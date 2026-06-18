@@ -32,6 +32,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          DEPLOY_TARGET: github-pages
 
       - name: Add SPA fallback
         run: cp dist/index.html dist/404.html

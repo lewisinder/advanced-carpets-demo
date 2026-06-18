@@ -155,7 +155,7 @@ function Header() {
           <a className="ml-4 font-['Inter',sans-serif] text-[15px] font-semibold text-[#0e1215]" href="tel:034453329">
             03 445 3329
           </a>
-          <ButtonLink to="/contact">Get a Quote</ButtonLink>
+          <ButtonLink to="/contact">Contact Us</ButtonLink>
         </nav>
         <button
           className="p-2 text-[#0e1215] lg:hidden"
@@ -200,7 +200,7 @@ function Header() {
           <a className="font-['Inter',sans-serif] text-[15px] font-semibold text-[#0e1215]" href="tel:034453329">
             03 445 3329
           </a>
-          <ButtonLink to="/contact">Get a Quote</ButtonLink>
+          <ButtonLink to="/contact">Contact Us</ButtonLink>
         </div>
       )}
     </header>
@@ -300,7 +300,7 @@ function HeroSection() {
           Professional carpet cleaning, upholstery care, stain treatment, repairs, and restoration work handled by trained local technicians.
         </p>
         <div className="mb-12 flex flex-wrap gap-4">
-          <ButtonLink to="/contact">Get a Quote</ButtonLink>
+          <ButtonLink to="/contact">Contact Us</ButtonLink>
           <ButtonLink to="/services" variant="outline">View Services</ButtonLink>
         </div>
         <div className="mb-12 w-fit max-w-full border-y border-white/10">
@@ -714,11 +714,11 @@ function CTASection({ compact = false }: { compact?: boolean }) {
               Tell us what needs cleaning or restoring
             </h2>
             <p className="mt-4 max-w-[600px] font-['Inter',sans-serif] text-[16px] font-normal leading-[1.6] text-white/78">
-              Send the job details, photos if useful, and the best way to reach you. The team can reply with practical advice or a quote.
+              Send the job details, photos if useful, and the best way to reach you. The team can reply with practical advice and next steps.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <ButtonLink to="/contact">Get a Quote</ButtonLink>
+            <ButtonLink to="/contact">Contact Us</ButtonLink>
             <a
               href="tel:034453329"
               className="inline-flex h-[48px] items-center justify-center gap-2 rounded-[6px] border-[1.5px] border-white px-6 font-['Inter',sans-serif] text-[15px] font-semibold text-white transition-colors hover:bg-white/10"
@@ -739,8 +739,8 @@ const steps = [
     description: "Share your address, job description, and any photos to help us understand the work needed.",
   },
   {
-    title: "We review and quote",
-    description: "We'll assess your request and send back a clear, no-obligation quote.",
+    title: "We check the details",
+    description: "We'll assess your request and send back a clear, practical response.",
   },
   {
     title: "Book a time that suits",
@@ -757,7 +757,7 @@ function HowItWorksSection() {
     <section className="border-t border-[#dbe0e3] bg-white py-16 lg:py-20">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-[88px]">
         <h2 className="mb-12 text-center font-['Inter',sans-serif] text-[26px] font-extrabold leading-[1.1] text-[#0e1215] lg:text-[32px]">
-          Getting a quote in 4 simple steps
+          Getting booked in 4 simple steps
         </h2>
         <div className="relative grid gap-8 lg:grid-cols-4 lg:gap-6">
           {steps.map((step, index) => (
@@ -781,14 +781,14 @@ function HowItWorksSection() {
   );
 }
 
-function QuoteSection() {
+function EnquirySection() {
   return (
-    <section id="quote" className="bg-white py-16 lg:py-24">
+    <section id="enquiry" className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-[88px]">
         <div className="overflow-hidden rounded-[10px] bg-[#0e1215]">
           <div className="grid lg:grid-cols-2">
             <div className="p-8 lg:p-14">
-              <p className="mb-3 font-['Inter',sans-serif] text-[13px] font-semibold uppercase tracking-[1.04px] text-[#ff4d00]">Get a Quote</p>
+              <p className="mb-3 font-['Inter',sans-serif] text-[13px] font-semibold uppercase tracking-[1.04px] text-[#ff4d00]">Contact Us</p>
               <h2 className="mb-4 max-w-[420px] font-['Inter',sans-serif] text-[30px] font-extrabold leading-[1.1] text-white lg:text-[36px]">
                 Tell us what needs cleaning or restoring
               </h2>
@@ -925,7 +925,7 @@ function HomePage() {
       <AboutPreviewSection />
       <LocationsSection />
       <HowItWorksSection />
-      <QuoteSection />
+      <EnquirySection />
       <FAQSection />
     </>
   );
@@ -972,7 +972,7 @@ function ServiceDetailPage() {
             <h1 className="max-w-[760px] font-['Inter',sans-serif] text-[40px] font-extrabold leading-[1.08] text-white lg:text-[60px]">{service.name}</h1>
             <p className="mt-5 max-w-[650px] font-['Inter',sans-serif] text-[17px] font-normal leading-[1.65] text-white/78 lg:text-[19px]">{service.intro}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <ButtonLink to="/contact">Request a Quote</ButtonLink>
+              <ButtonLink to="/contact">Book a Clean</ButtonLink>
               <ButtonLink to="/services" variant="outline">All Services</ButtonLink>
             </div>
           </div>
@@ -1085,10 +1085,10 @@ function ServiceDetailPage() {
               Ready to talk through {service.name.toLowerCase()}?
             </h2>
             <p className="mt-4 max-w-[620px] font-['Inter',sans-serif] text-[16px] font-normal leading-[1.6] text-white/75">
-              Send a few details and the team can advise what is practical, what to expect, and whether photos would help with quoting.
+              Send a few details and the team can advise what is practical, what to expect, and whether photos would help.
             </p>
           </div>
-          <ButtonLink to="/contact">Request a Quote</ButtonLink>
+          <ButtonLink to="/contact">Book a Clean</ButtonLink>
         </div>
       </section>
       <section className="bg-[#fbfcfc] py-16 lg:py-20">
@@ -1262,7 +1262,7 @@ function AboutPage() {
               </p>
             </div>
             <div className="mt-8">
-              <ButtonLink to="/contact">Request a Quote</ButtonLink>
+              <ButtonLink to="/contact">Book a Clean</ButtonLink>
             </div>
           </div>
         </div>
@@ -1276,7 +1276,7 @@ function ContactPage() {
   return (
     <>
       <PageHero
-        title="Request a quote or ask a question"
+        title="Send an enquiry or ask a question"
         copy="Keep the contact flow short. The final Webflow build can connect this to the preferred form, email, or Tradeify workflow."
       />
       <section className="bg-[#fbfcfc] py-16 lg:py-24">

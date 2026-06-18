@@ -17,7 +17,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  base: '/advanced-carpets-demo/',
+  base: process.env.DEPLOY_TARGET === 'github-pages' ? '/advanced-carpets-demo/' : '/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
