@@ -15,7 +15,7 @@ import {
   Sun,
   X,
 } from "lucide-react";
-import { BrowserRouter, Link, Navigate, Route, Routes, useParams } from "react-router";
+import { HashRouter, Link, Navigate, Route, Routes, useParams } from "react-router";
 import imgLogo from "@/imports/DesktopHomepage1440/27fdfb19f860981af5dfa6da2b876ad38777fe56.png";
 import imgHeroOverlay from "@/imports/DesktopHomepage1440/fbeb92e3dde6c5fe1d99ad0c211ca63fab6f10d0.png";
 import { getServiceBySlug, services, type Service } from "./data/services";
@@ -1341,8 +1341,8 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.PROD ? "/advanced-carpets-demo" : undefined}>
+    <HashRouter>
       <AppShell />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
