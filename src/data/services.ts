@@ -168,6 +168,23 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    name: "Window Cleaning",
+    slug: "window-cleaning",
+    category: "Specialist cleaning",
+    summary: "Streak-free residential and commercial window cleaning to keep glass bright and clear.",
+    intro:
+      "Professional window cleaning for homes and businesses across Central Otago and the Southern Lakes, using safe methods suited to each building and its access.",
+    benefits: ["Improves your view and natural light", "Enhances street appeal and presentation", "Suitable for homes, rentals, offices, and shopfronts"],
+    process: ["Check access and window condition", "Choose a safe, suitable method", "Clean glass, frames, and sills where practical", "Leave windows clear and streak-free"],
+    useCases: ["Homes and holiday homes", "Rental properties", "Offices", "Shopfronts and commercial premises"],
+    faqs: [
+      {
+        question: "How often should windows be cleaned?",
+        answer: "The dry climate, dust, and seasonal weather can build up quickly on glass, so many properties benefit from regular cleaning through the year.",
+      },
+    ],
+  },
 ];
 
 export function getServiceBySlug(slug: string | undefined) {

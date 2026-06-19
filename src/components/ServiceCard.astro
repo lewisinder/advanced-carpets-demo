@@ -11,6 +11,7 @@ import Paintbrush from "@lucide/astro/icons/paintbrush";
 import SprayCan from "@lucide/astro/icons/spray-can";
 import Sparkles from "@lucide/astro/icons/sparkles";
 import Sun from "@lucide/astro/icons/sun";
+import PanelsTopLeft from "@lucide/astro/icons/panels-top-left";
 
 type Props = {
   service: Service;
@@ -29,6 +30,7 @@ const icons = {
   "carpet-repair": Hammer,
   "pest-control": Bug,
   "solar-panel-cleaning": Sun,
+  "window-cleaning": PanelsTopLeft,
 };
 
 const Icon = icons[service.slug as keyof typeof icons] ?? Brush;
