@@ -1,0 +1,45 @@
+---
+type Props = {
+  beforeSrc: string;
+  afterSrc: string;
+  beforeAlt: string;
+  afterAlt: string;
+  title?: string;
+  caption?: string;
+  label?: string;
+};
+
+const { beforeSrc, afterSrc, beforeAlt, afterAlt, title, caption, label } = Astro.props;
+---
+
+<figure class="before-after" style="--position: 50%;">
+  <div class="before-after-frame">
+    <img class="before-after-image before-after-image-after" src={afterSrc} alt={afterAlt} loading="lazy" />
+    <img class="before-after-image before-after-image-before" src={beforeSrc} alt={beforeAlt} loading="lazy" />
+    {label && <span class="before-after-label-center">{label}</span>}
+    <span class="before-after-label before-after-label-before">Before</span>
+    <span class="before-after-label before-after-label-after">After</span>
+    <span class="before-after-handle" aria-hidden="true"></span>
+    <input class="before-after-slider" type="range" min="0" max="100" value="50" aria-label={`Drag to compare before and after${title ? ` for ${title}` : ""}`} />
+  </div>
+  {title && (
+    <figcaption>
+      <strong>{title}</strong>
+      {caption && <span>{caption}</span>}
+    </figcaption>
+  )}
+</figure>
+
+<script is:inline>
+  (() => {
+    document.querySelectorAll(".before-after").forEach((root) => {
+      if (root.dataset.beforeAfterReady === "true") return;
+      root.dataset.beforeAfterReady = "true";
+      const slider = root.querySelector(".before-after-slider");
+      if (!slider) return;
+      const update = () => root.style.setProperty("--position", `${slider.value}%`);
+      slider.addEventListener("input", update);
+      update();
+    });
+  })();
+</script>

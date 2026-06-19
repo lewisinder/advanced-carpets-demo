@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CTA from "@/components/CTA.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import { services, type Service } from "@/data/services";
+import { site, titleFor } from "@/data/site";
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+type Props = {
+  service: Service;
+};
+
+const { service } = Astro.props;
+const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
+const pathname = `/services/${service.slug}`;
+---
+
+<BaseLayout title={titleFor(pathname, service.name)} description={service.summary} pathname={pathname}>
+  <section class="page-hero">
+    <div class="container two-col">
+      <div>
+        <p class="overline orange">{service.category}</p>
+        <h1>{service.name}</h1>
+        <p>{service.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/contact">Make an enquiry</a>
+          <a class="button button-outline" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="panel dark-panel">
+        <h2>Available across the region</h2>
+        <p>{site.areas.join(", ")}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container two-col">
+      <div>
+        <div class="section-heading">
+          <h2>Why book this service</h2>
+        </div>
+        <div class="service-list">
+          {service.benefits.map((item) => <p>{item}</p>)}
+        </div>
+      </div>
+      <div>
+        <div class="section-heading">
+          <h2>Suitable for</h2>
+        </div>
+        <div class="service-list">
+          {service.useCases.map((item) => <p>{item}</p>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What to expect</h2>
+        <p>Clear steps help customers understand the process before they enquire.</p>
+      </div>
+      <div class="grid grid-4">
+        {service.process.map((step, index) => (
+          <div class="panel">
+            <div class="icon-box">{index + 1}</div>
+            <h3>{step}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container two-col">
+      <div>
+        <div class="section-heading">
+          <h2>Service FAQs</h2>
+          <p>Useful questions for this service page.</p>
+        </div>
+      </div>
+      <div>
+        {service.faqs.map((faq) => (
+          <div class="panel">
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Related services</h2>
+      </div>
+      <div class="grid grid-3">
+        {related.map((item) => <ServiceCard service={item} />)}
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

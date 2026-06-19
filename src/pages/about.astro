@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import CTA from "@/components/CTA.astro";
+
+const description = "Learn about Advanced Carpets & Restoration, serving Central Otago and the Southern Lakes with practical cleaning and restoration services.";
+---
+
+<BaseLayout title="About Advanced Carpets & Restoration" description={description} pathname="/about">
+  <PageHero title="Local people, proper gear, honest work" copy="Advanced Carpets is built around practical cleaning, restoration know-how, and direct local service across Central Otago and the Southern Lakes." />
+  <section class="section section-white">
+    <div class="container two-col">
+      <div class="media-block">
+        <img src="/assets/carpet-extraction.jpg" alt="Carpet cleaning wand and extraction hose on patterned carpet" />
+        <p>Cleaning equipment and carpet texture should remain visible wherever this page uses photography.</p>
+      </div>
+      <div>
+        <div class="section-heading">
+          <h2>Built for local homes, rentals, and businesses</h2>
+          <p>Advanced Carpets should feel reliable, direct, and established without drifting into generic sales copy.</p>
+        </div>
+        <p class="copy">The business handles carpet cleaning, upholstery, stain treatment, repairs, flood restoration, and selected specialist property services across Cromwell, Alexandra, Queenstown, Wanaka, Central Otago, and the Southern Lakes.</p>
+        <p class="copy">The page language should stay practical: what the team cleans, how quoting works, which areas are covered, and what customers can expect when a technician arrives.</p>
+      </div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>

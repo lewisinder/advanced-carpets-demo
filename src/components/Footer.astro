@@ -1,0 +1,29 @@
+---
+import { services } from "@/data/services";
+import { site } from "@/data/site";
+---
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>{site.name}</strong>
+      <p>Professional carpet cleaning and restoration across Central Otago and the Southern Lakes.</p>
+    </div>
+    <div>
+      <strong>Services</strong>
+      {services.slice(0, 6).map((service) => (
+        <a href={`/services/${service.slug}`}>{service.name}</a>
+      ))}
+    </div>
+    <div>
+      <strong>Locations</strong>
+      {site.areas.map((area) => <span>{area}</span>)}
+    </div>
+    <div>
+      <strong>Contact</strong>
+      {site.phones.map((phone) => <span>{phone.value}</span>)}
+      <span>{site.email}</span>
+      <a href="/design-system">Design system</a>
+    </div>
+  </div>
+</footer>

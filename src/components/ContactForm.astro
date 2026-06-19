@@ -1,0 +1,39 @@
+<form
+  class="form"
+  name="advanced-carpets-enquiry"
+  method="POST"
+  action="/thank-you"
+  enctype="multipart/form-data"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="advanced-carpets-enquiry" />
+  <p hidden>
+    <label>Do not fill this out: <input name="bot-field" /></label>
+  </p>
+  <label>
+    Name
+    <input name="name" required />
+  </label>
+  <label>
+    Email address
+    <input name="email" type="email" required />
+  </label>
+  <label>
+    Phone number
+    <input name="phone" type="tel" required />
+  </label>
+  <label>
+    Job address
+    <input name="job-address" required />
+  </label>
+  <label>
+    Job description
+    <textarea name="job-description" required></textarea>
+  </label>
+  <label>
+    Photos
+    <input name="photos" type="file" multiple />
+  </label>
+  <button class="button button-primary" type="submit">Send enquiry</button>
+</form>

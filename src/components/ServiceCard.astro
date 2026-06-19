@@ -1,0 +1,51 @@
+---
+import type { Service } from "@/data/services";
+import Armchair from "@lucide/astro/icons/armchair";
+import Brush from "@lucide/astro/icons/brush";
+import Bug from "@lucide/astro/icons/bug";
+import ChevronRight from "@lucide/astro/icons/chevron-right";
+import Droplets from "@lucide/astro/icons/droplets";
+import Hammer from "@lucide/astro/icons/hammer";
+import Leaf from "@lucide/astro/icons/leaf";
+import Paintbrush from "@lucide/astro/icons/paintbrush";
+import SprayCan from "@lucide/astro/icons/spray-can";
+import Sparkles from "@lucide/astro/icons/sparkles";
+import Sun from "@lucide/astro/icons/sun";
+
+type Props = {
+  service: Service;
+  compact?: boolean;
+};
+
+const { service, compact = false } = Astro.props;
+
+const icons = {
+  "carpet-cleaning": Paintbrush,
+  "upholstery-cleaning": Armchair,
+  "stain-treatment": SprayCan,
+  "flood-restoration": Droplets,
+  "gutter-cleaning": Leaf,
+  "hard-floor-cleaning-polish": Sparkles,
+  "carpet-repair": Hammer,
+  "pest-control": Bug,
+  "solar-panel-cleaning": Sun,
+};
+
+const Icon = icons[service.slug as keyof typeof icons] ?? Brush;
+---
+
+<a class:list={["service-card", compact && "service-card-compact"]} href={`/services/${service.slug}`}>
+  <div class="service-card-top">
+    <span class="icon-box" aria-hidden="true"><Icon size={38} stroke-width={2.1} /></span>
+    {!compact && <ChevronRight class="card-arrow" size={30} stroke-width={2.1} aria-hidden="true" />}
+  </div>
+  {compact ? (
+    <span class="also-label">{service.name}</span>
+  ) : (
+    <>
+      <small>{service.category}</small>
+      <h3>{service.name}</h3>
+      <p>{service.summary}</p>
+    </>
+  )}
+</a>

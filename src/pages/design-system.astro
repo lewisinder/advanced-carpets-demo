@@ -1,0 +1,303 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BeforeAfter from "@/components/BeforeAfter.astro";
+import ContactForm from "@/components/ContactForm.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import { services } from "@/data/services";
+
+const primaryServices = services.slice(0, 2);
+const compactServices = services.slice(2, 7);
+const colorTokens = [
+  ["--charcoal", "#111715", "Primary dark ground, page hero overlays, high-confidence contrast"],
+  ["--ink", "#24211d", "Main reading text on light surfaces"],
+  ["--muted", "#626159", "Secondary copy, captions, and proof notes"],
+  ["--wool", "#f4f0e7", "Warm page background, chosen to feel like carpet backing rather than SaaS white"],
+  ["--paper", "#fffdf8", "Clean surface for cards, forms, review panels, and documentation blocks"],
+  ["--line", "#d8d2c7", "Borders, dividers, field edges, and measurement guides"],
+  ["--clay", "#d94f22", "Primary action, job urgency, rating stars, and key material stripe"],
+  ["--water", "#147f9f", "Cleaning equipment accent, links, icons, and focus states"],
+  ["--sage", "#748b62", "Positive proof, local landscape, and secondary stripe accent"],
+  ["--taupe", "#b9aa94", "Neutral carpet sample, quiet separators, and inactive material stripe"],
+];
+const materialSwatches = [
+  ["Clay action", "#d94f22"],
+  ["Water clean", "#147f9f"],
+  ["Loop pile taupe", "#b9aa94"],
+  ["Central sage", "#748b62"],
+  ["Charcoal backing", "#111715"],
+];
+const typeRows = [
+  ["Display", ".hero h1 / .page-hero h1", "Carpet cleaning, restoration, and practical property care"],
+  ["Section", ".section-heading h2", "Built around real rooms, stains, fibres, and service areas"],
+  ["Card", ".service-card h3", "Stain Treatment"],
+  ["Body", ".copy / section p", "Plain-language service copy should describe what the customer needs to know before asking for a quote."],
+  ["Utility", ".overline / .system-label", "QUOTE WORKFLOW"],
+];
+---
+
+<BaseLayout
+  title="Design System | Advanced Carpets & Restoration"
+  description="Internal design system reference for Advanced Carpets & Restoration."
+  pathname="/design-system"
+  robots="noindex, nofollow"
+>
+  <section class="page-hero design-system-hero">
+    <div class="container">
+      <h1>Design system</h1>
+      <p>Built from carpet, craft, and local trust. Use this page before adding new sections, service pages, forms, or AI-generated layouts.</p>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container design-system-layout">
+      <aside class="design-system-nav" aria-label="Design system sections">
+        <strong>System</strong>
+        <a href="#foundation">Foundation</a>
+        <a href="#tokens">Colour</a>
+        <a href="#type">Typography</a>
+        <a href="#components">Components</a>
+        <a href="#before-after">Before/after</a>
+        <a href="#sections">Sections</a>
+        <a href="#forms">Forms</a>
+        <a href="#motion">Motion</a>
+        <a href="#rules">Rules</a>
+      </aside>
+
+      <div class="design-system-content">
+        <section id="foundation" class="design-system-block">
+          <div class="design-system-intro">
+            <div>
+              <p class="system-label">Foundation</p>
+              <h2 class="design-system-title">A local-service system with a material memory.</h2>
+              <p class="design-note">Advanced Carpets should feel like a team that handles fibres, equipment, water, rooms, and urgent restoration work every day. The visual system is quiet, tactile, and direct.</p>
+            </div>
+            <div class="design-panel panel">
+              <div class="material-strip" aria-label="Material swatch strip">
+                {materialSwatches.map(([, value]) => <span style={`--swatch:${value}`}></span>)}
+              </div>
+              <p class="design-note">Use swatches for palette explanation and material references. Section dividers stay as a single solid orange rule.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="tokens" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Colour</p>
+            <h2>Colour tokens</h2>
+            <p>Use the named CSS variables. The palette should feel like wool, equipment, water extraction, Central Otago landscape, and practical job-site signage.</p>
+          </div>
+          <div class="token-grid">
+            {colorTokens.map(([name, value, note]) => (
+              <article class="token-card">
+                <span class="swatch" style={`background:${value}`}></span>
+                <div>
+                  <strong>{name}</strong>
+                  <code>{value}</code>
+                  <p>{note}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="type" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Typography</p>
+            <h2>Type system</h2>
+            <p>Display headings use Archivo for a bolder, less narrow trade-workshop confidence. Body text uses Source Sans 3 for readable service detail and forms.</p>
+          </div>
+          <div class="type-scale">
+            {typeRows.map(([label, className, sample]) => (
+              <article>
+                <small>{label} <code>{className}</code></small>
+                {label === "Display" && <p class="type-display">{sample}</p>}
+                {label === "Section" && <p class="type-section">{sample}</p>}
+                {label === "Card" && <p class="type-section" style="font-size: 30px;">{sample}</p>}
+                {label === "Body" && <p class="type-body">{sample}</p>}
+                {label === "Utility" && <p class="overline">{sample}</p>}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="components" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Components</p>
+            <h2>Buttons, service cards, and proof panels</h2>
+            <p>Components should make high-intent actions and service choices clear. Use lucide icons for service meaning, not emojis or decorative symbols.</p>
+          </div>
+          <div class="button-spec">
+            <a class="button button-primary" href="/contact">Request a quote</a>
+            <a class="button button-dark" href="/about">Meet the team</a>
+            <span class="dark-preview"><a class="button button-outline" href="/services">View services</a></span>
+          </div>
+          <div class="code-row">
+            <code>.button .button-primary</code>
+            <code>.button .button-dark</code>
+            <code>.button .button-outline</code>
+          </div>
+
+          <div class="component-demo" style="margin-top: 34px;">
+            <div class="grid">
+              {primaryServices.map((service) => <ServiceCard service={service} />)}
+            </div>
+            <div class="panel">
+              <p class="google-label"><img src="/assets/google-g.svg" alt="" /> <span>Google Reviews</span></p>
+              <h3>Rating lockup</h3>
+              <div class="rating-lockup">
+                <span class="stars">★★★★★</span>
+                <strong>4.8</strong>
+                <small>on Google</small>
+              </div>
+              <p class="design-note" style="margin-top: 20px;">Use only with a verified count. Stars are always <code>var(--clay)</code>.</p>
+            </div>
+
+            <article class="review-card" style="margin-top: 24px;">
+              <div class="review-card-head">
+                <span class="review-avatar" style="--avatar:#4285f4">RT</span>
+                <div>
+                  <strong>Rachel T.</strong>
+                  <span>2 days ago</span>
+                </div>
+                <img class="google-mark" src="/assets/google-g.svg" alt="" />
+              </div>
+              <p class="stars">★★★★★</p>
+              <p>Kevin did a fantastic job on our lounge carpet. Stains we thought were permanent came out completely. Would highly recommend to anyone in the area.</p>
+            </article>
+          </div>
+
+          <div class="also-services">
+            <p>Compact service links</p>
+            <div class="also-services-grid">
+              {compactServices.map((service) => <ServiceCard service={service} compact />)}
+            </div>
+          </div>
+        </section>
+
+        <section id="before-after" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Before/after</p>
+            <h2>Draggable comparison card</h2>
+            <p>Use this component for genuine matching before/after imagery only. It is a reusable site primitive, not a one-off page decoration.</p>
+          </div>
+          <div class="component-demo">
+            <BeforeAfter
+              beforeSrc="/assets/gutter-before.jpeg"
+              afterSrc="/assets/gutter-after.jpeg"
+              beforeAlt="Gutter before clearing with debris visible"
+              afterAlt="Gutter after clearing with debris removed"
+              title="Before and after comparison"
+              caption="Drag the orange handle to compare the two states. Replace these with matching carpet, upholstery, hard-floor, or restoration images when available."
+            />
+            <article class="panel">
+              <h3>Usage rules</h3>
+              <ul class="rule-list">
+                <li>Use paired images from the same job, angle, and crop wherever possible.</li>
+                <li>Keep labels as Before and After for fast scanning.</li>
+                <li>Use the component on service pages when it proves workmanship.</li>
+                <li>Do not fake transformations by tinting unrelated images.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="sections" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Sections</p>
+            <h2>Section patterns</h2>
+            <p>Sections use full-width bands and a stable inner container. Transition rules are solid orange. Avoid floating wrapper cards around entire page sections.</p>
+          </div>
+          <div class="section-demo">
+            <div class="section-demo-light material-rule" style="position: relative;">
+              <p class="overline">Light section</p>
+              <h3>Services, FAQs, forms, and local content.</h3>
+              <p>Use wool or paper backgrounds with clear dividers and enough density to scan.</p>
+            </div>
+            <div class="section-demo-dark material-rule" style="position: relative;">
+              <p class="overline orange">Dark section</p>
+              <h3>Proof, process, and strong brand moments.</h3>
+              <p>Use charcoal for workmanship proof, real photos, and trust points.</p>
+            </div>
+          </div>
+          <div class="work-grid" style="margin-top: 24px;">
+            <figure class="work-photo">
+              <img src="/assets/carpet-extraction.jpg" alt="Carpet extraction equipment cleaning a patterned carpet" />
+              <figcaption class="work-caption">
+                <strong>Use real job texture</strong>
+                <span>Photos should show carpet pile, equipment, rooms, stains, or finished spaces.</span>
+              </figcaption>
+            </figure>
+            <div class="sample-stack">
+              <article class="sample-card">
+                <h3>Measure</h3>
+                <p>Use borders and grid lines as measurement cues, not decorative data widgets.</p>
+              </article>
+              <article class="sample-card">
+                <h3>Restore</h3>
+                <p>Show practical steps and honest limits before broad claims.</p>
+              </article>
+              <article class="sample-card">
+                <h3>Finish</h3>
+                <p>Prefer rooms and fibres over abstract icons when the user needs confidence.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="forms" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Forms</p>
+            <h2>Enquiry form</h2>
+            <p>Forms should be short, labelled, keyboard-friendly, and consistent with Netlify form handling. Use photos as an aid for quoting, not as a required hurdle.</p>
+          </div>
+          <div class="design-system-form">
+            <ContactForm />
+          </div>
+        </section>
+
+        <section id="motion" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Motion</p>
+            <h2>Hover and motion rules</h2>
+            <p>Motion should clarify interaction and hierarchy. No ambient loops, parallax tricks, or animated decoration unless it explains a real cleaning or quote workflow.</p>
+          </div>
+          <div class="motion-list">
+            <div><strong>Service cards</strong><span>Border shifts to water blue, shadow appears, and the card lifts by 2px.</span></div>
+            <div><strong>Buttons</strong><span>Use colour and a 1px lift only. Keep labels stable: Request a quote, View services, Meet the team.</span></div>
+            <div><strong>Reduced motion</strong><span>The global stylesheet respects <code>prefers-reduced-motion</code> and disables transitions for motion-sensitive users.</span></div>
+            <div><strong>Focus</strong><span>Keyboard focus uses the water-blue outline system and must remain visible on all interactive elements.</span></div>
+          </div>
+        </section>
+
+        <section id="rules" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Rules</p>
+            <h2>Dos and don'ts</h2>
+            <p>Use this before shipping any new section. If the design could be pasted onto an AI SaaS homepage, revise it.</p>
+          </div>
+          <div class="rules-grid">
+            <article class="panel">
+              <h3>Do</h3>
+              <ul class="rule-list">
+                <li>Use real photos, material texture, equipment, service areas, and quote actions.</li>
+                <li>Keep copy plain: what gets cleaned, where, how to enquire, what to expect.</li>
+                <li>Use cards only for repeated items, reviews, forms, or reference examples.</li>
+                <li>Check desktop and mobile for clipping, wrapping, focus states, and horizontal scroll.</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h3>Do not</h3>
+              <ul class="rule-list">
+                <li>Use purple gradients, generic badges, emoji icons, fake dashboards, or invented metrics.</li>
+                <li>Hide the carpet/flooring subject behind vague local-service layout.</li>
+                <li>Wrap every section in floating rounded cards or stack cards inside cards.</li>
+                <li>Ship abstract before/after blocks when a real client image is available.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

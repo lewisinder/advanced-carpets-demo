@@ -1,11 +1,14 @@
+# Advanced Carpets & Restoration
 
-  # Home page design
+Marketing site for Advanced Carpets & Restoration, serving Central Otago and the Southern Lakes.
 
-  This is a code bundle for Home page design. The original project is available at https://www.figma.com/design/L3WTRm85LvFiIB46yIIuxL/Home-page-design.
+Built with [Astro](https://astro.build/) and deployed via Netlify.
 
-  ## Running the code
+## Develop
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm install
+npm run dev      # start the dev server
+npm run build    # production build to ./dist
+npm run preview  # preview the production build
+```

@@ -1,0 +1,26 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import ContactForm from "@/components/ContactForm.astro";
+import { site } from "@/data/site";
+
+const description = "Contact Advanced Carpets & Restoration for carpet cleaning, stain treatment, upholstery care, flood restoration, and related services.";
+---
+
+<BaseLayout title="Contact Advanced Carpets & Restoration" description={description} pathname="/contact">
+  <PageHero title="Send us the job details" copy="Share the address, what needs doing, photos if useful, and the best way to reach you." />
+  <section class="section">
+    <div class="container two-col">
+      <div class="panel">
+        <ContactForm />
+      </div>
+      <aside class="panel region-panel">
+        <h2>Contact details</h2>
+        {site.phones.map((phone) => (
+          <p><strong>{phone.label}</strong><br />{phone.value}</p>
+        ))}
+        <p><strong>Email</strong><br />{site.email}</p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

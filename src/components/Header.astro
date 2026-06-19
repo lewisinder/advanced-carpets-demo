@@ -1,0 +1,110 @@
+---
+import { site } from "@/data/site";
+import { services } from "@/data/services";
+import ServiceCard from "@/components/ServiceCard.astro";
+import ChevronDown from "@lucide/astro/icons/chevron-down";
+import Menu from "@lucide/astro/icons/menu";
+import X from "@lucide/astro/icons/x";
+import Phone from "@lucide/astro/icons/phone";
+
+const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
+---
+
+<header class="site-header" data-site-header>
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Advanced Carpets home">
+      <img src="/assets/logo.png" alt={site.name} />
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <a href="/services" class="nav-trigger" aria-haspopup="true">
+          Services
+          <ChevronDown class="nav-caret" size={16} stroke-width={2.4} aria-hidden="true" />
+        </a>
+        <div class="mega">
+          <div class="mega-panel">
+            <div class="mega-head">
+              <div>
+                <p class="overline">Our services</p>
+                <strong>Cleaning, restoration, and specialist work</strong>
+              </div>
+              <a class="mega-overview" href="/services">View all services &rarr;</a>
+            </div>
+            <div class="mega-grid">
+              {services.map((service) => <ServiceCard service={service} compact />)}
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="nav-phone" href={phoneHref}>{site.primaryPhone}</a>
+      <a class="button button-primary" href="/contact">Get in touch</a>
+    </nav>
+    <button
+      type="button"
+      class="nav-toggle"
+      data-nav-toggle
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Open menu"
+    >
+      <Menu class="nav-toggle-open" size={26} stroke-width={2} aria-hidden="true" />
+      <X class="nav-toggle-close" size={26} stroke-width={2} aria-hidden="true" />
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <nav class="mobile-nav-inner" aria-label="Mobile navigation">
+      <a href="/services">Services</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="mobile-nav-phone" href={phoneHref}>
+        <Phone size={18} stroke-width={2.2} aria-hidden="true" />
+        Call {site.primaryPhone}
+      </a>
+      <a class="button button-primary" href="/contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>("[data-site-header]");
+  const toggle = document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
+  const panel = document.querySelector<HTMLElement>("[data-mobile-nav]");
+
+  if (header && toggle && panel) {
+    const setOpen = (open: boolean) => {
+      header.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      document.body.classList.toggle("nav-locked", open);
+      if (open) {
+        panel.removeAttribute("hidden");
+      } else {
+        panel.setAttribute("hidden", "");
+      }
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    panel.addEventListener("click", (event) => {
+      if ((event.target as HTMLElement).closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && header.classList.contains("is-open")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    // Reset state if the viewport grows back to desktop.
+    const desktop = window.matchMedia("(min-width: 901px)");
+    desktop.addEventListener("change", (event) => {
+      if (event.matches) setOpen(false);
+    });
+  }
+</script>

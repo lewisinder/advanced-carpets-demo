@@ -1,0 +1,25 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/PageHero.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import CTA from "@/components/CTA.astro";
+import { services } from "@/data/services";
+
+const description = "Explore carpet cleaning, upholstery cleaning, stain treatment, flood restoration, repairs, pest control, and specialist cleaning services.";
+---
+
+<BaseLayout title="Cleaning & Restoration Services | Advanced Carpets & Restoration" description={description} pathname="/services">
+  <PageHero title="Cleaning, restoration, and specialist property services" copy="A practical service overview for homes, rentals, commercial spaces, and urgent restoration work across Central Otago and the Southern Lakes." />
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Choose the service that matches the surface, stain, or property issue.</h2>
+        <p>Each page explains what the service is for, when it helps, and what to expect before you enquire.</p>
+      </div>
+      <div class="grid grid-3">
+        {services.map((service) => <ServiceCard service={service} />)}
+      </div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>
