@@ -49,7 +49,7 @@ export function localBusinessSchema() {
         "@type": "Service",
         name: service.name,
         description: service.summary,
-        url: `${site.url}/services/${service.slug}`,
+        url: `${site.url}/services/${service.slug}/`,
       },
     })),
   };

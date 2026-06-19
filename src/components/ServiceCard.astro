@@ -34,7 +34,7 @@ const icons = {
 const Icon = icons[service.slug as keyof typeof icons] ?? Brush;
 ---
 
-<a class:list={["service-card", compact && "service-card-compact"]} href={`/services/${service.slug}`}>
+<a class:list={["service-card", compact && "service-card-compact"]} href={`/services/${service.slug}/`}>
   <div class="service-card-top">
     <span class="icon-box" aria-hidden="true"><Icon size={38} stroke-width={2.1} /></span>
     {!compact && <ChevronRight class="card-arrow" size={30} stroke-width={2.1} aria-hidden="true" />}

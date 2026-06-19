@@ -17,7 +17,7 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
     </a>
     <nav class="nav" aria-label="Main navigation">
       <div class="nav-item has-mega">
-        <a href="/services" class="nav-trigger" aria-haspopup="true">
+        <a href="/services/" class="nav-trigger" aria-haspopup="true">
           Services
           <ChevronDown class="nav-caret" size={16} stroke-width={2.4} aria-hidden="true" />
         </a>
@@ -28,7 +28,7 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
                 <p class="overline">Our services</p>
                 <strong>Cleaning, restoration, and specialist work</strong>
               </div>
-              <a class="mega-overview" href="/services">View all services &rarr;</a>
+              <a class="mega-overview" href="/services/">View all services &rarr;</a>
             </div>
             <div class="mega-grid">
               {services.map((service) => <ServiceCard service={service} compact />)}
@@ -36,10 +36,10 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
           </div>
         </div>
       </div>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
       <a class="nav-phone" href={phoneHref}>{site.primaryPhone}</a>
-      <a class="button button-primary" href="/contact">Get in touch</a>
+      <a class="button button-primary" href="/contact/">Get in touch</a>
     </nav>
     <button
       type="button"
@@ -56,14 +56,14 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
 
   <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
     <nav class="mobile-nav-inner" aria-label="Mobile navigation">
-      <a href="/services">Services</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+      <a href="/services/">Services</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
       <a class="mobile-nav-phone" href={phoneHref}>
         <Phone size={18} stroke-width={2.2} aria-hidden="true" />
         Call {site.primaryPhone}
       </a>
-      <a class="button button-primary" href="/contact">Get in touch</a>
+      <a class="button button-primary" href="/contact/">Get in touch</a>
     </nav>
   </div>
 </header>

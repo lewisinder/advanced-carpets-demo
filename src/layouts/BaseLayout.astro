@@ -13,7 +13,7 @@ type Props = {
 
 const pathname = Astro.props.pathname ?? (Astro.url.pathname.replace(/\/$/, "") || "/");
 const pageTitle = Astro.props.title ?? titleFor(pathname);
-const canonical = `${site.url}${pathname === "/" ? "/" : pathname}`;
+const canonical = `${site.url}${pathname === "/" ? "/" : `${pathname}/`}`;
 const schema = JSON.stringify(localBusinessSchema());
 const robots = Astro.props.robots ?? "index, follow";
 ---
