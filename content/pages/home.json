@@ -7,11 +7,25 @@
     "secondaryAction": "View services",
     "rating": "4.8",
     "reviewCount": "94 Google reviews",
-    "trustedBy": ["IICRC", "Master Cleaners NZ", "Queenstown Chamber", "Central Otago Business"],
+    "trustedBy": [
+      "IICRC",
+      "Master Cleaners NZ",
+      "Queenstown Chamber",
+      "Central Otago Business"
+    ],
     "metrics": [
-      { "value": "7 Days", "label": "Cleaning and urgent response enquiries" },
-      { "value": "6,000+", "label": "Cleaning jobs completed" },
-      { "value": "IICRC", "label": "Certified technicians" }
+      {
+        "value": "7 Days",
+        "label": "Cleaning and urgent response enquiries"
+      },
+      {
+        "value": "6,000+",
+        "label": "Cleaning jobs completed"
+      },
+      {
+        "value": "IICRC",
+        "label": "Certified technicians"
+      }
     ]
   },
   "reviews": [
@@ -41,9 +55,18 @@
     "title": "Straightforward service from trained local technicians",
     "intro": "Clear service areas, practical quoting, visible equipment, and trained restoration experience are stronger than broad marketing claims.",
     "points": [
-      { "title": "Local coverage", "text": "Cromwell, Alexandra, Queenstown, Wanaka, Central Otago, and the Southern Lakes." },
-      { "title": "Trained technicians", "text": "IICRC training and practical restoration experience can sit as a credibility point." },
-      { "title": "Cleaning + restoration", "text": "Carpet, upholstery, stain, flood, repair, hard floor, solar, gutter, and pest support." }
+      {
+        "title": "Local coverage",
+        "text": "Cromwell, Alexandra, Queenstown, Wanaka, Central Otago, and the Southern Lakes."
+      },
+      {
+        "title": "Trained technicians",
+        "text": "IICRC training and practical restoration experience can sit as a credibility point."
+      },
+      {
+        "title": "Cleaning + restoration",
+        "text": "Carpet, upholstery, stain, flood, repair, hard floor, solar, gutter, and pest support."
+      }
     ]
   },
   "about": {
@@ -54,16 +77,43 @@
     ]
   },
   "steps": [
-    { "title": "Fill out our form", "text": "Share your address, job description, and any photos to help us understand the work needed." },
-    { "title": "We check the details", "text": "We'll assess your request and send back a clear, practical response." },
-    { "title": "Book a time that suits", "text": "Pick a day and time that works for you across Central Otago and the Southern Lakes." },
-    { "title": "We come to you", "text": "Your technician arrives ready to work, handles the job, and leaves the space clean." }
+    {
+      "title": "Fill out our form",
+      "text": "Share your address, job description, and any photos to help us understand the work needed."
+    },
+    {
+      "title": "We check the details",
+      "text": "We'll assess your request and send back a clear, practical response."
+    },
+    {
+      "title": "Book a time that suits",
+      "text": "Pick a day and time that works for you across Central Otago and the Southern Lakes."
+    },
+    {
+      "title": "We come to you",
+      "text": "Your technician arrives ready to work, handles the job, and leaves the space clean."
+    }
   ],
   "faqs": [
-    { "question": "What areas do you service?", "answer": "Cromwell, Alexandra, Queenstown, Wanaka, and the wider Central Otago and Southern Lakes region." },
-    { "question": "How long does carpet cleaning take to dry?", "answer": "Most carpets are dry within a few hours under normal conditions. Good airflow helps speed this up." },
-    { "question": "Can you treat pet stains and odours?", "answer": "Yes. Pet marks and odours can be assessed and treated with a targeted approach." },
-    { "question": "Do I need to move furniture before you arrive?", "answer": "Move smaller items where practical. Larger items can be discussed when booking." },
-    { "question": "How quickly can you respond to flood or water damage?", "answer": "Call directly for urgent jobs. Fast action is important with water damage." }
+    {
+      "question": "What areas do you service?",
+      "answer": "Cromwell, Alexandra, Queenstown, Wanaka, and the wider Central Otago and Southern Lakes region."
+    },
+    {
+      "question": "How long does carpet cleaning take to dry?",
+      "answer": "Most carpets are dry within a few hours under normal conditions. Good airflow helps speed this up."
+    },
+    {
+      "question": "Can you treat pet stains and odours?",
+      "answer": "Yes. Pet marks and odours can be assessed and treated with a targeted approach."
+    },
+    {
+      "question": "Do I need to move furniture before you arrive?",
+      "answer": "Move smaller items where practical. Larger items can be discussed when booking."
+    },
+    {
+      "question": "How quickly can you respond to flood or water damage?",
+      "answer": "Call directly for urgent jobs. Fast action is important with water damage."
+    }
   ]
 }
