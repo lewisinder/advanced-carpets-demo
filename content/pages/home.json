@@ -37,18 +37,18 @@
       "text": "Superb job everytime. Highly recommend. We had our couches, carpets and tiles cleaned while at work and came home to the cleanest home I've ever seen."
     },
     {
-      "name": "Mark Sinclair",
-      "source": "Google review",
-      "initials": "MS",
-      "avatarColor": "#34a853",
-      "text": "Used Advanced Carpets after a water leak in our hallway. Fast response, professional gear, and the carpet dried out perfectly."
-    },
-    {
       "name": "Jo Blackwell",
       "source": "Google review",
       "initials": "JB",
       "avatarColor": "#ea4335",
       "text": "Had the upholstery done on our couch and two armchairs. Came up looking brand new. Great service from a friendly local operator."
+    },
+    {
+      "name": "Mark Sinclair",
+      "source": "Google review",
+      "initials": "MS",
+      "avatarColor": "#34a853",
+      "text": "Used Advanced Carpets after a water leak in our hallway. Fast response, professional gear, and the carpet dried out perfectly."
     }
   ],
   "trust": {
