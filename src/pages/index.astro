@@ -2,16 +2,30 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HomePage from "@/components/tina/HomePage.astro";
 import TinaIsland from "@tinacms/astro/TinaIsland.astro";
-import { getHome } from "@/lib/tina/data";
 import { islands } from "@/lib/tina/islands";
-import type { HomeContent } from "@/data/home";
+import { home as staticHome, type HomeContent } from "@/data/home";
 
-const response = await getHome();
-const home = response.data.home as unknown as HomeContent;
+// The GitHub Pages build is fully static with no Tina backend, so read the home
+// content straight from JSON. On dev/Netlify (base "/") we use the Tina client
+// and island wrapper so live visual editing keeps working.
+const isGithubPages = import.meta.env.BASE_URL !== "/";
+
+let home: HomeContent;
+if (isGithubPages) {
+  home = staticHome;
+} else {
+  const { getHome } = await import("@/lib/tina/data");
+  const response = await getHome();
+  home = response.data.home as unknown as HomeContent;
+}
 ---
 
 <BaseLayout description={home.seoDescription} pathname="/">
-  <TinaIsland name="home" wrapper={islands.home.wrapper} primary>
+  {isGithubPages ? (
     <HomePage home={home} />
-  </TinaIsland>
+  ) : (
+    <TinaIsland name="home" wrapper={islands.home.wrapper} primary>
+      <HomePage home={home} />
+    </TinaIsland>
+  )}
 </BaseLayout>
