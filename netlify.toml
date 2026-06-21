@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  # Tina's content indexing needs more than Node's default ~2GB heap on
+  # Netlify's build container; raise it to avoid an out-of-memory crash.
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
 [[headers]]
   for = "/*"
   [headers.values]
