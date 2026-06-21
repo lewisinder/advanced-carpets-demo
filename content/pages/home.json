@@ -5,8 +5,8 @@
     "intro": "Carpets, upholstery, stains, repairs, hard floors, and urgent water damage handled with proper equipment and practical local service.",
     "primaryAction": "Make an enquiry",
     "secondaryAction": "View services",
-    "rating": "4.8",
-    "reviewCount": "94 Google reviews",
+    "rating": "5.0",
+    "reviewCount": "8 Google reviews",
     "trustedBy": [
       "IICRC",
       "Master Cleaners NZ",
@@ -30,25 +30,25 @@
   },
   "reviews": [
     {
+      "name": "Tiffany Menzies",
+      "source": "Google review",
+      "initials": "TM",
+      "avatarColor": "#4285f4",
+      "text": "Kevin did an incredible job cleaning our large awning. He went above and beyond by also considering mildew prevention so that it stays cleaner for longer. I would highly recommend."
+    },
+    {
       "name": "Jess Matthews",
       "source": "Google review",
       "initials": "JM",
-      "avatarColor": "#4285f4",
-      "text": "Superb job everytime. Highly recommend. We had our couches, carpets and tiles cleaned while at work and came home to the cleanest home I've ever seen."
-    },
-    {
-      "name": "Jo Blackwell",
-      "source": "Google review",
-      "initials": "JB",
       "avatarColor": "#ea4335",
-      "text": "Had the upholstery done on our couch and two armchairs. Came up looking brand new. Great service from a friendly local operator."
+      "text": "Superb job every time! Highly recommend. We had our couches, carpets and tiles cleaned while at work, came home to the cleanest home I've ever seen. 5 stars!"
     },
     {
-      "name": "Mark Sinclair",
+      "name": "Manow Khetwichan",
       "source": "Google review",
-      "initials": "MS",
+      "initials": "MK",
       "avatarColor": "#34a853",
-      "text": "Used Advanced Carpets after a water leak in our hallway. Fast response, professional gear, and the carpet dried out perfectly."
+      "text": "Excellent professional carpet cleaning from Kevin. The carpets turned out very clean and got rid of all the grime and odours. Highly recommend this company."
     }
   ],
   "trust": {
