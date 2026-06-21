@@ -2,8 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import CTA from "@/components/CTA.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
+import BeforeAfter from "@/components/BeforeAfter.astro";
 import { services, type Service } from "@/data/services";
 import { site, titleFor } from "@/data/site";
+import { withBase } from "@/lib/base";
 
 export function getStaticPaths() {
   return services.map((service) => ({
@@ -19,6 +21,70 @@ type Props = {
 const { service } = Astro.props;
 const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
 const pathname = `/services/${service.slug}`;
+const canonical = `${site.url}${pathname}/`;
+const areas = site.areas.join(", ");
+const lowerName = service.name.toLowerCase();
+
+// --- Placeholder content (swap for real, service-specific copy later) ---
+const overviewParagraphs = [
+  `Advanced Carpets & Restoration provides professional ${lowerName} for homes, rentals, holiday properties, and commercial spaces across ${site.areas.slice(0, 3).join(", ")} and the wider region. [Placeholder copy — describe how this service works, the equipment and methods used, and the results customers can expect.]`,
+  `[Placeholder copy — add a second paragraph covering the problems this service solves, the surfaces and materials it suits, typical turnaround times, and any guarantees. Write it to read naturally while helping the page rank for "${lowerName}".]`,
+];
+
+const stats = [
+  { value: "15+ yrs", label: "Local experience" },
+  { value: "4.9★", label: "Average Google rating" },
+  { value: "100%", label: "Satisfaction focused" },
+];
+
+const reasons = [
+  "Trained, insured technicians who treat your property with care",
+  "Honest, no-obligation pricing before any work begins",
+  "Methods and products matched to the job, not a one-size-fits-all approach",
+  `Locally owned and trusted across ${site.areas[0] ?? "the region"}`,
+];
+
+const facts = ["Fully insured", "Locally owned & operated", "Free, no-obligation pricing"];
+
+// Placeholder imagery — every service falls back to a real before/after pair.
+const mediaByService: Record<string, { overview: string; before: string; after: string }> = {
+  "carpet-cleaning": { overview: "/assets/carpet-extraction.jpg", before: "/assets/hero-cleaning.png", after: "/assets/carpet-extraction.jpg" },
+  "upholstery-cleaning": { overview: "/assets/carpet-texture-upholstery.jpeg", before: "/assets/carpet-texture-upholstery.jpeg", after: "/assets/carpet-extraction.jpg" },
+  "gutter-cleaning": { overview: "/assets/gutter-after.jpeg", before: "/assets/gutter-before.jpeg", after: "/assets/gutter-after.jpeg" },
+  "hard-floor-cleaning-polish": { overview: "/assets/hero-cleaning.png", before: "/assets/hero-cleaning.png", after: "/assets/carpet-extraction.jpg" },
+};
+const fallbackMedia = { overview: "/assets/hero-cleaning.png", before: "/assets/gutter-before.jpeg", after: "/assets/gutter-after.jpeg" };
+const shot = mediaByService[service.slug] ?? fallbackMedia;
+
+// --- Structured data for SEO ---
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: service.name,
+  serviceType: service.name,
+  category: service.category,
+  description: service.summary,
+  url: canonical,
+  provider: {
+    "@type": "LocalBusiness",
+    name: site.name,
+    url: site.url,
+    telephone: site.primaryPhone,
+  },
+  areaServed: site.areas.map((area) => ({ "@type": "Place", name: area })),
+};
+
+const faqSchema = service.faqs.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: service.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    }
+  : null;
 ---
 
 <BaseLayout title={titleFor(pathname, service.name)} description={service.summary} pathname={pathname}>
@@ -29,18 +95,49 @@ const pathname = `/services/${service.slug}`;
         <h1>{service.name}</h1>
         <p>{service.intro}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="/contact/">Make an enquiry</a>
-          <a class="button button-outline" href="/services/">All services</a>
+          <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
+          <a class="button button-outline" href={withBase("/services/")}>All services</a>
         </div>
+        <ul class="service-facts">
+          {facts.map((fact) => <li>{fact}</li>)}
+        </ul>
       </div>
       <div class="panel dark-panel">
         <h2>Available across the region</h2>
-        <p>{site.areas.join(", ")}</p>
+        <p>{areas}</p>
       </div>
     </div>
   </section>
 
   <section class="section section-white">
+    <div class="container">
+      <div class="two-col">
+        <div class="media-block">
+          <img src={withBase(shot.overview)} alt={`${service.name} work in progress`} loading="lazy" />
+          <p>{service.name} — placeholder image. Swap in a real job photo.</p>
+        </div>
+        <div>
+          <p class="overline orange">Overview</p>
+          <h2>What our {lowerName} service covers</h2>
+          {overviewParagraphs.map((paragraph) => <p class="copy">{paragraph}</p>)}
+          <div class="hero-actions">
+            <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
+            <a class="button button-outline" href="#before-after">See the results</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-stats">
+        {stats.map((stat) => (
+          <div>
+            <strong>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container two-col">
       <div>
         <div class="section-heading">
@@ -61,7 +158,7 @@ const pathname = `/services/${service.slug}`;
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-white">
     <div class="container">
       <div class="section-heading">
         <h2>What to expect</h2>
@@ -74,6 +171,54 @@ const pathname = `/services/${service.slug}`;
             <h3>{step}</h3>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="before-after" class="section section-dark">
+    <div class="container">
+      <div class="section-heading">
+        <p class="overline">Results</p>
+        <h2>See the difference</h2>
+        <p>Drag the handle to compare before and after. Placeholder imagery for now — real {lowerName} job photos can drop straight in.</p>
+      </div>
+      <details class="ba-toggle" open>
+        <summary class="ba-summary">
+          <span class="when-closed">Show before &amp; after</span>
+          <span class="when-open">Hide before &amp; after</span>
+        </summary>
+        <div class="ba-gallery">
+          <BeforeAfter
+            beforeSrc={withBase(shot.before)}
+            afterSrc={withBase(shot.after)}
+            beforeAlt={`${service.name} before`}
+            afterAlt={`${service.name} after`}
+            label={service.name}
+          />
+          <BeforeAfter
+            beforeSrc={withBase(fallbackMedia.before)}
+            afterSrc={withBase(fallbackMedia.after)}
+            beforeAlt="Example job before"
+            afterAlt="Example job after"
+            label="Example result"
+          />
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="overline orange">Why Advanced Carpets</p>
+        <h2>Why choose us for {lowerName}</h2>
+        <p class="copy">[Placeholder] A short, reassuring paragraph about our experience, care, and local reputation for {lowerName} across {areas}. Replace with copy that speaks to this specific service.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href={withBase("/contact/")}>Make an enquiry</a>
+        </div>
+      </div>
+      <div class="service-list">
+        {reasons.map((reason) => <p>{reason}</p>)}
       </div>
     </div>
   </section>
@@ -109,4 +254,7 @@ const pathname = `/services/${service.slug}`;
   </section>
 
   <CTA />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 </BaseLayout>

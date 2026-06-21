@@ -1,6 +1,7 @@
 ---
 import { services } from "@/data/services";
 import { site } from "@/data/site";
+import { withBase } from "@/lib/base";
 ---
 
 <footer class="footer">
@@ -12,7 +13,7 @@ import { site } from "@/data/site";
     <div>
       <strong>Services</strong>
       {services.slice(0, 6).map((service) => (
-        <a href={`/services/${service.slug}/`}>{service.name}</a>
+        <a href={withBase(`/services/${service.slug}/`)}>{service.name}</a>
       ))}
     </div>
     <div>
@@ -23,7 +24,7 @@ import { site } from "@/data/site";
       <strong>Contact</strong>
       {site.phones.map((phone) => <span>{phone.value}</span>)}
       <span>{site.email}</span>
-      <a href="/design-system/">Design system</a>
+      <a href={withBase("/design-system/")}>Design system</a>
     </div>
   </div>
 </footer>

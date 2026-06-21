@@ -7,6 +7,7 @@ import { services } from "@/data/services";
 import { site } from "@/data/site";
 import type { HomeContent } from "@/data/home";
 import { tinaField } from "@tinacms/astro/tina-field";
+import { withBase } from "@/lib/base";
 
 type Props = {
   home: HomeContent;
@@ -19,16 +20,16 @@ const secondaryServices = services.slice(4);
 
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline>
-      <source src="/assets/header.webm" type="video/webm" />
-      <source src="/assets/header.mp4" type="video/mp4" />
+      <source src={withBase("/assets/header.webm")} type="video/webm" />
+      <source src={withBase("/assets/header.mp4")} type="video/mp4" />
     </video>
     <div class="container">
       <div class="hero-content">
         <h1 data-tina-field={tinaField(home.hero, "title")}>{home.hero.title}</h1>
         <p data-tina-field={tinaField(home.hero, "intro")}>{home.hero.intro}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="/contact/" data-tina-field={tinaField(home.hero, "primaryAction")}>{home.hero.primaryAction}</a>
-          <a class="button button-outline" href="/services/" data-tina-field={tinaField(home.hero, "secondaryAction")}>{home.hero.secondaryAction}</a>
+          <a class="button button-primary" href={withBase("/contact/")} data-tina-field={tinaField(home.hero, "primaryAction")}>{home.hero.primaryAction}</a>
+          <a class="button button-outline" href={withBase("/services/")} data-tina-field={tinaField(home.hero, "secondaryAction")}>{home.hero.secondaryAction}</a>
         </div>
         <div class="hero-proof">
           <div class="review-line">
@@ -38,7 +39,11 @@ const secondaryServices = services.slice(4);
           </div>
           <div class="trusted-line" data-tina-field={tinaField(home.hero, "trustedBy")}>
             <span>Trusted by</span>
-            {home.hero.trustedBy.map((name) => <strong>{name}</strong>)}
+            <div class="trusted-logos">
+              <img src={withBase("/assets/clients/promisia.png")} alt="Promisia Healthcare" width="118" height="31" loading="lazy" />
+              <img src={withBase("/assets/clients/colonial-manor.png")} alt="Colonial Manor Motel, Cromwell" width="100" height="34" loading="lazy" />
+              <img src={withBase("/assets/clients/wanaka-hotel.png")} alt="Wanaka Hotel" width="48" height="34" loading="lazy" />
+            </div>
           </div>
         </div>
         <div class="hero-metrics">
@@ -80,22 +85,22 @@ const secondaryServices = services.slice(4);
       </div>
       <div class="ba-gallery">
         <BeforeAfter
-          beforeSrc="/assets/gutter-before.jpeg"
-          afterSrc="/assets/gutter-after.jpeg"
+          beforeSrc={withBase("/assets/gutter-before.jpeg")}
+          afterSrc={withBase("/assets/gutter-after.jpeg")}
           beforeAlt="Gutter before clearing"
           afterAlt="Gutter after clearing"
           label="Gutter clean"
         />
         <BeforeAfter
-          beforeSrc="/assets/carpet-extraction.jpg"
-          afterSrc="/assets/carpet-extraction.jpg"
+          beforeSrc={withBase("/assets/carpet-extraction.jpg")}
+          afterSrc={withBase("/assets/carpet-extraction.jpg")}
           beforeAlt="Upholstery before cleaning"
           afterAlt="Upholstery after cleaning"
           label="Upholstery clean"
         />
         <BeforeAfter
-          beforeSrc="/assets/hero-cleaning.png"
-          afterSrc="/assets/hero-cleaning.png"
+          beforeSrc={withBase("/assets/hero-cleaning.png")}
+          afterSrc={withBase("/assets/hero-cleaning.png")}
           beforeAlt="Carpet before cleaning"
           afterAlt="Carpet after cleaning"
           label="Carpet clean"
@@ -107,7 +112,7 @@ const secondaryServices = services.slice(4);
   <section class="section section-white reviews-section">
     <div class="container reviews-layout">
       <div>
-        <p class="google-label"><img src="/assets/google-g.svg" alt="" /> <span>Google Reviews</span></p>
+        <p class="google-label"><img src={withBase("/assets/google-g.svg")} alt="" /> <span>Google Reviews</span></p>
         <h2>What customers say about us</h2>
         <div class="rating-lockup">
           <span class="stars">★★★★★</span>
@@ -124,7 +129,7 @@ const secondaryServices = services.slice(4);
                 <strong data-tina-field={tinaField(review, "name")}>{review.name}</strong>
                 <span data-tina-field={tinaField(review, "source")}>{review.source}</span>
               </div>
-              <img class="google-mark" src="/assets/google-g.svg" alt="" />
+              <img class="google-mark" src={withBase("/assets/google-g.svg")} alt="" />
             </div>
             <p class="stars">★★★★★</p>
             <p data-tina-field={tinaField(review, "text")}>{review.text}</p>
@@ -155,7 +160,7 @@ const secondaryServices = services.slice(4);
   <section class="section section-white">
     <div class="container about-preview">
       <div class="media-block">
-        <img src="/assets/hero-cleaning.png" alt="Carpet cleaning equipment in a bright room" />
+        <img src={withBase("/assets/hero-cleaning.png")} alt="Carpet cleaning equipment in a bright room" />
         <p>Room-scale cleaning work with equipment visible and the carpet surface easy to inspect.</p>
         <div class="stat-badge">
           <strong>6,000+</strong>
@@ -167,7 +172,7 @@ const secondaryServices = services.slice(4);
         <h2 data-tina-field={tinaField(home.about, "title")}>{home.about.title}</h2>
         {home.about.paragraphs.map((paragraph, index) => <p class="copy" data-tina-field={tinaField(home.about, "paragraphs", index)}>{paragraph}</p>)}
         <div class="inline-actions">
-          <a class="button button-dark" href="/about/">Meet the team</a>
+          <a class="button button-dark" href={withBase("/about/")}>Meet the team</a>
           <div class="rating-lockup">
             <span class="stars">★★★★★</span>
             <strong>{home.hero.rating}</strong>
@@ -209,7 +214,7 @@ const secondaryServices = services.slice(4);
           </article>
         ))}
       <div class="steps-cta">
-        <a class="button button-primary" href="/contact/">Fill out the form</a>
+        <a class="button button-primary" href={withBase("/contact/")}>Fill out the form</a>
       </div>
     </div>
   </section>
@@ -237,7 +242,7 @@ const secondaryServices = services.slice(4);
         <p class="overline">FAQ</p>
         <h2>Common questions</h2>
         <p class="copy">Can't find what you're looking for? Get in touch and we'll answer directly.</p>
-        <a href="/contact/">Make an enquiry</a>
+        <a href={withBase("/contact/")}>Make an enquiry</a>
       </div>
       <div class="faq-list">
         {home.faqs.map((faq) => (

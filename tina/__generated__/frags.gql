@@ -1,0 +1,86 @@
+fragment SiteParts on Site {
+  __typename
+  name
+  url
+  email
+  primaryPhone
+  phones {
+    __typename
+    label
+    value
+  }
+  areas
+}
+
+fragment HomeParts on Home {
+  __typename
+  seoDescription
+  hero {
+    __typename
+    title
+    intro
+    primaryAction
+    secondaryAction
+    rating
+    reviewCount
+    trustedBy
+    metrics {
+      __typename
+      value
+      label
+    }
+  }
+  reviews {
+    __typename
+    name
+    source
+    initials
+    avatarColor
+    text
+  }
+  trust {
+    __typename
+    title
+    intro
+    points {
+      __typename
+      title
+      text
+    }
+  }
+  about {
+    __typename
+    title
+    paragraphs
+  }
+  steps {
+    __typename
+    title
+    text
+  }
+  faqs {
+    __typename
+    question
+    answer
+  }
+}
+
+fragment ServicesParts on Services {
+  __typename
+  services {
+    __typename
+    name
+    slug
+    category
+    summary
+    intro
+    benefits
+    process
+    useCases
+    faqs {
+      __typename
+      question
+      answer
+    }
+  }
+}

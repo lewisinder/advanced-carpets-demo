@@ -1,8 +1,12 @@
+---
+import { withBase } from "@/lib/base";
+---
+
 <form
   class="form"
   name="advanced-carpets-enquiry"
   method="POST"
-  action="/thank-you"
+  action={withBase("/thank-you")}
   enctype="multipart/form-data"
   data-netlify="true"
   netlify-honeypot="bot-field"

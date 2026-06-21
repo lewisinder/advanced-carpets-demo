@@ -4,6 +4,9 @@ dist/
 .DS_Store
 .claude/
 .env
-tina/__generated__/
+# The generated Tina client is committed so the GitHub Pages CI build can run a
+# plain `astro build` without TinaCloud credentials. Regenerate it locally with
+# `npm run build` (needs TinaCloud creds) or `npm run dev` after content edits.
+tina/__generated__/.cache/
 public/admin/
 .netlify/

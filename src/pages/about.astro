@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHero from "@/components/PageHero.astro";
 import CTA from "@/components/CTA.astro";
+import { withBase } from "@/lib/base";
 
 const description = "Learn about Advanced Carpets & Restoration, serving Central Otago and the Southern Lakes with practical cleaning and restoration services.";
 ---
@@ -11,7 +12,7 @@ const description = "Learn about Advanced Carpets & Restoration, serving Central
   <section class="section section-white">
     <div class="container two-col">
       <div class="media-block">
-        <img src="/assets/carpet-extraction.jpg" alt="Carpet cleaning wand and extraction hose on patterned carpet" />
+        <img src={withBase("/assets/carpet-extraction.jpg")} alt="Carpet cleaning wand and extraction hose on patterned carpet" />
         <p>Cleaning equipment and carpet texture should remain visible wherever this page uses photography.</p>
       </div>
       <div>

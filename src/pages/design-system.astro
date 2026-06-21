@@ -4,6 +4,7 @@ import BeforeAfter from "@/components/BeforeAfter.astro";
 import ContactForm from "@/components/ContactForm.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import { services } from "@/data/services";
+import { withBase } from "@/lib/base";
 
 const primaryServices = services.slice(0, 2);
 const compactServices = services.slice(2, 7);
@@ -30,8 +31,8 @@ const typeRows = [
   ["Display", ".hero h1 / .page-hero h1", "Carpet cleaning, restoration, and practical property care"],
   ["Section", ".section-heading h2", "Built around real rooms, stains, fibres, and service areas"],
   ["Card", ".service-card h3", "Stain Treatment"],
-  ["Body", ".copy / section p", "Plain-language service copy should describe what the customer needs to know before asking for a quote."],
-  ["Utility", ".overline / .system-label", "QUOTE WORKFLOW"],
+  ["Body", ".copy / section p", "Plain-language service copy should describe what the customer needs to know before getting in touch."],
+  ["Utility", ".overline / .system-label", "ENQUIRY WORKFLOW"],
 ];
 ---
 
@@ -127,9 +128,9 @@ const typeRows = [
             <p>Components should make high-intent actions and service choices clear. Use lucide icons for service meaning, not emojis or decorative symbols.</p>
           </div>
           <div class="button-spec">
-            <a class="button button-primary" href="/contact/">Request a quote</a>
-            <a class="button button-dark" href="/about/">Meet the team</a>
-            <span class="dark-preview"><a class="button button-outline" href="/services/">View services</a></span>
+            <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
+            <a class="button button-dark" href={withBase("/about/")}>Meet the team</a>
+            <span class="dark-preview"><a class="button button-outline" href={withBase("/services/")}>View services</a></span>
           </div>
           <div class="code-row">
             <code>.button .button-primary</code>
@@ -142,7 +143,7 @@ const typeRows = [
               {primaryServices.map((service) => <ServiceCard service={service} />)}
             </div>
             <div class="panel">
-              <p class="google-label"><img src="/assets/google-g.svg" alt="" /> <span>Google Reviews</span></p>
+              <p class="google-label"><img src={withBase("/assets/google-g.svg")} alt="" /> <span>Google Reviews</span></p>
               <h3>Rating lockup</h3>
               <div class="rating-lockup">
                 <span class="stars">★★★★★</span>
@@ -159,7 +160,7 @@ const typeRows = [
                   <strong>Rachel T.</strong>
                   <span>2 days ago</span>
                 </div>
-                <img class="google-mark" src="/assets/google-g.svg" alt="" />
+                <img class="google-mark" src={withBase("/assets/google-g.svg")} alt="" />
               </div>
               <p class="stars">★★★★★</p>
               <p>Kevin did a fantastic job on our lounge carpet. Stains we thought were permanent came out completely. Would highly recommend to anyone in the area.</p>
@@ -182,8 +183,8 @@ const typeRows = [
           </div>
           <div class="component-demo">
             <BeforeAfter
-              beforeSrc="/assets/gutter-before.jpeg"
-              afterSrc="/assets/gutter-after.jpeg"
+              beforeSrc={withBase("/assets/gutter-before.jpeg")}
+              afterSrc={withBase("/assets/gutter-after.jpeg")}
               beforeAlt="Gutter before clearing with debris visible"
               afterAlt="Gutter after clearing with debris removed"
               title="Before and after comparison"
@@ -221,7 +222,7 @@ const typeRows = [
           </div>
           <div class="work-grid" style="margin-top: 24px;">
             <figure class="work-photo">
-              <img src="/assets/carpet-extraction.jpg" alt="Carpet extraction equipment cleaning a patterned carpet" />
+              <img src={withBase("/assets/carpet-extraction.jpg")} alt="Carpet extraction equipment cleaning a patterned carpet" />
               <figcaption class="work-caption">
                 <strong>Use real job texture</strong>
                 <span>Photos should show carpet pile, equipment, rooms, stains, or finished spaces.</span>
@@ -260,11 +261,11 @@ const typeRows = [
           <div class="section-heading compact-heading">
             <p class="system-label">Motion</p>
             <h2>Hover and motion rules</h2>
-            <p>Motion should clarify interaction and hierarchy. No ambient loops, parallax tricks, or animated decoration unless it explains a real cleaning or quote workflow.</p>
+            <p>Motion should clarify interaction and hierarchy. No ambient loops, parallax tricks, or animated decoration unless it explains a real cleaning or enquiry workflow.</p>
           </div>
           <div class="motion-list">
             <div><strong>Service cards</strong><span>Border shifts to water blue, shadow appears, and the card lifts by 2px.</span></div>
-            <div><strong>Buttons</strong><span>Use colour and a 1px lift only. Keep labels stable: Request a quote, View services, Meet the team.</span></div>
+            <div><strong>Buttons</strong><span>Use colour and a 1px lift only. Keep labels stable: Make an enquiry, View services, Meet the team.</span></div>
             <div><strong>Reduced motion</strong><span>The global stylesheet respects <code>prefers-reduced-motion</code> and disables transitions for motion-sensitive users.</span></div>
             <div><strong>Focus</strong><span>Keyboard focus uses the water-blue outline system and must remain visible on all interactive elements.</span></div>
           </div>
@@ -280,7 +281,7 @@ const typeRows = [
             <article class="panel">
               <h3>Do</h3>
               <ul class="rule-list">
-                <li>Use real photos, material texture, equipment, service areas, and quote actions.</li>
+                <li>Use real photos, material texture, equipment, service areas, and enquiry actions.</li>
                 <li>Keep copy plain: what gets cleaned, where, how to enquire, what to expect.</li>
                 <li>Use cards only for repeated items, reviews, forms, or reference examples.</li>
                 <li>Check desktop and mobile for clipping, wrapping, focus states, and horizontal scroll.</li>
