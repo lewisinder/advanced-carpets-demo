@@ -4,16 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "dev": "tinacms dev -c \"npm run dev:site\"",
+    "dev:site": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "tinacms build --skip-cloud-checks && npm run build:site",
+    "build:site": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/netlify": "7.0.13",
     "@lucide/astro": "^1.21.0",
-    "astro": "^5.13.0"
+    "@tinacms/astro": "0.5.0",
+    "astro": "6.4.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tinacms": "3.9.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@tinacms/cli": "2.5.1",
+    "@types/node": "^24.13.2",
     "typescript": "^5.6.3"
   }
 }

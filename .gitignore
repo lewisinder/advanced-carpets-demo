@@ -3,3 +3,7 @@ dist/
 .astro/
 .DS_Store
 .claude/
+.env
+tina/__generated__/
+public/admin/
+.netlify/

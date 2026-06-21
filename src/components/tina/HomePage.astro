@@ -1,0 +1,253 @@
+---
+import BeforeAfter from "@/components/BeforeAfter.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import CTA from "@/components/CTA.astro";
+import ContactForm from "@/components/ContactForm.astro";
+import { services } from "@/data/services";
+import { site } from "@/data/site";
+import type { HomeContent } from "@/data/home";
+import { tinaField } from "@tinacms/astro/tina-field";
+
+type Props = {
+  home: HomeContent;
+};
+
+const { home } = Astro.props;
+const primaryServices = services.slice(0, 4);
+const secondaryServices = services.slice(4);
+---
+
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/assets/header.webm" type="video/webm" />
+      <source src="/assets/header.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="hero-content">
+        <h1 data-tina-field={tinaField(home.hero, "title")}>{home.hero.title}</h1>
+        <p data-tina-field={tinaField(home.hero, "intro")}>{home.hero.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/contact/" data-tina-field={tinaField(home.hero, "primaryAction")}>{home.hero.primaryAction}</a>
+          <a class="button button-outline" href="/services/" data-tina-field={tinaField(home.hero, "secondaryAction")}>{home.hero.secondaryAction}</a>
+        </div>
+        <div class="hero-proof">
+          <div class="review-line">
+            <span class="hero-stars">★★★★★</span>
+            <strong data-tina-field={tinaField(home.hero, "rating")}>{home.hero.rating}</strong>
+            <span data-tina-field={tinaField(home.hero, "reviewCount")}>{home.hero.reviewCount}</span>
+          </div>
+          <div class="trusted-line" data-tina-field={tinaField(home.hero, "trustedBy")}>
+            <span>Trusted by</span>
+            {home.hero.trustedBy.map((name) => <strong>{name}</strong>)}
+          </div>
+        </div>
+        <div class="hero-metrics">
+          {home.hero.metrics.map((metric) => (
+            <div>
+              <strong data-tina-field={tinaField(metric, "value")}>{metric.value}</strong>
+              <span data-tina-field={tinaField(metric, "label")}>{metric.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Core cleaning and restoration services</h2>
+        <p>Start with the work customers most often need at home, in rentals, and across commercial spaces.</p>
+      </div>
+      <div class="grid grid-4">
+        {primaryServices.map((service) => <ServiceCard service={service} />)}
+      </div>
+      <div class="also-services">
+        <p>Also available</p>
+        <div class="also-services-grid">
+          {secondaryServices.map((service) => <ServiceCard service={service} compact />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-heading">
+        <p class="overline">Results</p>
+        <h2>Before &amp; after</h2>
+        <p>Drag the handle to compare. Real job imagery can replace these placeholders once final photos are chosen.</p>
+      </div>
+      <div class="ba-gallery">
+        <BeforeAfter
+          beforeSrc="/assets/gutter-before.jpeg"
+          afterSrc="/assets/gutter-after.jpeg"
+          beforeAlt="Gutter before clearing"
+          afterAlt="Gutter after clearing"
+          label="Gutter clean"
+        />
+        <BeforeAfter
+          beforeSrc="/assets/carpet-extraction.jpg"
+          afterSrc="/assets/carpet-extraction.jpg"
+          beforeAlt="Upholstery before cleaning"
+          afterAlt="Upholstery after cleaning"
+          label="Upholstery clean"
+        />
+        <BeforeAfter
+          beforeSrc="/assets/hero-cleaning.png"
+          afterSrc="/assets/hero-cleaning.png"
+          beforeAlt="Carpet before cleaning"
+          afterAlt="Carpet after cleaning"
+          label="Carpet clean"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white reviews-section">
+    <div class="container reviews-layout">
+      <div>
+        <p class="google-label"><img src="/assets/google-g.svg" alt="" /> <span>Google Reviews</span></p>
+        <h2>What customers say about us</h2>
+        <div class="rating-lockup">
+          <span class="stars">★★★★★</span>
+          <strong>{home.hero.rating}</strong>
+          <small>{home.hero.reviewCount}</small>
+        </div>
+      </div>
+      <div class="review-grid">
+        {home.reviews.map((review) => (
+          <article class="review-card">
+            <div class="review-card-head">
+              <span class="review-avatar" style={`--avatar:${review.avatarColor}`}>{review.initials}</span>
+              <div>
+                <strong data-tina-field={tinaField(review, "name")}>{review.name}</strong>
+                <span data-tina-field={tinaField(review, "source")}>{review.source}</span>
+              </div>
+              <img class="google-mark" src="/assets/google-g.svg" alt="" />
+            </div>
+            <p class="stars">★★★★★</p>
+            <p data-tina-field={tinaField(review, "text")}>{review.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark trust-section">
+    <div class="container trust-layout">
+      <div>
+        <p class="overline orange">Why Advanced Carpets</p>
+        <h2 data-tina-field={tinaField(home.trust, "title")}>{home.trust.title}</h2>
+        <p data-tina-field={tinaField(home.trust, "intro")}>{home.trust.intro}</p>
+      </div>
+      <div class="trust-list">
+        {home.trust.points.map((point) => (
+          <div>
+            <h3 data-tina-field={tinaField(point, "title")}>{point.title}</h3>
+            <p data-tina-field={tinaField(point, "text")}>{point.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container about-preview">
+      <div class="media-block">
+        <img src="/assets/hero-cleaning.png" alt="Carpet cleaning equipment in a bright room" />
+        <p>Room-scale cleaning work with equipment visible and the carpet surface easy to inspect.</p>
+        <div class="stat-badge">
+          <strong>6,000+</strong>
+          <span>Jobs completed</span>
+        </div>
+      </div>
+      <div>
+        <p class="overline">About us</p>
+        <h2 data-tina-field={tinaField(home.about, "title")}>{home.about.title}</h2>
+        {home.about.paragraphs.map((paragraph, index) => <p class="copy" data-tina-field={tinaField(home.about, "paragraphs", index)}>{paragraph}</p>)}
+        <div class="inline-actions">
+          <a class="button button-dark" href="/about/">Meet the team</a>
+          <div class="rating-lockup">
+            <span class="stars">★★★★★</span>
+            <strong>{home.hero.rating}</strong>
+            <small>on Google</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Built around the areas already serviced</h2>
+        <p>The main towns are easy to find, with wider Central Otago and Southern Lakes coverage handled through direct enquiries.</p>
+      </div>
+      <div class="grid grid-4">
+        {site.phones.map((phone) => (
+          <div class="panel">
+            <h3>{phone.label}</h3>
+            <p>{phone.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-heading compact-heading">
+        <h2>Getting booked in 4 simple steps</h2>
+      </div>
+      <div class="steps-grid">
+        {home.steps.map((step, index) => (
+          <article>
+            <span>{index + 1}</span>
+            <h3 data-tina-field={tinaField(step, "title")}>{step.title}</h3>
+            <p data-tina-field={tinaField(step, "text")}>{step.text}</p>
+          </article>
+        ))}
+      <div class="steps-cta">
+        <a class="button button-primary" href="/contact/">Fill out the form</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container enquiry-panel">
+      <div>
+        <p class="overline orange">Contact Us</p>
+        <h2>Tell us what needs cleaning or restoring</h2>
+        <p>Send the room, material, stain, damage, access notes, and photos if they help. The team can respond with practical next steps.</p>
+        <div class="contact-lines">
+          {site.phones.map((phone) => <span>{phone.label} &nbsp; {phone.value}</span>)}
+          <span>{site.email}</span>
+        </div>
+      </div>
+      <div class="form-shell">
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container faq-layout">
+      <div>
+        <p class="overline">FAQ</p>
+        <h2>Common questions</h2>
+        <p class="copy">Can't find what you're looking for? Get in touch and we'll answer directly.</p>
+        <a href="/contact/">Make an enquiry</a>
+      </div>
+      <div class="faq-list">
+        {home.faqs.map((faq) => (
+          <details>
+            <summary data-tina-field={tinaField(faq, "question")}>{faq.question}<span>+</span></summary>
+            <p data-tina-field={tinaField(faq, "answer")}>{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA />
