@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"npm run dev:site\"",
     "dev:site": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "tinacms build --skip-cloud-checks && npm run build:site",
+    "build": "tinacms build --skip-cloud-checks --content=local --verbose && npm run build:site",
     "build:site": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "astro preview"
   },
