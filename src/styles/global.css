@@ -1126,6 +1126,13 @@ textarea {
   gap: 18px;
 }
 
+.review-cta {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
 .review-card {
   padding: 24px;
 }
