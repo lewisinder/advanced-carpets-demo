@@ -3,12 +3,12 @@ import type { Service } from "@/data/services";
 import { withBase } from "@/lib/base";
 import Armchair from "@lucide/astro/icons/armchair";
 import Brush from "@lucide/astro/icons/brush";
+import BrushCleaning from "@lucide/astro/icons/brush-cleaning";
 import Bug from "@lucide/astro/icons/bug";
 import ChevronRight from "@lucide/astro/icons/chevron-right";
 import Droplets from "@lucide/astro/icons/droplets";
 import Hammer from "@lucide/astro/icons/hammer";
 import Leaf from "@lucide/astro/icons/leaf";
-import Paintbrush from "@lucide/astro/icons/paintbrush";
 import SprayCan from "@lucide/astro/icons/spray-can";
 import Sparkles from "@lucide/astro/icons/sparkles";
 import Sun from "@lucide/astro/icons/sun";
@@ -22,7 +22,7 @@ type Props = {
 const { service, compact = false } = Astro.props;
 
 const icons = {
-  "carpet-cleaning": Paintbrush,
+  "carpet-cleaning": BrushCleaning,
   "upholstery-cleaning": Armchair,
   "stain-treatment": SprayCan,
   "flood-restoration": Droplets,
@@ -46,7 +46,6 @@ const Icon = icons[service.slug as keyof typeof icons] ?? Brush;
     <span class="also-label">{service.name}</span>
   ) : (
     <>
-      <small>{service.category}</small>
       <h3>{service.name}</h3>
       <p>{service.summary}</p>
     </>

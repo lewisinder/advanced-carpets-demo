@@ -314,8 +314,8 @@ textarea {
   content: "";
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(17, 23, 21, 0.96) 0%, rgba(17, 23, 21, 0.88) 48%, rgba(17, 23, 21, 0.6) 100%),
-    linear-gradient(180deg, rgba(17, 23, 21, 0.4) 0%, rgba(17, 23, 21, 0.92) 100%);
+    linear-gradient(90deg, rgba(17, 23, 21, 0.74) 0%, rgba(17, 23, 21, 0.58) 48%, rgba(17, 23, 21, 0.26) 100%),
+    linear-gradient(180deg, rgba(17, 23, 21, 0.12) 0%, rgba(17, 23, 21, 0.62) 100%);
 }
 
 .hero::after,
@@ -649,12 +649,14 @@ textarea {
 
 .icon-box {
   display: grid;
+  flex: 0 0 auto;
   width: 64px;
   height: 64px;
   place-items: center;
-  border: 1px solid rgba(20, 127, 159, 0.22);
   border-radius: 6px;
   background: var(--water-soft);
+  background-clip: padding-box;
+  box-shadow: inset 0 0 0 1px rgba(20, 127, 159, 0.26);
   color: var(--water);
   font-weight: 900;
 }

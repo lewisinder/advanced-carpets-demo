@@ -5,7 +5,7 @@
       "slug": "carpet-cleaning",
       "category": "Core cleaning",
       "summary": "Hot water extraction and practical carpet care for homes, rentals, offices, and commercial spaces.",
-      "intro": "Professional carpet cleaning using proper equipment, practical stain advice, and methods suited to the carpet and the condition of the room.",
+      "intro": "Professional carpet cleaning using commercial equipment, practical stain advice, and methods suited to the carpet and the condition of the room.",
       "benefits": [
         "Freshens high-use rooms",
         "Helps remove soil, marks, and odours",
@@ -31,6 +31,36 @@
         {
           "question": "Do you treat stains first?",
           "answer": "Yes. Visible marks and traffic lanes are assessed and pre-treated before the main clean."
+        }
+      ]
+    },
+    {
+      "name": "Pest Control",
+      "slug": "pest-control",
+      "category": "Core cleaning",
+      "summary": "Pest treatment options for common household and commercial pest issues.",
+      "intro": "Pest control supports homes and businesses dealing with common pests that need targeted treatment and practical advice.",
+      "benefits": [
+        "Targets common pest issues",
+        "Suitable for homes and workplaces",
+        "Can be paired with cleaning or property maintenance"
+      ],
+      "process": [
+        "Identify the pest issue",
+        "Recommend treatment options",
+        "Apply suitable treatment",
+        "Advise on prevention steps"
+      ],
+      "useCases": [
+        "Household pest issues",
+        "Rental property preparation",
+        "Commercial premises",
+        "Seasonal pest treatment"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need to leave the property?",
+          "answer": "That depends on the treatment used. The technician will advise before any work begins."
         }
       ]
     },
@@ -211,36 +241,6 @@
         {
           "question": "Can damaged carpet always be repaired?",
           "answer": "Not always. The repair depends on the carpet type, spare material, and the kind of damage."
-        }
-      ]
-    },
-    {
-      "name": "Pest Control",
-      "slug": "pest-control",
-      "category": "Repair and pest",
-      "summary": "Pest treatment options for common household and commercial pest issues.",
-      "intro": "Pest control supports homes and businesses dealing with common pests that need targeted treatment and practical advice.",
-      "benefits": [
-        "Targets common pest issues",
-        "Suitable for homes and workplaces",
-        "Can be paired with cleaning or property maintenance"
-      ],
-      "process": [
-        "Identify the pest issue",
-        "Recommend treatment options",
-        "Apply suitable treatment",
-        "Advise on prevention steps"
-      ],
-      "useCases": [
-        "Household pest issues",
-        "Rental property preparation",
-        "Commercial premises",
-        "Seasonal pest treatment"
-      ],
-      "faqs": [
-        {
-          "question": "Do I need to leave the property?",
-          "answer": "That depends on the treatment used. The technician will advise before any work begins."
         }
       ]
     },

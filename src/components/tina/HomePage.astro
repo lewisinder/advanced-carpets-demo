@@ -14,8 +14,11 @@ type Props = {
 };
 
 const { home } = Astro.props;
-const primaryServices = services.slice(0, 4);
-const secondaryServices = services.slice(4);
+const primaryServiceSlugs = ["carpet-cleaning", "pest-control", "upholstery-cleaning", "stain-treatment"];
+const primaryServices = primaryServiceSlugs
+  .map((slug) => services.find((service) => service.slug === slug))
+  .filter((service): service is (typeof services)[number] => Boolean(service));
+const secondaryServices = services.filter((service) => !primaryServiceSlugs.includes(service.slug));
 ---
 
   <section class="hero">
@@ -166,8 +169,8 @@ const secondaryServices = services.slice(4);
         <img src={withBase("/assets/hero-cleaning.png")} alt="Carpet cleaning equipment in a bright room" />
         <p>Room-scale cleaning work with equipment visible and the carpet surface easy to inspect.</p>
         <div class="stat-badge">
-          <strong>6,000+</strong>
-          <span>Jobs completed</span>
+          <strong>15+</strong>
+          <span>Years of experience</span>
         </div>
       </div>
       <div>
@@ -227,7 +230,7 @@ const secondaryServices = services.slice(4);
       <div>
         <p class="overline orange">Contact Us</p>
         <h2>Tell us what needs cleaning or restoring</h2>
-        <p>Send the room, material, stain, damage, access notes, and photos if they help. The team can respond with practical next steps.</p>
+        <p>Send the room, material, stain, damage, access notes, and photos if they help. The fully insured team can respond with practical next steps.</p>
         <div class="contact-lines">
           {site.phones.map((phone) => <span>{phone.label} &nbsp; {phone.value}</span>)}
           <span>{site.email}</span>
