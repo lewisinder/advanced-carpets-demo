@@ -1,5 +1,6 @@
 ---
 import BeforeAfter from "@/components/BeforeAfter.astro";
+import FaqItem from "@/components/FaqItem.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import CTA from "@/components/CTA.astro";
 import ContactForm from "@/components/ContactForm.astro";
@@ -252,10 +253,12 @@ const secondaryServices = services.filter((service) => !primaryServiceSlugs.incl
       </div>
       <div class="faq-list">
         {home.faqs.map((faq) => (
-          <details>
-            <summary data-tina-field={tinaField(faq, "question")}>{faq.question}<span>+</span></summary>
-            <p data-tina-field={tinaField(faq, "answer")}>{faq.answer}</p>
-          </details>
+          <FaqItem
+            question={faq.question}
+            answer={faq.answer}
+            questionProps={{ "data-tina-field": tinaField(faq, "question") }}
+            answerProps={{ "data-tina-field": tinaField(faq, "answer") }}
+          />
         ))}
       </div>
     </div>

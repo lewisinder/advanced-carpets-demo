@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BeforeAfter from "@/components/BeforeAfter.astro";
+import FaqItem from "@/components/FaqItem.astro";
 import ContactForm from "@/components/ContactForm.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import { services } from "@/data/services";
@@ -60,6 +61,7 @@ const typeRows = [
         <a href="#before-after">Before/after</a>
         <a href="#sections">Sections</a>
         <a href="#forms">Forms</a>
+        <a href="#faq">FAQ</a>
         <a href="#motion">Motion</a>
         <a href="#rules">Rules</a>
       </aside>
@@ -254,6 +256,30 @@ const typeRows = [
           </div>
           <div class="design-system-form">
             <ContactForm />
+          </div>
+        </section>
+
+        <section id="faq" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">FAQ</p>
+            <h2>Accordion pattern</h2>
+            <p>Use one shared FAQ item component everywhere. Keep the class names consistent so the animation, spacing, and editable fields stay in sync.</p>
+          </div>
+          <div class="component-demo">
+            <div class="faq-list" style="min-width: 0;">
+              <FaqItem open question="What areas do you service?" answer="Cromwell, Alexandra, Queenstown, Wanaka, and the wider Central Otago and Southern Lakes region." />
+              <FaqItem question="How long does carpet cleaning take to dry?" answer="Most carpets are dry within a few hours under normal conditions. Good airflow helps speed this up." />
+              <FaqItem question="Can you treat pet stains and odours?" answer="Yes. Pet marks and odours can be assessed and treated with a targeted approach." />
+            </div>
+            <article class="panel">
+              <h3>Editing rules</h3>
+              <ul class="rule-list">
+                <li>Use the `FaqItem` component for every FAQ list.</li>
+                <li>Wrap items in `faq-list` and keep questions short enough to scan.</li>
+                <li>Prefer one factual answer per item and avoid stacked paragraphs.</li>
+                <li>Pass Tina field props when the content is editable from the CMS.</li>
+              </ul>
+            </article>
           </div>
         </section>
 

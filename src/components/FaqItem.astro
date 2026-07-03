@@ -1,0 +1,31 @@
+---
+type Props = {
+  question: string;
+  answer: string;
+  open?: boolean;
+  questionProps?: Record<string, any>;
+  answerProps?: Record<string, any>;
+  class?: string;
+};
+
+const {
+  question,
+  answer,
+  open = false,
+  questionProps = {},
+  answerProps = {},
+  class: className = "",
+} = Astro.props;
+---
+
+<details class:list={["faq-item", className]} open={open}>
+  <summary class="faq-item__summary" {...questionProps}>
+    <span class="faq-item__question">{question}</span>
+    <span class="faq-item__icon" aria-hidden="true">+</span>
+  </summary>
+  <div class="faq-item__content">
+    <div class="faq-item__body">
+      <p {...answerProps}>{answer}</p>
+    </div>
+  </div>
+</details>
