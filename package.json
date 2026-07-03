@@ -7,11 +7,11 @@
     "dev": "tinacms dev -c \"npm run dev:site\"",
     "dev:site": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build": "tinacms build --skip-cloud-checks --content=local && npm run build:site",
-    "build:site": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build:site": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/netlify": "7.0.13",
     "@lucide/astro": "^1.21.0",
     "@tinacms/astro": "0.5.0",
     "astro": "6.4.8",

@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Runs `astro check && astro build` only. We deliberately skip the
+      # Runs the static Astro build only. We deliberately skip the
       # `tinacms build` step (in the default `npm run build`) because it requires
       # TinaCloud credentials. The committed tina/__generated__ client lets the
       # static site build without them.
