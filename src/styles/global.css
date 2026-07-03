@@ -150,6 +150,7 @@ textarea {
 }
 
 .has-mega {
+  position: relative;
   align-self: stretch;
 }
 
@@ -158,6 +159,15 @@ textarea {
   align-items: center;
   height: 100%;
   gap: 6px;
+}
+
+.has-mega::after {
+  position: absolute;
+  top: 100%;
+  left: -18px;
+  right: -18px;
+  height: 24px;
+  content: "";
 }
 
 .nav-caret {
@@ -184,7 +194,7 @@ textarea {
   right: 0;
   left: 0;
   z-index: 19;
-  padding-top: 12px;
+  padding-top: 4px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
