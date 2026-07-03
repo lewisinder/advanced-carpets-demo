@@ -155,9 +155,19 @@ textarea {
 
 .nav-trigger {
   display: inline-flex;
+  position: relative;
   align-items: center;
   height: 100%;
   gap: 6px;
+}
+
+.nav-trigger::before {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  width: 22px;
+  content: "";
 }
 
 .nav-caret {
