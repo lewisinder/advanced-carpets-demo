@@ -30,7 +30,7 @@ Do not produce a generic SaaS, agency, or AI-template website. Avoid default-loo
 
 - Make the first viewport clearly communicate Advanced Carpets and the flooring/carpet service.
 - Use visual assets where they help users inspect product, workmanship, texture, rooms, or transformations.
-- Prefer Lucide icons through `@lucide/astro`. Do not use emoji as UI icons.
+- Prefer Lucide icons through `@lucide/astro`. If Lucide does not include the needed icon, use a local SVG component that matches the existing line-icon style. Do not use emoji as UI icons.
 - Cards should be used for repeated items or framed tools, not as the default wrapper for every section.
 - Avoid nested cards and decorative UI that does not encode real information.
 
