@@ -11,7 +11,7 @@ Do not produce a generic SaaS, agency, or AI-template website. Avoid default-loo
 ## CTA And Copy Rules
 
 - Do not use the wording `free quote`, `quote`, `quotes`, or `quoting` in public site copy, navigation, headings, buttons, forms, or service cards.
-- Prefer wording that fits the customer action: `Request an estimate`, `Make an enquiry`, `Book a measure`, `Discuss pricing`, `Send job details`, or `Arrange an assessment`.
+- Prefer enquiry-led wording that fits the customer action: `Make an enquiry`, `Send an enquiry`, `Send job details`, `Book a measure`, `Arrange an assessment`, or `Discuss the job`.
 - Keep button labels action-led and specific.
 - Keep copy plain, practical, local, and service-specific.
 
