@@ -60,6 +60,7 @@ const typeRows = [
         <a href="#components">Components</a>
         <a href="#before-after">Before/after</a>
         <a href="#sections">Sections</a>
+        <a href="#service-pages">Service pages</a>
         <a href="#forms">Forms</a>
         <a href="#faq">FAQ</a>
         <a href="#motion">Motion</a>
@@ -244,6 +245,65 @@ const typeRows = [
                 <p>Prefer rooms and fibres over abstract icons when the user needs confidence.</p>
               </article>
             </div>
+          </div>
+        </section>
+
+
+        <section id="service-pages" class="design-system-block">
+          <div class="section-heading compact-heading">
+            <p class="system-label">Service pages</p>
+            <h2>Shared service detail template</h2>
+            <p>Service detail pages use one shared template. Keep layout changes in <code>src/pages/services/[slug].astro</code>, service copy in <code>content/services/services.json</code>, and styling in reusable service classes.</p>
+          </div>
+
+          <div class="service-media">
+            <div class="media-block">
+              <img src={withBase("/assets/carpet-extraction.jpg")} alt="Carpet extraction equipment cleaning carpet" />
+              <p>Use a real job photo with texture, equipment, room context, or finished detail.</p>
+            </div>
+            <div>
+              <p class="overline orange">Central Otago</p>
+              <h3 class="type-section" style="margin: 0 0 18px;">What the service covers</h3>
+              <p class="copy">Use balanced 50/50 media rows for service explanation. Add the reversed row further down the template when the page needs another image-led proof point.</p>
+              <div class="hero-metrics service-metrics">
+                <div>
+                  <strong>15+ yrs</strong>
+                  <span>Local experience</span>
+                </div>
+                <div>
+                  <strong>5.0</strong>
+                  <span>Average Google rating</span>
+                </div>
+                <div>
+                  <strong>100%</strong>
+                  <span>Satisfaction focused</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="component-demo" style="margin-top: 34px;">
+            <article class="review-card service-review-card">
+              <div class="review-card-head">
+                <span class="review-avatar" style="--avatar:#147f9f">AC</span>
+                <div>
+                  <strong>Local customer</strong>
+                  <span>Google review placeholder</span>
+                </div>
+                <img class="google-mark" src={withBase("/assets/google-g.svg")} alt="" />
+              </div>
+              <p class="stars">★★★★★</p>
+              <p>Use one larger service-specific review when there is a strong quote. Keep it visually related to the home page reviews.</p>
+            </article>
+            <article class="panel">
+              <h3>Template rules</h3>
+              <ul class="rule-list">
+                <li>Hero subheading is the region label: Central Otago.</li>
+                <li>Do not add pill badges in the hero.</li>
+                <li>Place the Tradify enquiry form before lower proof sections.</li>
+                <li>Use <code>.service-media</code>, <code>.service-metrics</code>, and <code>.service-review-card</code> instead of one-off CSS.</li>
+              </ul>
+            </article>
           </div>
         </section>
 

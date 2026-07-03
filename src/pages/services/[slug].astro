@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import CTA from "@/components/CTA.astro";
+import ContactForm from "@/components/ContactForm.astro";
 import FaqItem from "@/components/FaqItem.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import BeforeAfter from "@/components/BeforeAfter.astro";
@@ -44,8 +44,6 @@ const reasons = [
   "Methods and products matched to the job, not a one-size-fits-all approach",
   `Locally owned and trusted across ${site.areas[0] ?? "the region"}`,
 ];
-
-const facts = ["Fully insured", "Locally owned & operated", "Free, no-obligation pricing"];
 
 // Placeholder imagery — every service falls back to a real before/after pair.
 const mediaByService: Record<string, { overview: string; before: string; after: string }> = {
@@ -92,16 +90,13 @@ const faqSchema = service.faqs.length
   <section class="page-hero">
     <div class="container two-col">
       <div>
-        <p class="overline orange">{service.category}</p>
+        <p class="overline orange">Central Otago</p>
         <h1>{service.name}</h1>
         <p>{service.intro}</p>
         <div class="hero-actions">
           <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
           <a class="button button-outline" href={withBase("/services/")}>All services</a>
         </div>
-        <ul class="service-facts">
-          {facts.map((fact) => <li>{fact}</li>)}
-        </ul>
       </div>
       <div class="panel dark-panel">
         <h2>Available across the region</h2>
@@ -112,7 +107,7 @@ const faqSchema = service.faqs.length
 
   <section class="section section-white">
     <div class="container">
-      <div class="two-col">
+      <div class="service-media">
         <div class="media-block">
           <img src={withBase(shot.overview)} alt={`${service.name} work in progress`} loading="lazy" />
           <p>{service.name} — placeholder image. Swap in a real job photo.</p>
@@ -127,13 +122,56 @@ const faqSchema = service.faqs.length
           </div>
         </div>
       </div>
-      <div class="service-stats">
+      <div class="hero-metrics service-metrics">
         {stats.map((stat) => (
           <div>
             <strong>{stat.value}</strong>
             <span>{stat.label}</span>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews-section">
+    <div class="container reviews-layout service-review-layout">
+      <div>
+        <p class="google-label"><img src={withBase("/assets/google-g.svg")} alt="" /> <span>Google Reviews</span></p>
+        <h2>A recent {lowerName} review</h2>
+        <div class="rating-lockup">
+          <span class="stars">★★★★★</span>
+          <strong>5.0</strong>
+          <small>placeholder review</small>
+        </div>
+      </div>
+      <article class="review-card service-review-card">
+        <div class="review-card-head">
+          <span class="review-avatar" style="--avatar:#147f9f">AC</span>
+          <div>
+            <strong>Local customer</strong>
+            <span>Google review placeholder</span>
+          </div>
+          <img class="google-mark" src={withBase("/assets/google-g.svg")} alt="" />
+        </div>
+        <p class="stars">★★★★★</p>
+        <p>Placeholder review for {service.name}. Replace this with a real customer quote that mentions the job, the condition before work started, and the result after the team finished.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container enquiry-panel service-enquiry-panel">
+      <div>
+        <p class="overline orange">Make an enquiry</p>
+        <h2>Send the job details for {lowerName}</h2>
+        <p>Use the form to share the address, service notes, access details, and photos if they help explain the job. The team can reply with practical next steps.</p>
+        <div class="contact-lines">
+          {site.phones.map((phone) => <span>{phone.label} &nbsp; {phone.value}</span>)}
+          <span>{site.email}</span>
+        </div>
+      </div>
+      <div class="form-shell">
+        <ContactForm />
       </div>
     </div>
   </section>
@@ -176,6 +214,23 @@ const faqSchema = service.faqs.length
     </div>
   </section>
 
+  <section class="section section-white">
+    <div class="container">
+      <div class="service-media service-media-reverse">
+        <div>
+          <p class="overline orange">Local workmanship</p>
+          <h2>A practical approach to {lowerName}</h2>
+          <p class="copy">[Placeholder] Add service-specific copy here about how the team prepares the area, protects the property, checks the material or surface, and explains what is realistic before work begins.</p>
+          <p class="copy">[Placeholder] Use this section for the extra detail customers need before booking, such as drying time, access requirements, maintenance advice, or when a different service may be more suitable.</p>
+        </div>
+        <div class="media-block">
+          <img src={withBase(shot.after)} alt={`${service.name} completed work example`} loading="lazy" />
+          <p>{service.name} result — placeholder image. Replace with a real finished job photo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="before-after" class="section section-dark">
     <div class="container">
       <div class="section-heading">
@@ -183,28 +238,22 @@ const faqSchema = service.faqs.length
         <h2>See the difference</h2>
         <p>Drag the handle to compare before and after. Placeholder imagery for now — real {lowerName} job photos can drop straight in.</p>
       </div>
-      <details class="ba-toggle" open>
-        <summary class="ba-summary">
-          <span class="when-closed">Show before &amp; after</span>
-          <span class="when-open">Hide before &amp; after</span>
-        </summary>
-        <div class="ba-gallery">
-          <BeforeAfter
-            beforeSrc={withBase(shot.before)}
-            afterSrc={withBase(shot.after)}
-            beforeAlt={`${service.name} before`}
-            afterAlt={`${service.name} after`}
-            label={service.name}
-          />
-          <BeforeAfter
-            beforeSrc={withBase(fallbackMedia.before)}
-            afterSrc={withBase(fallbackMedia.after)}
-            beforeAlt="Example job before"
-            afterAlt="Example job after"
-            label="Example result"
-          />
-        </div>
-      </details>
+      <div class="ba-gallery">
+        <BeforeAfter
+          beforeSrc={withBase(shot.before)}
+          afterSrc={withBase(shot.after)}
+          beforeAlt={`${service.name} before`}
+          afterAlt={`${service.name} after`}
+          label={service.name}
+        />
+        <BeforeAfter
+          beforeSrc={withBase(fallbackMedia.before)}
+          afterSrc={withBase(fallbackMedia.after)}
+          beforeAlt="Example job before"
+          afterAlt="Example job after"
+          label="Example result"
+        />
+      </div>
     </div>
   </section>
 
@@ -250,8 +299,6 @@ const faqSchema = service.faqs.length
       </div>
     </div>
   </section>
-
-  <CTA />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
