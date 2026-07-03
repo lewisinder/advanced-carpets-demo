@@ -3,7 +3,6 @@ import type { Service } from "@/data/services";
 import { withBase } from "@/lib/base";
 import Armchair from "@lucide/astro/icons/armchair";
 import Brush from "@lucide/astro/icons/brush";
-import BrushCleaning from "@lucide/astro/icons/brush-cleaning";
 import Bug from "@lucide/astro/icons/bug";
 import ChevronRight from "@lucide/astro/icons/chevron-right";
 import Droplets from "@lucide/astro/icons/droplets";
@@ -11,6 +10,7 @@ import Hammer from "@lucide/astro/icons/hammer";
 import Leaf from "@lucide/astro/icons/leaf";
 import SprayCan from "@lucide/astro/icons/spray-can";
 import Sparkles from "@lucide/astro/icons/sparkles";
+import Stamp from "@lucide/astro/icons/stamp";
 import Sun from "@lucide/astro/icons/sun";
 import PanelsTopLeft from "@lucide/astro/icons/panels-top-left";
 
@@ -22,7 +22,7 @@ type Props = {
 const { service, compact = false } = Astro.props;
 
 const icons = {
-  "carpet-cleaning": BrushCleaning,
+  "carpet-cleaning": Stamp,
   "upholstery-cleaning": Armchair,
   "stain-treatment": SprayCan,
   "flood-restoration": Droplets,
