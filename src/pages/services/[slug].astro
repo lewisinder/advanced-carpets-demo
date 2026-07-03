@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import CTA from "@/components/CTA.astro";
+import FaqItem from "@/components/FaqItem.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import BeforeAfter from "@/components/BeforeAfter.astro";
 import { services, type Service } from "@/data/services";
@@ -231,12 +232,9 @@ const faqSchema = service.faqs.length
           <p>Useful questions for this service page.</p>
         </div>
       </div>
-      <div>
+      <div class="faq-list">
         {service.faqs.map((faq) => (
-          <div class="panel">
-            <h3>{faq.question}</h3>
-            <p>{faq.answer}</p>
-          </div>
+          <FaqItem question={faq.question} answer={faq.answer} />
         ))}
       </div>
     </div>
