@@ -25,6 +25,13 @@ const pathname = `/services/${service.slug}`;
 const canonical = `${site.url}${pathname}/`;
 const areas = site.areas.join(", ");
 const lowerName = service.name.toLowerCase();
+const ctaVerb = lowerName.includes("pest")
+  ? "treating"
+  : lowerName.includes("repair")
+    ? "repairing"
+    : lowerName.includes("restoration")
+      ? "restoring"
+      : "cleaning";
 
 // --- Placeholder content (swap for real, service-specific copy later) ---
 const overviewParagraphs = [
@@ -160,18 +167,13 @@ const faqSchema = service.faqs.length
   </section>
 
   <section class="section section-white">
-    <div class="container enquiry-panel service-enquiry-panel">
-      <div>
-        <p class="overline orange">Make an enquiry</p>
-        <h2>Send the job details for {lowerName}</h2>
-        <p>Use the form to share the address, service notes, access details, and photos if they help explain the job. The team can reply with practical next steps.</p>
-        <div class="contact-lines">
-          {site.phones.map((phone) => <span>{phone.label} &nbsp; {phone.value}</span>)}
-          <span>{site.email}</span>
+    <div class="container">
+      <div class="cta-panel service-cta-panel">
+        <div>
+          <h2>Tell us what needs {ctaVerb}</h2>
+          <p>Send the property details, affected areas, access notes, and photos if they help. The team can reply with practical advice for your {lowerName} job.</p>
         </div>
-      </div>
-      <div class="form-shell">
-        <ContactForm />
+        <a class="button button-primary" href="#service-enquiry">Send job details</a>
       </div>
     </div>
   </section>
@@ -285,6 +287,23 @@ const faqSchema = service.faqs.length
         {service.faqs.map((faq) => (
           <FaqItem question={faq.question} answer={faq.answer} />
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="service-enquiry" class="section section-white">
+    <div class="container enquiry-panel service-enquiry-panel">
+      <div>
+        <p class="overline orange">Make an enquiry</p>
+        <h2>Send the job details for {lowerName}</h2>
+        <p>Use the form to share the address, service notes, access details, and photos if they help explain the job. The team can reply with practical next steps.</p>
+        <div class="contact-lines">
+          {site.phones.map((phone) => <span>{phone.label} &nbsp; {phone.value}</span>)}
+          <span>{site.email}</span>
+        </div>
+      </div>
+      <div class="form-shell">
+        <ContactForm />
       </div>
     </div>
   </section>
