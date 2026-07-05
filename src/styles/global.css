@@ -973,6 +973,10 @@ textarea {
   gap: 20px;
 }
 
+.home-results-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .ba-gallery .before-after {
   border: none;
   box-shadow: none;
@@ -985,7 +989,8 @@ textarea {
 }
 
 @media (max-width: 900px) {
-  .ba-gallery {
+  .ba-gallery,
+  .home-results-gallery {
     grid-template-columns: 1fr;
   }
 }
