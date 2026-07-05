@@ -33,16 +33,25 @@ const ctaVerb = lowerName.includes("pest")
       ? "restoring"
       : "cleaning";
 
-// --- Placeholder content (swap for real, service-specific copy later) ---
-const overviewParagraphs = [
-  `Advanced Carpets & Restoration provides professional ${lowerName} for homes, rentals, holiday properties, and commercial spaces across ${site.areas.slice(0, 3).join(", ")} and the wider region. [Placeholder copy — describe how this service works, the equipment and methods used, and the results customers can expect.]`,
-  `[Placeholder copy — add a second paragraph covering the problems this service solves, the surfaces and materials it suits, typical turnaround times, and any guarantees. Write it to read naturally while helping the page rank for "${lowerName}".]`,
-];
+const overviewParagraphs =
+  service.overviewParagraphs?.length
+    ? service.overviewParagraphs
+    : [
+        `${site.name} provides professional ${lowerName} for homes, rentals, holiday properties, and commercial spaces across ${site.areas.slice(0, 3).join(", ")} and the wider region.`,
+        `The team checks the surface, property access, and job requirements before recommending a practical approach for ${lowerName}.`,
+      ];
+
+const detailSections = service.sections ?? [];
+const imageCaption = service.imageCaption ?? `${service.name} work example.`;
+const resultsCopy = service.resultsCopy ?? `Use the comparison to review the condition before and after ${lowerName}.`;
+const whyAdvanced =
+  service.whyAdvanced ??
+  `${site.name} matches the method to the job, explains what is realistic before work begins, and provides practical local service across ${areas}.`;
 
 const stats = [
-  { value: "15+ yrs", label: "Local experience" },
-  { value: "5.0★", label: "Average Google rating" },
-  { value: "100%", label: "Satisfaction focused" },
+  { value: "Local", label: "Central Otago and Southern Lakes" },
+  { value: "Care", label: "Methods matched to the job" },
+  { value: "Clear", label: "Practical advice before work starts" },
 ];
 
 const reasons = [
@@ -52,7 +61,7 @@ const reasons = [
   `Locally owned and trusted across ${site.areas[0] ?? "the region"}`,
 ];
 
-// Placeholder imagery — every service falls back to a real before/after pair.
+// Service imagery uses the closest available project assets until final job photos are selected.
 const mediaByService: Record<string, { overview: string; before: string; after: string }> = {
   "carpet-cleaning": { overview: "/assets/carpet-extraction.jpg", before: "/assets/hero-cleaning.png", after: "/assets/carpet-extraction.jpg" },
   "upholstery-cleaning": { overview: "/assets/carpet-texture-upholstery.jpeg", before: "/assets/carpet-texture-upholstery.jpeg", after: "/assets/carpet-extraction.jpg" },
@@ -117,7 +126,7 @@ const faqSchema = service.faqs.length
       <div class="service-media">
         <div class="media-block">
           <img src={withBase(shot.overview)} alt={`${service.name} work in progress`} loading="lazy" />
-          <p>{service.name} — placeholder image. Swap in a real job photo.</p>
+          <p>{imageCaption}</p>
         </div>
         <div>
           <p class="overline orange">Overview</p>
@@ -137,32 +146,6 @@ const faqSchema = service.faqs.length
           </div>
         ))}
       </div>
-    </div>
-  </section>
-
-  <section class="section reviews-section">
-    <div class="container reviews-layout service-review-layout">
-      <div>
-        <p class="google-label"><img src={withBase("/assets/google-g.svg")} alt="" /> <span>Google Reviews</span></p>
-        <h2>A recent {lowerName} review</h2>
-        <div class="rating-lockup">
-          <span class="stars">★★★★★</span>
-          <strong>5.0</strong>
-          <small>placeholder review</small>
-        </div>
-      </div>
-      <article class="review-card service-review-card">
-        <div class="review-card-head">
-          <span class="review-avatar" style="--avatar:#147f9f">AC</span>
-          <div>
-            <strong>Local customer</strong>
-            <span>Google review placeholder</span>
-          </div>
-          <img class="google-mark" src={withBase("/assets/google-g.svg")} alt="" />
-        </div>
-        <p class="stars">★★★★★</p>
-        <p>Placeholder review for {service.name}. Replace this with a real customer quote that mentions the job, the condition before work started, and the result after the team finished.</p>
-      </article>
     </div>
   </section>
 
@@ -199,6 +182,30 @@ const faqSchema = service.faqs.length
     </div>
   </section>
 
+  {detailSections.length > 0 && (
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="overline orange">Service detail</p>
+          <h2>A practical approach to {lowerName}</h2>
+        </div>
+        <div class="grid grid-3">
+          {detailSections.map((section) => (
+            <article class="panel">
+              <h3>{section.heading}</h3>
+              {section.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+              {section.bullets?.length ? (
+                <div class="service-list">
+                  {section.bullets.map((item) => <p>{item}</p>)}
+                </div>
+              ) : null}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="section section-white">
     <div class="container">
       <div class="section-heading">
@@ -216,29 +223,12 @@ const faqSchema = service.faqs.length
     </div>
   </section>
 
-  <section class="section section-white">
-    <div class="container">
-      <div class="service-media service-media-reverse">
-        <div>
-          <p class="overline orange">Local workmanship</p>
-          <h2>A practical approach to {lowerName}</h2>
-          <p class="copy">[Placeholder] Add service-specific copy here about how the team prepares the area, protects the property, checks the material or surface, and explains what is realistic before work begins.</p>
-          <p class="copy">[Placeholder] Use this section for the extra detail customers need before booking, such as drying time, access requirements, maintenance advice, or when a different service may be more suitable.</p>
-        </div>
-        <div class="media-block">
-          <img src={withBase(shot.after)} alt={`${service.name} completed work example`} loading="lazy" />
-          <p>{service.name} result — placeholder image. Replace with a real finished job photo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="before-after" class="section section-dark">
     <div class="container">
       <div class="section-heading">
         <p class="overline">Results</p>
         <h2>See the difference</h2>
-        <p>Drag the handle to compare before and after. Placeholder imagery for now — real {lowerName} job photos can drop straight in.</p>
+        <p>{resultsCopy}</p>
       </div>
       <div class="ba-gallery">
         <BeforeAfter
@@ -264,7 +254,7 @@ const faqSchema = service.faqs.length
       <div>
         <p class="overline orange">Why Advanced Carpets</p>
         <h2>Why choose us for {lowerName}</h2>
-        <p class="copy">[Placeholder] A short, reassuring paragraph about our experience, care, and local reputation for {lowerName} across {areas}. Replace with copy that speaks to this specific service.</p>
+        <p class="copy">{whyAdvanced}</p>
         <div class="hero-actions">
           <a class="button button-dark" href={withBase("/contact/")}>Make an enquiry</a>
         </div>

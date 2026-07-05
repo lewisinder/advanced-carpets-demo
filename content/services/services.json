@@ -4,33 +4,84 @@
       "name": "Carpet Cleaning",
       "slug": "carpet-cleaning",
       "category": "Core cleaning",
-      "summary": "Hot water extraction and practical carpet care for homes, rentals, offices, and commercial spaces.",
-      "intro": "Professional carpet cleaning using commercial equipment, practical stain advice, and methods suited to the carpet and the condition of the room.",
+      "summary": "Hot water extraction steam cleaning and practical carpet care for homes, rentals, offices, and commercial spaces.",
+      "intro": "Professional carpet cleaning by hot water extraction, using van-mounted industrial-grade equipment and practical methods suited to the carpet, soiling, and condition of the room.",
+      "overviewParagraphs": [
+        "At Advanced Carpets & Restoration, we use a van-mounted carpet cleaning machine and industrial-grade equipment so we can provide high-quality work the first time.",
+        "Using a van-mounted system means we do not need your power or hot water. By choosing hot water extraction, you can be confident your carpets are visually clean and treated for bacteria, dust mites, and other contaminants.",
+        "Whether you need a one-time deep clean or regular maintenance, we help keep carpets in good condition across Cromwell, Alexandra, Wanaka, Clyde, Queenstown, and the greater Central Otago area."
+      ],
+      "sections": [
+        {
+          "heading": "Hot Water Extraction (Steam Cleaning)",
+          "paragraphs": [
+            "Hot water extraction injects hot water at high pressure, helping loosen embedded dirt, oils, and debris from carpet fibres. The method is especially useful when paired with the right pre-treatment for the carpet and type of soiling."
+          ],
+          "bullets": [
+            "Deep cleaning with hot water helps lift embedded soil from carpet fibres.",
+            "The heat can reduce common bacteria, mould spores, dust mites, and allergens.",
+            "Professional-grade temperature and suction help balance cleaning performance with drying time.",
+            "Dry times are usually between 4 and 8 hours, depending on carpet type, pile thickness, airflow, and how much soil needs to be removed.",
+            "High water temperature can help strip greasy soiling from carpets in pubs, restaurants, and other high-use spaces."
+          ]
+        },
+        {
+          "heading": "Common scenarios where steam cleaning helps",
+          "bullets": [
+            "Allergies or asthma, where reducing dust mites and allergens is important.",
+            "Pet households, where odours and pet-related marks need targeted treatment.",
+            "High-traffic areas that look worn because embedded dirt has built up.",
+            "Routine maintenance that helps extend carpet life when combined with regular vacuuming.",
+            "Commercial carpets with grease, oils, or heavy foot traffic."
+          ]
+        },
+        {
+          "heading": "How often to clean carpet",
+          "paragraphs": [
+            "How often you should clean carpet depends on usage, traffic, pets, and the environment. These are practical guidelines that can be tailored to the property."
+          ],
+          "bullets": [
+            "Light to moderate traffic: deep clean every 12 to 18 months and vacuum weekly.",
+            "High-traffic areas or households with kids: deep clean every 12 months and vacuum 2 to 3 times per week.",
+            "Homes with pets: deep clean every 6 to 8 months and vacuum 3 to 4 times per week to manage hair and odours.",
+            "Allergy or asthma sufferers: deep clean every 6 to 8 months and vacuum weekly with a high-efficiency filter."
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration uses van-mounted commercial equipment, suitable pre-treatment, and practical advice before and after the clean. The team matches the method to the carpet and the condition of the room instead of using a one-size-fits-all approach.",
+      "imageCaption": "Hot water extraction carpet cleaning using commercial equipment.",
+      "resultsCopy": "Use the comparison to review carpet condition before and after professional hot water extraction cleaning.",
       "benefits": [
-        "Freshens high-use rooms",
-        "Helps remove soil, marks, and odours",
-        "Suitable for homes, rentals, and workplaces"
+        "Deep cleaning with hot water to loosen embedded dirt, oils, and debris",
+        "Strong sanitising effect that can reduce bacteria, mould spores, dust mites, and allergens",
+        "Eco-friendly options using minimal cleaning agents where suitable",
+        "Helps lift tough marks such as grease and deep-seated grime when paired with the right pre-treatment"
       ],
       "process": [
-        "Inspect carpet and problem areas",
-        "Pre-treat spots and traffic lanes",
-        "Clean with hot water extraction",
-        "Advise on drying and aftercare"
+        "Inspect carpet, fibre type, soiling, and problem areas",
+        "Pre-treat spots, traffic lanes, and suitable stains",
+        "Clean with hot water extraction using van-mounted equipment",
+        "Advise on drying, airflow, and aftercare"
       ],
       "useCases": [
         "End-of-tenancy cleaning",
         "Annual home carpet cleaning",
-        "Office and commercial carpet care",
-        "Pre-sale property presentation"
+        "Pet households",
+        "High-traffic family areas",
+        "Pubs, restaurants, offices, and commercial carpets"
       ],
       "faqs": [
         {
-          "question": "How long does carpet take to dry?",
-          "answer": "Most carpets dry within a few hours depending on airflow, carpet type, and weather conditions."
+          "question": "How long does carpet take to dry after hot water extraction?",
+          "answer": "Dry times are usually between 4 and 8 hours, depending on carpet type, pile thickness, airflow, weather, and how much soil needs to be removed."
         },
         {
-          "question": "Do you treat stains first?",
-          "answer": "Yes. Visible marks and traffic lanes are assessed and pre-treated before the main clean."
+          "question": "Do you need my power or hot water?",
+          "answer": "No. The van-mounted carpet cleaning system means the team does not need to use your power or hot water."
+        },
+        {
+          "question": "How often should carpet be deep cleaned?",
+          "answer": "Light to moderate traffic may suit every 12 to 18 months, while homes with pets, kids, allergies, or heavy traffic may benefit from a deep clean every 6 to 12 months."
         }
       ]
     },
@@ -38,29 +89,69 @@
       "name": "Pest Control",
       "slug": "pest-control",
       "category": "Core cleaning",
-      "summary": "Pest treatment options for common household and commercial pest issues.",
-      "intro": "Pest control supports homes and businesses dealing with common pests that need targeted treatment and practical advice.",
+      "summary": "Professional pest control for common household and commercial pest issues across Central Otago and the Southern Lakes.",
+      "intro": "Professional pest control for homes and commercial properties dealing with common pests that need safe, targeted treatment and practical prevention advice.",
+      "overviewParagraphs": [
+        "At Advanced Carpets & Restoration, we offer professional pest control services across Queenstown, Wanaka, Cromwell, Alexandra, Hawea, and the surrounding Central Otago and Southern Lakes regions.",
+        "Our technicians are fully qualified and have completed the Urban Pest Management Course. They are also certified approved handlers for the pest control products we use, supporting safe and effective pest removal from your home or commercial property.",
+        "We provide tailored pest control solutions for a wide range of issues. Whether it is a minor nuisance or a more severe infestation, the goal is to help restore the property to a pest-free environment."
+      ],
+      "sections": [
+        {
+          "heading": "Pests we treat",
+          "bullets": [
+            "Spider and fly control",
+            "Flea treatment",
+            "Bed bugs",
+            "Rodent control for rats and mice",
+            "Ant extermination",
+            "Wasp nest removal",
+            "Carpet beetle treatment",
+            "Silverfish",
+            "Borer control"
+          ]
+        },
+        {
+          "heading": "Qualified handling and treatment",
+          "paragraphs": [
+            "The team uses pest control products through qualified, approved handlers. Treatment recommendations depend on the pest, the property, access, and the level of activity found during assessment."
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration combines qualified pest control training with practical local property experience, helping customers choose a treatment approach that suits the pest issue and the building.",
+      "imageCaption": "Pest control assessment and treatment for homes and commercial properties.",
+      "resultsCopy": "Pest control results depend on the pest, treatment method, and prevention steps. Photos and activity notes can help the team assess the issue before treatment.",
       "benefits": [
-        "Targets common pest issues",
-        "Suitable for homes and workplaces",
-        "Can be paired with cleaning or property maintenance"
+        "Fully qualified technicians",
+        "Certified approved handlers for pest control products",
+        "Treatment options for common household and commercial pest issues",
+        "Tailored advice for minor nuisance pests and more severe infestations"
       ],
       "process": [
-        "Identify the pest issue",
-        "Recommend treatment options",
-        "Apply suitable treatment",
-        "Advise on prevention steps"
+        "Identify the pest issue and affected areas",
+        "Assess the property, access, and level of activity",
+        "Recommend a suitable treatment approach",
+        "Apply the treatment and advise on prevention steps"
       ],
       "useCases": [
         "Household pest issues",
         "Rental property preparation",
         "Commercial premises",
-        "Seasonal pest treatment"
+        "Seasonal pest treatment",
+        "Rodent, insect, and borer concerns"
       ],
       "faqs": [
         {
           "question": "Do I need to leave the property?",
-          "answer": "That depends on the treatment used. The technician will advise before any work begins."
+          "answer": "That depends on the pest and treatment used. The technician will advise before any work begins."
+        },
+        {
+          "question": "Are your technicians qualified?",
+          "answer": "Yes. The technicians have completed the Urban Pest Management Course and are certified approved handlers for the pest control products used."
+        },
+        {
+          "question": "What pests can you help with?",
+          "answer": "Services include spider and fly control, flea treatment, bed bugs, rats and mice, ants, wasp nests, carpet beetles, silverfish, and borer control."
         }
       ]
     },
@@ -68,29 +159,63 @@
       "name": "Upholstery Cleaning",
       "slug": "upholstery-cleaning",
       "category": "Core cleaning",
-      "summary": "Careful cleaning for fabric furniture, chairs, mattresses, and high-use upholstered surfaces.",
-      "intro": "Upholstery cleaning helps refresh fabric furniture and remove everyday build-up from couches, chairs, mattresses, and workplace seating.",
+      "summary": "Specialised upholstery cleaning for fabric furniture, mattresses, chairs, and other high-use upholstered surfaces.",
+      "intro": "Professional upholstery cleaning to keep fabric surfaces looking fresh, clean, and comfortable across lounges, mattresses, chairs, and other furniture items.",
+      "overviewParagraphs": [
+        "At Advanced Carpets & Restoration, we provide professional upholstery cleaning services to keep fabric surfaces looking fresh and clean.",
+        "Our skilled technicians use specialised upholstery tools designed to clean a wide variety of fabric materials, helping lounge suites, mattresses, chairs, and other furniture items feel thoroughly cleaned and revitalised."
+      ],
+      "sections": [
+        {
+          "heading": "Why get upholstery cleaned",
+          "bullets": [
+            "Professional upholstery cleaning is recommended every 12 to 24 months to remove deep-seated dirt, allergens, and bacteria that regular vacuuming cannot remove.",
+            "Stains from spills such as wine or coffee can oxidise and bond permanently with fabric dyes if they are not treated with the correct professional chemistry.",
+            "When colour starts to look faded, steam cleaning can help colours look brighter again.",
+            "Regular cleaning removes dead skin cells and food crumbs that dust mites and other microscopic pests feed on."
+          ]
+        },
+        {
+          "heading": "Fabric and furniture care",
+          "paragraphs": [
+            "Fabric type matters, so the technician checks the material and chooses a suitable method before cleaning. The aim is to refresh the item while respecting the construction, fibre, and current condition."
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration uses upholstery-specific tools and practical fabric checks before cleaning. The team chooses a method that suits the material rather than treating all furniture the same way.",
+      "imageCaption": "Specialised upholstery cleaning for fabric furniture and mattresses.",
+      "resultsCopy": "Use the comparison to review fabric appearance before and after upholstery cleaning, especially on high-use seats and lounge furniture.",
       "benefits": [
-        "Refreshes fabric furniture",
-        "Useful for family homes and rentals",
-        "Suitable for many common upholstery fabrics"
+        "Refreshes lounge suites, mattresses, chairs, and other fabric surfaces",
+        "Helps remove deep-seated dirt, allergens, and bacteria",
+        "Supports stain treatment before marks become permanent",
+        "Can help dull or faded-looking colours appear brighter"
       ],
       "process": [
-        "Check fabric and construction",
-        "Pre-treat suitable areas",
-        "Clean with the appropriate method",
-        "Groom and advise on drying"
+        "Check fabric, construction, and condition",
+        "Pre-treat suitable marks and high-use areas",
+        "Clean with specialised upholstery tools and an appropriate method",
+        "Groom the fabric and advise on drying"
       ],
       "useCases": [
-        "Couches and armchairs",
-        "Dining chairs",
+        "Lounge suites and couches",
+        "Armchairs and dining chairs",
         "Mattresses",
-        "Office seating"
+        "Office seating",
+        "Furniture with spills, allergens, or everyday build-up"
       ],
       "faqs": [
         {
           "question": "Can every fabric be wet cleaned?",
           "answer": "No. Fabric type matters, so the technician checks the material and chooses a suitable method."
+        },
+        {
+          "question": "How often should upholstery be professionally cleaned?",
+          "answer": "Professional upholstery cleaning is commonly recommended every 12 to 24 months, depending on use, pets, children, spills, and the fabric condition."
+        },
+        {
+          "question": "Can cleaning help faded-looking fabric?",
+          "answer": "When dullness is caused by soil and build-up, steam cleaning can help colours look brighter again."
         }
       ]
     },
@@ -100,9 +225,28 @@
       "category": "Core cleaning",
       "summary": "Targeted treatment for spills, pet issues, traffic marks, and problem spots before full cleaning.",
       "intro": "Stain treatment focuses on the areas that need extra attention, from everyday spills to deeper marks that need a more careful approach.",
+      "overviewParagraphs": [
+        "Stain treatment helps target visible problem areas before or alongside carpet and upholstery cleaning. The best approach depends on the stain type, fibre, age of the mark, and what has already been used on it.",
+        "Some marks can be greatly improved, while others may be permanent. The team assesses the area first and gives practical advice on what is realistic before treatment begins."
+      ],
+      "sections": [
+        {
+          "heading": "Common stain concerns",
+          "bullets": [
+            "Food and drink spills",
+            "Pet marks and odours",
+            "Traffic lane marks",
+            "Unknown older stains",
+            "Spots that have already had household products applied"
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration checks the likely stain type, tests where suitable, and uses treatment options that match the fibre and condition instead of relying on one generic product.",
+      "imageCaption": "Targeted stain treatment for carpet and upholstery marks.",
+      "resultsCopy": "Use the comparison to review how targeted treatment can improve visible marks. Some older or chemically changed stains may not fully release.",
       "benefits": [
         "Targets visible problem areas",
-        "Helps reduce permanent marking",
+        "Helps reduce the chance of permanent marking",
         "Can be paired with carpet or upholstery cleaning"
       ],
       "process": [
@@ -130,6 +274,25 @@
       "category": "Restoration",
       "summary": "Fast water damage response, extraction, drying support, and restoration guidance.",
       "intro": "Flood restoration is for urgent water damage situations where fast response, extraction, drying equipment, and practical restoration advice matter.",
+      "overviewParagraphs": [
+        "Flood restoration helps when water has affected carpet, underlay, walls, flooring, or other parts of a property. Fast action can reduce secondary damage and improve the chance of saving affected materials.",
+        "The team assesses the affected area, extracts water where possible, sets up drying support, and advises on the next practical steps for the property."
+      ],
+      "sections": [
+        {
+          "heading": "When to arrange flood restoration",
+          "bullets": [
+            "Burst pipes",
+            "Appliance leaks",
+            "Weather-related water ingress",
+            "Wet carpet and underlay",
+            "Water damage in homes, rentals, and commercial spaces"
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration brings cleaning and restoration experience to urgent water damage work, with practical advice on extraction, drying, and what should happen next.",
+      "imageCaption": "Water extraction and drying support for flood restoration work.",
+      "resultsCopy": "Flood restoration outcomes depend on the water source, time since the damage occurred, materials affected, and drying conditions.",
       "benefits": [
         "Fast response for urgent water issues",
         "Helps reduce further damage",
@@ -160,6 +323,24 @@
       "category": "Specialist cleaning",
       "summary": "Removal of gutter debris to help water flow properly around homes and commercial buildings.",
       "intro": "Gutter cleaning helps keep rainwater moving away from the property by clearing leaves, build-up, and blockages.",
+      "overviewParagraphs": [
+        "Gutters collect leaves, dirt, and debris over time, especially on properties with nearby trees or exposed rooflines. Clearing that build-up helps water move through the guttering and away from the building.",
+        "The team checks access and gutter condition, removes loose debris, clears key flow points, and tidies work areas where practical."
+      ],
+      "sections": [
+        {
+          "heading": "Why gutter cleaning matters",
+          "bullets": [
+            "Helps prevent overflow during rain",
+            "Supports seasonal property maintenance",
+            "Can reduce water issues around rooflines, downpipes, and exterior walls",
+            "Useful before heavy rain seasons or winter property checks"
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration provides practical gutter cleaning for residential and light commercial properties, with attention to access, flow points, and visible debris build-up.",
+      "imageCaption": "Gutter cleaning before and after debris removal.",
+      "resultsCopy": "Use the comparison to review gutter condition before and after debris removal and flow-point clearing.",
       "benefits": [
         "Helps prevent overflow",
         "Useful before heavy rain seasons",
@@ -190,6 +371,25 @@
       "category": "Specialist cleaning",
       "summary": "Cleaning and polishing for selected hard floor surfaces that need a deeper finish.",
       "intro": "Hard floor cleaning and polishing helps refresh suitable floors that need more than a normal mop can provide.",
+      "overviewParagraphs": [
+        "Hard floor cleaning and polishing helps selected floor surfaces recover a cleaner, brighter finish after regular use, traffic, and surface build-up.",
+        "The right method depends on the floor material, coating, and current condition. The team inspects the surface first, then chooses a cleaning and polishing approach that suits the floor."
+      ],
+      "sections": [
+        {
+          "heading": "Where hard floor cleaning helps",
+          "bullets": [
+            "Commercial entries and shared spaces",
+            "Kitchen and dining areas",
+            "Rental property refreshes",
+            "Dull high-use floors",
+            "Ongoing hard floor maintenance"
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration checks the floor type and finish before choosing a method, helping protect surfaces while improving presentation where polishing is suitable.",
+      "imageCaption": "Hard floor cleaning and polishing for suitable surfaces.",
+      "resultsCopy": "Use the comparison to review dull or marked hard floor surfaces before and after cleaning and polishing where suitable.",
       "benefits": [
         "Improves dull high-use floors",
         "Useful for homes and commercial spaces",
@@ -220,6 +420,25 @@
       "category": "Repair and pest",
       "summary": "Repair support for selected carpet damage, joins, lifting, and practical restoration issues.",
       "intro": "Carpet repair helps with selected damage and problem areas where replacement may not be the first or only option.",
+      "overviewParagraphs": [
+        "Carpet repair can help with localised damage, loose or lifting carpet, joins, and selected restoration issues. The right repair depends on the carpet type, backing, spare material, and the kind of damage.",
+        "The team inspects the damaged area first, confirms what is realistic, and explains whether repair is suitable or whether replacement should be considered."
+      ],
+      "sections": [
+        {
+          "heading": "Repair situations we can assess",
+          "bullets": [
+            "Small damaged areas",
+            "Loose or lifting carpet",
+            "Rental repairs",
+            "Localised restoration",
+            "Practical advice before replacement"
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration gives practical advice on whether carpet damage can be repaired and what limitations may affect the finished result.",
+      "imageCaption": "Carpet repair assessment for localised damage and lifting carpet.",
+      "resultsCopy": "Use the comparison to review localised carpet damage before and after repair where the carpet type and spare material allow.",
       "benefits": [
         "Can extend carpet life",
         "Useful for rental and localised damage",
@@ -248,29 +467,61 @@
       "name": "Solar Panel Cleaning",
       "slug": "solar-panel-cleaning",
       "category": "Specialist cleaning",
-      "summary": "Solar panel cleaning to remove dust, grime, pollen, and build-up that can reduce panel performance.",
-      "intro": "Solar panel cleaning helps panels work efficiently by removing the layer of dust, grime, pollen, and weather build-up that accumulates over time.",
+      "summary": "Solar panel cleaning to remove dust, grime, pollen, bird droppings, and build-up that can reduce panel performance.",
+      "intro": "Professional solar panel cleaning for homes and businesses across Central Otago and the Southern Lakes, helping maintain solar system performance with safe, non-abrasive cleaning.",
+      "overviewParagraphs": [
+        "Advanced Carpets & Restoration provides professional solar panel cleaning services in the Central Otago and Southern Lakes area, helping homeowners and businesses maintain optimal solar system performance.",
+        "Over time, dust, pollen, bird droppings, and environmental debris can significantly reduce solar panel efficiency. In changing weather conditions, regular solar panel cleaning helps support energy output and long-term system performance.",
+        "Our solar panel cleaning service uses safe, non-abrasive methods that remove build-up without damaging panels or coatings. We service residential and commercial solar installations and tailor each clean to suit roof access and system layout."
+      ],
+      "sections": [
+        {
+          "heading": "When to book professional solar panel cleaning",
+          "paragraphs": [
+            "Recommended cleaning is twice a year. One clean at the end of autumn helps maximise power input over the low-sun winter months, and a second clean at the end of spring removes pollen and dust to help keep efficiency as high as possible."
+          ],
+          "bullets": [
+            "Dust, pollen, bird droppings, and grime can reduce panel performance.",
+            "Dirty panels can lose up to 30% efficiency depending on the situation.",
+            "Residential and commercial arrays can both benefit from regular cleaning.",
+            "Cleaning should be tailored to roof access, system layout, and panel condition."
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration uses safe, non-abrasive solar panel cleaning methods and adjusts each clean to suit the roof access, system layout, and panel condition.",
+      "imageCaption": "Solar panel cleaning to remove dust, pollen, bird droppings, and weather build-up.",
+      "resultsCopy": "Use the comparison to review the visible build-up on solar panels before and after safe, non-abrasive cleaning.",
       "benefits": [
         "Helps maintain panel efficiency",
-        "Useful after dry or dusty periods",
-        "Suitable for residential and commercial solar arrays"
+        "Useful after dry, dusty, or pollen-heavy periods",
+        "Suitable for residential and commercial solar arrays",
+        "Removes dust, pollen, bird droppings, grime, and environmental debris"
       ],
       "process": [
         "Check access and panel condition",
-        "Use appropriate cleaning equipment",
+        "Use appropriate non-abrasive cleaning equipment",
         "Remove grime and build-up",
         "Advise on seasonal cleaning timing"
       ],
       "useCases": [
         "Residential solar systems",
         "Commercial solar arrays",
-        "Seasonal maintenance",
-        "Dust and pollen build-up"
+        "End-of-autumn maintenance",
+        "End-of-spring pollen and dust removal",
+        "Dust, grime, and bird dropping build-up"
       ],
       "faqs": [
         {
           "question": "Why clean solar panels?",
-          "answer": "Dirty panels can lose performance. Regular cleaning helps panels capture sunlight more effectively."
+          "answer": "Dust, pollen, bird droppings, and grime can reduce panel performance. Regular cleaning helps panels capture sunlight more effectively."
+        },
+        {
+          "question": "How often should solar panels be cleaned?",
+          "answer": "Cleaning is commonly recommended twice a year: at the end of autumn before the low-sun winter months, and at the end of spring to remove pollen and dust."
+        },
+        {
+          "question": "Can dirty panels affect efficiency?",
+          "answer": "Yes. Dirty panels can lose up to 30% efficiency depending on the situation."
         }
       ]
     },
@@ -278,8 +529,39 @@
       "name": "Window Cleaning",
       "slug": "window-cleaning",
       "category": "Specialist cleaning",
-      "summary": "Streak-free residential and commercial window cleaning to keep glass bright and clear.",
-      "intro": "Professional window cleaning for homes and businesses across Central Otago and the Southern Lakes, using safe methods suited to each building and its access.",
+      "summary": "Streak-free residential and commercial window cleaning to keep glass bright, clear, and well presented.",
+      "intro": "Professional residential and commercial window cleaning across the greater Central Otago and Southern Lakes area, helping homes and businesses keep glass clean, bright, and streak-free all year round.",
+      "overviewParagraphs": [
+        "Advanced Carpets & Restoration provides professional commercial and residential window cleaning in the greater Central Otago and Southern Lakes area, helping homeowners and local businesses keep their windows clean, bright, and streak-free all year round.",
+        "Central Otago and Southern Lakes dry climate, dust, and seasonal weather changes can quickly build up on glass, reducing visibility and natural light.",
+        "Regular window cleaning improves your view, enhances street appeal, and keeps your property looking well cared for."
+      ],
+      "sections": [
+        {
+          "heading": "Window cleaning for homes and businesses",
+          "paragraphs": [
+            "We clean windows for homes, holiday homes, rental properties, offices, and shopfronts, using safe and effective methods suited to each building and access requirement."
+          ],
+          "bullets": [
+            "Homes and holiday homes",
+            "Rental properties",
+            "Offices",
+            "Shopfronts and commercial premises"
+          ]
+        },
+        {
+          "heading": "Why regular window cleaning helps",
+          "bullets": [
+            "Improves your view and natural light",
+            "Enhances street appeal and property presentation",
+            "Removes dust and seasonal weather build-up",
+            "Keeps glass looking cared for through the year"
+          ]
+        }
+      ],
+      "whyAdvanced": "Advanced Carpets & Restoration uses safe, effective window cleaning methods matched to the building, access requirements, and property type.",
+      "imageCaption": "Residential and commercial window cleaning for clear, streak-free glass.",
+      "resultsCopy": "Use the comparison to review glass clarity before and after window cleaning, especially where dust and seasonal weather have built up.",
       "benefits": [
         "Improves your view and natural light",
         "Enhances street appeal and presentation",
@@ -301,6 +583,10 @@
         {
           "question": "How often should windows be cleaned?",
           "answer": "The dry climate, dust, and seasonal weather can build up quickly on glass, so many properties benefit from regular cleaning through the year."
+        },
+        {
+          "question": "Do you clean commercial windows?",
+          "answer": "Yes. Window cleaning is available for homes, holiday homes, rental properties, offices, shopfronts, and commercial premises."
         }
       ]
     }

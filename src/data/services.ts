@@ -6,6 +6,11 @@ export type Service = {
   category: "Core cleaning" | "Restoration" | "Specialist cleaning" | "Repair and pest";
   summary: string;
   intro: string;
+  overviewParagraphs?: string[];
+  sections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
+  whyAdvanced?: string;
+  imageCaption?: string;
+  resultsCopy?: string;
   benefits: string[];
   process: string[];
   useCases: string[];
