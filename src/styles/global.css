@@ -979,6 +979,16 @@ textarea {
   overscroll-behavior-inline: contain;
 }
 
+.home-results-gallery .before-after figcaption {
+  border-top: 0;
+  padding: 16px 0 0;
+}
+
+.home-results-gallery .before-after figcaption strong {
+  color: var(--white);
+  font-size: 22px;
+}
+
 .ba-gallery .before-after {
   border: none;
   box-shadow: none;
