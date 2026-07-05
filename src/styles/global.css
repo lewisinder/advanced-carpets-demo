@@ -975,6 +975,8 @@ textarea {
 
 .home-results-gallery {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
 }
 
 .ba-gallery .before-after {
@@ -989,9 +991,18 @@ textarea {
 }
 
 @media (max-width: 900px) {
-  .ba-gallery,
-  .home-results-gallery {
+  .ba-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .home-results-gallery {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
+  }
+
+  .home-results-gallery .before-after {
+    scroll-snap-align: start;
   }
 }
 
