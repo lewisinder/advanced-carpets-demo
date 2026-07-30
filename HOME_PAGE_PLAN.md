@@ -514,17 +514,16 @@ This section should remain in the structure, but it should not launch with dupli
 
 > See the difference our cleaning work can make.
 
+**Approved comparisons**
+
+- Carpet cleaning, using the supplied `03CC B` image as before and `03CC A` as after.
+- Hard floor cleaning and polish, using the supplied `02HF B` image as before and `02HF A` as after.
+
 **Final caption format when job details are supplied**
 
 > [Service] in [town]: [plain description of the problem and work completed].
 
-**Planned examples**
-
-- One carpet or upholstery clean
-- One stain treatment or restoration job
-- One specialist property service such as windows, solar panels or gutters
-
-Image use is approved. Until the client supplies the correct job details, use only factual placeholder labels such as `Carpet cleaning before` and `Carpet cleaning after`. Do not attach a town, service detail or result that has not been confirmed.
+Image use is approved. Do not attach a town or service detail that has not been confirmed.
 
 ### Customer reviews
 

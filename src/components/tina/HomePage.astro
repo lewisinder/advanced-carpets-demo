@@ -136,14 +136,22 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       <h2>Before and after</h2>
       <p>See the difference our cleaning work can make.</p>
     </div>
-    <div class="ba-gallery home-results-gallery home-results-gallery-single">
+    <div class="ba-gallery home-results-gallery">
       <BeforeAfter
-        beforeSrc={withBase("/assets/gutter-before.jpeg")}
-        afterSrc={withBase("/assets/gutter-after.jpeg")}
-        beforeAlt="Gutter before cleaning"
-        afterAlt="Gutter after cleaning"
-        title="Gutter cleaning"
-        caption="Before and after debris removal."
+        beforeSrc={withBase("/assets/carpet-cleaning-before.webp")}
+        afterSrc={withBase("/assets/carpet-cleaning-after.webp")}
+        beforeAlt="Carpet before professional cleaning"
+        afterAlt="Carpet after professional cleaning"
+        title="Carpet cleaning"
+        caption="Before and after professional carpet cleaning."
+      />
+      <BeforeAfter
+        beforeSrc={withBase("/assets/hard-floor-cleaning-before.webp")}
+        afterSrc={withBase("/assets/hard-floor-cleaning-after.webp")}
+        beforeAlt="Hard floor before cleaning and polishing"
+        afterAlt="Hard floor after cleaning and polishing"
+        title="Hard floor cleaning and polish"
+        caption="Before and after cleaning and polishing."
       />
     </div>
   </div>
@@ -216,7 +224,7 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       <img src={withBase("/assets/hero-cleaning.png")} alt="Carpet cleaning equipment working across a carpeted room" loading="lazy" />
       <p>Commercial cleaning equipment at work on a local property.</p>
       <div class="stat-badge">
-        <strong>16</strong>
+        <strong>16+</strong>
         <span>Years in the trade</span>
       </div>
     </div>
