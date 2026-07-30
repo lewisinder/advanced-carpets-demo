@@ -12,7 +12,7 @@ The homepage needs to help a local customer answer four questions quickly:
 3. Can I trust them with my home or property?
 4. What should I do next?
 
-The page should speak equally to homeowners and businesses across Central Otago, the Southern Lakes and Maniototo.
+The page should speak equally to homeowners and businesses across Central Otago, Southern Lakes and the Maniototo.
 
 ### Actions
 
@@ -85,7 +85,7 @@ These facts come from the completed client plan, client-supplied service documen
 | --- | --- |
 | Business name: Advanced Carpets & Restoration | Use consistently in headings, metadata, structured data and the footer |
 | Based in Cromwell | Use in the hero, about preview and service area section |
-| Covers Central Otago, the Southern Lakes and Maniototo, including the places within those regions | Use as the main service area statement, supported by a natural list of major towns |
+| Covers Central Otago, Southern Lakes and the Maniototo, including the places within those regions | Use as the main service area statement, supported by a natural list of major towns |
 | Homeowners and businesses are equally important | Balance residential and commercial examples throughout the page |
 | The business has operated in the region for 16+ years | Use first-person `we` wording in public copy |
 | The business has spent those years serving local homeowners and businesses | Use in the about and trust sections |
@@ -313,7 +313,7 @@ The plan keeps the useful structure of the current homepage while replacing plac
 
 **Open Graph description**
 
-> Carpet cleaning and specialist services for homes and businesses across Central Otago, the Southern Lakes and Maniototo.
+> Carpet cleaning and specialist services for homes and businesses across Central Otago, Southern Lakes and the Maniototo.
 
 **Open Graph image**
 
@@ -350,11 +350,11 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 **Headline**
 
-> Carpet cleaning in Central Otago, the Southern Lakes and Maniototo
+> Carpet cleaning in Central Otago, Southern Lakes and the Maniototo
 
 **Intro**
 
-> Based in Cromwell, we provide professional cleaning and restoration services throughout Central Otago, the Southern Lakes and Maniototo.
+> Based in Cromwell, we provide professional cleaning and restoration services throughout Central Otago, Southern Lakes and the Maniototo.
 
 **Primary button**
 
@@ -600,7 +600,7 @@ Keep the rating and review total in editable content because they will change ov
 
 **Intro**
 
-> Advanced Carpets & Restoration is a locally owned and operated Cromwell business. For 16+ years, we have worked throughout Central Otago, the Southern Lakes and Maniototo, serving homeowners and businesses.
+> Advanced Carpets & Restoration is a locally owned and operated Cromwell business. For 16+ years, we have worked throughout Central Otago, Southern Lakes and the Maniototo, serving homeowners and businesses.
 
 #### IICRC-certified technicians
 
@@ -638,7 +638,7 @@ Display the supplied IICRC logo as the only certification mark in this section.
 
 **Copy**
 
-> We have spent 16+ years serving homeowners and businesses across Central Otago, the Southern Lakes and Maniototo. Advanced Carpets & Restoration is based in Cromwell and works throughout all three regions. The current technicians are IICRC certified, and the business is fully insured. We use commercial equipment and give straightforward advice about what is likely to work for each job.
+> We have spent 16+ years serving homeowners and businesses across Central Otago, Southern Lakes and the Maniototo. Advanced Carpets & Restoration is based in Cromwell and works throughout all three regions. The current technicians are IICRC certified, and the business is fully insured. We use commercial equipment and give straightforward advice about what is likely to work for each job.
 
 **Button**
 
@@ -658,7 +658,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 
 **Intro**
 
-> From our Cromwell base, we provide carpet cleaning and our full service range throughout Central Otago, the Southern Lakes and Maniototo. This includes Cromwell, Alexandra, Clyde, Queenstown, Wanaka, Hāwea, Ranfurly and the places within the wider regions.
+> From our Cromwell base, we provide carpet cleaning and our full service range throughout Central Otago, Southern Lakes and the Maniototo. This includes Cromwell, Alexandra, Clyde, Queenstown, Wanaka, Hāwea, Ranfurly and the places within the wider regions.
 
 #### Main mobile
 
@@ -755,7 +755,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 
 #### What areas do you service?
 
-> We work throughout Central Otago, the Southern Lakes and Maniototo from our base in Cromwell. This includes Cromwell, Alexandra, Clyde, Queenstown, Wanaka, Hāwea, Ranfurly and the places within the wider regions.
+> We work throughout Central Otago, Southern Lakes and the Maniototo from our base in Cromwell. This includes Cromwell, Alexandra, Clyde, Queenstown, Wanaka, Hāwea, Ranfurly and the places within the wider regions.
 
 #### How quickly can you respond to flood or water damage?
 
@@ -823,7 +823,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 
 **Business summary**
 
-> Cromwell-based carpet cleaning and specialist services for homes and businesses across Central Otago, the Southern Lakes and Maniototo.
+> Cromwell-based carpet cleaning and specialist services for homes and businesses across Central Otago, Southern Lakes and the Maniototo.
 
 **Service links**
 
@@ -897,7 +897,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 ### SEO changes
 
 - Set the homepage title to `Carpet Cleaning Central Otago | Advanced Carpets`.
-- Set the H1 to `Carpet cleaning in Central Otago, the Southern Lakes and Maniototo`.
+- Set the H1 to `Carpet cleaning in Central Otago, Southern Lakes and the Maniototo`.
 - Use the approved homepage meta description in this plan.
 - Pass a homepage-specific title into `BaseLayout` instead of relying on the current generic homepage result from `titleFor("/")`.
 - If the title remains editable in Tina, add a dedicated `seoTitle` field and keep the schema, JSON content and static build path in sync.
