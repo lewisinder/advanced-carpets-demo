@@ -10,7 +10,9 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <strong>{site.name}</strong>
+      <a class="footer-logo" href={withBase("/")} aria-label="Advanced Carpets & Restoration home">
+        <img src={withBase("/assets/logo.png")} alt={site.name} width="500" height="234" />
+      </a>
       <p>Cromwell-based carpet cleaning and specialist services for homes and businesses across Central Otago, the Southern Lakes and Maniototo.</p>
       <p class="footer-hours">Normal hours 9am to 5pm every day. Flood emergencies 24/7.</p>
     </div>

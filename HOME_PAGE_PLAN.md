@@ -87,7 +87,7 @@ These facts come from the completed client plan, client-supplied service documen
 | Based in Cromwell | Use in the hero, about preview and service area section |
 | Covers Central Otago, the Southern Lakes and Maniototo, including the places within those regions | Use as the main service area statement, supported by a natural list of major towns |
 | Homeowners and businesses are equally important | Balance residential and commercial examples throughout the page |
-| Kevin has operated in the region for 16 years | Attribute the experience to Kevin instead of presenting it as the combined age of the team |
+| The business has operated in the region for 16 years | Use first-person `we` wording in public copy |
 | The business has spent those years serving local homeowners and businesses | Use in the about and trust sections |
 | Current technicians are IICRC certified | Explain the Institute of Inspection, Cleaning and Restoration Certification at first detailed mention |
 | The IICRC name and logo may be displayed | Use as a factual trust signal |
@@ -107,7 +107,6 @@ These facts come from the completed client plan, client-supplied service documen
 | The public Google rating is 5.0 from 10 reviews | Display it with the Google reviews section and keep the figure easy to update |
 | The three named Google reviews, their wording and their public source are approved | Use the confirmed reviews from Tiffany Menzies, Jess Matthews and Manow Khetwichan |
 | The Google Business Profile link is approved | Use the confirmed profile link for reading reviews and the existing review link for leaving a review |
-| Master Cleaners NZ, Queenstown Chamber and Central Otago Business are confirmed | Display them as factual memberships or affiliations without adding unsupported claims |
 | Before-and-after image use is approved | Use temporary, factual captions until the client supplies the final job details |
 | Existing van images are incorrect | Remove them from the site and do not reuse them |
 | Replacement interior van photography is not yet available | Use a clearly identified neutral placeholder until the client replaces it |
@@ -355,7 +354,7 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 **Intro**
 
-> Based in Cromwell, Advanced Carpets & Restoration serves homeowners and businesses throughout the region. We handle carpet and upholstery cleaning, pest control and stain treatment across the region.
+> Based in Cromwell, we provide professional cleaning and restoration services throughout Central Otago, the Southern Lakes and Maniototo.
 
 **Primary button**
 
@@ -451,13 +450,13 @@ Keep the four services already displayed on the current homepage.
 
 > Water extraction, drying support and practical next steps for leaks and flood damage, with 24/7 emergency response throughout the full service area.
 
-**Link**
-
-> View Flood Restoration
-
 **Urgent action**
 
 > Call about water damage
+
+**Link**
+
+> View Flood Restoration
 
 #### Gutter Cleaning
 
@@ -509,11 +508,11 @@ This section should remain in the structure, but it should not launch with dupli
 
 **Heading**
 
-> See the condition before and the result after
+> Before and after
 
 **Intro**
 
-> Compare cleaning and restoration work completed around the region. Each example will identify the service, location and work carried out.
+> See the difference our cleaning work can make.
 
 **Final caption format when job details are supplied**
 
@@ -593,11 +592,11 @@ Keep the rating and review total in editable content because they will change ov
 
 **Heading**
 
-> Kevin has spent 16 years serving the region
+> We have served the region for 16 years
 
 **Intro**
 
-> Advanced Carpets & Restoration is a locally owned and operated Cromwell business. Kevin has worked throughout Central Otago, the Southern Lakes and Maniototo for 16 years, serving homeowners and businesses across the region.
+> Advanced Carpets & Restoration is a locally owned and operated Cromwell business. For 16 years, we have worked throughout Central Otago, the Southern Lakes and Maniototo, serving homeowners and businesses.
 
 #### IICRC-certified technicians
 
@@ -619,9 +618,9 @@ Keep the rating and review total in editable content because they will change ov
 
 > Flood and water damage response is available 24 hours a day, 7 days a week. The normal response time is 20 minutes to 2 hours across the full service area.
 
-#### Certifications and memberships
+#### IICRC certification mark
 
-Display the confirmed IICRC, Master Cleaners NZ, Queenstown Chamber and Central Otago Business names. Use approved official logos where suitable assets are available. Present them as certifications, memberships or affiliations only, without implying awards or endorsements.
+Display the supplied IICRC logo as the only certification mark in this section.
 
 ### About preview
 
@@ -635,7 +634,7 @@ Display the confirmed IICRC, Master Cleaners NZ, Queenstown Chamber and Central 
 
 **Copy**
 
-> Kevin has operated in Central Otago and the surrounding regions for 16 years, serving local homeowners and businesses. Advanced Carpets & Restoration is based in Cromwell and works throughout Central Otago, the Southern Lakes and Maniototo. The current technicians are IICRC certified, and the business is fully insured. We use commercial equipment and give straightforward advice about what is likely to work for each job.
+> We have spent 16 years serving homeowners and businesses across Central Otago, the Southern Lakes and Maniototo. Advanced Carpets & Restoration is based in Cromwell and works throughout all three regions. The current technicians are IICRC certified, and the business is fully insured. We use commercial equipment and give straightforward advice about what is likely to work for each job.
 
 **Button**
 
@@ -865,12 +864,11 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 - Add Maniototo to the public service area content in `content/global/site.json`.
 - Add Clyde, Hāwea and Ranfurly to the visible service area copy.
 - Remove any quote-led wording found in site content, components, metadata, forms or generated pages.
-- Replace `15+` with `Kevin has 16 years in the trade`.
+- Replace `15+` with `16 years experience`.
 - Replace the current `7 Days` metric with confirmed 24/7 emergency flood response.
 - Add same-day normal enquiry response and normal 9am to 5pm hours every day.
 - Add `fully insured` as a confirmed trust point.
 - Keep IICRC as the confirmed certification and display the approved logo.
-- Add Master Cleaners NZ, Queenstown Chamber and Central Otago Business as confirmed memberships or affiliations.
 - Display the confirmed 5.0 rating from 10 Google reviews and the three approved named reviews.
 - Use the confirmed Google Business Profile link for reading reviews and the existing review link for leaving one.
 - Keep the current four prominent service cards: Carpet Cleaning, Pest Control, Upholstery Cleaning and Stain Treatment.
@@ -882,6 +880,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 
 - Add a homepage service area anchor and link to it from the header.
 - Keep the approved customer logos within the hero proof area.
+- Use the Advanced Carpets logo in the footer and add visible hover feedback to footer links.
 - Keep the current before-and-after interaction, but replace all repeated or unrelated images and use clearly labelled temporary captions.
 - Use real client-supplied working images throughout.
 - Remove every existing van image. Use a neutral interior-van or equipment placeholder until suitable replacement photography is available.

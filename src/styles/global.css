@@ -865,6 +865,28 @@ textarea {
   font-size: 15px;
 }
 
+.footer a:not(.footer-logo) {
+  width: fit-content;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.footer a:not(.footer-logo):hover,
+.footer a:not(.footer-logo):focus-visible {
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.footer-logo {
+  display: block;
+  width: 190px;
+  margin: 0 0 22px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: auto;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -2377,25 +2399,28 @@ textarea {
   line-height: 1.08;
 }
 
-.secondary-service > a {
+.secondary-service-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.secondary-service-actions a {
   display: inline-flex;
   width: fit-content;
   align-items: center;
   gap: 7px;
-  margin-top: auto;
-  padding-top: 22px;
   color: var(--water);
   font-size: 15px;
   font-weight: 900;
 }
 
-.secondary-service > a:hover {
+.secondary-service-actions a:hover {
   color: var(--clay-dark);
 }
 
-.secondary-service .secondary-service-urgent {
-  margin-top: 10px;
-  padding-top: 0;
+.secondary-service-actions .secondary-service-urgent {
   color: var(--clay-dark);
 }
 
@@ -2405,20 +2430,18 @@ textarea {
   overflow: visible;
 }
 
-.membership-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.certification-logo {
+  width: min(100%, 330px);
   margin-top: 30px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--white);
+  padding: 10px;
 }
 
-.membership-list span {
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 4px;
-  color: rgba(255, 255, 255, 0.82);
-  padding: 8px 10px;
-  font-size: 13px;
-  font-weight: 800;
+.certification-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .trust-list > div:nth-child(4)::before {
@@ -2431,9 +2454,7 @@ textarea {
 
 .service-areas-section {
   scroll-margin-top: 120px;
-  background:
-    repeating-linear-gradient(90deg, rgba(185, 170, 148, 0.13) 0 4px, transparent 4px 12px),
-    var(--wool);
+  background: var(--wool);
 }
 
 .service-areas-layout {

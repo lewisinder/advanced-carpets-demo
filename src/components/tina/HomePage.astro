@@ -113,13 +113,15 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
           <article class="secondary-service">
             <h3>{service.name}</h3>
             <p>{secondarySummaries[service.slug] ?? service.summary}</p>
-            <a href={withBase(`/services/${service.slug}/`)}>
-              View {service.name === "Hard Floor Cleaning & Polish" ? "Hard Floor Cleaning" : service.name}
-              <ArrowUpRight size={18} stroke-width={2.2} aria-hidden="true" />
-            </a>
-            {service.slug === "flood-restoration" && (
-              <a class="secondary-service-urgent" href={phoneHref(site.primaryPhone)}>Call about water damage</a>
-            )}
+            <div class="secondary-service-actions">
+              {service.slug === "flood-restoration" && (
+                <a class="secondary-service-urgent" href={phoneHref(site.primaryPhone)}>Call about water damage</a>
+              )}
+              <a href={withBase(`/services/${service.slug}/`)}>
+                View {service.name === "Hard Floor Cleaning & Polish" ? "Hard Floor Cleaning" : service.name}
+                <ArrowUpRight size={18} stroke-width={2.2} aria-hidden="true" />
+              </a>
+            </div>
           </article>
         ))}
       </div>
@@ -131,8 +133,8 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
   <div class="container">
     <div class="section-heading">
       <p class="overline orange">Recent work</p>
-      <h2>See the condition before and the result after</h2>
-      <p>Compare cleaning and restoration work completed around the region. Job details and additional examples can be updated as the final captions are supplied.</p>
+      <h2>Before and after</h2>
+      <p>See the difference our cleaning work can make.</p>
     </div>
     <div class="ba-gallery home-results-gallery home-results-gallery-single">
       <BeforeAfter
@@ -187,8 +189,14 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       <p class="overline orange">Why Advanced Carpets</p>
       <h2 data-tina-field={tinaField(home.trust, "title")}>{home.trust.title}</h2>
       <p data-tina-field={tinaField(home.trust, "intro")}>{home.trust.intro}</p>
-      <div class="membership-list" aria-label="Certifications and memberships">
-        {home.hero.trustedBy.map((item) => <span>{item}</span>)}
+      <div class="certification-logo">
+        <img
+          src={withBase("/assets/iicrc-logo.png")}
+          alt="IICRC, Institute of Inspection Cleaning and Restoration Certification"
+          width="760"
+          height="300"
+          loading="lazy"
+        />
       </div>
     </div>
     <div class="trust-list">
