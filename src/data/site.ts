@@ -6,6 +6,7 @@ export const site = siteContent;
 export function titleFor(pathname: string, serviceName?: string) {
   if (serviceName) return `${serviceName} | ${site.name}`;
   if (pathname === "/services") return `Cleaning & Restoration Services | ${site.name}`;
+  if (pathname === "/estimator") return `Service Cost Estimator | ${site.name}`;
   if (pathname === "/about") return `About ${site.name}`;
   if (pathname === "/contact") return `Contact ${site.name}`;
   if (pathname === "/design-system") return `Design System | ${site.name}`;

@@ -1,0 +1,14 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Estimator from "@/components/Estimator.astro";
+
+const description = "Use the Advanced Carpets service estimator to explore indicative costs for cleaning, restoration, pest control, repair, and specialist property services.";
+---
+
+<BaseLayout
+  title="Service Cost Estimator | Advanced Carpets & Restoration"
+  description={description}
+  pathname="/estimator"
+>
+  <Estimator />
+</BaseLayout>

@@ -5,6 +5,7 @@ const routes = [
   "/",
   "/services",
   ...services.map((service) => `/services/${service.slug}`),
+  "/estimator",
   "/about",
   "/contact",
 ];

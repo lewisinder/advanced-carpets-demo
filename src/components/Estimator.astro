@@ -1,0 +1,1254 @@
+---
+import { estimatorLocations, estimatorServices } from "@/data/estimator";
+import { withBase } from "@/lib/base";
+import SpiderIcon from "@/components/icons/SpiderIcon.astro";
+import Armchair from "@lucide/astro/icons/armchair";
+import Bug from "@lucide/astro/icons/bug";
+import Calculator from "@lucide/astro/icons/calculator";
+import Droplets from "@lucide/astro/icons/droplets";
+import Hammer from "@lucide/astro/icons/hammer";
+import Leaf from "@lucide/astro/icons/leaf";
+import MapPin from "@lucide/astro/icons/map-pin";
+import PanelsTopLeft from "@lucide/astro/icons/panels-top-left";
+import RotateCcw from "@lucide/astro/icons/rotate-ccw";
+import Ruler from "@lucide/astro/icons/ruler";
+import Sparkles from "@lucide/astro/icons/sparkles";
+import Stamp from "@lucide/astro/icons/stamp";
+import Sun from "@lucide/astro/icons/sun";
+
+const icons = {
+  "carpet-cleaning": Stamp,
+  "pest-control": SpiderIcon,
+  "upholstery-cleaning": Armchair,
+  "stain-treatment": Sparkles,
+  "flood-restoration": Droplets,
+  "gutter-cleaning": Leaf,
+  "hard-floor-cleaning-polish": Sparkles,
+  "carpet-repair": Hammer,
+  "solar-panel-cleaning": Sun,
+  "window-cleaning": PanelsTopLeft,
+};
+
+const contactUrl = withBase("/contact/");
+---
+
+<section class="estimator-intro">
+  <div class="container estimator-intro-inner">
+    <div>
+      <h1>Plan the job. See an indicative cost.</h1>
+      <p>Select a service and adjust the job details. The figures below use placeholder rates so we can test the estimator before replacing them with confirmed pricing.</p>
+    </div>
+    <div class="measure-mark" aria-hidden="true">
+      <span>10</span><span>20</span><span>30</span><span>40</span>
+    </div>
+  </div>
+</section>
+
+<section class="estimator-stage">
+  <div class="container">
+    <div
+      class="estimator-shell"
+      data-estimator
+      data-contact-url={contactUrl}
+    >
+      <div class="service-picker">
+        <div class="estimator-step-heading">
+          <span>1</span>
+          <h2>Choose a service</h2>
+        </div>
+        <div class="service-options" role="list">
+          {estimatorServices.map((service, index) => {
+            const Icon = icons[service.slug as keyof typeof icons] ?? Bug;
+            return (
+              <button
+                class:list={["service-option", index === 0 && "is-selected"]}
+                type="button"
+                data-service={service.slug}
+                aria-pressed={index === 0 ? "true" : "false"}
+              >
+                <Icon size={23} stroke-width={2} aria-hidden="true" />
+                <span>{service.name}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="job-controls">
+        <div class="estimator-step-heading">
+          <span>2</span>
+          <div>
+            <h2>Tell us about the job</h2>
+            <p data-service-description></p>
+          </div>
+        </div>
+
+        <div class="control-group quantity-control">
+          <div class="control-label-row">
+            <label for="estimator-quantity" data-quantity-label></label>
+            <output for="estimator-quantity" data-quantity-output></output>
+          </div>
+          <div class="range-row">
+            <input id="estimator-quantity" type="range" data-quantity-range />
+            <div class="number-field">
+              <input type="number" data-quantity-number aria-label="Enter quantity" />
+              <span data-quantity-unit></span>
+            </div>
+          </div>
+          <div class="range-scale" aria-hidden="true">
+            <span data-quantity-min></span>
+            <span data-quantity-mid></span>
+            <span data-quantity-max></span>
+          </div>
+          <p class="control-hint" data-quantity-hint></p>
+        </div>
+
+        <fieldset class="control-group">
+          <legend data-condition-label></legend>
+          <div class="choice-grid" data-condition-options></div>
+        </fieldset>
+
+        <fieldset class="control-group">
+          <legend data-option-label></legend>
+          <div class="choice-grid choice-grid-wide" data-service-options></div>
+        </fieldset>
+
+        <div class="control-group counter-group" data-counter-group>
+          <div>
+            <label data-counter-label></label>
+            <p class="control-hint" data-counter-hint></p>
+          </div>
+          <div class="stepper">
+            <button type="button" data-counter-down aria-label="Decrease quantity">−</button>
+            <input type="number" data-counter-input aria-label="Additional quantity" />
+            <span data-counter-unit></span>
+            <button type="button" data-counter-up aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <label class="toggle-row" data-toggle-row>
+          <span>
+            <strong data-toggle-label></strong>
+            <small data-toggle-hint></small>
+          </span>
+          <input type="checkbox" data-toggle-input />
+          <span class="toggle-track" aria-hidden="true"><span></span></span>
+        </label>
+
+        <div class="control-group location-group">
+          <label for="estimator-location">Property location</label>
+          <select id="estimator-location" data-location>
+            {estimatorLocations.map((location) => (
+              <option value={location.value}>{location.label}</option>
+            ))}
+          </select>
+          <p class="control-hint">Placeholder travel allowances are included in the estimate.</p>
+        </div>
+      </div>
+
+      <aside class="estimate-summary">
+        <div class="estimator-step-heading">
+          <span>3</span>
+          <h2>Your indicative cost</h2>
+        </div>
+
+        <div class="estimate-total" aria-live="polite" aria-atomic="true">
+          <span>Estimated price range</span>
+          <strong data-estimate-range>$0–$0</strong>
+          <small>Placeholder rates, including GST</small>
+        </div>
+
+        <dl class="estimate-breakdown">
+          <div>
+            <dt data-main-breakdown-label>Service allowance</dt>
+            <dd data-main-breakdown-value>$0</dd>
+          </div>
+          <div>
+            <dt>Job modifiers</dt>
+            <dd data-modifier-value>$0</dd>
+          </div>
+          <div>
+            <dt>Travel allowance</dt>
+            <dd data-travel-value>$0</dd>
+          </div>
+        </dl>
+
+        <div class="minimum-note">
+          <Calculator size={22} stroke-width={2} aria-hidden="true" />
+          <p><strong data-minimum-charge></strong><span>Applied automatically where needed.</span></p>
+        </div>
+
+        <p class="estimate-note" data-estimate-note></p>
+
+        <a class="button button-primary estimate-action" href={contactUrl} data-estimate-action>Make an enquiry</a>
+        <button class="reset-button" type="button" data-reset>
+          <RotateCcw size={18} stroke-width={2.2} aria-hidden="true" />
+          Reset this estimate
+        </button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="estimate-explainer">
+  <div class="container">
+    <h2>How this estimate is calculated</h2>
+    <div class="estimate-factors">
+      <div>
+        <Calculator size={30} stroke-width={1.8} aria-hidden="true" />
+        <p><strong>Indicative only</strong><span>These are guessed rates for testing the page and will be replaced.</span></p>
+      </div>
+      <div>
+        <Ruler size={30} stroke-width={1.8} aria-hidden="true" />
+        <p><strong>The unit fits the service</strong><span>Area, panes, panels, seats or affected rooms drive the starting point.</span></p>
+      </div>
+      <div>
+        <MapPin size={30} stroke-width={1.8} aria-hidden="true" />
+        <p><strong>Travel is visible</strong><span>The selected town adds a clear placeholder travel allowance.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { estimatorLocations, estimatorServices } from "@/data/estimator";
+
+  const estimator = document.querySelector<HTMLElement>("[data-estimator]");
+
+  if (estimator) {
+    const serviceButtons = Array.from(estimator.querySelectorAll<HTMLButtonElement>("[data-service]"));
+    const quantityRange = estimator.querySelector<HTMLInputElement>("[data-quantity-range]")!;
+    const quantityNumber = estimator.querySelector<HTMLInputElement>("[data-quantity-number]")!;
+    const conditionOptions = estimator.querySelector<HTMLElement>("[data-condition-options]")!;
+    const serviceOptions = estimator.querySelector<HTMLElement>("[data-service-options]")!;
+    const counterGroup = estimator.querySelector<HTMLElement>("[data-counter-group]")!;
+    const counterInput = estimator.querySelector<HTMLInputElement>("[data-counter-input]")!;
+    const counterDown = estimator.querySelector<HTMLButtonElement>("[data-counter-down]")!;
+    const counterUp = estimator.querySelector<HTMLButtonElement>("[data-counter-up]")!;
+    const toggleRow = estimator.querySelector<HTMLElement>("[data-toggle-row]")!;
+    const toggleInput = estimator.querySelector<HTMLInputElement>("[data-toggle-input]")!;
+    const locationSelect = estimator.querySelector<HTMLSelectElement>("[data-location]")!;
+    const resetButton = estimator.querySelector<HTMLButtonElement>("[data-reset]")!;
+    const actionLink = estimator.querySelector<HTMLAnchorElement>("[data-estimate-action]")!;
+
+    let activeService = estimatorServices[0];
+    let quantity = activeService.quantityDefault;
+    let condition = activeService.conditions[1]?.value ?? activeService.conditions[0].value;
+    let serviceOption = activeService.options[0].value;
+    let counter = activeService.counter?.defaultValue ?? 0;
+    let toggle = false;
+    let location = estimatorLocations[0].value;
+
+    const text = (selector: string, value: string) => {
+      const element = estimator.querySelector<HTMLElement>(selector);
+      if (element) element.textContent = value;
+    };
+
+    const money = (value: number) => `$${Math.max(0, Math.round(value)).toLocaleString("en-NZ")}`;
+    const roundToFive = (value: number) => Math.round(value / 5) * 5;
+
+    const createChoices = (
+      target: HTMLElement,
+      choices: typeof activeService.conditions,
+      selectedValue: string,
+      group: "condition" | "option",
+    ) => {
+      target.replaceChildren();
+      choices.forEach((choice) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "choice-button";
+        button.dataset.choiceGroup = group;
+        button.dataset.choiceValue = choice.value;
+        button.setAttribute("aria-pressed", String(choice.value === selectedValue));
+
+        const label = document.createElement("strong");
+        label.textContent = choice.label;
+        button.append(label);
+
+        if (choice.hint) {
+          const hint = document.createElement("small");
+          hint.textContent = choice.hint;
+          button.append(hint);
+        }
+
+        button.addEventListener("click", () => {
+          if (group === "condition") condition = choice.value;
+          else serviceOption = choice.value;
+
+          target.querySelectorAll<HTMLButtonElement>(".choice-button").forEach((item) => {
+            item.setAttribute("aria-pressed", String(item === button));
+          });
+          updateEstimate();
+        });
+
+        target.append(button);
+      });
+    };
+
+    const resetState = () => {
+      quantity = activeService.quantityDefault;
+      condition = activeService.conditions[1]?.value ?? activeService.conditions[0].value;
+      serviceOption = activeService.options[0].value;
+      counter = activeService.counter?.defaultValue ?? 0;
+      toggle = false;
+      location = estimatorLocations[0].value;
+    };
+
+    const renderService = () => {
+      text("[data-service-description]", activeService.description);
+      text("[data-quantity-label]", activeService.quantityLabel);
+      text("[data-quantity-unit]", activeService.quantityUnit);
+      text("[data-quantity-min]", `${activeService.quantityMin} ${activeService.quantityUnit}`);
+      text("[data-quantity-mid]", `${roundToFive((activeService.quantityMin + activeService.quantityMax) / 2)} ${activeService.quantityUnit}`);
+      text("[data-quantity-max]", `${activeService.quantityMax} ${activeService.quantityUnit}`);
+      text("[data-quantity-hint]", activeService.quantityHint);
+      text("[data-condition-label]", activeService.conditionLabel);
+      text("[data-option-label]", activeService.optionLabel);
+      text("[data-estimate-note]", activeService.note);
+
+      quantityRange.min = String(activeService.quantityMin);
+      quantityRange.max = String(activeService.quantityMax);
+      quantityRange.step = String(activeService.quantityStep);
+      quantityRange.value = String(quantity);
+
+      quantityNumber.min = String(activeService.quantityMin);
+      quantityNumber.max = String(activeService.quantityMax);
+      quantityNumber.step = String(activeService.quantityStep);
+      quantityNumber.value = String(quantity);
+
+      createChoices(conditionOptions, activeService.conditions, condition, "condition");
+      createChoices(serviceOptions, activeService.options, serviceOption, "option");
+
+      if (activeService.counter) {
+        counterGroup.hidden = false;
+        counterInput.min = String(activeService.counter.min);
+        counterInput.max = String(activeService.counter.max);
+        counterInput.step = String(activeService.counter.step);
+        counterInput.value = String(counter);
+        text("[data-counter-label]", activeService.counter.label);
+        text("[data-counter-hint]", activeService.counter.hint);
+        text("[data-counter-unit]", activeService.counter.unit);
+      } else {
+        counterGroup.hidden = true;
+      }
+
+      if (activeService.toggle) {
+        toggleRow.hidden = false;
+        toggleInput.checked = toggle;
+        text("[data-toggle-label]", activeService.toggle.label);
+        text("[data-toggle-hint]", activeService.toggle.hint);
+      } else {
+        toggleRow.hidden = true;
+      }
+
+      locationSelect.value = location;
+      actionLink.textContent = activeService.actionLabel ?? "Make an enquiry";
+      actionLink.href = activeService.actionHref ?? estimator.dataset.contactUrl ?? "/contact/";
+
+      serviceButtons.forEach((button) => {
+        const isSelected = button.dataset.service === activeService.slug;
+        button.classList.toggle("is-selected", isSelected);
+        button.setAttribute("aria-pressed", String(isSelected));
+      });
+
+      updateEstimate();
+    };
+
+    const updateEstimate = () => {
+      const selectedCondition = activeService.conditions.find((item) => item.value === condition) ?? activeService.conditions[0];
+      const selectedOption = activeService.options.find((item) => item.value === serviceOption) ?? activeService.options[0];
+      const selectedLocation = estimatorLocations.find((item) => item.value === location) ?? estimatorLocations[0];
+
+      const primaryBeforeOptions = activeService.baseCharge + quantity * activeService.unitRate;
+      const optionAdjusted = primaryBeforeOptions * (selectedOption.multiplier ?? 1) + (selectedOption.addition ?? 0);
+      const conditionAdjusted = optionAdjusted * (selectedCondition.multiplier ?? 1);
+      const counterAmount = activeService.counter ? counter * activeService.counter.rate : 0;
+      const toggleAmount = toggle && activeService.toggle
+        ? (activeService.toggle.amount ?? 0) + (activeService.toggle.ratePerPrimaryUnit ?? 0) * quantity
+        : 0;
+      const serviceAllowance = primaryBeforeOptions;
+      const modifierAmount = conditionAdjusted - primaryBeforeOptions + counterAmount + toggleAmount;
+      const calculated = conditionAdjusted + counterAmount + toggleAmount + selectedLocation.amount;
+      const subtotal = Math.max(activeService.minimumCharge, calculated);
+      const low = roundToFive(Math.max(activeService.minimumCharge, subtotal * (1 - activeService.variance)));
+      const high = roundToFive(Math.max(low + 10, subtotal * (1 + activeService.variance)));
+
+      text("[data-quantity-output]", `${quantity} ${activeService.quantityUnit}`);
+      text("[data-estimate-range]", `${money(low)}–${money(high)}`);
+      text("[data-main-breakdown-label]", `${activeService.name} allowance`);
+      text("[data-main-breakdown-value]", money(serviceAllowance));
+      text("[data-modifier-value]", money(modifierAmount));
+      text("[data-travel-value]", selectedLocation.amount ? money(selectedLocation.amount) : "Included");
+      text("[data-minimum-charge]", `Minimum allowance ${money(activeService.minimumCharge)}`);
+
+      const progress = ((quantity - activeService.quantityMin) / (activeService.quantityMax - activeService.quantityMin)) * 100;
+      quantityRange.style.setProperty("--range-progress", `${progress}%`);
+    };
+
+    const setQuantity = (value: number) => {
+      const bounded = Math.min(activeService.quantityMax, Math.max(activeService.quantityMin, value));
+      quantity = bounded;
+      quantityRange.value = String(bounded);
+      quantityNumber.value = String(bounded);
+      updateEstimate();
+    };
+
+    const setCounter = (value: number) => {
+      if (!activeService.counter) return;
+      counter = Math.min(activeService.counter.max, Math.max(activeService.counter.min, value));
+      counterInput.value = String(counter);
+      updateEstimate();
+    };
+
+    serviceButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const next = estimatorServices.find((service) => service.slug === button.dataset.service);
+        if (!next) return;
+        activeService = next;
+        resetState();
+        renderService();
+      });
+    });
+
+    quantityRange.addEventListener("input", () => setQuantity(Number(quantityRange.value)));
+    quantityNumber.addEventListener("input", () => setQuantity(Number(quantityNumber.value)));
+    counterInput.addEventListener("input", () => setCounter(Number(counterInput.value)));
+    counterDown.addEventListener("click", () => setCounter(counter - (activeService.counter?.step ?? 1)));
+    counterUp.addEventListener("click", () => setCounter(counter + (activeService.counter?.step ?? 1)));
+    toggleInput.addEventListener("change", () => {
+      toggle = toggleInput.checked;
+      updateEstimate();
+    });
+    locationSelect.addEventListener("change", () => {
+      location = locationSelect.value;
+      updateEstimate();
+    });
+    resetButton.addEventListener("click", () => {
+      resetState();
+      renderService();
+    });
+
+    renderService();
+  }
+</script>
+
+<style>
+  .estimator-intro {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+
+  .estimator-intro::after {
+    position: absolute;
+    right: -90px;
+    bottom: -150px;
+    width: 560px;
+    height: 360px;
+    border: 1px solid rgba(185, 170, 148, 0.28);
+    background:
+      linear-gradient(90deg, rgba(185, 170, 148, 0.2) 1px, transparent 1px) 0 0 / 42px 42px,
+      linear-gradient(rgba(185, 170, 148, 0.2) 1px, transparent 1px) 0 0 / 42px 42px;
+    content: "";
+    transform: rotate(-7deg);
+  }
+
+  .estimator-intro-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-height: 250px;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+    padding-block: 64px 48px;
+  }
+
+  .estimator-intro h1 {
+    max-width: 820px;
+    margin: 0;
+    color: var(--charcoal);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(42px, 5.2vw, 68px);
+    font-weight: 900;
+    line-height: 1.02;
+  }
+
+  .estimator-intro p {
+    max-width: 790px;
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: 19px;
+  }
+
+  .measure-mark {
+    display: flex;
+    width: 270px;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    border-top: 2px solid var(--clay);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .measure-mark span {
+    position: relative;
+    padding-top: 12px;
+  }
+
+  .measure-mark span::before {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 1px;
+    height: 12px;
+    background: var(--clay);
+    content: "";
+  }
+
+  .estimator-stage {
+    padding-block: 52px 76px;
+  }
+
+  .estimator-shell {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 260px minmax(430px, 1fr) 360px;
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--clay);
+    border-radius: var(--radius);
+    background: var(--paper);
+    box-shadow: 0 20px 52px rgba(17, 23, 21, 0.1);
+  }
+
+  .service-picker {
+    border-right: 1px solid var(--line);
+    background: #eee9df;
+  }
+
+  .job-controls {
+    min-width: 0;
+    padding: 30px 34px 38px;
+  }
+
+  .estimate-summary {
+    min-width: 0;
+    border-left: 1px solid var(--line);
+    padding: 30px 30px 34px;
+    background: var(--paper);
+  }
+
+  .service-picker > .estimator-step-heading {
+    padding: 24px 22px;
+  }
+
+  .estimator-step-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .estimator-step-heading > span {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--charcoal);
+    border-radius: 50%;
+    color: var(--charcoal);
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .estimator-step-heading h2 {
+    margin: 2px 0 0;
+    color: var(--charcoal);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.15;
+  }
+
+  .estimator-step-heading p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .service-options {
+    border-top: 1px solid var(--line);
+  }
+
+  .service-option {
+    display: grid;
+    width: 100%;
+    min-height: 58px;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    padding: 10px 18px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  .service-option:hover {
+    background: rgba(255, 255, 255, 0.58);
+  }
+
+  .service-option.is-selected {
+    background: var(--clay);
+    color: var(--white);
+  }
+
+  .service-option :global(svg) {
+    justify-self: center;
+  }
+
+  .control-group,
+  .toggle-row {
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+  }
+
+  .control-group legend,
+  .control-group > label,
+  .control-label-row label,
+  .counter-group label,
+  .location-group label {
+    color: var(--charcoal);
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .control-label-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .control-label-row output {
+    color: var(--water);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .range-row {
+    display: grid;
+    grid-template-columns: 1fr 122px;
+    align-items: center;
+    gap: 22px;
+    margin-top: 18px;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    height: 24px;
+    margin: 0;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    border-radius: 3px;
+    background: linear-gradient(to right, var(--water) var(--range-progress, 0%), #d6d3cb var(--range-progress, 0%));
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+    margin-top: -8px;
+    appearance: none;
+    border: 3px solid var(--paper);
+    border-radius: 50%;
+    background: var(--water);
+    box-shadow: 0 0 0 1px var(--water);
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 5px;
+    border-radius: 3px;
+    background: #d6d3cb;
+  }
+
+  input[type="range"]::-moz-range-progress {
+    height: 5px;
+    border-radius: 3px;
+    background: var(--water);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border: 3px solid var(--paper);
+    border-radius: 50%;
+    background: var(--water);
+    box-shadow: 0 0 0 1px var(--water);
+  }
+
+  .number-field {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    border: 1px solid #bdb6aa;
+    border-radius: 5px;
+    background: var(--white);
+  }
+
+  .number-field input {
+    width: 66px;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 10px 4px 10px 14px;
+    color: var(--charcoal);
+    font-weight: 800;
+  }
+
+  .number-field span {
+    flex: 1;
+    padding-right: 10px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .range-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    padding-right: 144px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .control-hint {
+    margin: 9px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 14px;
+  }
+
+  .choice-grid-wide {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .choice-grid :global(.choice-button) {
+    display: grid;
+    min-height: 56px;
+    place-content: center;
+    gap: 2px;
+    border: 1px solid #c9c3b8;
+    border-right-width: 0;
+    background: var(--white);
+    color: var(--ink);
+    padding: 9px 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
+
+  .choice-grid :global(.choice-button:first-child) {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .choice-grid :global(.choice-button:last-child) {
+    border-right-width: 1px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .choice-grid :global(.choice-button:hover) {
+    background: #eef6f7;
+  }
+
+  .choice-grid :global(.choice-button[aria-pressed="true"]) {
+    position: relative;
+    z-index: 1;
+    border-color: var(--water);
+    border-right-width: 1px;
+    background: var(--water);
+    color: var(--white);
+  }
+
+  .choice-grid :global(.choice-button[aria-pressed="true"] + .choice-button) {
+    border-left-width: 0;
+  }
+
+  .choice-grid :global(.choice-button strong) {
+    font-size: 14px;
+  }
+
+  .choice-grid :global(.choice-button small) {
+    color: inherit;
+    font-size: 11px;
+    opacity: 0.72;
+  }
+
+  .counter-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .counter-group[hidden],
+  .toggle-row[hidden] {
+    display: none;
+  }
+
+  .stepper {
+    display: grid;
+    min-height: 48px;
+    grid-template-columns: 44px 46px auto 44px;
+    align-items: stretch;
+    border: 1px solid #bdb6aa;
+    border-radius: 5px;
+    background: var(--white);
+  }
+
+  .stepper button {
+    border: 0;
+    background: transparent;
+    color: var(--water);
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .stepper button:first-child {
+    border-right: 1px solid var(--line);
+  }
+
+  .stepper button:last-child {
+    border-left: 1px solid var(--line);
+  }
+
+  .stepper input {
+    width: 46px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--charcoal);
+    text-align: right;
+    font-weight: 800;
+  }
+
+  .stepper span {
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 4px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    cursor: pointer;
+  }
+
+  .toggle-row > span:first-child {
+    display: grid;
+  }
+
+  .toggle-row strong {
+    color: var(--charcoal);
+    font-size: 16px;
+  }
+
+  .toggle-row small {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .toggle-row input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .toggle-track {
+    display: flex;
+    width: 52px;
+    height: 30px;
+    flex: 0 0 auto;
+    align-items: center;
+    border: 1px solid #aaa297;
+    border-radius: 18px;
+    background: #d7d2ca;
+    padding: 3px;
+    transition: background-color 180ms ease, border-color 180ms ease;
+  }
+
+  .toggle-track span {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(17, 23, 21, 0.22);
+    transition: transform 180ms ease;
+  }
+
+  .toggle-row input:checked + .toggle-track {
+    border-color: var(--water);
+    background: var(--water);
+  }
+
+  .toggle-row input:checked + .toggle-track span {
+    transform: translateX(22px);
+  }
+
+  .toggle-row input:focus-visible + .toggle-track {
+    outline: 3px solid rgba(20, 127, 159, 0.44);
+    outline-offset: 3px;
+  }
+
+  .location-group {
+    display: grid;
+    border-bottom: 0;
+  }
+
+  .location-group select {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 12px;
+    border: 1px solid #bdb6aa;
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--ink);
+    padding: 0 14px;
+    font: inherit;
+    font-weight: 700;
+  }
+
+  .estimate-total {
+    margin-top: 30px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 28px;
+  }
+
+  .estimate-total > span {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .estimate-total strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--water);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(38px, 4vw, 52px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .estimate-total small {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted);
+  }
+
+  .estimate-breakdown {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 24px;
+  }
+
+  .estimate-breakdown div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .estimate-breakdown dt {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .estimate-breakdown dd {
+    margin: 0;
+    color: var(--charcoal);
+    font-weight: 800;
+    text-align: right;
+  }
+
+  .minimum-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    border: 1px solid var(--taupe);
+    border-radius: 5px;
+    background: #f6f1e8;
+    padding: 14px;
+    color: var(--water);
+  }
+
+  .minimum-note p {
+    display: grid;
+    margin: 0;
+  }
+
+  .minimum-note strong {
+    color: var(--charcoal);
+    font-size: 14px;
+  }
+
+  .minimum-note span {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .estimate-note {
+    min-height: 82px;
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .estimate-action {
+    width: 100%;
+  }
+
+  .reset-button {
+    display: inline-flex;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    border: 1.5px solid var(--water);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--water);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .estimate-explainer {
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+    padding-block: 42px 52px;
+  }
+
+  .estimate-explainer h2 {
+    margin: 0;
+    color: var(--charcoal);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .estimate-factors {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .estimate-factors > div {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 14px;
+    padding: 24px 28px 24px 0;
+  }
+
+  .estimate-factors > div + div {
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
+  }
+
+  .estimate-factors :global(svg) {
+    color: var(--clay);
+  }
+
+  .estimate-factors p {
+    display: grid;
+    margin: 0;
+  }
+
+  .estimate-factors strong {
+    color: var(--charcoal);
+  }
+
+  .estimate-factors span {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 1120px) {
+    .estimator-shell {
+      grid-template-columns: 230px minmax(420px, 1fr);
+    }
+
+    .estimate-summary {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    .estimate-note {
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: 820px) {
+    .estimator-intro-inner {
+      min-height: 0;
+      padding-block: 52px 40px;
+    }
+
+    .measure-mark {
+      display: none;
+    }
+
+    .estimator-intro p {
+      font-size: 17px;
+    }
+
+    .estimator-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .service-picker {
+      border-right: 0;
+    }
+
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-option:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .job-controls,
+    .estimate-summary {
+      border-top: 1px solid var(--line);
+      padding: 26px 24px 32px;
+    }
+
+    .choice-grid-wide {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .choice-grid-wide :global(.choice-button),
+    .choice-grid-wide :global(.choice-button:first-child),
+    .choice-grid-wide :global(.choice-button:last-child) {
+      border: 1px solid #c9c3b8;
+      border-radius: 5px;
+    }
+
+    .estimate-factors {
+      grid-template-columns: 1fr;
+    }
+
+    .estimate-factors > div + div {
+      border-top: 1px solid var(--line);
+      border-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .estimator-intro h1 {
+      font-size: 37px;
+    }
+
+    .estimator-stage {
+      padding-block: 28px 48px;
+    }
+
+    .service-options {
+      grid-template-columns: 1fr;
+      max-height: 305px;
+      overflow-y: auto;
+    }
+
+    .service-option:nth-child(odd) {
+      border-right: 0;
+    }
+
+    .range-row {
+      grid-template-columns: 1fr;
+    }
+
+    .number-field {
+      width: 100%;
+    }
+
+    .range-scale {
+      padding-right: 0;
+    }
+
+    .choice-grid,
+    .choice-grid-wide {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .choice-grid :global(.choice-button),
+    .choice-grid :global(.choice-button:first-child),
+    .choice-grid :global(.choice-button:last-child) {
+      border: 1px solid #c9c3b8;
+      border-radius: 5px;
+    }
+
+    .counter-group {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .stepper {
+      width: 100%;
+      grid-template-columns: 48px 1fr auto 48px;
+    }
+
+    .estimate-total strong {
+      font-size: 42px;
+    }
+  }
+</style>
