@@ -518,6 +518,9 @@ This section should remain in the structure, but it should not launch with dupli
 
 - Carpet cleaning, using the supplied `03CC B` image as before and `03CC A` as after.
 - Hard floor cleaning and polish, using the supplied `02HF B` image as before and `02HF A` as after.
+- Gutter cleaning, using the existing approved before-and-after images.
+
+On desktop, each comparison divider should follow the pointer while it moves across the image. Keep the range input available for touch and keyboard use.
 
 **Final caption format when job details are supplied**
 
