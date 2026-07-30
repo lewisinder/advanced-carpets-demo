@@ -4,10 +4,10 @@
   "email": "office@advancedcarpet.co.nz",
   "primaryPhone": "021 333 354",
   "phones": [
+    { "label": "Main mobile", "value": "021 333 354" },
     { "label": "Cromwell / Alexandra", "value": "03 445 3329" },
     { "label": "Queenstown", "value": "03 442 6803" },
-    { "label": "Wanaka", "value": "03 443 4162" },
-    { "label": "Mobile", "value": "021 333 354" }
+    { "label": "Wanaka", "value": "03 443 4162" }
   ],
-  "areas": ["Cromwell", "Alexandra", "Queenstown", "Wanaka", "Central Otago", "Southern Lakes"]
+  "areas": ["Central Otago", "Southern Lakes", "Maniototo", "Cromwell", "Alexandra", "Clyde", "Queenstown", "Wanaka", "Hāwea", "Ranfurly"]
 }

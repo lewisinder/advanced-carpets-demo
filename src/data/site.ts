@@ -32,6 +32,20 @@ export function localBusinessSchema() {
       "@type": "Place",
       name: area,
     })),
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+        "https://schema.org/Sunday",
+      ],
+      opens: "09:00",
+      closes: "17:00",
+    },
     makesOffer: services.map((service) => ({
       "@type": "Offer",
       itemOffered: {

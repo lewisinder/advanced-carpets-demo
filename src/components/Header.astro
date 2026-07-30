@@ -12,8 +12,14 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
 ---
 
 <header class="site-header" data-site-header>
+  <div class="header-hours">
+    <div class="container header-hours-inner">
+      <span>Normal hours 9am to 5pm every day.</span>
+      <a href={phoneHref}>Flood emergencies 24/7. Call {site.primaryPhone}</a>
+    </div>
+  </div>
   <div class="container header-inner">
-    <a class="logo" href={withBase("/")} aria-label="Advanced Carpets home">
+    <a class="logo" href={withBase("/")} aria-label="Advanced Carpets & Restoration home">
       <img src={withBase("/assets/logo.png")} alt={site.name} />
     </a>
     <nav class="nav" aria-label="Main navigation">
@@ -38,9 +44,10 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
         </div>
       </div>
       <a href={withBase("/about/")}>About</a>
+      <a href={withBase("/#service-areas")}>Service areas</a>
       <a href={withBase("/contact/")}>Contact</a>
-      <a class="nav-phone" href={phoneHref}>{site.primaryPhone}</a>
-      <a class="button button-primary" href={withBase("/contact/")}>Get in touch</a>
+      <a class="nav-phone" href={phoneHref}>Call {site.primaryPhone}</a>
+      <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
     </nav>
     <button
       type="button"
@@ -59,12 +66,13 @@ const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
     <nav class="mobile-nav-inner" aria-label="Mobile navigation">
       <a href={withBase("/services/")}>Services</a>
       <a href={withBase("/about/")}>About</a>
+      <a href={withBase("/#service-areas")}>Service areas</a>
       <a href={withBase("/contact/")}>Contact</a>
       <a class="mobile-nav-phone" href={phoneHref}>
         <Phone size={18} stroke-width={2.2} aria-hidden="true" />
         Call {site.primaryPhone}
       </a>
-      <a class="button button-primary" href={withBase("/contact/")}>Get in touch</a>
+      <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
     </nav>
   </div>
 </header>

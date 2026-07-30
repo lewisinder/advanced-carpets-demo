@@ -1,15 +1,21 @@
 ---
 import { withBase } from "@/lib/base";
+import { site } from "@/data/site";
+
+const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
 ---
 
 <section class="section">
   <div class="container">
     <div class="cta-panel">
       <div>
-        <h2>Tell us what needs cleaning or restoring</h2>
-        <p>Send the job details, photos if useful, and the best way to reach you. The team can reply with practical advice and next steps.</p>
+        <h2>Need help with cleaning, pests or water damage?</h2>
+        <p>Send us the job details and we will answer your enquiry the same day. Call directly for 24/7 flood and water damage response.</p>
       </div>
-      <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
+      <div class="cta-actions">
+        <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
+        <a class="button button-outline" href={phoneHref}>Call {site.primaryPhone}</a>
+      </div>
     </div>
   </div>
 </section>

@@ -2,29 +2,33 @@
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { withBase } from "@/lib/base";
+
+const footerAreas = ["Cromwell", "Alexandra", "Queenstown", "Wanaka", "Central Otago", "Southern Lakes", "Maniototo"];
+const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
 ---
 
 <footer class="footer">
   <div class="container footer-grid">
     <div>
       <strong>{site.name}</strong>
-      <p>Professional carpet cleaning and restoration across Central Otago and the Southern Lakes.</p>
+      <p>Cromwell-based carpet cleaning and specialist services for homes and businesses across Central Otago, the Southern Lakes and Maniototo.</p>
+      <p class="footer-hours">Normal hours 9am to 5pm every day. Flood emergencies 24/7.</p>
     </div>
     <div>
       <strong>Services</strong>
-      {services.slice(0, 6).map((service) => (
+      {services.map((service) => (
         <a href={withBase(`/services/${service.slug}/`)}>{service.name}</a>
       ))}
     </div>
     <div>
       <strong>Locations</strong>
-      {site.areas.map((area) => <span>{area}</span>)}
+      {footerAreas.map((area) => <span>{area}</span>)}
     </div>
     <div>
       <strong>Contact</strong>
-      {site.phones.map((phone) => <span>{phone.value}</span>)}
-      <span>{site.email}</span>
-      <a href={withBase("/design-system/")}>Design system</a>
+      {site.phones.map((phone) => <a href={phoneHref(phone.value)}>{phone.label}: {phone.value}</a>)}
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a href={withBase("/contact/")}>Make an enquiry</a>
     </div>
   </div>
 </footer>

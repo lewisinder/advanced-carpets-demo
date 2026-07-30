@@ -8,6 +8,9 @@ import { withBase } from "@/lib/base";
 type Props = {
   title?: string;
   description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
   pathname?: string;
   robots?: string;
 };
@@ -17,10 +20,13 @@ const pageTitle = Astro.props.title ?? titleFor(pathname);
 const canonical = `${site.url}${pathname === "/" ? "/" : `${pathname}/`}`;
 const schema = JSON.stringify(localBusinessSchema());
 const robots = Astro.props.robots ?? "index, follow";
+const ogTitle = Astro.props.ogTitle ?? pageTitle;
+const ogDescription = Astro.props.ogDescription ?? Astro.props.description;
+const ogImage = Astro.props.ogImage ? `${site.url}${Astro.props.ogImage}` : undefined;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,11 +35,13 @@ const robots = Astro.props.robots ?? "index, follow";
     <meta name="description" content={Astro.props.description} />
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={Astro.props.description} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content="summary_large_image" />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
     <script is:inline type="application/ld+json" set:html={schema}></script>
   </head>
   <body>
