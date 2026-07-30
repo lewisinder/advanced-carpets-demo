@@ -328,6 +328,12 @@ textarea {
   z-index: 0;
 }
 
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 .hero::before {
   position: absolute;
   inset: 0;
@@ -1042,6 +1048,11 @@ textarea {
 @media (max-width: 900px) {
   .ba-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .before-after-label,
+  .before-after-label-center {
+    display: none;
   }
 
   .home-results-gallery {

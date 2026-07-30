@@ -48,11 +48,15 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
     muted
     loop
     playsinline
+    webkit-playsinline
+    preload="auto"
+    disablepictureinpicture
+    disableRemotePlayback
     poster={withBase("/assets/hero-cleaning.png")}
     aria-hidden="true"
   >
-    <source src={withBase("/assets/header.webm")} type="video/webm" />
     <source src={withBase("/assets/header.mp4")} type="video/mp4" />
+    <source src={withBase("/assets/header.webm")} type="video/webm" />
   </video>
   <div class="container">
     <div class="hero-content">
@@ -67,11 +71,11 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
         Need urgent help? Call {site.primaryPhone}
       </a>
       <div class="hero-proof">
-        <a class="review-line" href="https://g.page/r/CWa4H9jR5qTgEBM" target="_blank" rel="noopener noreferrer">
+        <div class="review-line">
           <span class="hero-stars" aria-label="Five stars">★★★★★</span>
           <strong data-tina-field={tinaField(home.hero, "rating")}>{home.hero.rating}</strong>
           <span data-tina-field={tinaField(home.hero, "reviewCount")}>{home.hero.reviewCount}</span>
-        </a>
+        </div>
         <div class="trusted-line">
           <span>Trusted by local businesses</span>
           <div class="trusted-logos">
@@ -92,6 +96,31 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
     </div>
   </div>
 </section>
+
+<script is:inline>
+  (() => {
+    const video = document.querySelector(".hero-video");
+    if (!video || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const startVideo = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      const playAttempt = video.play();
+      if (playAttempt) playAttempt.catch(() => {});
+    };
+
+    if (video.readyState >= 2) startVideo();
+    else video.addEventListener("canplay", startVideo, { once: true });
+
+    window.addEventListener("pageshow", startVideo);
+    window.addEventListener("touchstart", startVideo, { once: true, passive: true });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) startVideo();
+    });
+  })();
+</script>
 
 <section class="section services-section">
   <div class="container">

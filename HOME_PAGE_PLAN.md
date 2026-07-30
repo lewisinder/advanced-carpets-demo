@@ -374,9 +374,11 @@ Use an approved real-work image. Do not use an incorrect van image.
 - IICRC-certified technicians
 - Fully insured
 
+Display the confirmed Google rating and review count as static proof within the hero. Do not link this hero figure to Google reviews.
+
 **Media direction**
 
-Use the current client-supplied working video if it shows real carpet-cleaning equipment and remains clear behind the copy. The first frame or poster image should show a technician or cleaning wand in use. Keep controls hidden for a decorative background video, mute it and provide a static fallback for reduced-motion users.
+Use the current client-supplied working video if it shows real carpet-cleaning equipment and remains clear behind the copy. The first frame or poster image should show a technician or cleaning wand in use. Keep controls hidden for a decorative background video, mute it, use inline autoplay on mobile and provide a static fallback for reduced-motion users.
 
 ### Approved customer logos within the hero
 
@@ -520,7 +522,7 @@ This section should remain in the structure, but it should not launch with dupli
 - Hard floor cleaning and polish, using the supplied `02HF B` image as before and `02HF A` as after.
 - Gutter cleaning, using the existing approved before-and-after images.
 
-On desktop, each comparison divider should follow the pointer while it moves across the image. Keep the range input available for touch and keyboard use.
+On desktop, each comparison divider should follow the pointer while it moves across the image. Keep the range input available for touch and keyboard use. Hide the `Before` and `After` tags below the desktop breakpoint.
 
 **Final caption format when job details are supplied**
 
