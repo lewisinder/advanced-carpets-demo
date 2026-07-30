@@ -707,8 +707,10 @@ textarea {
   margin-top: 10px;
 }
 
-.nav .service-card-compact {
+.service-card-compact {
   display: flex;
+  align-self: start;
+  height: auto;
   min-height: 0;
   align-items: center;
   gap: 14px;
@@ -717,6 +719,11 @@ textarea {
   padding: 0;
   box-shadow: none;
   transform: translateX(0);
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+/* The header's generic link transition is more specific, so retain the compact-card motion there. */
+.nav .service-card-compact {
   transition: transform 180ms ease, color 180ms ease;
 }
 
@@ -734,7 +741,7 @@ textarea {
 }
 
 .also-label {
-  transition: color 200ms ease;
+  transition: color 180ms ease;
 }
 
 .service-card-compact .service-card-top {
