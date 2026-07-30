@@ -2,7 +2,7 @@
   "seoDescription": "Carpet cleaning, pest control, upholstery cleaning and stain treatment for homes and businesses across Central Otago. IICRC certified and fully insured.",
   "hero": {
     "title": "Carpet cleaning in Central Otago, the Southern Lakes and Maniototo",
-    "intro": "Based in Cromwell, Advanced Carpets & Restoration serves homeowners and businesses throughout the region. We handle carpet and upholstery cleaning, pest control and stain treatment, with 24/7 response for urgent flood and water damage.",
+    "intro": "Based in Cromwell, Advanced Carpets & Restoration serves homeowners and businesses throughout the region. We handle carpet and upholstery cleaning, pest control and stain treatment across the region.",
     "primaryAction": "Make an enquiry",
     "secondaryAction": "View services",
     "rating": "5.0",
@@ -15,12 +15,8 @@
     ],
     "metrics": [
       {
-        "value": "Cromwell",
-        "label": "Based in the region we service"
-      },
-      {
         "value": "16 years",
-        "label": "Kevin's experience in the trade"
+        "label": "Experience"
       },
       {
         "value": "IICRC",

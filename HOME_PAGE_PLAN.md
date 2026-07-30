@@ -278,20 +278,19 @@ This separation reduces keyword overlap and gives each service page a clear purp
 The plan keeps the useful structure of the current homepage while replacing placeholder content and adjusting the emphasis to match the client’s answers.
 
 1. Header
-2. Hero with local service statement and proof
-3. Approved customer logos
-4. Four main services
-5. Other available services
-6. Before-and-after work
-7. Customer reviews
-8. Why Advanced Carpets
-9. About preview
-10. Service areas and phone numbers
-11. How to arrange a job
-12. Enquiry panel
-13. Common questions
-14. Final contact prompt
-15. Footer
+2. Hero with local service statement, proof and approved customer logos
+3. Four main services
+4. Other available services
+5. Before-and-after work
+6. Customer reviews
+7. Why Advanced Carpets
+8. About preview
+9. Service areas and phone numbers
+10. How to arrange a job
+11. Enquiry panel
+12. Common questions
+13. Final contact prompt
+14. Footer
 
 ## 7. Full homepage copy
 
@@ -346,7 +345,7 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 **Hours line**
 
-> Normal hours 9am to 5pm every day. Flood emergencies 24/7.
+> Normal hours 9am to 5pm every day. Urgent response: Call 021 333 354.
 
 ### Hero
 
@@ -356,7 +355,7 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 **Intro**
 
-> Based in Cromwell, Advanced Carpets & Restoration serves homeowners and businesses throughout the region. We handle carpet and upholstery cleaning, pest control and stain treatment, with 24/7 response for urgent flood and water damage.
+> Based in Cromwell, Advanced Carpets & Restoration serves homeowners and businesses throughout the region. We handle carpet and upholstery cleaning, pest control and stain treatment across the region.
 
 **Primary button**
 
@@ -368,12 +367,11 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 **Urgent link**
 
-> Water damage? Call 021 333 354
+> Need urgent help? Call 021 333 354
 
 **Proof points**
 
-- Cromwell based
-- Kevin has 16 years in the trade
+- 16 years experience
 - IICRC-certified technicians
 - Fully insured
 
@@ -381,7 +379,7 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 Use the current client-supplied working video if it shows real carpet-cleaning equipment and remains clear behind the copy. The first frame or poster image should show a technician or cleaning wand in use. Keep controls hidden for a decorative background video, mute it and provide a static fallback for reduced-motion users.
 
-### Approved customer logos
+### Approved customer logos within the hero
 
 **Label**
 
@@ -393,7 +391,7 @@ Display the supplied logos for:
 - Colonial Manor Motel
 - Wanaka Hotel
 
-Keep this as a compact proof strip. Use the official supplied artwork, provide accurate alt text and do not imply a relationship beyond the client’s permission to display the logos.
+Keep this as a compact proof row within the hero. Use the official supplied artwork, provide accurate alt text and do not imply a relationship beyond the client’s permission to display the logos.
 
 ### Main services
 
@@ -804,7 +802,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 
 **Copy**
 
-> Send us the job details and we will answer your enquiry the same day. Call directly for 24/7 flood and water damage response.
+> Send us the job details and we will answer your enquiry the same day. For urgent assistance, call us directly.
 
 **Primary button**
 
@@ -883,7 +881,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 ### Structure changes
 
 - Add a homepage service area anchor and link to it from the header.
-- Keep the approved customer-logo strip beneath the hero.
+- Keep the approved customer logos within the hero proof area.
 - Keep the current before-and-after interaction, but replace all repeated or unrelated images and use clearly labelled temporary captions.
 - Use real client-supplied working images throughout.
 - Remove every existing van image. Use a neutral interior-van or equipment placeholder until suitable replacement photography is available.

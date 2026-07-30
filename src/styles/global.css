@@ -2319,54 +2319,7 @@ textarea {
 }
 
 .hero-metrics {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.hero-metrics div:nth-child(4) {
-  border-color: var(--taupe);
-}
-
-.client-logo-section {
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-  padding-block: 25px;
-}
-
-.client-logo-row {
-  display: flex;
-  min-height: 54px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 36px;
-}
-
-.client-logo-row > p {
-  flex: 0 0 auto;
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 850;
-}
-
-.client-logos {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 36px;
-}
-
-.client-logos img {
-  width: auto;
-  max-height: 42px;
-  object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.72;
-  transition: filter 180ms ease, opacity 180ms ease;
-}
-
-.client-logos img:hover {
-  filter: none;
-  opacity: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .also-services-heading {
@@ -2645,15 +2598,9 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .client-logo-row,
   .steps-footer {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .client-logos {
-    width: 100%;
-    justify-content: flex-start;
   }
 
   .service-areas-layout {
@@ -2683,15 +2630,6 @@ textarea {
 
   .header-hours-inner > span {
     display: none;
-  }
-
-  .client-logos {
-    gap: 22px;
-  }
-
-  .client-logos img {
-    max-width: 29%;
-    max-height: 34px;
   }
 
   .also-services-heading,

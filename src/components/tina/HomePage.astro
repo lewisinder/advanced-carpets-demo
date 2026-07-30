@@ -64,7 +64,7 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       </div>
       <a class="hero-urgent-link" href={phoneHref(site.primaryPhone)}>
         <Phone size={19} stroke-width={2.2} aria-hidden="true" />
-        Water damage? Call {site.primaryPhone}
+        Need urgent help? Call {site.primaryPhone}
       </a>
       <div class="hero-proof">
         <a class="review-line" href="https://g.page/r/CWa4H9jR5qTgEBM" target="_blank" rel="noopener noreferrer">
@@ -72,6 +72,14 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
           <strong data-tina-field={tinaField(home.hero, "rating")}>{home.hero.rating}</strong>
           <span data-tina-field={tinaField(home.hero, "reviewCount")}>{home.hero.reviewCount}</span>
         </a>
+        <div class="trusted-line">
+          <span>Trusted by local businesses</span>
+          <div class="trusted-logos">
+            <img src={withBase("/assets/clients/promisia.png")} alt="Promisia Healthcare" width="118" height="31" />
+            <img src={withBase("/assets/clients/colonial-manor.png")} alt="Colonial Manor Motel, Cromwell" width="100" height="34" />
+            <img src={withBase("/assets/clients/wanaka-hotel.png")} alt="Wanaka Hotel" width="48" height="34" />
+          </div>
+        </div>
       </div>
       <div class="hero-metrics">
         {home.hero.metrics.map((metric) => (
@@ -81,17 +89,6 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
           </div>
         ))}
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="client-logo-section" aria-label="Trusted by local businesses">
-  <div class="container client-logo-row">
-    <p>Trusted by local businesses</p>
-    <div class="client-logos">
-      <img src={withBase("/assets/clients/promisia.png")} alt="Promisia Healthcare" width="174" height="46" />
-      <img src={withBase("/assets/clients/colonial-manor.png")} alt="Colonial Manor Motel, Cromwell" width="145" height="49" />
-      <img src={withBase("/assets/clients/wanaka-hotel.png")} alt="Wanaka Hotel" width="72" height="51" />
     </div>
   </div>
 </section>
