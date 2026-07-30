@@ -87,7 +87,7 @@ These facts come from the completed client plan, client-supplied service documen
 | Based in Cromwell | Use in the hero, about preview and service area section |
 | Covers Central Otago, the Southern Lakes and Maniototo, including the places within those regions | Use as the main service area statement, supported by a natural list of major towns |
 | Homeowners and businesses are equally important | Balance residential and commercial examples throughout the page |
-| The business has operated in the region for 16 years | Use first-person `we` wording in public copy |
+| The business has operated in the region for 16+ years | Use first-person `we` wording in public copy |
 | The business has spent those years serving local homeowners and businesses | Use in the about and trust sections |
 | Current technicians are IICRC certified | Explain the Institute of Inspection, Cleaning and Restoration Certification at first detailed mention |
 | The IICRC name and logo may be displayed | Use as a factual trust signal |
@@ -370,7 +370,7 @@ Use an approved real-work image. Do not use an incorrect van image.
 
 **Proof points**
 
-- 16 years experience
+- 16+ years experience
 - IICRC-certified technicians
 - Fully insured
 
@@ -592,11 +592,11 @@ Keep the rating and review total in editable content because they will change ov
 
 **Heading**
 
-> We have served the region for 16 years
+> We have served the region for 16+ years
 
 **Intro**
 
-> Advanced Carpets & Restoration is a locally owned and operated Cromwell business. For 16 years, we have worked throughout Central Otago, the Southern Lakes and Maniototo, serving homeowners and businesses.
+> Advanced Carpets & Restoration is a locally owned and operated Cromwell business. For 16+ years, we have worked throughout Central Otago, the Southern Lakes and Maniototo, serving homeowners and businesses.
 
 #### IICRC-certified technicians
 
@@ -634,7 +634,7 @@ Display the supplied IICRC logo as the only certification mark in this section.
 
 **Copy**
 
-> We have spent 16 years serving homeowners and businesses across Central Otago, the Southern Lakes and Maniototo. Advanced Carpets & Restoration is based in Cromwell and works throughout all three regions. The current technicians are IICRC certified, and the business is fully insured. We use commercial equipment and give straightforward advice about what is likely to work for each job.
+> We have spent 16+ years serving homeowners and businesses across Central Otago, the Southern Lakes and Maniototo. Advanced Carpets & Restoration is based in Cromwell and works throughout all three regions. The current technicians are IICRC certified, and the business is fully insured. We use commercial equipment and give straightforward advice about what is likely to work for each job.
 
 **Button**
 
@@ -864,7 +864,7 @@ Add `id="service-areas"` to this section so the header link has a stable destina
 - Add Maniototo to the public service area content in `content/global/site.json`.
 - Add Clyde, Hāwea and Ranfurly to the visible service area copy.
 - Remove any quote-led wording found in site content, components, metadata, forms or generated pages.
-- Replace `15+` with `16 years experience`.
+- Replace `15+` with `16+ years experience`.
 - Replace the current `7 Days` metric with confirmed 24/7 emergency flood response.
 - Add same-day normal enquiry response and normal 9am to 5pm hours every day.
 - Add `fully insured` as a confirmed trust point.
