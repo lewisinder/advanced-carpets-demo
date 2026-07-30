@@ -976,27 +976,6 @@ textarea {
   clip-path: inset(0 calc(100% - var(--position)) 0 0);
 }
 
-.before-after-label {
-  position: absolute;
-  top: 16px;
-  z-index: 2;
-  border-radius: 4px;
-  background: rgba(17, 23, 21, 0.76);
-  color: var(--white);
-  padding: 7px 10px;
-  font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.before-after-label-before {
-  left: 16px;
-}
-
-.before-after-label-after {
-  right: 16px;
-}
-
 .before-after-label-center {
   position: absolute;
   top: 16px;
@@ -1050,7 +1029,6 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .before-after-label,
   .before-after-label-center {
     display: none;
   }

@@ -522,7 +522,7 @@ This section should remain in the structure, but it should not launch with dupli
 - Hard floor cleaning and polish, using the supplied `02HF B` image as before and `02HF A` as after.
 - Gutter cleaning, using the existing approved before-and-after images.
 
-On desktop, each comparison divider should follow the pointer while it moves across the image. Keep the range input available for touch and keyboard use. Hide the `Before` and `After` tags below the desktop breakpoint.
+On desktop, each comparison divider should follow the pointer while it moves across the image. Keep the range input available for touch and keyboard use. Do not display `Before` or `After` badges on the comparison images.
 
 **Final caption format when job details are supplied**
 

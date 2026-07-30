@@ -17,8 +17,6 @@ const { beforeSrc, afterSrc, beforeAlt, afterAlt, title, caption, label } = Astr
     <img class="before-after-image before-after-image-after" src={afterSrc} alt={afterAlt} loading="lazy" />
     <img class="before-after-image before-after-image-before" src={beforeSrc} alt={beforeAlt} loading="lazy" />
     {label && <span class="before-after-label-center">{label}</span>}
-    <span class="before-after-label before-after-label-before">Before</span>
-    <span class="before-after-label before-after-label-after">After</span>
     <span class="before-after-handle" aria-hidden="true"></span>
     <input class="before-after-slider" type="range" min="0" max="100" value="50" aria-label={`Drag to compare before and after${title ? ` for ${title}` : ""}`} />
   </div>
