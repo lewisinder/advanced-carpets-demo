@@ -164,9 +164,19 @@ textarea {
 .nav-trigger::before {
   position: absolute;
   top: 0;
-  right: 100%;
+  right: -36px;
   bottom: 0;
-  width: 22px;
+  left: -36px;
+  content: "";
+}
+
+/* Keep the route from the trigger into the mega menu forgiving for diagonal pointer movement. */
+.nav-trigger::after {
+  position: absolute;
+  top: 100%;
+  right: -36px;
+  left: -36px;
+  height: 28px;
   content: "";
 }
 
@@ -697,7 +707,7 @@ textarea {
   margin-top: 10px;
 }
 
-.service-card-compact {
+.nav .service-card-compact {
   display: flex;
   min-height: 0;
   align-items: center;
@@ -706,8 +716,8 @@ textarea {
   background: transparent;
   padding: 0;
   box-shadow: none;
-  transform: none;
-  transition: transform 200ms ease;
+  transform: translateX(0);
+  transition: transform 180ms ease, color 180ms ease;
 }
 
 .service-card-compact::after {
