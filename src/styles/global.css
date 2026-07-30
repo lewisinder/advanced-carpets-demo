@@ -590,9 +590,7 @@ textarea {
 .panel,
 .review-card,
 .token-card,
-.design-panel,
-.form-shell,
-.design-system-form {
+.design-panel {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
@@ -1460,7 +1458,8 @@ textarea {
 
 .form-shell,
 .design-system-form {
-  padding: 28px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .faq-layout {
@@ -1637,9 +1636,12 @@ textarea {
   min-width: 0;
 }
 
-.service-enquiry-panel .tradify-enquiry__frame-wrap {
-  max-height: 680px;
-  overflow: auto;
+.contact-form-section {
+  min-width: 0;
+}
+
+.contact-form-section .section-heading {
+  margin-bottom: 28px;
 }
 
 .region-panel {
@@ -2144,6 +2146,10 @@ textarea {
     padding: 28px;
   }
 
+  .enquiry-panel {
+    gap: 36px;
+  }
+
   .media-block,
   .media-block img,
   .work-photo,
@@ -2225,6 +2231,10 @@ textarea {
 @media (max-width: 560px) {
   .section {
     padding-block: 48px;
+  }
+
+  .enquiry-panel > .form-shell {
+    margin-inline: -28px;
   }
 
   .hero-content {
