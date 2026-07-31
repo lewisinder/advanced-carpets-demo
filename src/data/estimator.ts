@@ -86,7 +86,7 @@ export const estimatorServices: EstimatorService[] = [
   {
     slug: "pest-control",
     name: "Pest Control",
-    description: "Estimate treatment from the total floor area of the house.",
+    description: "Estimate indoor or outdoor pest treatment from the total floor area of the house.",
     quantityLabel: "Whole house floor area",
     quantityUnit: "m²",
     quantityMin: 40,
@@ -97,6 +97,12 @@ export const estimatorServices: EstimatorService[] = [
     baseCharge: 0,
     variance: 0,
     quantityHint: "Use the approximate total floor area of the home, not the land area.",
+    optionLabel: "Treatment area",
+    options: [
+      { label: "Outside", value: "outside", hint: "$1 per m²", unitRate: 1 },
+      { label: "Inside", value: "inside", hint: "$0.75 per m²", unitRate: 0.75 },
+      { label: "Inside & outside", value: "both", hint: "$1.75 per m²", unitRate: 1.75 },
+    ],
     note: "This assumes a standard treatment. Borer, bed bugs, severe infestations and repeat visits need a tailored assessment.",
   },
   {
