@@ -5,8 +5,6 @@ import SpiderIcon from "@/components/icons/SpiderIcon.astro";
 import Armchair from "@lucide/astro/icons/armchair";
 import Bug from "@lucide/astro/icons/bug";
 import Calculator from "@lucide/astro/icons/calculator";
-import Droplets from "@lucide/astro/icons/droplets";
-import Hammer from "@lucide/astro/icons/hammer";
 import Leaf from "@lucide/astro/icons/leaf";
 import MapPin from "@lucide/astro/icons/map-pin";
 import PanelsTopLeft from "@lucide/astro/icons/panels-top-left";
@@ -21,10 +19,8 @@ const icons = {
   "pest-control": SpiderIcon,
   "upholstery-cleaning": Armchair,
   "stain-treatment": Sparkles,
-  "flood-restoration": Droplets,
   "gutter-cleaning": Leaf,
   "hard-floor-cleaning-polish": Sparkles,
-  "carpet-repair": Hammer,
   "solar-panel-cleaning": Sun,
   "window-cleaning": PanelsTopLeft,
 };
@@ -36,7 +32,7 @@ const contactUrl = withBase("/contact/");
   <div class="container estimator-intro-inner">
     <div>
       <h1>Plan the job. See an indicative cost.</h1>
-      <p>Select a service and adjust the job details. The figures below use placeholder rates so we can test the estimator before replacing them with confirmed pricing.</p>
+      <p>Select a service and adjust the job details. Confirmed service rates are shown where available; remaining figures will be refined as pricing is confirmed.</p>
     </div>
     <div class="measure-mark" aria-hidden="true">
       <span>10</span><span>20</span><span>30</span><span>40</span>
@@ -103,12 +99,12 @@ const contactUrl = withBase("/contact/");
           <p class="control-hint" data-quantity-hint></p>
         </div>
 
-        <fieldset class="control-group">
+        <fieldset class="control-group" data-condition-group>
           <legend data-condition-label></legend>
           <div class="choice-grid" data-condition-options></div>
         </fieldset>
 
-        <fieldset class="control-group">
+        <fieldset class="control-group" data-option-group>
           <legend data-option-label></legend>
           <div class="choice-grid choice-grid-wide" data-service-options></div>
         </fieldset>
@@ -142,7 +138,7 @@ const contactUrl = withBase("/contact/");
               <option value={location.value}>{location.label}</option>
             ))}
           </select>
-          <p class="control-hint">Placeholder travel allowances are included in the estimate.</p>
+          <p class="control-hint">The minimum charge changes by location and is applied automatically.</p>
         </div>
       </div>
 
@@ -153,9 +149,9 @@ const contactUrl = withBase("/contact/");
         </div>
 
         <div class="estimate-total" aria-live="polite" aria-atomic="true">
-          <span>Estimated price range</span>
-          <strong data-estimate-range>$0–$0</strong>
-          <small>Placeholder rates, including GST</small>
+          <span>Estimated cost</span>
+          <strong data-estimate-range>$0</strong>
+          <small>Includes GST where the confirmed rate does</small>
         </div>
 
         <dl class="estimate-breakdown">
@@ -168,8 +164,8 @@ const contactUrl = withBase("/contact/");
             <dd data-modifier-value>$0</dd>
           </div>
           <div>
-            <dt>Travel allowance</dt>
-            <dd data-travel-value>$0</dd>
+            <dt>Location minimum</dt>
+            <dd data-location-minimum>$0</dd>
           </div>
         </dl>
 
@@ -196,7 +192,7 @@ const contactUrl = withBase("/contact/");
     <div class="estimate-factors">
       <div>
         <Calculator size={30} stroke-width={1.8} aria-hidden="true" />
-        <p><strong>Indicative only</strong><span>These are guessed rates for testing the page and will be replaced.</span></p>
+        <p><strong>Indicative only</strong><span>Some services use confirmed rates; the remaining figures will be refined as pricing is confirmed.</span></p>
       </div>
       <div>
         <Ruler size={30} stroke-width={1.8} aria-hidden="true" />
@@ -204,7 +200,7 @@ const contactUrl = withBase("/contact/");
       </div>
       <div>
         <MapPin size={30} stroke-width={1.8} aria-hidden="true" />
-        <p><strong>Travel is visible</strong><span>The selected town adds a clear placeholder travel allowance.</span></p>
+        <p><strong>Location is visible</strong><span>The selected town applies the correct minimum charge.</span></p>
       </div>
     </div>
   </div>
@@ -219,7 +215,9 @@ const contactUrl = withBase("/contact/");
     const serviceButtons = Array.from(estimator.querySelectorAll<HTMLButtonElement>("[data-service]"));
     const quantityRange = estimator.querySelector<HTMLInputElement>("[data-quantity-range]")!;
     const quantityNumber = estimator.querySelector<HTMLInputElement>("[data-quantity-number]")!;
+    const conditionGroup = estimator.querySelector<HTMLElement>("[data-condition-group]")!;
     const conditionOptions = estimator.querySelector<HTMLElement>("[data-condition-options]")!;
+    const optionGroup = estimator.querySelector<HTMLElement>("[data-option-group]")!;
     const serviceOptions = estimator.querySelector<HTMLElement>("[data-service-options]")!;
     const counterGroup = estimator.querySelector<HTMLElement>("[data-counter-group]")!;
     const counterInput = estimator.querySelector<HTMLInputElement>("[data-counter-input]")!;
@@ -233,8 +231,12 @@ const contactUrl = withBase("/contact/");
 
     let activeService = estimatorServices[0];
     let quantity = activeService.quantityDefault;
-    let condition = activeService.conditions[1]?.value ?? activeService.conditions[0].value;
-    let serviceOption = activeService.options[0].value;
+    const defaultCondition = (service = activeService) =>
+      service.conditions?.find((item) => item.value === "normal")?.value ?? service.conditions?.[0]?.value ?? "";
+    const defaultOption = (service = activeService) => service.options?.[0]?.value ?? "";
+
+    let condition = defaultCondition();
+    let serviceOption = defaultOption();
     let counter = activeService.counter?.defaultValue ?? 0;
     let toggle = false;
     let location = estimatorLocations[0].value;
@@ -249,7 +251,7 @@ const contactUrl = withBase("/contact/");
 
     const createChoices = (
       target: HTMLElement,
-      choices: typeof activeService.conditions,
+      choices: Array<{ label: string; value: string; hint?: string }>,
       selectedValue: string,
       group: "condition" | "option",
     ) => {
@@ -288,8 +290,8 @@ const contactUrl = withBase("/contact/");
 
     const resetState = () => {
       quantity = activeService.quantityDefault;
-      condition = activeService.conditions[1]?.value ?? activeService.conditions[0].value;
-      serviceOption = activeService.options[0].value;
+      condition = defaultCondition();
+      serviceOption = defaultOption();
       counter = activeService.counter?.defaultValue ?? 0;
       toggle = false;
       location = estimatorLocations[0].value;
@@ -303,8 +305,6 @@ const contactUrl = withBase("/contact/");
       text("[data-quantity-mid]", `${roundToFive((activeService.quantityMin + activeService.quantityMax) / 2)} ${activeService.quantityUnit}`);
       text("[data-quantity-max]", `${activeService.quantityMax} ${activeService.quantityUnit}`);
       text("[data-quantity-hint]", activeService.quantityHint);
-      text("[data-condition-label]", activeService.conditionLabel);
-      text("[data-option-label]", activeService.optionLabel);
       text("[data-estimate-note]", activeService.note);
 
       quantityRange.min = String(activeService.quantityMin);
@@ -317,8 +317,21 @@ const contactUrl = withBase("/contact/");
       quantityNumber.step = String(activeService.quantityStep);
       quantityNumber.value = String(quantity);
 
-      createChoices(conditionOptions, activeService.conditions, condition, "condition");
-      createChoices(serviceOptions, activeService.options, serviceOption, "option");
+      if (activeService.conditions && activeService.conditions.length > 1) {
+        conditionGroup.hidden = false;
+        text("[data-condition-label]", activeService.conditionLabel ?? "Job condition");
+        createChoices(conditionOptions, activeService.conditions, condition, "condition");
+      } else {
+        conditionGroup.hidden = true;
+      }
+
+      if (activeService.options && activeService.options.length > 0) {
+        optionGroup.hidden = false;
+        text("[data-option-label]", activeService.optionLabel ?? "Service option");
+        createChoices(serviceOptions, activeService.options, serviceOption, "option");
+      } else {
+        optionGroup.hidden = true;
+      }
 
       if (activeService.counter) {
         counterGroup.hidden = false;
@@ -356,11 +369,11 @@ const contactUrl = withBase("/contact/");
     };
 
     const updateEstimate = () => {
-      const selectedCondition = activeService.conditions.find((item) => item.value === condition) ?? activeService.conditions[0];
-      const selectedOption = activeService.options.find((item) => item.value === serviceOption) ?? activeService.options[0];
+      const selectedCondition = activeService.conditions?.find((item) => item.value === condition) ?? { multiplier: 1, unitRate: undefined };
+      const selectedOption = activeService.options?.find((item) => item.value === serviceOption) ?? { multiplier: 1, addition: 0, unitRate: undefined };
       const selectedLocation = estimatorLocations.find((item) => item.value === location) ?? estimatorLocations[0];
 
-      const primaryBeforeOptions = activeService.baseCharge + quantity * activeService.unitRate;
+      const primaryBeforeOptions = activeService.baseCharge + quantity * (selectedOption.unitRate ?? selectedCondition.unitRate ?? activeService.unitRate);
       const optionAdjusted = primaryBeforeOptions * (selectedOption.multiplier ?? 1) + (selectedOption.addition ?? 0);
       const conditionAdjusted = optionAdjusted * (selectedCondition.multiplier ?? 1);
       const counterAmount = activeService.counter ? counter * activeService.counter.rate : 0;
@@ -369,18 +382,19 @@ const contactUrl = withBase("/contact/");
         : 0;
       const serviceAllowance = primaryBeforeOptions;
       const modifierAmount = conditionAdjusted - primaryBeforeOptions + counterAmount + toggleAmount;
-      const calculated = conditionAdjusted + counterAmount + toggleAmount + selectedLocation.amount;
-      const subtotal = Math.max(activeService.minimumCharge, calculated);
-      const low = roundToFive(Math.max(activeService.minimumCharge, subtotal * (1 - activeService.variance)));
-      const high = roundToFive(Math.max(low + 10, subtotal * (1 + activeService.variance)));
+      const minimumCharge = activeService.minimumCharge ?? selectedLocation.minimumCharge;
+      const calculated = conditionAdjusted + counterAmount + toggleAmount;
+      const subtotal = Math.max(minimumCharge, calculated);
+      const low = roundToFive(Math.max(minimumCharge, subtotal * (1 - activeService.variance)));
+      const high = roundToFive(Math.max(minimumCharge, subtotal * (1 + activeService.variance)));
 
       text("[data-quantity-output]", `${quantity} ${activeService.quantityUnit}`);
-      text("[data-estimate-range]", `${money(low)}–${money(high)}`);
+      text("[data-estimate-range]", low === high ? money(low) : `${money(low)}–${money(high)}`);
       text("[data-main-breakdown-label]", `${activeService.name} allowance`);
       text("[data-main-breakdown-value]", money(serviceAllowance));
       text("[data-modifier-value]", money(modifierAmount));
-      text("[data-travel-value]", selectedLocation.amount ? money(selectedLocation.amount) : "Included");
-      text("[data-minimum-charge]", `Minimum allowance ${money(activeService.minimumCharge)}`);
+      text("[data-location-minimum]", money(selectedLocation.minimumCharge));
+      text("[data-minimum-charge]", `Minimum charge ${money(minimumCharge)}`);
 
       const progress = ((quantity - activeService.quantityMin) / (activeService.quantityMax - activeService.quantityMin)) * 100;
       quantityRange.style.setProperty("--range-progress", `${progress}%`);
