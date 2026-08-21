@@ -6,10 +6,8 @@ import Armchair from "@lucide/astro/icons/armchair";
 import Bug from "@lucide/astro/icons/bug";
 import Calculator from "@lucide/astro/icons/calculator";
 import Leaf from "@lucide/astro/icons/leaf";
-import MapPin from "@lucide/astro/icons/map-pin";
 import PanelsTopLeft from "@lucide/astro/icons/panels-top-left";
 import RotateCcw from "@lucide/astro/icons/rotate-ccw";
-import Ruler from "@lucide/astro/icons/ruler";
 import Sparkles from "@lucide/astro/icons/sparkles";
 import Stamp from "@lucide/astro/icons/stamp";
 import Sun from "@lucide/astro/icons/sun";
@@ -31,7 +29,6 @@ const contactUrl = withBase("/contact/");
   <div class="container estimator-intro-inner">
     <div>
       <h1>Plan the job. See an indicative cost.</h1>
-      <p>Select a service and adjust the job details. Confirmed service rates are shown where available; remaining figures will be refined as pricing is confirmed.</p>
     </div>
     <div class="measure-mark" aria-hidden="true">
       <span>10</span><span>20</span><span>30</span><span>40</span>
@@ -181,26 +178,6 @@ const contactUrl = withBase("/contact/");
           Reset this estimate
         </button>
       </aside>
-    </div>
-  </div>
-</section>
-
-<section class="estimate-explainer">
-  <div class="container">
-    <h2>How this estimate is calculated</h2>
-    <div class="estimate-factors">
-      <div>
-        <Calculator size={30} stroke-width={1.8} aria-hidden="true" />
-        <p><strong>Indicative only</strong><span>Some services use confirmed rates; the remaining figures will be refined as pricing is confirmed.</span></p>
-      </div>
-      <div>
-        <Ruler size={30} stroke-width={1.8} aria-hidden="true" />
-        <p><strong>The unit fits the service</strong><span>Area, panes, panels, seats or affected rooms drive the starting point.</span></p>
-      </div>
-      <div>
-        <MapPin size={30} stroke-width={1.8} aria-hidden="true" />
-        <p><strong>Location is visible</strong><span>The selected town applies the correct minimum charge.</span></p>
-      </div>
     </div>
   </div>
 </section>
@@ -487,13 +464,6 @@ const contactUrl = withBase("/contact/");
     font-size: clamp(42px, 5.2vw, 68px);
     font-weight: 900;
     line-height: 1.02;
-  }
-
-  .estimator-intro p {
-    max-width: 790px;
-    margin: 20px 0 0;
-    color: var(--muted);
-    font-size: 19px;
   }
 
   .measure-mark {
@@ -1077,59 +1047,6 @@ const contactUrl = withBase("/contact/");
     font-weight: 900;
   }
 
-  .estimate-explainer {
-    border-top: 1px solid var(--line);
-    background: var(--paper);
-    padding-block: 42px 52px;
-  }
-
-  .estimate-explainer h2 {
-    margin: 0;
-    color: var(--charcoal);
-    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-  }
-
-  .estimate-factors {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 24px;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .estimate-factors > div {
-    display: grid;
-    grid-template-columns: 38px 1fr;
-    gap: 14px;
-    padding: 24px 28px 24px 0;
-  }
-
-  .estimate-factors > div + div {
-    border-left: 1px solid var(--line);
-    padding-left: 28px;
-  }
-
-  .estimate-factors :global(svg) {
-    color: var(--clay);
-  }
-
-  .estimate-factors p {
-    display: grid;
-    margin: 0;
-  }
-
-  .estimate-factors strong {
-    color: var(--charcoal);
-  }
-
-  .estimate-factors span {
-    margin-top: 5px;
-    color: var(--muted);
-    font-size: 14px;
-  }
-
   @media (max-width: 1100px) {
     .estimator-shell {
       grid-template-columns: 230px minmax(420px, 1fr);
@@ -1154,10 +1071,6 @@ const contactUrl = withBase("/contact/");
 
     .measure-mark {
       display: none;
-    }
-
-    .estimator-intro p {
-      font-size: 17px;
     }
 
     .estimator-shell {
@@ -1195,15 +1108,6 @@ const contactUrl = withBase("/contact/");
       border-radius: 5px;
     }
 
-    .estimate-factors {
-      grid-template-columns: 1fr;
-    }
-
-    .estimate-factors > div + div {
-      border-top: 1px solid var(--line);
-      border-left: 0;
-      padding-left: 0;
-    }
   }
 
   @media (max-width: 600px) {

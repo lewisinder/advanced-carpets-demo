@@ -5,8 +5,10 @@ import ServiceCard from "@/components/ServiceCard.astro";
 import CTA from "@/components/CTA.astro";
 import ContactForm from "@/components/ContactForm.astro";
 import IicrcLogo from "@/components/IicrcLogo.astro";
+import CompanyGallery from "@/components/CompanyGallery.astro";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
+import { companyGalleryImages } from "@/data/company-gallery";
 import type { HomeContent } from "@/data/home";
 import { tinaField } from "@tinacms/astro/tina-field";
 import ArrowUpRight from "@lucide/astro/icons/arrow-up-right";
@@ -336,6 +338,8 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
     </div>
   </div>
 </section>
+
+<CompanyGallery images={companyGalleryImages} />
 
 <section class="section section-white">
   <div class="container faq-layout">

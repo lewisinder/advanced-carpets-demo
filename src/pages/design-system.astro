@@ -100,6 +100,16 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
         </article>
 
         <article class="design-block">
+          <h3>Service media frames</h3>
+          <p>Service-page images use stable responsive frames and <code>object-fit: cover</code>. Source aspect ratios should never determine section height, so portrait or landscape assets are cropped into the shared frame while retaining the shared radius and accent edge treatment.</p>
+        </article>
+
+        <article class="design-block">
+          <h3>Company work gallery</h3>
+          <p>Use a maximum of eight selected company photographs in square frames with the shared radius. The photographs form a continuously moving horizontal rail, duplicated visually to create a seamless loop while the duplicate set stays hidden from assistive technology. Pause the rail while it is off screen. When reduced motion is requested, stop the animation, remove the duplicate set and leave the original photographs available in a horizontally scrollable rail.</p>
+        </article>
+
+        <article class="design-block">
           <h3>Service-page order</h3>
           <ol class="design-order">{pageOrder.map((item) => <li>{item}</li>)}</ol>
           <p class="design-note">The shared <code>ServicePage.astro</code> component is the source of truth. <a class="text-link" href={withBase("/service-page-template/")}>Open the private carpet-cleaning approval example</a>.</p>

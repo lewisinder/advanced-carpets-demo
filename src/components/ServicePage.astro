@@ -265,7 +265,8 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(460px, 0.96fr);
     max-width: 1600px;
-    min-height: 650px;
+    height: var(--service-media-hero-height);
+    min-height: 0;
     margin-inline: auto;
   }
 
@@ -333,11 +334,13 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
 
   .service-page-hero__media {
     position: relative;
-    min-height: 650px;
+    height: 100%;
+    min-height: 0;
     border-left: 7px solid var(--clay);
   }
 
   .service-page-hero__media img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -442,13 +445,13 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
     gap: 72px;
-    align-items: center;
+    align-items: stretch;
   }
 
   .service-page-work-photo {
     position: relative;
-    height: 100%;
-    min-height: 560px;
+    height: var(--service-media-work-height);
+    min-height: 0;
     margin: 0;
     overflow: hidden;
     border-right: 7px solid var(--clay);
@@ -457,9 +460,10 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
   }
 
   .service-page-work-photo img {
+    display: block;
     width: 100%;
     height: 100%;
-    min-height: 560px;
+    min-height: 0;
     object-fit: cover;
   }
 
@@ -493,7 +497,8 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
   .service-page-technical__grid {
     display: grid;
     grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-    min-height: 610px;
+    height: var(--service-media-technical-height);
+    min-height: 0;
   }
 
   .service-page-technical__copy {
@@ -540,14 +545,17 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
   }
 
   .service-page-technical__media {
+    height: 100%;
     min-width: 0;
+    min-height: 0;
     border-left: 7px solid var(--water);
   }
 
   .service-page-technical__media img {
+    display: block;
     width: 100%;
     height: 100%;
-    min-height: 610px;
+    min-height: 0;
     object-fit: cover;
   }
 
@@ -856,6 +864,7 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     }
 
     .service-page-hero__grid {
+      height: auto;
       min-height: 0;
     }
 
@@ -865,7 +874,8 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     }
 
     .service-page-hero__media {
-      min-height: 430px;
+      height: var(--service-media-compact-height);
+      min-height: 0;
       border-top: 7px solid var(--clay);
       border-left: 0;
     }
@@ -874,9 +884,13 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
       order: -1;
     }
 
-    .service-page-work-photo,
+    .service-page-work-photo {
+      height: 430px;
+      min-height: 0;
+    }
+
     .service-page-work-photo img {
-      min-height: 430px;
+      min-height: 0;
     }
 
     .service-page-technical__copy {
@@ -884,14 +898,14 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     }
 
     .service-page-technical__media {
-      min-height: 430px;
+      height: 430px;
+      min-height: 0;
       border-top: 7px solid var(--water);
       border-left: 0;
     }
 
     .service-page-technical__media img {
-      min-height: 430px;
-      max-height: 560px;
+      min-height: 0;
     }
 
     .service-page-results__grid {
@@ -989,9 +1003,7 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
       width: 100%;
     }
 
-    .service-page-hero__media {
-      min-height: 320px;
-    }
+    .service-page-hero__media { height: var(--service-media-mobile-height); }
     .service-page-fit__lists,
     .service-page-proof-line {
       grid-template-columns: 1fr;
@@ -1008,11 +1020,10 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     }
 
     .service-page-work-photo,
+    .service-page-technical__media { height: var(--service-media-mobile-height); }
+
     .service-page-work-photo img,
-    .service-page-technical__media,
-    .service-page-technical__media img {
-      min-height: 320px;
-    }
+    .service-page-technical__media img { min-height: 0; }
 
     .service-page-results :global(.before-after-frame) {
       aspect-ratio: 1 / 1;
@@ -1028,7 +1039,7 @@ const review = ["carpet-cleaning", "upholstery-cleaning", "stain-treatment", "ha
     }
 
     .service-page-enquiry .service-page-form-shell {
-      margin-inline: -24px;
+      margin-inline: -16px;
     }
 
     .service-page-related__grid > a {

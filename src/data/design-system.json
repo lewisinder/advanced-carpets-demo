@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 6,
   "policy": {
     "sourceOfTruth": "src/pages/design-system.astro",
     "tokenFile": "src/styles/global.css",
@@ -11,7 +11,23 @@
       1100
     ],
     "processPatternClass": "steps-grid",
-    "processSurfaceMode": "transparent"
+    "processSurfaceMode": "transparent",
+    "companyGallery": {
+      "aspectRatio": "1 / 1",
+      "desktopColumns": 4,
+      "compactColumns": 2,
+      "radiusToken": "--radius",
+      "motion": "continuous horizontal image rail",
+      "reducedMotion": "static horizontally scrollable rail"
+    },
+    "serviceMediaFrames": {
+      "fit": "cover",
+      "hero": "--service-media-hero-height; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
+      "work": "--service-media-work-height; 430px below 900px; --service-media-mobile-height below 600px",
+      "technical": "--service-media-technical-height; 430px below 900px; --service-media-mobile-height below 600px",
+      "tokens": ["--service-media-hero-height", "--service-media-work-height", "--service-media-technical-height", "--service-media-compact-height", "--service-media-mobile-height"],
+      "radiusToken": "--radius"
+    }
   },
   "components": [
     {
@@ -25,6 +41,12 @@
       "file": "src/components/CTA.astro",
       "category": "Actions",
       "description": "Shared enquiry call-to-action section."
+    },
+    {
+      "name": "CompanyGallery",
+      "file": "src/components/CompanyGallery.astro",
+      "category": "Media",
+      "description": "Responsive square company-work rail with the shared radius, a slow seamless horizontal loop, off-screen pausing and a static scrollable reduced-motion state."
     },
     {
       "name": "ContactForm",
@@ -84,7 +106,7 @@
       "name": "ServicePage",
       "file": "src/components/ServicePage.astro",
       "category": "Page template",
-      "description": "Canonical shared layout for every service detail page, using the homepage process pattern with steps that inherit the section surface."
+      "description": "Canonical shared layout for every service detail page, with stable responsive media frames that crop source images using cover and the homepage process pattern with steps that inherit the section surface."
     },
     {
       "name": "SpiderIcon",

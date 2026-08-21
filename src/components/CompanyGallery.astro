@@ -1,0 +1,64 @@
+---
+import { withBase } from "@/lib/base";
+import type { CompanyGalleryImage } from "@/data/company-gallery";
+
+type Props = {
+  images?: readonly CompanyGalleryImage[];
+  placeholderCount?: number;
+};
+
+const { images = [], placeholderCount = 8 } = Astro.props;
+const selectedImages = images.slice(0, 8);
+const items = selectedImages.length > 0
+  ? selectedImages.map((image) => ({ image }))
+  : Array.from({ length: Math.min(Math.max(placeholderCount, 1), 8) }, () => ({ image: undefined }));
+---
+
+<section class="section company-gallery-section" aria-label="Company work gallery">
+  <div class="company-gallery" data-company-gallery>
+    <div class="company-gallery-track">
+      {[false, true].map((isDuplicate) => (
+        <div class="company-gallery-group" role={isDuplicate ? undefined : "list"} aria-hidden={isDuplicate ? "true" : undefined}>
+          {items.map(({ image }, index) => (
+            <figure class="company-gallery-item" role={isDuplicate ? undefined : "listitem"}>
+              {image ? (
+                <img
+                  class="company-gallery-image"
+                  src={withBase(image.src)}
+                  srcset={`${withBase(image.src)} 640w, ${withBase(image.largeSrc)} 1280w`}
+                  sizes="(max-width: 600px) 72vw, (max-width: 900px) 31vw, 400px"
+                  alt={isDuplicate ? "" : image.alt}
+                  width="1600"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  style={`--company-gallery-position: ${image.position ?? "50% 50%"}`}
+                />
+              ) : (
+                <div class="company-gallery-placeholder" aria-hidden="true">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
+              )}
+            </figure>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const galleries = document.querySelectorAll<HTMLElement>("[data-company-gallery]");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        entry.target.toggleAttribute("data-company-gallery-visible", entry.isIntersecting);
+      }
+    }, { rootMargin: "120px 0px", threshold: 0.05 });
+
+    galleries.forEach((gallery) => observer.observe(gallery));
+  } else {
+    galleries.forEach((gallery) => gallery.setAttribute("data-company-gallery-visible", ""));
+  }
+</script>
