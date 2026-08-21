@@ -1,0 +1,16 @@
+---
+import ServicePage from "@/components/ServicePage.astro";
+import { getServiceBySlug } from "@/data/services";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const service = getServiceBySlug("carpet-cleaning");
+if (!service) throw new Error("Carpet cleaning service content is missing");
+---
+
+<BaseLayout
+  title="Service Page Template | Advanced Carpets & Restoration"
+  description="Private service page template for Advanced Carpets & Restoration."
+  pathname="/service-page-template"
+  robots="noindex, nofollow"
+>
+  <ServicePage service={service} />
+</BaseLayout>

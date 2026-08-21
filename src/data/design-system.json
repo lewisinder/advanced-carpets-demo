@@ -1,0 +1,114 @@
+{
+  "version": 4,
+  "policy": {
+    "sourceOfTruth": "src/pages/design-system.astro",
+    "tokenFile": "src/styles/global.css",
+    "iconSource": "@lucide/astro/icons/",
+    "localIconDirectory": "src/components/icons",
+    "breakpoints": [
+      600,
+      900,
+      1100
+    ],
+    "processPatternClass": "steps-grid",
+    "processSurfaceMode": "transparent"
+  },
+  "components": [
+    {
+      "name": "BeforeAfter",
+      "file": "src/components/BeforeAfter.astro",
+      "category": "Media",
+      "description": "Accessible before-and-after comparison with pointer, touch and keyboard controls."
+    },
+    {
+      "name": "CTA",
+      "file": "src/components/CTA.astro",
+      "category": "Actions",
+      "description": "Shared enquiry call-to-action section."
+    },
+    {
+      "name": "ContactForm",
+      "file": "src/components/ContactForm.astro",
+      "category": "Forms",
+      "description": "Shared Tradify enquiry form and fallback contact link."
+    },
+    {
+      "name": "Estimator",
+      "file": "src/components/Estimator.astro",
+      "category": "Feature",
+      "description": "Interactive service cost estimator."
+    },
+    {
+      "name": "FaqItem",
+      "file": "src/components/FaqItem.astro",
+      "category": "Disclosure",
+      "description": "Accessible expandable question and answer item."
+    },
+    {
+      "name": "Footer",
+      "file": "src/components/Footer.astro",
+      "category": "Site shell",
+      "description": "Shared site footer and service links."
+    },
+    {
+      "name": "Header",
+      "file": "src/components/Header.astro",
+      "category": "Site shell",
+      "description": "Shared responsive site navigation and urgent phone action."
+    },
+    {
+      "name": "IicrcLogo",
+      "file": "src/components/IicrcLogo.astro",
+      "category": "Brand",
+      "description": "Approved IICRC logo variants for light and dark surfaces."
+    },
+    {
+      "name": "PageHero",
+      "file": "src/components/PageHero.astro",
+      "category": "Page structure",
+      "description": "Standard internal-page introduction."
+    },
+    {
+      "name": "ServiceCard",
+      "file": "src/components/ServiceCard.astro",
+      "category": "Services",
+      "description": "Service overview link with the approved icon treatment."
+    },
+    {
+      "name": "ServiceFacts",
+      "file": "src/components/ServiceFacts.astro",
+      "category": "Services",
+      "description": "Verified service facts with Lucide line icons and design tokens."
+    },
+    {
+      "name": "ServicePage",
+      "file": "src/components/ServicePage.astro",
+      "category": "Page template",
+      "description": "Canonical shared layout for every service detail page, using the homepage process pattern with steps that inherit the section surface."
+    },
+    {
+      "name": "SpiderIcon",
+      "file": "src/components/icons/SpiderIcon.astro",
+      "category": "Icon exception",
+      "description": "Local line-icon exception used where Lucide has no suitable spider icon."
+    },
+    {
+      "name": "HomePage",
+      "file": "src/components/tina/HomePage.astro",
+      "category": "Page composition",
+      "description": "CMS-aware homepage composition built from the shared design language."
+    }
+  ],
+  "retiredPatterns": [
+    "service-metrics",
+    "service-page-process__grid",
+    "template-",
+    "Satisfaction focused"
+  ],
+  "prohibitedPublicTerms": [
+    "free quote",
+    "quote",
+    "quotes",
+    "quoting"
+  ]
+}

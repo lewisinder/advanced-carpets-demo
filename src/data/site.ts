@@ -3,6 +3,13 @@ import siteContent from "../../content/global/site.json";
 
 export const site = siteContent;
 
+const siteIsIndexable = import.meta.env.PUBLIC_SITE_INDEXABLE === "true";
+
+export const siteIndexing = {
+  indexable: siteIsIndexable,
+  robots: siteIsIndexable ? "index, follow" : "noindex, nofollow",
+} as const;
+
 export function titleFor(pathname: string, serviceName?: string) {
   if (serviceName) return `${serviceName} | ${site.name}`;
   if (pathname === "/services") return `Cleaning & Restoration Services | ${site.name}`;
@@ -11,7 +18,7 @@ export function titleFor(pathname: string, serviceName?: string) {
   if (pathname === "/contact") return `Contact ${site.name}`;
   if (pathname === "/design-system") return `Design System | ${site.name}`;
   if (pathname === "/thank-you") return `Thank You | ${site.name}`;
-  return `${site.name} | Central Otago & Southern Lakes`;
+  return `${site.name} | Central Otago, Southern Lakes & the Maniototo`;
 }
 
 export function localBusinessSchema() {

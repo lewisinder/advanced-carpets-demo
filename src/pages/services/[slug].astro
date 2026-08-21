@@ -1,77 +1,17 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import ContactForm from "@/components/ContactForm.astro";
-import FaqItem from "@/components/FaqItem.astro";
-import ServiceCard from "@/components/ServiceCard.astro";
-import BeforeAfter from "@/components/BeforeAfter.astro";
+import ServicePage from "@/components/ServicePage.astro";
 import { services, type Service } from "@/data/services";
 import { site, titleFor } from "@/data/site";
-import { withBase } from "@/lib/base";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-  return services.map((service) => ({
-    params: { slug: service.slug },
-    props: { service },
-  }));
+  return services.map((service) => ({ params: { slug: service.slug }, props: { service } }));
 }
 
-type Props = {
-  service: Service;
-};
-
+type Props = { service: Service };
 const { service } = Astro.props;
-const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
 const pathname = `/services/${service.slug}`;
 const canonical = `${site.url}${pathname}/`;
-const areas = site.areas.join(", ");
-const lowerName = service.name.toLowerCase();
-const ctaVerb = lowerName.includes("pest")
-  ? "treating"
-  : lowerName.includes("repair")
-    ? "repairing"
-    : lowerName.includes("restoration")
-      ? "restoring"
-      : "cleaning";
-
-const overviewParagraphs =
-  service.overviewParagraphs?.length
-    ? service.overviewParagraphs
-    : [
-        `${site.name} provides professional ${lowerName} for homes, rentals, holiday properties, and commercial spaces across ${site.areas.slice(0, 3).join(", ")} and the wider region.`,
-        `The team checks the surface, property access, and job requirements before recommending a practical approach for ${lowerName}.`,
-      ];
-
-const detailSections = service.sections ?? [];
-const imageCaption = service.imageCaption ?? `${service.name} work example.`;
-const resultsCopy = service.resultsCopy ?? `Use the comparison to review the condition before and after ${lowerName}.`;
-const whyAdvanced =
-  service.whyAdvanced ??
-  `${site.name} matches the method to the job, explains what is realistic before work begins, and provides practical local service across ${areas}.`;
-
-const stats = [
-  { value: "Local", label: "Central Otago and Southern Lakes" },
-  { value: "Care", label: "Methods matched to the job" },
-  { value: "Clear", label: "Practical advice before work starts" },
-];
-
-const reasons = [
-  "Trained, insured technicians who treat your property with care",
-  "Honest, no-obligation pricing before any work begins",
-  "Methods and products matched to the job, not a one-size-fits-all approach",
-  `Locally owned and trusted across ${site.areas[0] ?? "the region"}`,
-];
-
-// Service imagery uses the closest available project assets until final job photos are selected.
-const mediaByService: Record<string, { overview: string; before: string; after: string }> = {
-  "carpet-cleaning": { overview: "/assets/carpet-extraction.jpg", before: "/assets/hero-cleaning.png", after: "/assets/carpet-extraction.jpg" },
-  "upholstery-cleaning": { overview: "/assets/carpet-texture-upholstery.jpeg", before: "/assets/carpet-texture-upholstery.jpeg", after: "/assets/carpet-extraction.jpg" },
-  "gutter-cleaning": { overview: "/assets/gutter-after.jpeg", before: "/assets/gutter-before.jpeg", after: "/assets/gutter-after.jpeg" },
-  "hard-floor-cleaning-polish": { overview: "/assets/hero-cleaning.png", before: "/assets/hero-cleaning.png", after: "/assets/carpet-extraction.jpg" },
-};
-const fallbackMedia = { overview: "/assets/hero-cleaning.png", before: "/assets/gutter-before.jpeg", after: "/assets/gutter-after.jpeg" };
-const shot = mediaByService[service.slug] ?? fallbackMedia;
-
-// --- Structured data for SEO ---
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -80,235 +20,18 @@ const serviceSchema = {
   category: service.category,
   description: service.summary,
   url: canonical,
-  provider: {
-    "@type": "LocalBusiness",
-    name: site.name,
-    url: site.url,
-    telephone: site.primaryPhone,
-  },
+  provider: { "@type": "LocalBusiness", name: site.name, url: site.url, telephone: site.primaryPhone },
   areaServed: site.areas.map((area) => ({ "@type": "Place", name: area })),
 };
-
-const faqSchema = service.faqs.length
-  ? {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: service.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: { "@type": "Answer", text: faq.answer },
-      })),
-    }
-  : null;
+const faqSchema = service.faqs.length ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: service.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
+} : null;
 ---
 
 <BaseLayout title={titleFor(pathname, service.name)} description={service.summary} pathname={pathname}>
-  <section class="page-hero">
-    <div class="container two-col">
-      <div>
-        <p class="overline orange">Central Otago</p>
-        <h1>{service.name}</h1>
-        <p>{service.intro}</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
-          <a class="button button-outline" href={withBase("/services/")}>All services</a>
-        </div>
-      </div>
-      <div class="panel dark-panel">
-        <h2>Available across the region</h2>
-        <p>{areas}</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-white">
-    <div class="container">
-      <div class="service-media">
-        <div class="media-block">
-          <img src={withBase(shot.overview)} alt={`${service.name} work in progress`} loading="lazy" />
-          <p>{imageCaption}</p>
-        </div>
-        <div>
-          <p class="overline orange">Overview</p>
-          <h2>What our {lowerName} service covers</h2>
-          {overviewParagraphs.map((paragraph) => <p class="copy">{paragraph}</p>)}
-          <div class="hero-actions">
-            <a class="button button-primary" href={withBase("/contact/")}>Make an enquiry</a>
-            <a class="button button-outline" href="#before-after">See the results</a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-metrics service-metrics">
-        {stats.map((stat) => (
-          <div>
-            <strong>{stat.value}</strong>
-            <span>{stat.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-white">
-    <div class="container">
-      <div class="cta-panel service-cta-panel">
-        <div>
-          <h2>Tell us what needs {ctaVerb}</h2>
-          <p>Send the property details, affected areas, access notes, and photos if they help. The team can reply with practical advice for your {lowerName} job.</p>
-        </div>
-        <a class="button button-primary" href="#service-enquiry">Send job details</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container two-col">
-      <div>
-        <div class="section-heading">
-          <h2>Why book this service</h2>
-        </div>
-        <div class="service-list">
-          {service.benefits.map((item) => <p>{item}</p>)}
-        </div>
-      </div>
-      <div>
-        <div class="section-heading">
-          <h2>Suitable for</h2>
-        </div>
-        <div class="service-list">
-          {service.useCases.map((item) => <p>{item}</p>)}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {detailSections.length > 0 && (
-    <section class="section section-white">
-      <div class="container">
-        <div class="section-heading">
-          <p class="overline orange">Service detail</p>
-          <h2>A practical approach to {lowerName}</h2>
-        </div>
-        <div class="grid grid-3">
-          {detailSections.map((section) => (
-            <article class="panel">
-              <h3>{section.heading}</h3>
-              {section.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
-              {section.bullets?.length ? (
-                <div class="service-list">
-                  {section.bullets.map((item) => <p>{item}</p>)}
-                </div>
-              ) : null}
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <section class="section section-white">
-    <div class="container">
-      <div class="section-heading">
-        <h2>What to expect</h2>
-        <p>Clear steps help customers understand the process before they enquire.</p>
-      </div>
-      <div class="grid grid-4">
-        {service.process.map((step, index) => (
-          <div class="panel">
-            <div class="icon-box">{index + 1}</div>
-            <h3>{step}</h3>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section id="before-after" class="section section-dark">
-    <div class="container">
-      <div class="section-heading">
-        <p class="overline">Results</p>
-        <h2>See the difference</h2>
-        <p>{resultsCopy}</p>
-      </div>
-      <div class="ba-gallery">
-        <BeforeAfter
-          beforeSrc={withBase(shot.before)}
-          afterSrc={withBase(shot.after)}
-          beforeAlt={`${service.name} before`}
-          afterAlt={`${service.name} after`}
-          label={service.name}
-        />
-        <BeforeAfter
-          beforeSrc={withBase(fallbackMedia.before)}
-          afterSrc={withBase(fallbackMedia.after)}
-          beforeAlt="Example job before"
-          afterAlt="Example job after"
-          label="Example result"
-        />
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container two-col">
-      <div>
-        <p class="overline orange">Why Advanced Carpets</p>
-        <h2>Why choose us for {lowerName}</h2>
-        <p class="copy">{whyAdvanced}</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href={withBase("/contact/")}>Make an enquiry</a>
-        </div>
-      </div>
-      <div class="service-list">
-        {reasons.map((reason) => <p>{reason}</p>)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-white">
-    <div class="container two-col">
-      <div>
-        <div class="section-heading">
-          <h2>Service FAQs</h2>
-          <p>Useful questions for this service page.</p>
-        </div>
-      </div>
-      <div class="faq-list">
-        {service.faqs.map((faq) => (
-          <FaqItem question={faq.question} answer={faq.answer} />
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section id="service-enquiry" class="section section-white">
-    <div class="container enquiry-panel service-enquiry-panel">
-      <div>
-        <p class="overline orange">Make an enquiry</p>
-        <h2>Send the job details for {lowerName}</h2>
-        <p>Use the form to share the address, service notes, access details, and photos if they help explain the job. The team can reply with practical next steps.</p>
-        <div class="contact-lines">
-          {site.phones.map((phone) => <span>{phone.label} &nbsp; {phone.value}</span>)}
-          <span>{site.email}</span>
-        </div>
-      </div>
-      <div class="form-shell">
-        <ContactForm />
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Related services</h2>
-      </div>
-      <div class="grid grid-3">
-        {related.map((item) => <ServiceCard service={item} />)}
-      </div>
-    </div>
-  </section>
-
+  <ServicePage service={service} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
-  {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  {faqSchema ? <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} /> : null}
 </BaseLayout>

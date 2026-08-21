@@ -4,24 +4,25 @@ import PageHero from "@/components/PageHero.astro";
 import CTA from "@/components/CTA.astro";
 import { withBase } from "@/lib/base";
 
-const description = "Learn about Advanced Carpets & Restoration, serving Central Otago and Southern Lakes with practical cleaning and restoration services.";
+const description = "About Advanced Carpets & Restoration, serving homes and businesses across Central Otago, Southern Lakes and the Maniototo.";
 ---
 
 <BaseLayout title="About Advanced Carpets & Restoration" description={description} pathname="/about">
-  <PageHero title="Local people, proper gear, honest work" copy="Advanced Carpets is built around practical cleaning, restoration know-how, and direct local service across Central Otago and Southern Lakes." />
+  <PageHero title="16+ years serving homes and businesses" copy="We provide cleaning, restoration and specialist property services across Central Otago, Southern Lakes and the Maniototo." />
   <section class="section section-white">
     <div class="container two-col">
       <div class="media-block">
-        <img src={withBase("/assets/carpet-extraction.jpg")} alt="Carpet cleaning wand and extraction hose on patterned carpet" />
-        <p>Cleaning equipment and carpet texture should remain visible wherever this page uses photography.</p>
+        <img src={withBase("/assets/carpet-extraction.jpg")} alt="Commercial carpet cleaning equipment in use" />
+        <p>Commercial cleaning equipment at work at a local property.</p>
       </div>
       <div>
         <div class="section-heading">
-          <h2>Built for local homes, rentals, and businesses</h2>
-          <p>Advanced Carpets should feel reliable, direct, and established without drifting into generic sales copy.</p>
+          <p class="overline orange">About us</p>
+          <h2>Local experience and practical advice</h2>
         </div>
-        <p class="copy">The business handles carpet cleaning, upholstery, stain treatment, repairs, flood restoration, and selected specialist property services across Cromwell, Alexandra, Queenstown, Wanaka, Central Otago, and Southern Lakes.</p>
-        <p class="copy">The page language should stay practical: what the team cleans, how enquiries are handled, which areas are covered, and what customers can expect when a technician arrives.</p>
+        <p class="copy">We have worked throughout the regions for more than 16 years, helping homeowners and businesses with carpet cleaning, upholstery cleaning, stain treatment, flood restoration and selected specialist services.</p>
+        <p class="copy">Our technicians are IICRC certified and our work is fully insured. We use commercial equipment, check the material and condition before starting, and explain what is realistic for the job.</p>
+        <p class="copy">We are based in Cromwell and service Cromwell, Alexandra, Clyde, Queenstown, Wanaka, Hāwea, Ranfurly and the places within the wider regions.</p>
       </div>
     </div>
   </section>

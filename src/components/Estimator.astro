@@ -539,7 +539,7 @@ const contactUrl = withBase("/contact/");
 
   .service-picker {
     border-right: 1px solid var(--line);
-    background: #eee9df;
+    background: var(--surface-muted);
   }
 
   .job-controls {
@@ -683,7 +683,7 @@ const contactUrl = withBase("/contact/");
   input[type="range"]::-webkit-slider-runnable-track {
     height: 5px;
     border-radius: 3px;
-    background: linear-gradient(to right, var(--water) var(--range-progress, 0%), #d6d3cb var(--range-progress, 0%));
+    background: linear-gradient(to right, var(--water) var(--range-progress, 0%), var(--control-track) var(--range-progress, 0%));
   }
 
   input[type="range"]::-webkit-slider-thumb {
@@ -700,7 +700,7 @@ const contactUrl = withBase("/contact/");
   input[type="range"]::-moz-range-track {
     height: 5px;
     border-radius: 3px;
-    background: #d6d3cb;
+    background: var(--control-track);
   }
 
   input[type="range"]::-moz-range-progress {
@@ -722,7 +722,7 @@ const contactUrl = withBase("/contact/");
     display: flex;
     min-height: 48px;
     align-items: center;
-    border: 1px solid #bdb6aa;
+    border: 1px solid var(--line-strong);
     border-radius: 5px;
     background: var(--white);
   }
@@ -777,7 +777,7 @@ const contactUrl = withBase("/contact/");
     min-height: 56px;
     place-content: center;
     gap: 2px;
-    border: 1px solid #c9c3b8;
+    border: 1px solid var(--line-medium);
     border-right-width: 0;
     background: var(--white);
     color: var(--ink);
@@ -797,7 +797,7 @@ const contactUrl = withBase("/contact/");
   }
 
   .choice-grid :global(.choice-button:hover) {
-    background: #eef6f7;
+    background: var(--water-pale);
   }
 
   .choice-grid :global(.choice-button[aria-pressed="true"]) {
@@ -840,7 +840,7 @@ const contactUrl = withBase("/contact/");
     min-height: 48px;
     grid-template-columns: 44px 46px auto 44px;
     align-items: stretch;
-    border: 1px solid #bdb6aa;
+    border: 1px solid var(--line-strong);
     border-radius: 5px;
     background: var(--white);
   }
@@ -916,9 +916,9 @@ const contactUrl = withBase("/contact/");
     height: 30px;
     flex: 0 0 auto;
     align-items: center;
-    border: 1px solid #aaa297;
+    border: 1px solid var(--control-disabled-line);
     border-radius: 18px;
-    background: #d7d2ca;
+    background: var(--control-disabled);
     padding: 3px;
     transition: background-color 180ms ease, border-color 180ms ease;
   }
@@ -955,7 +955,7 @@ const contactUrl = withBase("/contact/");
     width: 100%;
     min-height: 50px;
     margin-top: 12px;
-    border: 1px solid #bdb6aa;
+    border: 1px solid var(--line-strong);
     border-radius: 5px;
     background: var(--white);
     color: var(--ink);
@@ -1027,7 +1027,7 @@ const contactUrl = withBase("/contact/");
     gap: 11px;
     border: 1px solid var(--taupe);
     border-radius: 5px;
-    background: #f6f1e8;
+    background: var(--wool-light);
     padding: 14px;
     color: var(--water);
   }
@@ -1130,7 +1130,7 @@ const contactUrl = withBase("/contact/");
     font-size: 14px;
   }
 
-  @media (max-width: 1120px) {
+  @media (max-width: 1100px) {
     .estimator-shell {
       grid-template-columns: 230px minmax(420px, 1fr);
     }
@@ -1146,7 +1146,7 @@ const contactUrl = withBase("/contact/");
     }
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 900px) {
     .estimator-intro-inner {
       min-height: 0;
       padding-block: 52px 40px;
@@ -1191,7 +1191,7 @@ const contactUrl = withBase("/contact/");
     .choice-grid-wide :global(.choice-button),
     .choice-grid-wide :global(.choice-button:first-child),
     .choice-grid-wide :global(.choice-button:last-child) {
-      border: 1px solid #c9c3b8;
+      border: 1px solid var(--line-medium);
       border-radius: 5px;
     }
 
@@ -1206,7 +1206,7 @@ const contactUrl = withBase("/contact/");
     }
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 600px) {
     .estimator-intro h1 {
       font-size: 37px;
     }
@@ -1246,7 +1246,7 @@ const contactUrl = withBase("/contact/");
     .choice-grid :global(.choice-button),
     .choice-grid :global(.choice-button:first-child),
     .choice-grid :global(.choice-button:last-child) {
-      border: 1px solid #c9c3b8;
+      border: 1px solid var(--line-medium);
       border-radius: 5px;
     }
 

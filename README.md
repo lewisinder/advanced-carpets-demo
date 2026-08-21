@@ -1,27 +1,37 @@
 # Advanced Carpets & Restoration
 
-Marketing site for Advanced Carpets & Restoration, serving Central Otago and the Southern Lakes.
+Marketing site for Advanced Carpets & Restoration, serving Central Otago, Southern Lakes and the Maniototo.
 
-Built with [Astro](https://astro.build/) and managed with [TinaCMS](https://tina.io/).
+Built with [Astro](https://astro.build/) and managed with [TinaCMS](https://tina.io/). GitHub Pages hosts the current approval site. Cloudflare will host the production domain later.
 
 ## Develop
 
 ```bash
 npm install
-npm run dev      # start Astro and TinaCMS
-npm run build    # build the CMS admin and Netlify deployment to ./dist
+npm run dev:site # Astro only, at http://127.0.0.1:4321
+npm run dev      # Astro with the TinaCMS editor
+npm run build    # check and build the static site to ./dist
 npm run preview  # preview the production build
 ```
 
-The local editor is available at `http://localhost:4321/admin/index.html`. Content is stored in `content/`. Astro generates complete HTML, metadata, and structured data for normal visitors and search crawlers.
+Content is stored in `content/`. The copy from the former service-page layout is preserved in `SERVICE_PAGE_CONTENT_ARCHIVE.md`.
 
-## TinaCloud
+## Design system workflow
 
-1. Create a free TinaCloud project connected to this Git repository.
-2. Copy `.env.example` to `.env` and add the project client ID and read-only token.
-3. Add the same variables to the hosting provider before deploying.
+The private `/design-system/` page is the visual source of truth. `src/data/design-system.json` is the machine-readable component registry.
 
-Required variables:
+For shared frontend work:
+
+1. Add or update the component in the registry first.
+2. Confirm the design-system page explains or demonstrates the pattern.
+3. Implement the component using the shared tokens, Lucide icons and standard breakpoints.
+4. Run `npm run check:design-system`.
+
+`npm run build` and the GitHub Pages workflow run the same consistency check automatically, so unregistered components and off-system styling cannot deploy.
+
+## TinaCMS
+
+TinaCloud builds require the project client ID and read-only token. Add them to a local `.env` file when the CMS editor is needed:
 
 ```bash
 NEXT_PUBLIC_TINA_CLIENT_ID=
@@ -29,6 +39,10 @@ TINA_TOKEN=
 NEXT_PUBLIC_TINA_BRANCH=main
 ```
 
+Run `npm run build:cms` only when those credentials are configured.
+
 ## Deploy
 
-The Astro adapter and `netlify.toml` target Netlify. Configure the TinaCloud variables in Netlify, then deploy through the linked GitHub repository or the Netlify CLI.
+Pushes to `main` deploy automatically through `.github/workflows/pages.yml`. The workflow builds the static site with the GitHub Pages base path and publishes `dist` using GitHub Actions.
+
+The GitHub Pages approval site is noindex by default. Set `PUBLIC_SITE_INDEXABLE=true` only for the production Cloudflare deployment. The private `/service-page-template/` and `/design-system/` pages always remain noindex and are omitted from navigation and the sitemap.

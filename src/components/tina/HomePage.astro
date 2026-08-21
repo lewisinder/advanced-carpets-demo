@@ -4,6 +4,7 @@ import FaqItem from "@/components/FaqItem.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import CTA from "@/components/CTA.astro";
 import ContactForm from "@/components/ContactForm.astro";
+import IicrcLogo from "@/components/IicrcLogo.astro";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import type { HomeContent } from "@/data/home";
@@ -235,13 +236,7 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       <h2 data-tina-field={tinaField(home.trust, "title")}>{home.trust.title}</h2>
       <p data-tina-field={tinaField(home.trust, "intro")}>{home.trust.intro}</p>
       <div class="certification-logo">
-        <img
-          src={withBase("/assets/iicrc-logo.png")}
-          alt="IICRC, Institute of Inspection Cleaning and Restoration Certification"
-          width="760"
-          height="300"
-          loading="lazy"
-        />
+        <IicrcLogo variant="on-dark" />
       </div>
     </div>
     <div class="trust-list">

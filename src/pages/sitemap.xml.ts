@@ -1,5 +1,5 @@
 import { services } from "@/data/services";
-import { site } from "@/data/site";
+import { site, siteIndexing } from "@/data/site";
 
 const routes = [
   "/",
@@ -17,6 +17,7 @@ export function GET() {
   return new Response(xml, {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
+      "X-Robots-Tag": siteIndexing.robots,
     },
   });
 }

@@ -6,17 +6,26 @@ import { islands } from "@/lib/tina/islands";
 import { home as staticHome, type HomeContent } from "@/data/home";
 
 // The GitHub Pages build is fully static with no Tina backend, so read the home
-// content straight from JSON. On dev/Netlify (base "/") we use the Tina client
+// content straight from JSON. During local development (base "/") we use the Tina client
 // and island wrapper so live visual editing keeps working.
-const isGithubPages = import.meta.env.BASE_URL !== "/";
+const useTinaClient = import.meta.env.DEV && process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
-let home: HomeContent;
-if (isGithubPages) {
-  home = staticHome;
-} else {
-  const { getHome } = await import("@/lib/tina/data");
-  const response = await getHome();
-  home = response.data.home as unknown as HomeContent;
+let home: HomeContent = staticHome;
+let useTinaEditing = false;
+
+if (useTinaClient) {
+  try {
+    const { getHome } = await import("@/lib/tina/data");
+    const response = await getHome();
+    const tinaHome = response?.data?.home;
+
+    if (tinaHome) {
+      home = tinaHome as unknown as HomeContent;
+      useTinaEditing = true;
+    }
+  } catch {
+    // `npm run dev:site` has no Tina data server, so use committed content.
+  }
 }
 ---
 
@@ -28,7 +37,7 @@ if (isGithubPages) {
   ogImage="/assets/hero-cleaning.png"
   pathname="/"
 >
-  {isGithubPages ? (
+  {!useTinaEditing ? (
     <HomePage home={home} />
   ) : (
     <TinaIsland name="home" wrapper={islands.home.wrapper} primary>

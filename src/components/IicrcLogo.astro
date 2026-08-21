@@ -1,0 +1,27 @@
+---
+import { withBase } from "@/lib/base";
+
+type Props = {
+  variant?: "on-light" | "on-dark";
+  class?: string;
+  loading?: "eager" | "lazy";
+};
+
+const {
+  variant = "on-light",
+  class: className,
+  loading = "lazy",
+} = Astro.props;
+const src = variant === "on-dark"
+  ? "/assets/iicrc-logo-on-dark.png"
+  : "/assets/iicrc-logo-on-light.png";
+---
+
+<img
+  class:list={["iicrc-logo", `iicrc-logo-${variant}`, className]}
+  src={withBase(src)}
+  alt="IICRC, Institute of Inspection, Cleaning and Restoration Certification"
+  width="782"
+  height="291"
+  loading={loading}
+/>
