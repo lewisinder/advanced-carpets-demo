@@ -20,7 +20,7 @@ const serviceSchema = {
   category: service.category,
   description: service.seoDescription,
   url: canonical,
-  provider: { "@type": "LocalBusiness", name: site.name, url: site.url, telephone: site.primaryPhone },
+  provider: { "@id": `${site.url}/#localbusiness` },
   areaServed: site.areas.map((area) => ({ "@type": "Place", name: area })),
 };
 const faqSchema = service.faqs.length ? {

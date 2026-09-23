@@ -321,6 +321,22 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
 </section>
 
 <section class="section">
+  <div class="container">
+    <div class="cta-panel">
+      <div>
+        <p class="overline orange">Plan the job</p>
+        <h2>Estimate the cost before you enquire</h2>
+        <p>Use our interactive estimator to choose a service, adjust the job details and see an indicative cost before you send us the property information.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="button button-primary" href={withBase("/estimator/")}>Estimate the cost</a>
+        <a class="button button-outline" href={withBase("/contact/")}>Make an enquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container enquiry-panel">
     <div>
       <p class="overline orange">Contact</p>

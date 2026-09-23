@@ -9,6 +9,7 @@ import { site } from "@/data/site";
 import { withBase } from "@/lib/base";
 import homeContent from "../../content/pages/home.json";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
+import Calculator from "@lucide/astro/icons/calculator";
 import Phone from "@lucide/astro/icons/phone";
 import ShieldCheck from "@lucide/astro/icons/shield-check";
 
@@ -16,7 +17,6 @@ type Props = { service: Service };
 const { service } = Astro.props;
 const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
 const lowerName = service.name.toLowerCase();
-const regionName = "Central Otago, Southern Lakes and the Maniototo";
 const detailSections = service.sections ?? [];
 const featuredDetail = detailSections[0];
 const extraDetails = detailSections.slice(1);
@@ -37,11 +37,12 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
           <a href={withBase("/services/")}>Services</a><span aria-hidden="true">/</span>
           <span aria-current="page">{service.name}</span>
         </nav>
-        <h1>{service.heroHeading ?? `${service.name} across ${regionName}`}</h1>
+        <h1>{service.heroHeading}</h1>
         <p>{service.intro}</p>
         <div class="service-page-hero__actions">
           <a class="button button-primary" href="#service-enquiry">Make an enquiry</a>
           <a class="button button-outline" href={phoneHref}><Phone size={18} stroke-width={2.2} aria-hidden="true" />Call {site.primaryPhone}</a>
+          <a class="button button-outline" href={withBase("/estimator/")}><Calculator size={18} stroke-width={2.2} aria-hidden="true" />Estimate the cost</a>
         </div>
         <div class="service-page-rating" aria-label="Rated 5 out of 5 from 10 Google reviews">
           <img src={withBase("/assets/google-g.svg")} alt="" width="26" height="26" />
@@ -91,7 +92,10 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
           {featuredDetail.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
           {featuredDetail.bullets?.length ? <ul class="service-page-detail-list">{featuredDetail.bullets.map((item) => <li>{item}</li>)}</ul> : null}
           <aside class="service-page-limit-note"><ShieldCheck size={26} stroke-width={1.8} aria-hidden="true" /><p>{service.whyAdvanced}</p></aside>
-          <a class="button button-primary" href="#service-enquiry">Make an enquiry</a>
+          <div class="service-page-technical__actions">
+            <a class="button button-primary" href="#service-enquiry">Make an enquiry</a>
+            <a class="button button-outline" href={withBase("/estimator/")}><Calculator size={18} stroke-width={2.2} aria-hidden="true" />Estimate the cost</a>
+          </div>
         </div>
         <div class:list={["service-page-technical__media", media.technicalRotation && "service-page-media--rotated", media.technicalRotation && `service-page-media--rotate-${media.technicalRotation}`]}><img src={withBase(technicalMedia)} alt={technicalAlt} loading="lazy" /></div>
       </div>
@@ -139,7 +143,7 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
 
   <section class="service-page-section service-page-local-faq">
     <div class="container service-page-local-faq__grid">
-      <div class="service-page-local"><h2>{service.name} throughout the regions</h2><p>We provide {lowerName} across {regionName}, including Cromwell, Alexandra, Clyde, Queenstown, Wanaka, Hāwea and Ranfurly.</p><a class="service-page-text-link" href={withBase("/#service-areas")}>View our service areas<ArrowRight size={18} stroke-width={2} aria-hidden="true" /></a></div>
+      <div class="service-page-local"><h2>{service.localHeading}</h2><p>{service.localCopy}</p><a class="service-page-text-link" href={withBase("/#service-areas")}>View our service areas<ArrowRight size={18} stroke-width={2} aria-hidden="true" /></a></div>
       <div><h2>{service.name} questions</h2><div class="faq-list service-page-faq-list">{service.faqs.map((faq, index) => <FaqItem question={faq.question} answer={faq.answer} open={index === 0} />)}</div></div>
     </div>
   </section>
@@ -510,9 +514,20 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     line-height: 1.5;
   }
 
-  .service-page-technical .button {
-    align-self: flex-start;
+  .service-page-technical__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
     margin-top: 28px;
+  }
+
+  .service-page-technical .button-outline {
+    border-color: rgba(255, 255, 255, 0.72);
+    color: var(--white);
+  }
+
+  .service-page-technical .button-outline:hover {
+    border-color: var(--white);
   }
 
   .service-page-technical__media {

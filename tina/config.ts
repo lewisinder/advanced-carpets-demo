@@ -178,7 +178,9 @@ export default defineConfig({
               longTextField("summary", "Short summary"),
               textField("seoTitle", "Search title"),
               longTextField("seoDescription", "Search description"),
-              textField("heroHeading", "Page heading override", false),
+              textField("heroHeading", "Main page heading"),
+              textField("localHeading", "Service area heading"),
+              longTextField("localCopy", "Service area paragraph"),
               longTextField("intro", "Page introduction"),
               longTextField("overview", "Who the service suits"),
               {

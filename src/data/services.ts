@@ -8,7 +8,9 @@ export type Service = {
   summary: string;
   seoTitle: string;
   seoDescription: string;
-  heroHeading?: string;
+  heroHeading: string;
+  localHeading: string;
+  localCopy: string;
   intro: string;
   overview: string;
   sections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
