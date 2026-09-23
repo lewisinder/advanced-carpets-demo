@@ -13,6 +13,13 @@
     "processPatternClass": "steps-grid",
     "processSurfaceMode": "transparent",
     "reviewStarColour": "--brand-orange",
+    "serviceEvidenceStat": {
+      "role": "A prominent, client-approved service-specific figure with its condition and meaning stated beside it",
+      "surface": "Open editorial rule on the charcoal results section, not a metric card",
+      "colour": "White figure with clay accent; no new colour token",
+      "responsive": "Two reading columns on desktop, one stacked column below 600px",
+      "contentRule": "Say what the number measures. A potential loss must not be presented as a measured gain from our work."
+    },
     "companyGallery": {
       "aspectRatio": "1 / 1",
       "desktopColumns": 4,
@@ -104,6 +111,12 @@
       "file": "src/components/ServiceFacts.astro",
       "category": "Services",
       "description": "Verified service facts with Lucide line icons and design tokens."
+    },
+    {
+      "name": "ServiceStat",
+      "file": "src/components/ServiceStat.astro",
+      "category": "Evidence",
+      "description": "Optional editorial figure for a client-approved, service-specific claim. The value is paired with a plain-language label and its condition, so a potential loss is not mistaken for a guaranteed result."
     },
     {
       "name": "ServicePage",

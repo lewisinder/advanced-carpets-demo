@@ -3,6 +3,7 @@ import BeforeAfter from "@/components/BeforeAfter.astro";
 import ContactForm from "@/components/ContactForm.astro";
 import FaqItem from "@/components/FaqItem.astro";
 import ServiceFacts from "@/components/ServiceFacts.astro";
+import ServiceStat from "@/components/ServiceStat.astro";
 import { services, type Service } from "@/data/services";
 import { site } from "@/data/site";
 import { withBase } from "@/lib/base";
@@ -122,6 +123,7 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     <div class="container">
       <h2>{service.resultsHeading}</h2>
       <p class="service-page-results__intro">{service.resultsCopy}</p>
+      {service.highlightStat && <ServiceStat {...service.highlightStat} />}
       {(comparison || review) && <div class:list={["service-page-results__grid", (!comparison || !review) && "service-page-results__grid--single"]}>
         {comparison ? <BeforeAfter beforeSrc={withBase(comparison.before)} afterSrc={withBase(comparison.after)} beforeAlt={`Before ${lowerName}`} afterAlt={`After ${lowerName}`} title={`${service.name} before and after`} caption={comparison.caption} /> : null}
         {review ? <blockquote class="service-page-review"><div class="service-page-review__source"><img src={withBase("/assets/google-g.svg")} alt="" width="28" height="28" /><span>Google review</span></div><p class="service-page-review__stars" aria-label="5 out of 5 stars">★★★★★</p><p>“{review.text}”</p><footer>{review.name}</footer></blockquote> : null}

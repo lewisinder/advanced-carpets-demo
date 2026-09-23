@@ -21,6 +21,7 @@ export type Service = {
   useCases: string[];
   resultsHeading: string;
   resultsCopy: string;
+  highlightStat?: { eyebrow: string; value: string; label: string; detail: string };
   media: {
     hero: string;
     work: string;

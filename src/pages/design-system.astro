@@ -1,6 +1,7 @@
 ---
 import IicrcLogo from "@/components/IicrcLogo.astro";
 import ServiceFacts, { type ServiceFact } from "@/components/ServiceFacts.astro";
+import ServiceStat from "@/components/ServiceStat.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import designSystemRegistry from "@/data/design-system.json";
 import { withBase } from "@/lib/base";
@@ -100,6 +101,12 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
         </article>
 
         <article class="design-block">
+          <h3>Service-specific figure</h3>
+          <p>Use a prominent number only when the client has supplied the claim and it helps explain the service. Place it in the results section with a label that says exactly what it measures. A potential efficiency loss is not a promised improvement after cleaning.</p>
+          <div class="design-stat-example"><ServiceStat eyebrow="Up to" value="30%" label="Potential efficiency loss from dirty solar panels" detail="Dirty panels can cause you to lose up to 30% efficiency, depending on the situation." /></div>
+        </article>
+
+        <article class="design-block">
           <h3>Service media frames</h3>
           <p>Align hero text with the shared page container. Service-page images fill clipped responsive frames with <code>object-fit: cover</code>. If a supplied photograph is sideways, set its rotation in the service data so it displays upright inside the same frame. The hero has a minimum height and may grow for longer copy. Work and technical photos retain set frame heights, so source aspect ratios and long text cannot push an image over the next section. Keep the shared radius and accent edge treatment. A single extra detail section uses the reading column instead of leaving an empty half-grid.</p>
         </article>
@@ -159,6 +166,7 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
   .design-logos > div { display: grid; min-height: 150px; place-items: center; padding: 30px; }
   .design-logos .dark { background: var(--charcoal); }
   .design-steps { margin-top: 30px; }
+  .design-stat-example { margin-top: 26px; background: var(--charcoal); padding: 28px 34px; }
   .design-registry { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; border-top: 1px solid var(--line); }
   .design-registry > div { min-width: 0; border-bottom: 1px solid var(--line); padding: 22px 28px 22px 0; }
   .design-registry > div:nth-child(even) { border-left: 1px solid var(--line); padding-right: 0; padding-left: 28px; }
@@ -176,5 +184,5 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
   .section-dark li { color: rgba(255,255,255,.74); }
   .design-rules ul { display: grid; gap: 12px; padding-left: 20px; }
   @media (max-width: 900px) { .design-colours { grid-template-columns: repeat(2, minmax(0, 1fr)); } .design-nav { top: 0; } .design-type, .design-rules { grid-template-columns: 1fr; } .design-type > div + div, .design-rules > div + div { border-top: 1px solid var(--line); border-left: 0; padding-left: 0; } }
-  @media (max-width: 600px) { .design-registry { grid-template-columns: 1fr; } .design-registry > div:nth-child(even) { border-left: 0; padding-left: 0; } .design-hero { padding: 60px 0; } .design-colours, .design-logos, .design-order { grid-template-columns: 1fr; } .design-colours > div { border-right: 0; } .design-nav .container { gap: 18px; } }
+  @media (max-width: 600px) { .design-registry { grid-template-columns: 1fr; } .design-registry > div:nth-child(even) { border-left: 0; padding-left: 0; } .design-hero { padding: 60px 0; } .design-colours, .design-logos, .design-order { grid-template-columns: 1fr; } .design-colours > div { border-right: 0; } .design-nav .container { gap: 18px; } .design-stat-example { padding: 24px; } }
 </style>

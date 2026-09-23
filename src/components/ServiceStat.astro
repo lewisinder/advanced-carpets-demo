@@ -1,0 +1,80 @@
+---
+type Props = {
+  eyebrow: string;
+  value: string;
+  label: string;
+  detail: string;
+};
+
+const { eyebrow, value, label, detail } = Astro.props;
+---
+
+<aside class="service-stat">
+  <div class="service-stat__figure">
+    <span>{eyebrow}</span>
+    <strong>{value}</strong>
+  </div>
+  <div class="service-stat__copy">
+    <h3>{label}</h3>
+    <p>{detail}</p>
+  </div>
+</aside>
+
+<style>
+  .service-stat {
+    display: grid;
+    grid-template-columns: minmax(250px, .7fr) minmax(0, 1.3fr);
+    gap: 48px;
+    align-items: end;
+    border-block: 1px solid rgba(255, 255, 255, .27);
+    padding-block: 30px 34px;
+  }
+
+  .service-stat__figure {
+    display: grid;
+    gap: 2px;
+    border-left: 6px solid var(--clay);
+    padding-left: 24px;
+    color: var(--white);
+  }
+
+  .service-stat__figure span {
+    color: var(--clay-light);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .service-stat__figure strong {
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(5rem, 10vw, 9rem);
+    font-weight: 900;
+    letter-spacing: -.075em;
+    line-height: 1;
+  }
+
+  .service-stat__copy h3 {
+    max-width: 590px;
+    margin: 0 0 12px;
+    color: var(--white);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.65rem, 2.7vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1.15;
+  }
+
+  .service-stat__copy p {
+    max-width: 590px;
+    margin: 0;
+    color: rgba(255, 255, 255, .78);
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .service-stat { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 24px 28px; }
+    .service-stat__figure { padding-left: 18px; }
+    .service-stat__figure strong { font-size: clamp(4.4rem, 22vw, 6rem); }
+  }
+</style>
