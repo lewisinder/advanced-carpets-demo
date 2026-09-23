@@ -16,6 +16,7 @@ export function titleFor(pathname: string, serviceName?: string) {
   if (pathname === "/estimator") return `Service Cost Estimator | ${site.name}`;
   if (pathname === "/about") return `About ${site.name}`;
   if (pathname === "/contact") return `Contact ${site.name}`;
+  if (pathname === "/privacy-policy") return `Privacy Policy | ${site.name}`;
   if (pathname === "/design-system") return `Design System | ${site.name}`;
   if (pathname === "/thank-you") return `Thank You | ${site.name}`;
   return `${site.name} | Central Otago, Southern Lakes & the Maniototo`;

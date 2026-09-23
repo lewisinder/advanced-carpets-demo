@@ -33,4 +33,8 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       <a href={withBase("/contact/")}>Make an enquiry</a>
     </div>
   </div>
+  <div class="container footer-legal">
+    <span>© {new Date().getFullYear()} {site.name}</span>
+    <a href={withBase("/privacy-policy/")}>Privacy policy</a>
+  </div>
 </footer>

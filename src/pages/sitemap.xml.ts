@@ -8,6 +8,7 @@ const routes = [
   "/estimator",
   "/about",
   "/contact",
+  "/privacy-policy",
 ];
 
 export function GET() {
