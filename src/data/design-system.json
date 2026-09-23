@@ -22,9 +22,10 @@
     },
     "serviceMediaFrames": {
       "fit": "cover",
-      "hero": "--service-media-hero-height; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
-      "work": "--service-media-work-height; 430px below 900px; --service-media-mobile-height below 600px",
-      "technical": "--service-media-technical-height; 430px below 900px; --service-media-mobile-height below 600px",
+      "hero": "Minimum --service-media-hero-height, with text aligned to the shared container and the image clipped to its column; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
+      "work": "Fixed --service-media-work-height; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
+      "technical": "Fixed --service-media-technical-height frame centred beside content that may grow; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
+      "overflow": "Images fill clipped frames and never determine section height or cover following content",
       "tokens": ["--service-media-hero-height", "--service-media-work-height", "--service-media-technical-height", "--service-media-compact-height", "--service-media-mobile-height"],
       "radiusToken": "--radius"
     }
@@ -106,7 +107,7 @@
       "name": "ServicePage",
       "file": "src/components/ServicePage.astro",
       "category": "Page template",
-      "description": "Canonical shared layout for every service detail page, with stable responsive media frames that crop source images using cover and the homepage process pattern with steps that inherit the section surface."
+      "description": "Canonical shared layout for every service detail page, with container-aligned hero text, clipped responsive cover-image frames, and the homepage process pattern with steps that inherit the section surface."
     },
     {
       "name": "SpiderIcon",
