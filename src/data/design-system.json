@@ -12,6 +12,7 @@
     ],
     "processPatternClass": "steps-grid",
     "processSurfaceMode": "transparent",
+    "reviewStarColour": "--brand-orange",
     "companyGallery": {
       "aspectRatio": "1 / 1",
       "desktopColumns": 4,
@@ -26,6 +27,7 @@
       "work": "Fixed --service-media-work-height; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
       "technical": "Fixed --service-media-technical-height frame centred beside content that may grow; --service-media-compact-height below 900px; --service-media-mobile-height below 600px",
       "overflow": "Images fill clipped frames and never determine section height or cover following content",
+      "orientation": "Set per-image clockwise or counterclockwise rotation in service data only when the source photograph is sideways; keep it inside the existing clipped cover frame",
       "tokens": ["--service-media-hero-height", "--service-media-work-height", "--service-media-technical-height", "--service-media-compact-height", "--service-media-mobile-height"],
       "radiusToken": "--radius"
     }
@@ -107,7 +109,7 @@
       "name": "ServicePage",
       "file": "src/components/ServicePage.astro",
       "category": "Page template",
-      "description": "Canonical shared layout for every service detail page, with container-aligned hero text, clipped responsive cover-image frames, and the homepage process pattern with steps that inherit the section surface."
+      "description": "Canonical shared layout for every service detail page. Each page supplies its own search title, service facts, reasons, included work, honest limits, process, media and related links. Media may provide distinct hero, work and technical images; every image keeps the shared clipped cover frames and responsive height tokens. The visual order, cover-image frames and homepage process pattern stay shared. The What to expect section identifies the numbered steps as our process. The results section shows genuine proof when available and otherwise uses service-specific copy without repeating earlier assurance text."
     },
     {
       "name": "SpiderIcon",

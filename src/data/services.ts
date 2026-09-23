@@ -1,19 +1,41 @@
 import serviceContent from "../../content/services/services.json";
+import type { ServiceFact } from "@/components/ServiceFacts.astro";
 
 export type Service = {
   name: string;
   slug: string;
   category: "Core cleaning" | "Restoration" | "Specialist cleaning" | "Repair and pest";
   summary: string;
+  seoTitle: string;
+  seoDescription: string;
+  heroHeading?: string;
   intro: string;
-  overviewParagraphs?: string[];
+  overview: string;
   sections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
-  whyAdvanced?: string;
-  imageCaption?: string;
-  resultsCopy?: string;
-  benefits: string[];
-  process: string[];
+  whyAdvanced: string;
+  reasons: string[];
+  included: string[];
+  exclusions?: string[];
+  facts: ServiceFact[];
+  process: Array<{ title: string; copy: string }>;
   useCases: string[];
+  resultsHeading: string;
+  resultsCopy: string;
+  media: {
+    hero: string;
+    work: string;
+    technical?: string;
+    heroAlt: string;
+    workAlt: string;
+    technicalAlt?: string;
+    heroRotation?: "clockwise" | "counterclockwise";
+    workRotation?: "clockwise" | "counterclockwise";
+    technicalRotation?: "clockwise" | "counterclockwise";
+  };
+  comparison?: { before: string; after: string; caption: string };
+  reviewName?: string;
+  relatedSlugs: string[];
+  enquiryCopy: string;
   faqs: Array<{ question: string; answer: string }>;
 };
 

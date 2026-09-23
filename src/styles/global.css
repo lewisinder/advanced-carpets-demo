@@ -10,6 +10,7 @@
   --white: #ffffff;
   --clay: #d94f22;
   --clay-dark: #aa3918;
+  --brand-orange: #f98504;
   --water: #147f9f;
   --water-soft: #d9edf2;
   --sage: #748b62;
@@ -458,7 +459,7 @@ textarea {
 
 .hero-stars,
 .stars {
-  color: var(--clay);
+  color: var(--brand-orange);
   font-style: normal;
 }
 
@@ -1247,7 +1248,7 @@ textarea {
   margin: 16px 0 10px;
   font-size: 22px;
   line-height: 1;
-  color: var(--clay);
+  color: var(--brand-orange);
 }
 
 .review-card strong {

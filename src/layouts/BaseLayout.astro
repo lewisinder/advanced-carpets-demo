@@ -22,7 +22,7 @@ const schema = JSON.stringify(localBusinessSchema());
 const robots = Astro.props.robots ?? siteIndexing.robots;
 const ogTitle = Astro.props.ogTitle ?? pageTitle;
 const ogDescription = Astro.props.ogDescription ?? Astro.props.description;
-const ogImage = Astro.props.ogImage ? `${site.url}${Astro.props.ogImage}` : undefined;
+const ogImage = Astro.props.ogImage ? new URL(withBase(Astro.props.ogImage), Astro.url.origin).toString() : undefined;
 ---
 
 <!doctype html>

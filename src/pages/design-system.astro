@@ -14,7 +14,7 @@ const facts: ServiceFact[] = [
 ];
 const colours = [
   ["Charcoal", "--charcoal"], ["Ink", "--ink"], ["Muted", "--muted"], ["Wool", "--wool"],
-  ["Paper", "--paper"], ["Clay", "--clay"], ["Water", "--water"], ["Sage", "--sage"], ["Taupe", "--taupe"],
+  ["Paper", "--paper"], ["Clay", "--clay"], ["Logo orange", "--brand-orange"], ["Water", "--water"], ["Sage", "--sage"], ["Taupe", "--taupe"],
 ];
 const pageOrder = ["Service hero", "Verified service facts", "Who the service suits", "What is included", "Detailed service explanation", "What to expect", "Results or proof", "Local coverage and FAQs", "Enquiry form", "Related services"];
 ---
@@ -35,7 +35,7 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
 
     <section id="foundations" class="section section-white">
       <div class="container design-section">
-        <div class="design-heading"><p class="overline orange">01</p><h2>Foundations</h2><p>Use the shared CSS tokens. Do not introduce near-matching colours, typefaces or spacing systems inside individual pages.</p></div>
+        <div class="design-heading"><p class="overline orange">01</p><h2>Foundations</h2><p>Use the shared CSS tokens. Use logo orange for review stars and clay for actions and accents. Do not introduce near-matching colours, typefaces or spacing systems inside individual pages.</p></div>
         <div class="design-colours">{colours.map(([name, token]) => <div><span style={`--swatch: var(${token})`}></span><strong>{name}</strong><code>{token}</code></div>)}</div>
         <div class="design-type">
           <div><small>Display and headings</small><h2>Plus Jakarta Sans</h2><p>Use weights 700 to 900 with compact line-height.</p></div>
@@ -90,7 +90,7 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
 
         <article class="design-block">
           <h3>Numbered process</h3>
-          <p>Use the homepage pattern everywhere, including the clay, water, sage and taupe accents. Steps are not separate cards: their backgrounds stay transparent and inherit the surrounding section surface, while the coloured rules provide the hierarchy.</p>
+          <p>Use the homepage pattern everywhere, including the clay, water, sage and taupe accents. On service pages, place a short line below “What to expect” to make clear that the steps describe our process. Steps are not separate cards: their backgrounds stay transparent and inherit the surrounding section surface, while the coloured rules provide the hierarchy.</p>
           <div class="steps-grid design-steps">{homeContent.steps.map((step, index) => <article><span>{index + 1}</span><h3>{step.title}</h3><p>{step.text}</p></article>)}</div>
         </article>
 
@@ -101,7 +101,7 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
 
         <article class="design-block">
           <h3>Service media frames</h3>
-          <p>Align hero text with the shared page container. Service-page images fill clipped responsive frames with <code>object-fit: cover</code>. The hero has a minimum height and may grow for longer copy. Work and technical photos retain set frame heights, so source aspect ratios and long text cannot push an image over the next section. Keep the shared radius and accent edge treatment.</p>
+          <p>Align hero text with the shared page container. Service-page images fill clipped responsive frames with <code>object-fit: cover</code>. If a supplied photograph is sideways, set its rotation in the service data so it displays upright inside the same frame. The hero has a minimum height and may grow for longer copy. Work and technical photos retain set frame heights, so source aspect ratios and long text cannot push an image over the next section. Keep the shared radius and accent edge treatment. A single extra detail section uses the reading column instead of leaving an empty half-grid.</p>
         </article>
 
         <article class="design-block">
@@ -112,7 +112,7 @@ const pageOrder = ["Service hero", "Verified service facts", "Who the service su
         <article class="design-block">
           <h3>Service-page order</h3>
           <ol class="design-order">{pageOrder.map((item) => <li>{item}</li>)}</ol>
-          <p class="design-note">The shared <code>ServicePage.astro</code> component is the source of truth. <a class="text-link" href={withBase("/service-page-template/")}>Open the private carpet-cleaning approval example</a>.</p>
+          <p class="design-note">The shared <code>ServicePage.astro</code> component is the layout source of truth. Keep service-specific facts, reasons, included work, limits, four step titles and descriptions, images and related links in service data. Show only facts and proof that fit the service. When no result image or review is available, use a short, useful explanation instead of repeating an earlier assurance paragraph. <a class="text-link" href={withBase("/service-page-template/")}>Open the private carpet-cleaning approval example</a>.</p>
         </article>
       </div>
     </section>

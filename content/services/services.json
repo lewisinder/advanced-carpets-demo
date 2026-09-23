@@ -4,734 +4,289 @@
       "name": "Carpet Cleaning",
       "slug": "carpet-cleaning",
       "category": "Core cleaning",
-      "summary": "Hot water extraction steam cleaning and practical carpet care for homes, rentals, offices, and commercial spaces.",
-      "intro": "Professional carpet cleaning by hot water extraction, using van-mounted industrial-grade equipment and practical methods suited to the carpet, soiling, and condition of the room.",
-      "overviewParagraphs": [
-        "At Advanced Carpets & Restoration, we use a van-mounted carpet cleaning machine and industrial-grade equipment so we can provide high-quality work the first time.",
-        "Using a van-mounted system means we do not need your power or hot water. By choosing hot water extraction, you can be confident your carpets are visually clean and treated for bacteria, dust mites, and other contaminants.",
-        "Whether you need a one-time deep clean or regular maintenance, we help keep carpets in good condition across Cromwell, Alexandra, Wanaka, Clyde, Queenstown, and the greater Central Otago area."
-      ],
+      "summary": "Van-mounted hot water extraction for carpets in homes, rentals and businesses across Central Otago, Southern Lakes and the Maniototo.",
+      "seoTitle": "Carpet Cleaning Central Otago | Advanced Carpets",
+      "seoDescription": "Carpet cleaning and hot water extraction in Cromwell, Queenstown, Wanaka and nearby areas. Van-mounted equipment for homes and businesses. Make an enquiry.",
+      "intro": "We clean carpets with a van-mounted hot water extraction system and industrial-grade equipment. The system supplies its own power and hot water, so we do not need to use yours.",
+      "overview": "We clean carpets in homes, rentals, offices, pubs and other commercial spaces. Whether it is a one-time deep clean or regular maintenance, we check the carpet and its condition before choosing the treatment.",
       "sections": [
         {
-          "heading": "Hot Water Extraction (Steam Cleaning)",
-          "paragraphs": [
-            "Hot water extraction injects hot water at high pressure, helping loosen embedded dirt, oils, and debris from carpet fibres. The method is especially useful when paired with the right pre-treatment for the carpet and type of soiling."
-          ],
-          "bullets": [
-            "Deep cleaning with hot water helps lift embedded soil from carpet fibres.",
-            "The heat can reduce common bacteria, mould spores, dust mites, and allergens.",
-            "Professional-grade temperature and suction help balance cleaning performance with drying time.",
-            "Dry times are usually between 4 and 8 hours, depending on carpet type, pile thickness, airflow, and how much soil needs to be removed.",
-            "High water temperature can help strip greasy soiling from carpets in pubs, restaurants, and other high-use spaces."
-          ]
+          "heading": "Hot water extraction for a deeper clean",
+          "paragraphs": ["Hot water extraction helps loosen embedded dirt, oils and debris from carpet fibres. We pre-treat suitable spots and traffic lanes, then use the van-mounted machine to clean and extract the soiled water.", "High water temperature can help with greasy carpets in pubs and restaurants. The treatment is adjusted to the fibre, pile, level of soiling and any problem areas."],
+          "bullets": ["The van-mounted system supplies its own power and hot water.", "Carpets usually take 4 to 8 hours to dry. Carpet thickness, soiling, indoor temperature, airflow and weather can change that time.", "Stain removal depends on the stain, the carpet and any products already applied to it."]
         },
         {
-          "heading": "Common scenarios where steam cleaning helps",
-          "bullets": [
-            "Allergies or asthma, where reducing dust mites and allergens is important.",
-            "Pet households, where odours and pet-related marks need targeted treatment.",
-            "High-traffic areas that look worn because embedded dirt has built up.",
-            "Routine maintenance that helps extend carpet life when combined with regular vacuuming.",
-            "Commercial carpets with grease, oils, or heavy foot traffic."
-          ]
-        },
-        {
-          "heading": "How often to clean carpet",
-          "paragraphs": [
-            "How often you should clean carpet depends on usage, traffic, pets, and the environment. These are practical guidelines that can be tailored to the property."
-          ],
-          "bullets": [
-            "Light to moderate traffic: deep clean every 12 to 18 months and vacuum weekly.",
-            "High-traffic areas or households with kids: deep clean every 12 months and vacuum 2 to 3 times per week.",
-            "Homes with pets: deep clean every 6 to 8 months and vacuum 3 to 4 times per week to manage hair and odours.",
-            "Allergy or asthma sufferers: deep clean every 6 to 8 months and vacuum weekly with a high-efficiency filter."
-          ]
+          "heading": "How often should carpet be professionally cleaned?",
+          "paragraphs": ["How often you should clean carpet depends on usage, traffic and the home environment. A light-use home may suit a deep clean every 12 to 18 months. Busy family areas often need attention around once a year."],
+          "bullets": ["Homes with pets may benefit from cleaning every 6 to 8 months.", "High-traffic rooms, rentals and commercial carpets may need a different schedule.", "Regular vacuuming between visits helps manage hair, dust and everyday soil."]
         }
       ],
-      "whyAdvanced": "Advanced Carpets & Restoration uses van-mounted commercial equipment, suitable pre-treatment, and practical advice before and after the clean. The team matches the method to the carpet and the condition of the room instead of using a one-size-fits-all approach.",
-      "imageCaption": "Hot water extraction carpet cleaning using commercial equipment.",
-      "resultsCopy": "Use the comparison to review carpet condition before and after professional hot water extraction cleaning.",
-      "benefits": [
-        "Deep cleaning with hot water to loosen embedded dirt, oils, and debris",
-        "Strong sanitising effect that can reduce bacteria, mould spores, dust mites, and allergens",
-        "Eco-friendly options using minimal cleaning agents where suitable",
-        "Helps lift tough marks such as grease and deep-seated grime when paired with the right pre-treatment"
-      ],
-      "process": [
-        "Inspect carpet, fibre type, soiling, and problem areas",
-        "Pre-treat spots, traffic lanes, and suitable stains",
-        "Clean with hot water extraction using van-mounted equipment",
-        "Advise on drying, airflow, and aftercare"
-      ],
-      "useCases": [
-        "End-of-tenancy cleaning",
-        "Annual home carpet cleaning",
-        "Pet households",
-        "High-traffic family areas",
-        "Pubs, restaurants, offices, and commercial carpets"
-      ],
-      "faqs": [
-        {
-          "question": "How long does carpet take to dry after hot water extraction?",
-          "answer": "Dry times are usually between 4 and 8 hours, depending on carpet type, pile thickness, airflow, weather, and how much soil needs to be removed."
-        },
-        {
-          "question": "Do you need my power or hot water?",
-          "answer": "No. The van-mounted carpet cleaning system means the team does not need to use your power or hot water."
-        },
-        {
-          "question": "How often should carpet be deep cleaned?",
-          "answer": "Light to moderate traffic may suit every 12 to 18 months, while homes with pets, kids, allergies, or heavy traffic may benefit from a deep clean every 6 to 12 months."
-        }
-      ]
+      "whyAdvanced": "We are locally owned and operated, with 16+ years of experience in the region. Our IICRC-certified technicians use commercial equipment and explain what is realistic for the carpet before work begins.",
+      "reasons": ["Embedded dirt in high-traffic rooms", "Pet marks and odours", "End-of-tenancy or routine carpet cleaning", "Greasy or heavily used commercial carpets"],
+      "included": ["Inspect the fibre, condition, soiling and problem areas", "Pre-treat suitable spots and traffic lanes", "Clean with hot water extraction using van-mounted equipment", "Allow 4 to 8 hours for drying and vacuum twice a week afterwards"],
+      "exclusions": ["No stain can be guaranteed to disappear. Old marks, colour loss and previous home treatments can limit the result."],
+      "facts": [{"label":"Van-mounted equipment","icon":"truck","tone":"clay"},{"label":"Own power and hot water","icon":"droplets","tone":"water"},{"label":"Usually 4 to 8 hours to dry","icon":"clock","tone":"sage"},{"label":"IICRC-certified technicians","icon":"award","tone":"taupe"}],
+      "process": [{"title":"Inspect","copy":"Check fibre, condition, soiling and problem areas."},{"title":"Prepare","copy":"Pre-treat suitable spots and traffic lanes."},{"title":"Clean","copy":"Use hot water extraction with our commercial van-mounted equipment."},{"title":"Dry and care","copy":"Carpets usually dry in 4 to 8 hours. After that, vacuum twice a week to manage everyday dirt."}],
+      "useCases": ["Family homes and pet households", "Rentals and end-of-tenancy cleans", "Offices and accommodation properties", "Pubs, restaurants and high-traffic commercial spaces"],
+      "resultsHeading": "Before and after carpet cleaning",
+      "resultsCopy": "See the change in the same carpet using the slider below. Hot water extraction can lift embedded soil, though stains and worn fibres may still show.",
+      "media": {"hero":"/assets/services/carpet-cleaning-work.webp","work":"/assets/services/carpet-cleaning-equipment.webp","heroAlt":"Carpet cleaning equipment in use on a carpet at a local property","workAlt":"Van-mounted hot water extraction equipment inside the service vehicle"},
+      "comparison": {"before":"/assets/carpet-cleaning-before.webp","after":"/assets/carpet-cleaning-after.webp","caption":"Carpet cleaning before and after from the same job. Move across the image or use the slider to compare."},
+      "reviewName": "Manow Khetwichan",
+      "relatedSlugs": ["stain-treatment","upholstery-cleaning","carpet-repair"],
+      "enquiryCopy": "Tell us which carpets need cleaning, where the property is and whether there are stains or pet-related areas. Photos help us understand the job. We answer normal enquiries the same day.",
+      "faqs": [{"question":"How long does carpet cleaning take to dry?","answer":"Usually 4 to 8 hours. Carpet type, pile thickness, soiling, indoor temperature, airflow and weather can affect drying time."},{"question":"Do you need to use my power or hot water?","answer":"No. Our van-mounted carpet cleaning system supplies its own power and hot water."},{"question":"Do I need to move furniture before you arrive?","answer":"Please move small furniture off the areas we are going to clean."},{"question":"Can you clean upholstery and carpets in the same visit?","answer":"Yes, we can arrange to clean both in the same visit."}]
     },
     {
       "name": "Pest Control",
       "slug": "pest-control",
       "category": "Core cleaning",
-      "summary": "Pest control for homes and businesses across Central Otago, Southern Lakes and the Maniototo.",
-      "intro": "Professional pest control for common household and commercial pest problems, with the treatment matched to the pest and property.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Pest control for spiders, flies, fleas, bed bugs, rodents, ants, wasps and other common pests in homes and businesses.",
+      "seoTitle": "Pest Control Central Otago | Advanced Carpets",
+      "seoDescription": "Pest control for homes and businesses in Cromwell, Queenstown, Wanaka and Central Otago. Qualified technicians treat common insects and rodents. Make an enquiry.",
+      "intro": "We provide pest control for homes and commercial properties across Central Otago, Southern Lakes and the Maniototo. Our qualified technicians identify the pest and choose a treatment suited to the property.",
+      "overview": "Whether it is a minor nuisance or more widespread activity, we look at the pest, affected areas and property conditions before treatment. We work with homeowners and businesses throughout the region.",
       "sections": [
-        {
-          "heading": "Pests and property types covered",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Spider and fly control",
-            "Rodents, ants and wasps",
-            "Fleas, bed bugs and carpet beetles",
-            "Silverfish and borer"
-          ]
-        },
-        {
-          "heading": "Treatment methods, safety and preparation",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Products and methods used",
-            "Preparation before treatment",
-            "People, pets and re-entry advice",
-            "Follow-up and prevention guidance"
-          ]
-        }
+        {"heading":"Pests we treat","paragraphs":["We provide tailored pest control solutions for the problem at your property. Treatment may involve spraying or removal, depending on the pest and where it is active."],"bullets":["Spiders, flies, fleas and bed bugs", "Rats, mice, ants and wasps", "Carpet beetles, silverfish and borer"]},
+        {"heading":"Treatment, safety and follow-up","paragraphs":["Our technicians have completed the Urban Pest Management Course and are certified approved handlers for the pest control products we use. We explain the selected treatment and any preparation or re-entry instructions before work starts.","Bed bugs, ants and some other pests may need a follow-up treatment. We will tell you if a return visit is needed after assessing the pest and the extent of activity."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Pest Control image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Identify the pest and affected areas",
-        "Choose treatment suited to the property",
-        "Explain preparation and safety requirements",
-        "Provide prevention and follow-up advice"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Homes and rental properties",
-        "Offices and commercial premises",
-        "Seasonal pest activity",
-        "Rodent and insect concerns"
-      ],
-      "faqs": [
-        {
-          "question": "Which pests do you treat?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "What preparation is needed before treatment?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "How long do people and pets need to stay away?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "Our pest technicians are fully qualified, have completed Urban Pest Management training and are approved handlers for the products they use. We match the treatment to the pest and property rather than assuming every infestation is the same.",
+      "reasons": ["Spiders and flies inside or around the property", "Fleas, bed bugs or carpet beetles", "Rats, mice, ants or wasp nests", "Silverfish or borer activity"],
+      "included": ["Identify the pest and affected areas", "Assess access, activity and property conditions", "Apply the agreed treatment or removal method", "Provide preparation and re-entry instructions for the treatment used"],
+      "exclusions": ["Treatment and re-entry advice depends on the product and pest. Structural repairs and proofing are separate from the pest treatment."],
+      "facts": [{"label":"Urban Pest Management trained","icon":"award","tone":"clay"},{"label":"Approved product handlers","icon":"shield","tone":"water"},{"label":"Homes and businesses","icon":"building","tone":"sage"},{"label":"Treatment matched to the pest","icon":"search","tone":"taupe"}],
+      "process": [{"title":"Identify","copy":"Confirm the pest and affected areas."},{"title":"Assess","copy":"Check access, pest activity and property conditions."},{"title":"Initial treatment","copy":"Apply the agreed targeted treatment or removal method."},{"title":"Follow-up advice","copy":"Give treatment-specific re-entry instructions and arrange a return visit if the pest needs one."}],
+      "useCases": ["Homes and rental properties", "Offices and commercial premises", "Accommodation properties", "Seasonal insect or rodent activity"],
+      "resultsHeading": "After pest treatment",
+      "resultsCopy": "We will tell you when the treated area can be used again and whether another visit is needed. This depends on the pest, the product used and how much activity we find.",
+      "media": {"hero":"/assets/services/pest-control-indoor.webp","work":"/assets/services/pest-control-outdoor.webp","heroAlt":"Technician carrying out a pest treatment inside a property","workAlt":"Technician applying a pest treatment outside a building"},
+      "relatedSlugs": ["carpet-cleaning","upholstery-cleaning","stain-treatment"],
+      "enquiryCopy": "Tell us which pest you have seen, where you have noticed activity and the property address. Photos can help with identification. We will tell you what to prepare once we know which treatment is needed.",
+      "faqs": [{"question":"Which pests do you treat?","answer":"We treat spiders, flies, fleas, bed bugs, rats, mice, ants, wasps, carpet beetles, silverfish and borer."},{"question":"Do we need to leave the property during treatment?","answer":"It depends on the pest and treatment used. We will give you preparation and re-entry instructions before work begins."},{"question":"Are your pest technicians qualified?","answer":"Yes. Our technicians have completed Urban Pest Management training and are certified approved handlers for the products they use."},{"question":"Will one treatment solve the problem?","answer":"Some infestations need follow-up treatment or prevention work. This depends on the pest, severity and source of activity, and we will explain it when we assess the job."}]
     },
     {
       "name": "Upholstery Cleaning",
       "slug": "upholstery-cleaning",
       "category": "Core cleaning",
-      "summary": "Upholstery cleaning for couches, chairs, mattresses and fabric furniture across the service area.",
-      "intro": "Professional upholstery cleaning using methods selected for the fabric, condition and way the furniture is used.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Specialised upholstery cleaning for couches, chairs, mattresses and fabric furniture in homes and businesses.",
+      "seoTitle": "Upholstery Cleaning Central Otago | Advanced Carpets",
+      "seoDescription": "Professional upholstery and couch cleaning in Cromwell, Queenstown, Wanaka and nearby areas. We check the fabric before cleaning. Make an enquiry.",
+      "intro": "We clean lounge suites, mattresses, chairs and other fabric furniture with specialised upholstery tools. Our technicians check the material first and choose a method suited to its condition.",
+      "overview": "We clean furniture for homeowners, accommodation providers, offices, landlords and property managers. The fabric, previous treatments and cause of any marks all affect what can be cleaned and how.",
       "sections": [
-        {
-          "heading": "Furniture and fabrics we can clean",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Lounge suites and couches",
-            "Armchairs and dining chairs",
-            "Mattresses and headboards",
-            "Office and accommodation seating"
-          ]
-        },
-        {
-          "heading": "Fabric checks, cleaning methods and drying",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Fabric identification and colour-fastness",
-            "Spots and areas needing extra attention",
-            "Cleaning method and equipment",
-            "Expected drying time and aftercare"
-          ]
-        }
+        {"heading":"Cleaning for furniture you use every day","paragraphs":["Regular use leaves soil and crumbs in upholstery that vacuuming may not remove. Spills such as coffee and wine can become harder to treat with time. If a fabric looks dull because of built-up soil, cleaning may brighten it."],"bullets":["Lounge suites, couches and armchairs", "Dining chairs, office seating and accommodation furniture", "Mattresses and other suitable fabric surfaces"]},
+        {"heading":"Fabric checks and drying","paragraphs":["Not every fabric can be wet cleaned. We inspect the material, condition and problem areas, then test and pre-treat suitable areas before using specialised upholstery tools.","A typical visit may take around 1.5 to 3 hours, depending on the size and number of items. Drying commonly takes around 4 to 8 hours and varies with the fabric and airflow. Many homes arrange upholstery cleaning every 12 to 24 months, with more frequent attention where use and spills are heavier."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Upholstery Cleaning image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Assess the fabric before cleaning",
-        "Treat spills and high-use areas",
-        "Use specialised upholstery tools",
-        "Explain drying and aftercare"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Family lounge furniture",
-        "Rental and holiday-home furniture",
-        "Office and accommodation seating",
-        "Mattresses and upholstered bedheads"
-      ],
-      "faqs": [
-        {
-          "question": "Which upholstery fabrics can you clean?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "How long will the furniture take to dry?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Can you treat stains and odours at the same time?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "Our IICRC-certified team checks the fabric before treatment and explains any limits, including old stains, permanent colour loss and drying time. We use equipment selected for furniture rather than treating every item like carpet.",
+      "reasons": ["Built-up soil on couches and chairs", "Spills and marks on fabric furniture", "Dull-looking upholstery in high-use rooms", "Routine cleaning for homes, offices or accommodation"],
+      "included": ["Inspect fabric, condition and problem areas", "Test and pre-treat suitable marks", "Clean suitable items with specialised upholstery tools", "Allow around 4 to 8 hours for the fabric to dry"],
+      "exclusions": ["Some fabrics cannot be wet cleaned. Cleaning cannot reverse permanent fading, colour loss or fabric damage, and old marks may remain."],
+      "facts": [{"label":"Fabric checked first","icon":"search","tone":"clay"},{"label":"Specialised upholstery tools","icon":"wrench","tone":"water"},{"label":"Usually 4 to 8 hours to dry","icon":"clock","tone":"sage"},{"label":"IICRC-certified technicians","icon":"award","tone":"taupe"}],
+      "process": [{"title":"Check","copy":"Inspect the fabric, condition and problem areas."},{"title":"Prepare","copy":"Test and pre-treat suitable areas."},{"title":"Clean","copy":"Use specialised tools and commercial-grade hot water extraction where the fabric allows."},{"title":"Dry","copy":"Allow around 4 to 8 hours for drying, depending on the fabric and airflow."}],
+      "useCases": ["Lounge suites and family couches", "Chairs and office seating", "Mattresses and suitable fabric furniture", "Rental and accommodation properties"],
+      "resultsHeading": "What upholstery cleaning can improve",
+      "resultsCopy": "Cleaning can lift built-up soil and brighten fabric that looks dull from use. Permanent fading, colour loss and fabric damage will still be visible.",
+      "media": {"hero":"/assets/services/upholstery-sofa.webp","work":"/assets/services/upholstery-chair.webp","heroAlt":"Fabric lounge suite at a residential property","workAlt":"Close view of an upholstered chair being cleaned","workRotation":"clockwise"},
+      "reviewName": "Jess Matthews",
+      "relatedSlugs": ["carpet-cleaning","stain-treatment","hard-floor-cleaning-polish"],
+      "enquiryCopy": "Tell us which furniture needs cleaning, the fabric if you know it, and any stains or previous products used. Photos of the items and care labels help us assess the job.",
+      "faqs": [{"question":"Can you clean upholstery and carpets in the same visit?","answer":"Yes, we can arrange to clean both in the same visit."},{"question":"How long does upholstery take to dry?","answer":"It usually takes around 4 to 8 hours. Fabric, construction, indoor conditions and airflow can change the time."},{"question":"How often should upholstery be professionally cleaned?","answer":"A common guide is every 12 to 24 months. More frequent cleaning may suit furniture used heavily by children, pets or guests."},{"question":"Can cleaning improve faded-looking fabric?","answer":"It may brighten fabric when dullness is caused by soil, but it cannot reverse permanent fading or colour loss."}]
     },
     {
       "name": "Stain Treatment",
       "slug": "stain-treatment",
       "category": "Core cleaning",
-      "summary": "Targeted stain treatment for carpets and upholstery across Central Otago, Southern Lakes and the Maniototo.",
-      "intro": "Assessment and targeted treatment for spills, pet marks, traffic areas and other problem spots.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Targeted carpet stain treatment for food, drink, pet accidents, mud, grease and other difficult marks.",
+      "seoTitle": "Carpet Stain Removal Central Otago | Advanced Carpets",
+      "seoDescription": "Carpet stain treatment in Cromwell, Queenstown, Wanaka and Central Otago. We assess the fibre and stain before choosing a treatment. Make an enquiry.",
+      "heroHeading": "Carpet stain removal across Central Otago, Southern Lakes and the Maniototo",
+      "intro": "From fresh spills to old, set-in marks, we use targeted carpet stain treatments chosen for the fibre and cause of the mark. We assess the carpet before choosing a method and explain what is realistic.",
+      "overview": "We treat carpet stains in homes and businesses, including food and drink spills, pet accidents, mud, grease and rust. The sooner we see a mark, and the fewer products applied to it, the better the chance of improvement.",
       "sections": [
-        {
-          "heading": "Stains and fibres we can assess",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Food and drink spills",
-            "Pet marks and odours",
-            "Older or unknown stains",
-            "Traffic lanes and high-use areas"
-          ]
-        },
-        {
-          "heading": "Treatment expectations and limitations",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "What caused the mark",
-            "How long it has been present",
-            "Products already used",
-            "Fibre type and permanent colour change"
-          ]
-        }
+        {"heading":"Our approach to carpet stains","paragraphs":["Every stain is different. We start by assessing the carpet fibre, the age of the stain and what caused it. We then choose a suitable treatment, which may include fibre-safe solutions, targeted spot treatment and hot water extraction.","Stubborn or set-in marks may need more than one treatment pass. Some staining, colour loss or fibre damage cannot be removed by cleaning."],"bullets":["Food and drink spills, including wine, coffee, juice and sauces", "Pet marks, mud, grass, grease and oil", "Rust, mineral marks, ink, dye and older set-in stains"]},
+        {"heading":"What to do when a spill happens","paragraphs":["Act promptly. Blot the area with a clean white towel instead of rubbing it. Add a little cold water and keep blotting to dilute the spill. If the mark remains, stop and contact us.","Household cleaners and carpet stain products can react with the fibres or make a mark harder to treat. Please tell us what has already been used on the area."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Stain Treatment image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Assess the likely stain type",
-        "Test the fibre where suitable",
-        "Apply targeted treatment",
-        "Explain realistic limits before work"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Carpet spills",
-        "Upholstery marks",
-        "Pet-related areas",
-        "Older problem spots"
-      ],
-      "faqs": [
-        {
-          "question": "Can every stain be removed?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "What information or photos should the client provide?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Should household stain products be used first?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "Our IICRC-certified technicians check the fibre and stain before using a product. We have 16+ years of experience working with carpets in the region and will explain any limits before treatment.",
+      "reasons": ["Wine, coffee and food spills", "Pet stains and odours", "Mud, grease or rust marks", "Old stains that previous cleaning has not shifted"],
+      "included": ["Identify the likely stain and inspect the carpet fibre", "Test the treatment where needed", "Apply suitable spot treatment and extraction", "Check for remaining marks, colour loss or fibre damage"],
+      "exclusions": ["No stain-removal result is guaranteed. Colour loss and fibre damage cannot be cleaned away, and past home treatments can reduce the chance of removal."],
+      "facts": [{"label":"Stain assessed first","icon":"search","tone":"clay"},{"label":"Targeted spot treatment","icon":"sparkles","tone":"water"},{"label":"Method matched to the fibre","icon":"wrench","tone":"sage"},{"label":"IICRC-certified technicians","icon":"award","tone":"taupe"}],
+      "process": [{"title":"Identify","copy":"Establish the likely stain, affected area and carpet fibre."},{"title":"Test","copy":"Check the carpet and treatment suitability."},{"title":"Treat","copy":"Apply, work in and extract the chosen treatment as appropriate."},{"title":"Review","copy":"Check the treated area for any remaining stain, colour loss or fibre damage."}],
+      "useCases": ["Carpets in homes and rentals", "Pet households", "Accommodation and business premises", "Fresh spills and older set-in marks"],
+      "resultsHeading": "When a stain does not fully lift",
+      "resultsCopy": "A mark may lighten or disappear, but colour loss and fibre damage can remain after cleaning. Older stains and products already used on the area can also affect the result.",
+      "media": {"hero":"/assets/services/carpet-stain.webp","work":"/assets/services/stain-treatment-work.webp","heroAlt":"Visible mark on a carpet before stain treatment","workAlt":"Technician working on a stained carpet area"},
+      "relatedSlugs": ["carpet-cleaning","upholstery-cleaning","carpet-repair"],
+      "enquiryCopy": "Tell us what caused the mark, when it happened, the carpet type if known and any products you have already tried. Include a clear photo and the property address. We answer normal enquiries the same day.",
+      "faqs": [{"question":"What should I do as soon as a spill happens?","answer":"Blot it with a clean white towel rather than rubbing. Add a little cold water and keep blotting. If the mark remains, stop and contact us."},{"question":"Should I use a household stain remover first?","answer":"We recommend avoiding other products until the carpet and stain have been assessed. Some treatments can react with the fibre or make the mark harder to remove."},{"question":"Can you treat pet stains and odours?","answer":"Often, but the result depends on how large the affected area is, how often it has been soiled and how far it has reached into the carpet and underlay."},{"question":"Can you remove an old or set-in stain?","answer":"We can assess it and may use more than one treatment pass. Older marks and previous cleaning attempts can limit the result, so removal is not guaranteed."}]
     },
     {
       "name": "Flood Restoration",
       "slug": "flood-restoration",
       "category": "Restoration",
-      "summary": "Urgent water damage response, extraction and drying support across the full service area.",
-      "intro": "Flood restoration support for water-affected homes and businesses, available for urgent enquiries at any hour.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "24/7 response for water damage, extraction, structural drying and moisture monitoring across the full service area.",
+      "seoTitle": "Water Damage Restoration Central Otago | Advanced Carpets",
+      "seoDescription": "Flood restoration and water damage drying across Central Otago, Queenstown, Wanaka and the Maniototo. 24/7 emergency response. Call 021 333 354.",
+      "heroHeading": "Water damage and flood restoration across Central Otago, Southern Lakes and the Maniototo",
+      "intro": "When water damages a property, starting the drying process promptly can help limit further harm. We respond to flood and water damage emergencies 24/7 across our full service area.",
+      "overview": "We help homes and businesses after burst pipes, appliance overflows, roof leaks, storms and other water damage. Water can travel further than the visible wet area, so our first step is to assess where moisture has reached.",
       "sections": [
-        {
-          "heading": "Water damage situations we respond to",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Burst pipes and plumbing failures",
-            "Appliance leaks",
-            "Weather-related water entry",
-            "Wet carpet, underlay and flooring"
-          ]
-        },
-        {
-          "heading": "Extraction, drying and monitoring",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Initial safety and damage assessment",
-            "Water extraction requirements",
-            "Drying equipment and expected timing",
-            "Monitoring, documentation and next steps"
-          ]
-        }
+        {"heading":"Our flood restoration process","paragraphs":["Every water damage situation is different. We assess the affected area and take moisture readings from carpets, floors and walls to understand how far the water has travelled. We then extract standing water and begin structural drying with industrial-grade air movers and dehumidifiers.","We monitor moisture levels during drying and adjust the equipment as needed. The water source, time elapsed and materials affected determine what can be dried and what may need removal."],"bullets":["Moisture assessment beyond the visible wet area", "Standing-water extraction", "Air movers, dehumidifiers and ongoing moisture monitoring"]},
+        {"heading":"Why acting promptly matters","paragraphs":["The first 24 to 48 hours after a flood are important. Left untreated, moisture can reach subfloors, wall linings and furniture and increase the risk of mould, warping and lingering odours.","Call us as soon as it is safe. Stop the water source if you can do so safely, and avoid electrical or contaminated-water hazards."]},
+        {"heading":"Working with your insurer","paragraphs":["You can choose your local restoration provider. We work with insurance companies and can communicate with them about documentation and invoicing, so you can focus on your home or business while the drying work is under way."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Flood Restoration image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Respond to urgent water damage",
-        "Assess affected materials and safety issues",
-        "Extract water and set up drying",
-        "Monitor progress and explain next steps"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Homes and rental properties",
-        "Offices and commercial premises",
-        "Carpet and underlay water damage",
-        "Leaks, floods and weather events"
-      ],
-      "faqs": [
-        {
-          "question": "What should the client do before we arrive?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "What is the expected response time?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Which materials can usually be dried or restored?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "Our IICRC-qualified technicians use moisture readings, extraction and drying equipment to guide the work. Emergency response is available at any hour, with a normal response range of 20 minutes to 2 hours across the full service area.",
+      "reasons": ["Burst or leaking pipes", "Washing machine, dishwasher or hot water cylinder overflows", "Storm water, roof leaks or overflowing gutters", "Other sudden water damage in a home or business"],
+      "included": ["Assess affected areas and take moisture readings", "Extract standing water", "Set up air movers and dehumidifiers for structural drying", "Take repeat moisture readings while affected materials dry"],
+      "exclusions": ["Some materials cannot be saved. Electrical, structural or hazardous work may need another specialist, and drying time depends on the water source and extent of damage."],
+      "facts": [{"label":"24/7 emergency response","icon":"phone","tone":"clay"},{"label":"Normal response: 20 min to 2 hr","icon":"clock","tone":"water"},{"label":"Extraction and drying equipment","icon":"droplets","tone":"sage"},{"label":"IICRC-qualified technicians","icon":"award","tone":"taupe"}],
+      "process": [{"title":"Assess","copy":"Check affected areas and take moisture readings from carpets, floors and walls."},{"title":"Extract","copy":"Remove standing water where accessible."},{"title":"Dry","copy":"Use air movers and dehumidifiers to begin structural drying."},{"title":"Monitor","copy":"Take repeat moisture readings and check the affected materials before removing drying equipment."}],
+      "useCases": ["Homes with water-damaged carpet or flooring", "Businesses with leaks or overflows", "Storm and roof-leak damage", "Burst pipes and appliance failures"],
+      "resultsHeading": "Checking that affected areas are dry",
+      "resultsCopy": "We take repeat moisture readings as the drying equipment works. The water source and time spent wet affect what can be dried; some materials may need to be removed.",
+      "media": {"hero":"/assets/services/flood-drying-equipment.webp","work":"/assets/services/flood-restoration-work.webp","heroAlt":"Drying equipment set up in a water-damaged room","workAlt":"Drying equipment in use at a property","heroRotation":"clockwise","workRotation":"clockwise"},
+      "relatedSlugs": ["carpet-cleaning","carpet-repair","stain-treatment"],
+      "enquiryCopy": "For water damage, call 021 333 354 now. Emergency response is available 24/7. Tell us the property address, water source if known, when it happened and which areas are affected.",
+      "faqs": [{"question":"Should I contact you as soon as water damage occurs?","answer":"Yes. Prompt assessment and drying can help reduce secondary damage. If it is safe, stop the water source and avoid electrical hazards."},{"question":"How quickly can you respond?","answer":"Our normal response range is 20 minutes to 2 hours across Central Otago, Southern Lakes and the Maniototo. Emergency response is available 24/7."},{"question":"What should we do before you arrive?","answer":"Call us, turn off the water source if safe and contact a plumber where needed. Keep clear of electrical and contaminated-water hazards."},{"question":"Can wet carpet and underlay always be saved?","answer":"No. This depends on the water source, how long the materials have been wet and their condition. We will assess them and explain the options."},{"question":"Do I have to use the provider suggested by my insurer?","answer":"You can choose your local restoration provider. We can communicate with your insurer about documentation and invoicing for the work."}]
     },
     {
       "name": "Gutter Cleaning",
       "slug": "gutter-cleaning",
       "category": "Specialist cleaning",
-      "summary": "Gutter cleaning for homes and suitable commercial properties across the service area.",
-      "intro": "Removal of leaves, debris and blockages to help gutters and key flow points carry rainwater away from the property.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Removal of leaves and gutter debris from homes and suitable commercial properties, with key outlets cleared.",
+      "seoTitle": "Gutter Cleaning Central Otago | Advanced Carpets",
+      "seoDescription": "Gutter cleaning in Cromwell, Queenstown, Wanaka and nearby areas. We remove leaves and debris and clear key outlets. Make an enquiry.",
+      "intro": "Blocked gutters can overflow when rain arrives. We check access and the visible gutter condition, remove loose debris and clear key outlets so water can move through the guttering.",
+      "overview": "We clean gutters on homes, rentals, accommodation properties and suitable commercial buildings. Properties near trees and those with seasonal leaf build-up often need the most attention.",
       "sections": [
-        {
-          "heading": "What the gutter cleaning service includes",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Access and visible condition check",
-            "Removal of leaves and loose debris",
-            "Clearing key outlets and flow points",
-            "Work-area tidy-up"
-          ]
-        },
-        {
-          "heading": "Access, property types and service limits",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Single and multi-level properties",
-            "Roof access and safety requirements",
-            "Downpipes and blocked flow points",
-            "Repairs or issues outside cleaning scope"
-          ]
-        }
+        {"heading":"What the gutter clean covers","paragraphs":["We start by checking access and visible condition. We remove leaves and built-up debris and clear key flow points. Removed debris is generally placed in the garden. If we spot damaged guttering while we work, we will tell you."],"bullets":["Loose leaf and debris removal", "Key outlets and flow points", "Visible gutter damage flagged"]},
+        {"heading":"When to arrange gutter cleaning","paragraphs":["How often gutters need cleaning depends on nearby trees, exposure and what has collected along the roofline. Seasonal checks can help you spot build-up before heavy rain. If a gutter is already overflowing, tell us which area is affected when you enquire."],"bullets":["Downpipe clearing and gutter repairs are not part of this service.", "Weather, roof pitch, height and safe access may affect the work we can carry out."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Gutter Cleaning image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Check access and gutter condition",
-        "Remove built-up debris",
-        "Clear key water-flow points",
-        "Identify visible maintenance concerns"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Seasonal property maintenance",
-        "Properties near trees",
-        "Pre-winter checks",
-        "Homes and suitable commercial buildings"
-      ],
-      "faqs": [
-        {
-          "question": "Which property heights and roof types can you service?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Are downpipes included?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "How often should gutters be cleaned?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "We check access first, clear the gutters and key outlets we can reach safely, and flag any gutter damage we can see. Our team works across Central Otago, Southern Lakes and the Maniototo.",
+      "reasons": ["Leaves and debris building up", "Overflow during rain", "Blocked gutter outlets", "Pre-winter or seasonal maintenance"],
+      "included": ["Check access and visible gutter condition", "Remove loose leaves and built-up debris", "Clear key outlets and flow points", "Place removed debris in the garden where practical and flag visible gutter damage"],
+      "exclusions": ["We do not clear downpipes or repair damaged gutters. Weather and safe roof access may limit the work."],
+      "facts": [{"label":"Access checked first","icon":"search","tone":"clay"},{"label":"Leaves and debris removed","icon":"sparkles","tone":"water"},{"label":"Key outlets cleared","icon":"droplets","tone":"sage"},{"label":"Homes and businesses","icon":"building","tone":"taupe"}],
+      "process": [{"title":"Check access","copy":"Assess access and the visible condition of the gutters."},{"title":"Remove debris","copy":"Clear leaves and loose build-up from reachable gutters."},{"title":"Clear flow points","copy":"Open key outlets so rainwater can move through the guttering."},{"title":"Tidy","copy":"Generally place removed debris in the garden and flag any visible gutter damage."}],
+      "useCases": ["Homes near trees", "Rentals and accommodation properties", "Light commercial buildings", "Properties with overflowing gutters"],
+      "resultsHeading": "Before and after gutter cleaning",
+      "resultsCopy": "Use the slider to compare the same gutter before and after loose debris was removed. Gutter cleaning does not repair leaks or clear blocked downpipes.",
+      "media": {"hero":"/assets/services/gutter-debris.webp","work":"/assets/services/gutter-property.webp","heroAlt":"Leaves and debris collected along a roof gutter","workAlt":"Residential roofline and guttering"},
+      "comparison": {"before":"/assets/gutter-before.jpeg","after":"/assets/gutter-after.jpeg","caption":"Gutter cleaning before and after from the same job. Move across the image or use the slider to compare."},
+      "relatedSlugs": ["window-cleaning","solar-panel-cleaning","flood-restoration"],
+      "enquiryCopy": "Tell us the property address, approximate building height and where the gutters are blocked or overflowing. Photos of the roofline and access can help us plan the visit.",
+      "faqs": [{"question":"How often should gutters be cleaned?","answer":"It depends on nearby trees and exposure. Seasonal checks can be useful, especially where leaves collect quickly."},{"question":"Are downpipes included?","answer":"No. We clean gutters and key outlets, but downpipe clearing is not included."},{"question":"Can you clean gutters on every building?","answer":"We check roof height, pitch, access and weather before confirming what can be done safely."},{"question":"What happens to the debris you remove?","answer":"We generally place the removed debris in the property garden and tidy the work area where practical."}]
     },
     {
       "name": "Hard Floor Cleaning & Polish",
       "slug": "hard-floor-cleaning-polish",
       "category": "Specialist cleaning",
-      "summary": "Hard floor cleaning and polishing for suitable residential and commercial floor surfaces.",
-      "intro": "A deeper clean and polished finish for suitable hard floors, with the method selected after checking the material and condition.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Cleaning, scrubbing, polishing and grout care for suitable hard floors in homes and commercial spaces.",
+      "seoTitle": "Hard Floor Cleaning Central Otago | Advanced Carpets",
+      "seoDescription": "Hard floor cleaning, grout cleaning and polishing in Central Otago and Queenstown. We assess vinyl, tile and other surfaces before treatment. Make an enquiry.",
+      "heroHeading": "Hard floor cleaning and polishing across Central Otago, Southern Lakes and the Maniototo",
+      "intro": "We clean hard floors in homes and businesses, including vinyl, tile and grout. Our technicians assess the surface and finish before recommending cleaning, scrubbing or polishing.",
+      "overview": "Hard floors in busy homes, shops, offices and hospitality spaces collect grit and dirt that can wear the finish over time. We choose a treatment based on the floor type, condition and level of soiling.",
       "sections": [
-        {
-          "heading": "Floor types and finishes we can work with",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Floor materials accepted",
-            "Coated and uncoated surfaces",
-            "Residential and commercial areas",
-            "Surfaces that need specialist referral"
-          ]
-        },
-        {
-          "heading": "Cleaning, polishing and ongoing care",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Inspection and test area",
-            "Products and equipment used",
-            "Finish options and expected result",
-            "Maintenance frequency and aftercare"
-          ]
-        }
+        {"heading":"Hard floor treatments we offer","paragraphs":["Our services include scrub and buff for lighter maintenance, strip and polish for suitable floors with a dulled finish, targeted grout cleaning and sealing where appropriate. Not every floor can be polished, so we inspect the material and existing coating first."],"bullets":["Vinyl and lino flooring", "Ceramic and porcelain tile with grout lines", "Suitable natural stone and commercial hard flooring", "Selected wood veneer and concrete floors after assessment"]},
+        {"heading":"An approach matched to the floor","paragraphs":["Grit left on hard floors acts like sandpaper underfoot. Regular cleaning removes the build-up and helps protect the surface. We assess the floor type, current finish and soiling before choosing products or equipment.","A cleaned floor may be ready to walk on straight away. If a polish is applied, allow at least 12 hours before using the floor, subject to the product and conditions. We explain this before work begins."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Hard Floor Cleaning & Polish image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Identify the floor material and finish",
-        "Choose an appropriate cleaning method",
-        "Polish suitable surfaces",
-        "Provide maintenance and aftercare advice"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Commercial entries and shared spaces",
-        "Kitchens and dining areas",
-        "Rental property refreshes",
-        "Dull or high-use floors"
-      ],
-      "faqs": [
-        {
-          "question": "Which hard floor surfaces can be cleaned and polished?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "What finish should the client expect?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "How long before the floor can be used again?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "Our IICRC-certified technicians assess the floor before choosing a method. We clean and polish suitable hard floors across the region and explain when a surface should be cleaned rather than polished.",
+      "reasons": ["Dull or heavily used vinyl flooring", "Dirty or discoloured grout", "Built-up grime on tile and other hard floors", "Commercial floors needing scrub, buff or polish"],
+      "included": ["Inspect the floor type, finish and condition", "Choose a suitable clean, scrub, buff or polish treatment", "Clean grout or seal suitable surfaces where agreed", "Allow at least 12 hours before using a polished floor; a cleaned floor can usually be used straight away"],
+      "exclusions": ["Not every hard floor can be polished. Cleaning does not remove every scratch, coating defect or damaged area, and repair or refinishing may need separate work."],
+      "facts": [{"label":"Floor assessed first","icon":"search","tone":"clay"},{"label":"Vinyl, tile and grout","icon":"sparkles","tone":"water"},{"label":"Polish where suitable","icon":"wrench","tone":"sage"},{"label":"Homes and businesses","icon":"building","tone":"taupe"}],
+      "process": [{"title":"Inspect","copy":"Identify the floor type, finish, condition and level of soiling."},{"title":"Choose a method","copy":"Agree on cleaning, scrubbing, polishing or grout treatment suited to the floor."},{"title":"Clean and polish","copy":"Complete the selected treatment with equipment and products suited to the surface."},{"title":"Use the floor","copy":"A cleaned floor can usually be used straight away. If polished, allow at least 12 hours before use."}],
+      "useCases": ["Vinyl and lino floors", "Tile and grout in homes", "Retail, hospitality and office floors", "Suitable natural stone, wood veneer and concrete"],
+      "resultsHeading": "Before and after a hard floor clean",
+      "resultsCopy": "Compare the floor before and after cleaning and polishing. Scrubbing removes built-up soil, while a suitable polish can improve the finish. Scratches and damaged coatings may still show.",
+      "media": {"hero":"/assets/services/hard-floor-polished.webp","work":"/assets/services/hard-floor-equipment.webp","heroAlt":"Polished hard floor after cleaning at a property","workAlt":"Commercial equipment cleaning a hard floor"},
+      "comparison": {"before":"/assets/hard-floor-cleaning-before.webp","after":"/assets/hard-floor-cleaning-after.webp","caption":"Hard floor cleaning and polishing before and after from the same job. Move across the image or use the slider to compare."},
+      "reviewName": "Jess Matthews",
+      "relatedSlugs": ["carpet-cleaning","stain-treatment","window-cleaning"],
+      "enquiryCopy": "Tell us what type of floor you have, the approximate area, its current finish and any problem spots. Photos help us see whether cleaning, scrubbing or polishing may suit the floor.",
+      "faqs": [{"question":"Which hard floors can you clean?","answer":"We clean suitable vinyl, lino, tile, grout, wood veneer, concrete and other hard floors after checking the material and finish."},{"question":"Can every hard floor be polished?","answer":"No. Many floors can be cleaned but not polished. Polishing is more common for suitable commercial floors, and we will assess the surface first."},{"question":"When can the floor be used again?","answer":"A standard clean may allow use straight away. After polishing, allow at least 12 hours, depending on the product and conditions."},{"question":"How often should a hard floor be maintained?","answer":"It depends on traffic and the finish. Annual attention can suit some busy commercial vinyl floors; homes can be cleaned when the condition calls for it."}]
     },
     {
       "name": "Carpet Repair",
       "slug": "carpet-repair",
       "category": "Repair and pest",
-      "summary": "Assessment and repair of selected carpet damage, joins, loose areas and localised problems.",
-      "intro": "Practical carpet repair options where localised damage may be repairable without replacing the entire carpet.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Practical repairs for burns, tears, pet damage, loose carpet, seams and worn areas where repair is possible.",
+      "seoTitle": "Carpet Repair Central Otago | Advanced Carpets",
+      "seoDescription": "Carpet repair, patching and stretching in Cromwell, Queenstown, Wanaka and Central Otago. We assess damage and explain realistic options. Make an enquiry.",
+      "intro": "From a small burn to loose or rippling carpet, we assess the damage and explain whether a repair is practical. Where possible, repairing a local area can avoid replacing the whole carpet.",
+      "overview": "We repair carpets in homes and businesses. Burns, tears, pet damage, failing seams and loose carpet can often be assessed for patching, joining or power stretching.",
       "sections": [
-        {
-          "heading": "Carpet damage we can assess",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Small damaged or burnt areas",
-            "Loose, lifting or rippled carpet",
-            "Joins and edge problems",
-            "Rental and localised restoration work"
-          ]
-        },
-        {
-          "heading": "Repair options, donor carpet and limitations",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Carpet type and backing",
-            "Availability of matching donor material",
-            "Expected visibility of the finished repair",
-            "When replacement is the better option"
-          ]
-        }
+        {"heading":"How we assess and repair carpet","paragraphs":["We start with an on-site assessment of the damage and the carpet. For a small patch, matching carpet may be taken from a spare offcut or an inconspicuous area such as a cupboard. Matching material needs to be available on site.","For loose or rippling carpet, we use power-stretching equipment to re-tension it. We explain which method is realistic for the material and affected area before work starts."],"bullets":["Burns, scorch marks, rips, tears and pet damage", "Loose, rippling or bubbling carpet", "Seam and transition repairs", "Patch repairs using available matching carpet"]},
+        {"heading":"When repair makes sense","paragraphs":["A damaged patch or fraying seam can get worse with foot traffic. Repairing it promptly may improve the appearance and prevent the affected area spreading. Loose carpet can also be a trip hazard.","A repair will not always be invisible. Colour, pile direction, wear and the available matching carpet affect the finish. We will tell you when replacement is the more realistic option."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Carpet Repair image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Inspect the damaged area",
-        "Confirm whether repair is suitable",
-        "Explain material and finish limitations",
-        "Complete the agreed localised repair"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Small damaged areas",
-        "Loose or lifting carpet",
-        "Rental property repairs",
-        "Carpet joins and edges"
-      ],
-      "faqs": [
-        {
-          "question": "Which types of carpet damage can be repaired?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Is matching spare carpet required?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Will the repaired area be completely invisible?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "Our team has hands-on experience with carpet repairs across the region. We bring the tools for patching and stretching, and give an honest assessment of whether repair or replacement makes more sense.",
+      "reasons": ["Burns, holes, rips and pet damage", "Loose or rippling carpet", "Frayed seams and carpet transitions", "Local damage where full replacement may be avoidable"],
+      "included": ["Assess the damage and carpet condition", "Check whether patching, joining or power stretching suits the damage", "Carry out the agreed repair, using matching carpet for patches", "Check the finished area for visible colour, wear or pile differences"],
+      "exclusions": ["Matching carpet must be available on site for patch repairs. Some damage cannot be repaired, and a repair may remain visible because of wear, colour or pile differences."],
+      "facts": [{"label":"Repair options assessed first","icon":"search","tone":"clay"},{"label":"Patching and stretching","icon":"wrench","tone":"water"},{"label":"Homes and businesses","icon":"building","tone":"sage"},{"label":"16+ years in the region","icon":"award","tone":"taupe"}],
+      "process": [{"title":"Inspect","copy":"Assess the damage, carpet condition and affected area."},{"title":"Confirm options","copy":"Check for matching carpet if a patch is needed, then choose patching, joining or stretching."},{"title":"Repair","copy":"Patch, join or power-stretch the carpet as agreed."},{"title":"Review","copy":"Check the repair for visible differences in colour, wear or pile."}],
+      "useCases": ["Carpets with burns or pet damage", "Loose carpet in homes and rentals", "Frayed seams and transitions", "Commercial carpet with localised damage"],
+      "resultsHeading": "How visible will a carpet repair be?",
+      "resultsCopy": "A patch depends on how closely the spare carpet matches the existing colour, pile and wear. Power stretching can flatten ripples without replacing the carpet.",
+      "media": {"hero":"/assets/carpet-cleaning-after.webp","work":"/assets/services/carpet-cleaning-work.webp","heroAlt":"Carpet in a residential room","workAlt":"Carpeted room at a residential property"},
+      "relatedSlugs": ["carpet-cleaning","stain-treatment","flood-restoration"],
+      "enquiryCopy": "Send a clear photo of the damage, its approximate size, the property address and whether you have spare matching carpet. We can then see whether an on-site assessment is needed.",
+      "faqs": [{"question":"What types of carpet damage can you repair?","answer":"We assess burns, tears, pet damage, loose carpet, failing seams, transitions and areas that may suit a patch repair."},{"question":"Do I need matching spare carpet?","answer":"Yes, matching carpet needs to be available on site for a patch. An offcut or material from an inconspicuous area may be suitable."},{"question":"Will the repair be invisible?","answer":"Not always. Colour, wear, pile and material differences can make a repaired area visible."},{"question":"Is repair better than replacement?","answer":"It depends on the damage and the available matching carpet. We will assess the area and explain whether repair is realistic."}]
     },
     {
       "name": "Solar Panel Cleaning",
       "slug": "solar-panel-cleaning",
       "category": "Specialist cleaning",
-      "summary": "Non-abrasive solar panel cleaning for residential and commercial systems across the region.",
-      "intro": "Removal of dust, pollen, bird droppings and grime using a method suited to the panels, system layout and property access.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Non-abrasive cleaning for suitable residential and commercial solar panels, adjusted for access and layout.",
+      "seoTitle": "Solar Panel Cleaning Central Otago | Advanced Carpets",
+      "seoDescription": "Solar panel cleaning in Central Otago, Queenstown and Wanaka. We remove dust, pollen and bird droppings using a pure-water system. Make an enquiry.",
+      "intro": "Dust, pollen and bird droppings build up on solar panels over time. We clean suitable residential and commercial panels with a non-abrasive pure-water system, adjusting the work to the roof and array.",
+      "overview": "We work with homeowners and businesses across Central Otago, Southern Lakes and the Maniototo. Before cleaning, we check access, panel condition and the layout of the system.",
       "sections": [
-        {
-          "heading": "What the solar panel cleaning service includes",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Panel and access assessment",
-            "Non-abrasive cleaning method",
-            "Removal of environmental build-up",
-            "Visible condition notes after cleaning"
-          ]
-        },
-        {
-          "heading": "Access, timing and maintenance planning",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Roof pitch and safe access",
-            "Residential and commercial arrays",
-            "Seasonal cleaning timing",
-            "Service exclusions and specialist referrals"
-          ]
-        }
+        {"heading":"A gentle clean for solar panels","paragraphs":["Our commercial-grade pure-water cleaning system removes dust and environmental build-up without abrasive treatment. The method is chosen to suit the panel surface and the access available. Electrical testing and repairs are not part of the clean."],"bullets":["Dust and pollen", "Bird droppings and environmental debris", "Residential and commercial arrays with suitable access"]},
+        {"heading":"When should panels be cleaned?","paragraphs":["We recommend considering a clean twice a year, at the end of autumn and the end of spring. An autumn clean removes build-up ahead of the lower-sun winter months. A spring clean removes pollen and dust.","The right timing depends on exposure, nearby birds or trees, and how much build-up you can see. Cleaning may help performance where dirt is blocking light, but no fixed energy gain can be promised."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Solar Panel Cleaning image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Check access and panel condition",
-        "Use non-abrasive equipment",
-        "Remove dust and environmental build-up",
-        "Suggest an appropriate maintenance schedule"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Residential solar systems",
-        "Commercial solar arrays",
-        "Dust and pollen build-up",
-        "Bird droppings and environmental grime"
-      ],
-      "faqs": [
-        {
-          "question": "Which roof types and panel systems can you access?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "How often should solar panels be cleaned?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "What preparation is needed before the visit?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "We use a commercial-grade pure-water system and check roof access before work. Our team cleans suitable solar installations across the region and explains any access or weather limits.",
+      "reasons": ["Dust and pollen on the panels", "Bird droppings and local environmental build-up", "Seasonal solar-system maintenance", "Panels that have not been cleaned for some time"],
+      "included": ["Check roof access, panel layout and visible condition", "Clean accessible panels with a commercial-grade pure-water system", "Remove dust, pollen and bird droppings without abrasive treatment", "Check cleaned panels for remaining build-up"],
+      "exclusions": ["Cleaning does not include electrical testing or repairs. Roof pitch, height, weather and safe access may limit what we can clean."],
+      "facts": [{"label":"Access checked first","icon":"search","tone":"clay"},{"label":"Pure-water cleaning system","icon":"droplets","tone":"water"},{"label":"Non-abrasive method","icon":"sparkles","tone":"sage"},{"label":"Homes and businesses","icon":"building","tone":"taupe"}],
+      "process": [{"title":"Check access","copy":"Assess roof access, array layout and visible panel condition."},{"title":"Prepare","copy":"Set up the commercial-grade pure-water system and tools suited to the job."},{"title":"Clean","copy":"Remove dust, pollen and bird droppings from accessible panels without abrasive treatment."},{"title":"Check","copy":"Check accessible panels for remaining build-up. Cleaning twice a year, at the end of autumn and spring, is a useful guide."}],
+      "useCases": ["Residential rooftop arrays", "Suitable commercial solar installations", "Panels affected by dust or bird droppings", "Seasonal solar-panel maintenance"],
+      "resultsHeading": "Clean panels and energy output",
+      "resultsCopy": "Removing dust, pollen and bird droppings clears the panel surface. Any effect on power output depends on how dirty the panels were, their condition and the weather.",
+      "media": {"hero":"/assets/services/solar-panels-local.webp","work":"/assets/services/solar-panels-close.webp","heroAlt":"Solar panels on a roof in the local service region","workAlt":"Close view of residential solar panels"},
+      "relatedSlugs": ["gutter-cleaning","window-cleaning","hard-floor-cleaning-polish"],
+      "enquiryCopy": "Tell us the property address, roof type, approximate number of panels and any access concerns. Photos of the roof and array help us assess the job.",
+      "faqs": [{"question":"Why clean solar panels?","answer":"Dust, pollen, bird droppings and grime can block light from reaching the panels. Cleaning removes that build-up."},{"question":"How often should panels be cleaned?","answer":"Twice a year, at the end of autumn and spring, is a useful guide. The right timing depends on local conditions and how quickly the panels get dirty."},{"question":"Will cleaning improve solar output?","answer":"It may help when dirt is blocking light, but the effect varies. We do not promise a particular increase in energy output."},{"question":"Can you clean every roof and system?","answer":"We can access many systems, but roof pitch, height, weather and safe access need to be checked first. Send us the details and photos so we can advise."}]
     },
     {
       "name": "Window Cleaning",
       "slug": "window-cleaning",
       "category": "Specialist cleaning",
-      "summary": "Residential and commercial window cleaning across Central Otago, Southern Lakes and the Maniototo.",
-      "intro": "Window cleaning for homes, rentals, accommodation providers, offices and shopfronts, matched to the building and access requirements.",
-      "overviewParagraphs": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      ],
+      "summary": "Interior and exterior glass cleaning for homes, holiday properties, offices and shopfronts across the region.",
+      "seoTitle": "Window Cleaning Central Otago | Advanced Carpets",
+      "seoDescription": "Residential and commercial window cleaning in Cromwell, Queenstown, Wanaka and nearby areas. Inside and outside glass cleaning. Make an enquiry.",
+      "intro": "We clean windows for homes and local businesses across Central Otago, Southern Lakes and the Maniototo. Interior and exterior glass cleaning helps keep views clear and properties looking cared for.",
+      "overview": "Dry conditions, dust and seasonal weather leave a film on glass. We work with homeowners, holiday homes, rentals, offices and shopfronts, choosing a method that suits the building and its access.",
       "sections": [
-        {
-          "heading": "Windows and properties we can service",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Homes and holiday homes",
-            "Rental and accommodation properties",
-            "Offices and shopfronts",
-            "Interior, exterior and access requirements"
-          ]
-        },
-        {
-          "heading": "What is included in the clean",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ],
-          "bullets": [
-            "Glass surfaces",
-            "Frames and sills",
-            "Screens or specialist glass",
-            "Hard-water marks and service exclusions"
-          ]
-        }
+        {"heading":"Residential and commercial window cleaning","paragraphs":["We clean inside and outside glass on suitable buildings, including homes, holiday properties, offices and shopfronts. We check the windows, their condition and safe access before choosing a method. A commercial-grade pure-water cleaning system is used where suitable."],"bullets":["House and holiday-home windows", "Office and shopfront glass", "Skylights where access is safe"]},
+        {"heading":"What to expect on the day","paragraphs":["Please provide access to the windows, clear fragile items and sills, secure pets and tell us about alarms or interior access. A standard residential clean generally takes around 1 to 2 hours, but building size and access can change that time.","The service covers glass inside and out. Tell us about any particular windows or difficult access when you make an enquiry."]}
       ],
-      "whyAdvanced": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "imageCaption": "Window Cleaning image placeholder.",
-      "resultsCopy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "benefits": [
-        "Assess access and glass condition",
-        "Choose a safe cleaning method",
-        "Clean agreed glass and surrounding areas",
-        "Confirm maintenance options"
-      ],
-      "process": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      ],
-      "useCases": [
-        "Homes and holiday homes",
-        "Rental and accommodation properties",
-        "Offices",
-        "Shopfronts and commercial premises"
-      ],
-      "faqs": [
-        {
-          "question": "Are interior and exterior windows both included?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Which heights and access situations can you service?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-          "question": "Are frames, sills and screens included?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-      ]
+      "whyAdvanced": "We provide window cleaning for homes and businesses throughout the region. We check access, select a suitable method and let you know if a particular window cannot be cleaned safely.",
+      "reasons": ["Dust and weather build-up on glass", "Reduced view or natural light", "Holiday-home or rental presentation", "Regular cleaning for offices and shopfronts"],
+      "included": ["Check windows, condition and safe access", "Use a commercial-grade pure-water system where suitable", "Clean accessible interior and exterior glass", "Check the glass for remaining dirt or streaks"],
+      "exclusions": ["The normal service is for glass. Work on skylights or difficult-to-reach windows depends on safe access and building conditions."],
+      "facts": [{"label":"Inside and outside glass","icon":"sparkles","tone":"clay"},{"label":"Pure-water system where suitable","icon":"droplets","tone":"water"},{"label":"Homes and businesses","icon":"building","tone":"sage"},{"label":"Access checked first","icon":"search","tone":"taupe"}],
+      "process": [{"title":"Check access","copy":"Confirm the windows, their condition and safe access."},{"title":"Choose a method","copy":"Select the tools and pure-water method where suitable."},{"title":"Clean","copy":"Clean accessible inside and outside glass."},{"title":"Finish","copy":"Check the cleaned glass for remaining dirt or streaks."}],
+      "useCases": ["Homes and holiday homes", "Rental properties", "Offices and shopfronts", "Accessible skylights"],
+      "resultsHeading": "A clearer view through your windows",
+      "resultsCopy": "Cleaning accessible inside and outside glass removes dust and weather film. Scratches or existing glass damage can still be visible afterwards.",
+      "media": {"hero":"/assets/services/window-cleaning-home.webp","work":"/assets/services/window-cleaning-shopfront.webp","technical":"/assets/services/window-cleaning-interior.webp","heroAlt":"Blue weatherboard home with large front windows and an entryway","workAlt":"Shopfront window with signs and glass panels","technicalAlt":"Bright interior window with lace curtains and a garden view"},
+      "relatedSlugs": ["gutter-cleaning","solar-panel-cleaning","hard-floor-cleaning-polish"],
+      "enquiryCopy": "Tell us the property address, approximate number of windows, whether you need inside and outside glass, and any access concerns. Photos of the building can help us plan the visit.",
+      "faqs": [{"question":"Do you clean inside and outside windows?","answer":"Yes. We can clean glass inside and outside where access is suitable."},{"question":"How long does a standard residential clean take?","answer":"Usually around 1 to 2 hours. The number of windows and access may change the time."},{"question":"Do you clean skylights?","answer":"We can clean suitable skylights where access is safe. Tell us about them when you enquire."},{"question":"How often should windows be cleaned?","answer":"Twice a year is a useful starting point. Dust, weather exposure and how the property is used may call for a different schedule."}]
     }
   ]
 }

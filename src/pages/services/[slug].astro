@@ -1,7 +1,7 @@
 ---
 import ServicePage from "@/components/ServicePage.astro";
 import { services, type Service } from "@/data/services";
-import { site, titleFor } from "@/data/site";
+import { site } from "@/data/site";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
@@ -18,7 +18,7 @@ const serviceSchema = {
   name: service.name,
   serviceType: service.name,
   category: service.category,
-  description: service.summary,
+  description: service.seoDescription,
   url: canonical,
   provider: { "@type": "LocalBusiness", name: site.name, url: site.url, telephone: site.primaryPhone },
   areaServed: site.areas.map((area) => ({ "@type": "Place", name: area })),
@@ -30,7 +30,7 @@ const faqSchema = service.faqs.length ? {
 } : null;
 ---
 
-<BaseLayout title={titleFor(pathname, service.name)} description={service.summary} pathname={pathname}>
+<BaseLayout title={service.seoTitle} description={service.seoDescription} pathname={pathname} ogImage={service.media.hero}>
   <ServicePage service={service} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   {faqSchema ? <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} /> : null}
