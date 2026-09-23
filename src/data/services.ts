@@ -31,9 +31,6 @@ export type Service = {
     heroAlt: string;
     workAlt: string;
     technicalAlt?: string;
-    heroRotation?: "clockwise" | "counterclockwise";
-    workRotation?: "clockwise" | "counterclockwise";
-    technicalRotation?: "clockwise" | "counterclockwise";
   };
   comparison?: { before: string; after: string; caption: string };
   reviewName?: string;

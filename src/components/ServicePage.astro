@@ -6,6 +6,7 @@ import ServiceFacts from "@/components/ServiceFacts.astro";
 import ServiceStat from "@/components/ServiceStat.astro";
 import { services, type Service } from "@/data/services";
 import { site } from "@/data/site";
+import { estimatorServices } from "@/data/estimator";
 import { withBase } from "@/lib/base";
 import homeContent from "../../content/pages/home.json";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
@@ -17,6 +18,7 @@ type Props = { service: Service };
 const { service } = Astro.props;
 const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
 const lowerName = service.name.toLowerCase();
+const canEstimate = estimatorServices.some((estimatorService) => estimatorService.slug === service.slug);
 const detailSections = service.sections ?? [];
 const featuredDetail = detailSections[0];
 const extraDetails = detailSections.slice(1);
@@ -42,14 +44,14 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
         <div class="service-page-hero__actions">
           <a class="button button-primary" href="#service-enquiry">Make an enquiry</a>
           <a class="button button-outline" href={phoneHref}><Phone size={18} stroke-width={2.2} aria-hidden="true" />Call {site.primaryPhone}</a>
-          <a class="button button-outline" href={withBase("/estimator/")}><Calculator size={18} stroke-width={2.2} aria-hidden="true" />Estimate the cost</a>
+          {canEstimate && <a class="button button-outline" href={withBase("/estimator/")}><Calculator size={18} stroke-width={2.2} aria-hidden="true" />Estimate the cost</a>}
         </div>
         <div class="service-page-rating" aria-label="Rated 5 out of 5 from 10 Google reviews">
           <img src={withBase("/assets/google-g.svg")} alt="" width="26" height="26" />
           <strong>5.0</strong><span class="service-page-stars" aria-hidden="true">★★★★★</span><span>10 Google reviews</span>
         </div>
       </div>
-      <div class:list={["service-page-hero__media", media.heroRotation && "service-page-media--rotated", media.heroRotation && `service-page-media--rotate-${media.heroRotation}`]}>
+      <div class="service-page-hero__media">
         <img src={withBase(media.hero)} alt={media.heroAlt} fetchpriority="high" />
       </div>
     </div>
@@ -75,7 +77,7 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
 
   <section class="service-page-section service-page-includes">
     <div class="container service-page-includes__grid">
-      <figure class:list={["service-page-work-photo", media.workRotation && "service-page-media--rotated", media.workRotation && `service-page-media--rotate-${media.workRotation}`]}><img src={withBase(media.work)} alt={media.workAlt} loading="lazy" /></figure>
+      <figure class="service-page-work-photo"><img src={withBase(media.work)} alt={media.workAlt} loading="lazy" /></figure>
       <div>
         <h2>What our {lowerName} service includes</h2>
         <div class="service-page-scope-list">{service.included.map((item) => <div><strong>{item}</strong></div>)}</div>
@@ -94,10 +96,10 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
           <aside class="service-page-limit-note"><ShieldCheck size={26} stroke-width={1.8} aria-hidden="true" /><p>{service.whyAdvanced}</p></aside>
           <div class="service-page-technical__actions">
             <a class="button button-primary" href="#service-enquiry">Make an enquiry</a>
-            <a class="button button-outline" href={withBase("/estimator/")}><Calculator size={18} stroke-width={2.2} aria-hidden="true" />Estimate the cost</a>
+            {canEstimate && <a class="button button-outline" href={withBase("/estimator/")}><Calculator size={18} stroke-width={2.2} aria-hidden="true" />Estimate the cost</a>}
           </div>
         </div>
-        <div class:list={["service-page-technical__media", media.technicalRotation && "service-page-media--rotated", media.technicalRotation && `service-page-media--rotate-${media.technicalRotation}`]}><img src={withBase(technicalMedia)} alt={technicalAlt} loading="lazy" /></div>
+        <div class="service-page-technical__media"><img src={withBase(technicalMedia)} alt={technicalAlt} loading="lazy" /></div>
       </div>
     </section>
   )}
@@ -406,32 +408,6 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     height: 100%;
     min-height: 0;
     object-fit: cover;
-  }
-
-  .service-page-media--rotated {
-    container-type: size;
-  }
-
-  .service-page-media--rotate-clockwise {
-    --media-rotation: 90deg;
-  }
-
-  .service-page-media--rotate-counterclockwise {
-    --media-rotation: -90deg;
-  }
-
-  .service-page-media--rotated img {
-    position: absolute;
-    inset: auto;
-    top: 50%;
-    left: 50%;
-    width: 100cqh;
-    height: 100cqw;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: center;
-    transform: translate(-50%, -50%) rotate(var(--media-rotation));
   }
 
   .service-page-scope-list {

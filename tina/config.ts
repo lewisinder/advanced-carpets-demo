@@ -224,8 +224,6 @@ export default defineConfig({
                   textField("work", "Work image path"),
                   textField("heroAlt", "Hero image description"),
                   textField("workAlt", "Work image description"),
-                  { type: "string", name: "heroRotation", label: "Hero image rotation", options: ["clockwise", "counterclockwise"] },
-                  { type: "string", name: "workRotation", label: "Work image rotation", options: ["clockwise", "counterclockwise"] },
                 ],
               },
               {
