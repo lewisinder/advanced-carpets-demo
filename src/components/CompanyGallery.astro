@@ -5,16 +5,17 @@ import type { CompanyGalleryImage } from "@/data/company-gallery";
 type Props = {
   images?: readonly CompanyGalleryImage[];
   placeholderCount?: number;
+  label?: string;
 };
 
-const { images = [], placeholderCount = 8 } = Astro.props;
+const { images = [], placeholderCount = 8, label = "Company work gallery" } = Astro.props;
 const selectedImages = images.slice(0, 8);
 const items = selectedImages.length > 0
   ? selectedImages.map((image) => ({ image }))
   : Array.from({ length: Math.min(Math.max(placeholderCount, 1), 8) }, () => ({ image: undefined }));
 ---
 
-<section class="section company-gallery-section" aria-label="Company work gallery">
+<section class="section company-gallery-section" aria-label={label}>
   <div class="company-gallery" data-company-gallery>
     <div class="company-gallery-track">
       {[false, true].map((isDuplicate) => (
@@ -25,7 +26,7 @@ const items = selectedImages.length > 0
                 <img
                   class="company-gallery-image"
                   src={withBase(image.src)}
-                  srcset={`${withBase(image.src)} 640w, ${withBase(image.largeSrc)} 1280w`}
+                  srcset={image.largeSrc ? `${withBase(image.src)} 640w, ${withBase(image.largeSrc)} 1280w` : undefined}
                   sizes="(max-width: 600px) 72vw, (max-width: 900px) 31vw, 400px"
                   alt={isDuplicate ? "" : image.alt}
                   width="1600"

@@ -51,6 +51,8 @@
       "layout": "Use the existing section typography and responsive wrapping"
     },
     "companyGallery": {
+      "role": "Shared moving image rail for company work or an optional service-specific photo set",
+      "content": "Keep images, descriptions, source links and the accessible gallery label in service content; stock photography must not be described as local company work",
       "aspectRatio": "1 / 1",
       "desktopColumns": 4,
       "compactColumns": 2,

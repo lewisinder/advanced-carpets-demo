@@ -71,6 +71,18 @@
         {"heading":"Ants, carpet beetles, silverfish and borer","paragraphs":["These are different pest problems, so identifying what is present matters. If you have seen insects, trails or damage to carpets, fabrics or timber, send clear photos if you can.","We use those details and what we find at the property to decide which areas need treatment. If you are unsure which pest you have, you can still make an enquiry and describe what you have noticed."]},
         {"heading":"Treatment, safety and follow-up","paragraphs":["Our technicians have completed the Urban Pest Management Course and are certified approved handlers for the pest control products we use. We explain the selected treatment and any preparation or re-entry instructions before work starts.","Bed bugs, ants and some other pests may need a follow-up treatment. We will tell you if a return visit is needed after assessing the pest and the extent of activity."]}
       ],
+      "gallery": {
+        "label": "Pest control photo gallery",
+        "images": [
+          {"src":"/assets/pest-gallery/spider-640.webp","largeSrc":"/assets/pest-gallery/spider-1280.webp","alt":"Spider resting in the centre of a web","sourceUrl":"https://unsplash.com/photos/barn-spider-on-cobweb-closeup-photography-x2dJcfCNO1A"},
+          {"src":"/assets/pest-gallery/wasps-roof-640.webp","largeSrc":"/assets/pest-gallery/wasps-roof-1280.webp","alt":"Wasps building a nest beneath a roof overhang","sourceUrl":"https://unsplash.com/photos/wasps-building-a-nest-under-a-roof-overhang-0_NG6m-0x94"},
+          {"src":"/assets/pest-gallery/fruit-fly-640.webp","largeSrc":"/assets/pest-gallery/fruit-fly-1280.webp","alt":"Fruit fly on the edge of a slice of fruit","sourceUrl":"https://unsplash.com/photos/fruit-fly-on-fruit-slice-uoyUq8rAeT0"},
+          {"src":"/assets/pest-gallery/bed-640.webp","largeSrc":"/assets/pest-gallery/bed-1280.webp","alt":"White pillows and bedding on a bed","sourceUrl":"https://unsplash.com/photos/white-pillows-and-bed-comforter--R2uNyGmeM4"},
+          {"src":"/assets/pest-gallery/wasps-nest-640.webp","largeSrc":"/assets/pest-gallery/wasps-nest-1280.webp","alt":"Wasps clustered on a paper nest attached to wood","sourceUrl":"https://unsplash.com/photos/a-group-of-bees-on-a-wood-surface-r8wCWc1q0_M"},
+          {"src":"/assets/pest-gallery/ants-640.webp","largeSrc":"/assets/pest-gallery/ants-1280.webp","alt":"Group of black ants moving across a rock","sourceUrl":"https://unsplash.com/photos/a-group-of-black-bugs-crawling-on-a-rock-8oht0WoqD8g"},
+          {"src":"/assets/pest-gallery/rat-640.webp","largeSrc":"/assets/pest-gallery/rat-1280.webp","alt":"Rat climbing the side of a tree","sourceUrl":"https://unsplash.com/photos/a-rat-climbing-up-the-side-of-a-tree-F_5t2LjlYTc"}
+        ]
+      },
       "seasonality": {
         "heading": "When are pests most active in Central Otago?",
         "paragraphs": [

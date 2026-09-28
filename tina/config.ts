@@ -210,6 +210,29 @@ export default defineConfig({
               },
               {
                 type: "object",
+                name: "gallery",
+                label: "Moving photo gallery",
+                required: false,
+                fields: [
+                  textField("label", "Accessible gallery label"),
+                  {
+                    type: "object",
+                    name: "images",
+                    label: "Gallery photos (up to eight)",
+                    list: true,
+                    ui: { itemProps: (item) => ({ label: item?.alt || "Gallery photo" }) },
+                    fields: [
+                      { type: "image", name: "src", label: "Photo", required: true },
+                      { type: "image", name: "largeSrc", label: "Larger photo (optional)", required: false },
+                      textField("alt", "Image description"),
+                      textField("position", "Image position", false),
+                      textField("sourceUrl", "Original photo URL", false),
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "object",
                 name: "seasonality",
                 label: "Local pest seasons",
                 required: false,

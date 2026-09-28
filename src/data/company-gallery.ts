@@ -1,12 +1,14 @@
 export type CompanyGalleryImage = {
   /** Default public asset path. */
   src: string;
-  /** Larger WebP candidate for high-density and wider displays. */
-  largeSrc: string;
+  /** Optional larger WebP candidate for high-density and wider displays. */
+  largeSrc?: string;
   /** Describe the work shown; leave decorative wording out of the alt text. */
   alt: string;
   /** Optional CSS object-position value used to protect the subject during the pan. */
   position?: string;
+  /** Original photo page for attribution and future content edits. */
+  sourceUrl?: string;
 };
 
 export const companyGalleryImages: CompanyGalleryImage[] = [

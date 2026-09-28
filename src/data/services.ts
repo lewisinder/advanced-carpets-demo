@@ -1,5 +1,6 @@
 import serviceContent from "../../content/services/services.json";
 import type { ServiceFact } from "@/components/ServiceFacts.astro";
+import type { CompanyGalleryImage } from "@/data/company-gallery";
 
 export type Service = {
   name: string;
@@ -18,6 +19,7 @@ export type Service = {
   overview: string;
   sections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
   detailHeading?: string;
+  gallery?: { label: string; images: CompanyGalleryImage[] };
   seasonality?: { heading: string; paragraphs: string[]; image: string; imageAlt: string };
   preparation?: { heading: string; intro: string; steps: Array<{ heading: string; copy: string }> };
   whyAdvanced: string;

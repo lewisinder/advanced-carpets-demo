@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm.astro";
 import FaqItem from "@/components/FaqItem.astro";
 import ServiceFacts from "@/components/ServiceFacts.astro";
 import ServiceStat from "@/components/ServiceStat.astro";
+import CompanyGallery from "@/components/CompanyGallery.astro";
 import { services, type Service } from "@/data/services";
 import { site } from "@/data/site";
 import { estimatorServices } from "@/data/estimator";
@@ -114,6 +115,8 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
       </div>
     </section>
   )}
+
+  {service.gallery?.images?.length ? <CompanyGallery images={service.gallery.images} label={service.gallery.label} /> : null}
 
   {service.seasonality && (
     <section class="service-page-section service-page-seasonality">
