@@ -276,6 +276,52 @@ type HomeConnection implements Connection {
   edges: [HomeConnectionEdges]
 }
 
+type ServicesServicesLocalAreas {
+  heading: String!
+  copy: String!
+}
+
+type ServicesServicesSections {
+  heading: String!
+  paragraphs: [String]
+  bullets: [String]
+}
+
+type ServicesServicesPreparationSteps {
+  heading: String!
+  copy: String!
+}
+
+type ServicesServicesPreparation {
+  heading: String!
+  intro: String!
+  steps: [ServicesServicesPreparationSteps]
+}
+
+type ServicesServicesFacts {
+  label: String!
+  icon: String
+  tone: String
+}
+
+type ServicesServicesProcess {
+  title: String!
+  copy: String!
+}
+
+type ServicesServicesMedia {
+  hero: String!
+  work: String!
+  heroAlt: String!
+  workAlt: String!
+}
+
+type ServicesServicesComparison {
+  before: String!
+  after: String!
+  caption: String!
+}
+
 type ServicesServicesFaqs {
   question: String!
   answer: String!
@@ -286,10 +332,31 @@ type ServicesServices {
   slug: String!
   category: String!
   summary: String!
+  seoTitle: String!
+  seoDescription: String!
+  heroHeading: String!
+  localHeading: String!
+  localCopy: String!
+  localAreas: [ServicesServicesLocalAreas]
   intro: String!
-  benefits: [String!]!
-  process: [String!]!
+  overview: String!
+  detailHeading: String
+  sections: [ServicesServicesSections]
+  preparation: ServicesServicesPreparation
+  whyAdvanced: String!
+  reasons: [String!]!
+  included: [String!]!
+  exclusions: [String]
+  facts: [ServicesServicesFacts]
+  process: [ServicesServicesProcess]
   useCases: [String!]!
+  resultsHeading: String!
+  resultsCopy: String!
+  media: ServicesServicesMedia
+  comparison: ServicesServicesComparison
+  reviewName: String
+  relatedSlugs: [String]
+  enquiryCopy: String!
   faqs: [ServicesServicesFaqs]
 }
 
@@ -298,6 +365,52 @@ type Services implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input ServicesServicesLocalAreasFilter {
+  heading: StringFilter
+  copy: StringFilter
+}
+
+input ServicesServicesSectionsFilter {
+  heading: StringFilter
+  paragraphs: StringFilter
+  bullets: StringFilter
+}
+
+input ServicesServicesPreparationStepsFilter {
+  heading: StringFilter
+  copy: StringFilter
+}
+
+input ServicesServicesPreparationFilter {
+  heading: StringFilter
+  intro: StringFilter
+  steps: ServicesServicesPreparationStepsFilter
+}
+
+input ServicesServicesFactsFilter {
+  label: StringFilter
+  icon: StringFilter
+  tone: StringFilter
+}
+
+input ServicesServicesProcessFilter {
+  title: StringFilter
+  copy: StringFilter
+}
+
+input ServicesServicesMediaFilter {
+  hero: StringFilter
+  work: StringFilter
+  heroAlt: StringFilter
+  workAlt: StringFilter
+}
+
+input ServicesServicesComparisonFilter {
+  before: StringFilter
+  after: StringFilter
+  caption: StringFilter
 }
 
 input ServicesServicesFaqsFilter {
@@ -310,10 +423,31 @@ input ServicesServicesFilter {
   slug: StringFilter
   category: StringFilter
   summary: StringFilter
+  seoTitle: StringFilter
+  seoDescription: StringFilter
+  heroHeading: StringFilter
+  localHeading: StringFilter
+  localCopy: StringFilter
+  localAreas: ServicesServicesLocalAreasFilter
   intro: StringFilter
-  benefits: StringFilter
-  process: StringFilter
+  overview: StringFilter
+  detailHeading: StringFilter
+  sections: ServicesServicesSectionsFilter
+  preparation: ServicesServicesPreparationFilter
+  whyAdvanced: StringFilter
+  reasons: StringFilter
+  included: StringFilter
+  exclusions: StringFilter
+  facts: ServicesServicesFactsFilter
+  process: ServicesServicesProcessFilter
   useCases: StringFilter
+  resultsHeading: StringFilter
+  resultsCopy: StringFilter
+  media: ServicesServicesMediaFilter
+  comparison: ServicesServicesComparisonFilter
+  reviewName: StringFilter
+  relatedSlugs: StringFilter
+  enquiryCopy: StringFilter
   faqs: ServicesServicesFaqsFilter
 }
 
@@ -433,6 +567,52 @@ input HomeMutation {
   faqs: [HomeFaqsMutation]
 }
 
+input ServicesServicesLocalAreasMutation {
+  heading: String
+  copy: String
+}
+
+input ServicesServicesSectionsMutation {
+  heading: String
+  paragraphs: [String]
+  bullets: [String]
+}
+
+input ServicesServicesPreparationStepsMutation {
+  heading: String
+  copy: String
+}
+
+input ServicesServicesPreparationMutation {
+  heading: String
+  intro: String
+  steps: [ServicesServicesPreparationStepsMutation]
+}
+
+input ServicesServicesFactsMutation {
+  label: String
+  icon: String
+  tone: String
+}
+
+input ServicesServicesProcessMutation {
+  title: String
+  copy: String
+}
+
+input ServicesServicesMediaMutation {
+  hero: String
+  work: String
+  heroAlt: String
+  workAlt: String
+}
+
+input ServicesServicesComparisonMutation {
+  before: String
+  after: String
+  caption: String
+}
+
 input ServicesServicesFaqsMutation {
   question: String
   answer: String
@@ -443,10 +623,31 @@ input ServicesServicesMutation {
   slug: String
   category: String
   summary: String
+  seoTitle: String
+  seoDescription: String
+  heroHeading: String
+  localHeading: String
+  localCopy: String
+  localAreas: [ServicesServicesLocalAreasMutation]
   intro: String
-  benefits: [String]
-  process: [String]
+  overview: String
+  detailHeading: String
+  sections: [ServicesServicesSectionsMutation]
+  preparation: ServicesServicesPreparationMutation
+  whyAdvanced: String
+  reasons: [String]
+  included: [String]
+  exclusions: [String]
+  facts: [ServicesServicesFactsMutation]
+  process: [ServicesServicesProcessMutation]
   useCases: [String]
+  resultsHeading: String
+  resultsCopy: String
+  media: ServicesServicesMediaMutation
+  comparison: ServicesServicesComparisonMutation
+  reviewName: String
+  relatedSlugs: [String]
+  enquiryCopy: String
   faqs: [ServicesServicesFaqsMutation]
 }
 

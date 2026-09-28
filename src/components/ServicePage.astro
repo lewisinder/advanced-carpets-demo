@@ -107,9 +107,20 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
   {extraDetails.length > 0 && (
     <section class="service-page-section service-page-more-detail">
       <div class="container">
-        <h2>More about {lowerName}</h2>
+        <h2>{service.detailHeading ?? `More about ${lowerName}`}</h2>
         <div class:list={["service-page-more-detail__grid", extraDetails.length === 1 && "service-page-more-detail__grid--single"]}>
           {extraDetails.map((section) => <article><h3>{section.heading}</h3>{section.paragraphs?.map((p) => <p>{p}</p>)}{section.bullets?.length ? <ul>{section.bullets.map((item) => <li>{item}</li>)}</ul> : null}</article>)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {service.preparation && (
+    <section class="service-page-section service-page-preparation">
+      <div class="container service-page-preparation__grid">
+        <div><h2>{service.preparation.heading}</h2><p>{service.preparation.intro}</p></div>
+        <div class="service-page-preparation__steps">
+          {service.preparation.steps.map((step) => <div><h3>{step.heading}</h3><p>{step.copy}</p></div>)}
         </div>
       </div>
     </section>
@@ -145,7 +156,9 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
 
   <section class="service-page-section service-page-local-faq">
     <div class="container service-page-local-faq__grid">
-      <div class="service-page-local"><h2>{service.localHeading}</h2><p>{service.localCopy}</p><a class="service-page-text-link" href={withBase("/#service-areas")}>View our service areas<ArrowRight size={18} stroke-width={2} aria-hidden="true" /></a></div>
+      <div class="service-page-local"><h2>{service.localHeading}</h2><p>{service.localCopy}</p>
+        {service.localAreas?.length ? <div class="service-page-local__areas">{service.localAreas.map((area) => <section><h3>{area.heading}</h3><p>{area.copy}</p></section>)}</div> : null}
+        <a class="service-page-text-link" href={withBase("/#service-areas")}>View our service areas<ArrowRight size={18} stroke-width={2} aria-hidden="true" /></a></div>
       <div><h2>{service.name} questions</h2><div class="faq-list service-page-faq-list">{service.faqs.map((faq, index) => <FaqItem question={faq.question} answer={faq.answer} open={index === 0} />)}</div></div>
     </div>
   </section>
@@ -685,9 +698,36 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     line-height: 1.7;
   }
 
+  .service-page-local__areas {
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+  }
+
+  .service-page-local__areas section {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .service-page-local__areas h3 {
+    font-size: 18px;
+  }
+
+  .service-page-local__areas p {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
   .service-page-faq-list {
     margin-top: 30px;
   }
+
+  .service-page-preparation { background: var(--wool); }
+  .service-page-preparation__grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; }
+  .service-page-preparation__grid > div:first-child p { max-width: 520px; margin: 24px 0 0; font-size: 19px; line-height: 1.65; }
+  .service-page-preparation__steps { border-top: 1px solid var(--line); }
+  .service-page-preparation__steps > div { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .service-page-preparation__steps p { margin: 9px 0 0; line-height: 1.6; }
 
   .service-page-enquiry {
     position: relative;
@@ -1047,10 +1087,19 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
   .service-page-more-detail__grid--single { grid-template-columns: minmax(0, 760px); }
   .service-page-more-detail__grid article { padding: 32px 34px 12px 0; }
   .service-page-more-detail__grid article + article { border-left: 1px solid var(--line); padding-right: 0; padding-left: 34px; }
+  .service-page-more-detail__grid article + article:nth-child(odd) { border-left: 0; padding-right: 34px; padding-left: 0; }
+  .service-page-more-detail__grid article:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .service-page-more-detail__grid ul,
   .service-page-detail-list { display: grid; gap: 12px; margin: 22px 0 0; padding-left: 20px; color: rgba(255,255,255,.8); }
   .service-page-more-detail__grid ul { color: var(--muted); }
   .service-page-results__grid--single { grid-template-columns: minmax(0, 1fr); }
   .service-page-process .steps-grid { margin-top: 32px; }
-  @media (max-width: 900px) { .service-page-more-detail__grid { grid-template-columns: 1fr; } .service-page-more-detail__grid article + article { border-top: 1px solid var(--line); border-left: 0; padding-left: 0; } }
+  @media (max-width: 900px) {
+    .service-page-more-detail__grid { grid-template-columns: 1fr; }
+    .service-page-more-detail__grid article,
+    .service-page-more-detail__grid article + article,
+    .service-page-more-detail__grid article + article:nth-child(odd) { padding-right: 0; padding-left: 0; border-left: 0; }
+    .service-page-more-detail__grid article + article { border-top: 1px solid var(--line); }
+  }
+  @media (max-width: 900px) { .service-page-preparation__grid { grid-template-columns: 1fr; gap: 34px; } }
 </style>

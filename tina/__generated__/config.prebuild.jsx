@@ -173,8 +173,23 @@ var config_default = defineConfig({
                 options: ["Core cleaning", "Restoration", "Specialist cleaning", "Repair and pest"]
               },
               longTextField("summary", "Short summary"),
+              textField("seoTitle", "Search title"),
+              longTextField("seoDescription", "Search description"),
+              textField("heroHeading", "Main page heading"),
+              textField("localHeading", "Service area heading"),
+              longTextField("localCopy", "Service area paragraph"),
+              {
+                type: "object",
+                name: "localAreas",
+                label: "Named service areas",
+                list: true,
+                required: false,
+                ui: { itemProps: (item) => ({ label: item?.heading || "Service area" }) },
+                fields: [textField("heading", "Heading"), longTextField("copy", "Area details")]
+              },
               longTextField("intro", "Page introduction"),
-              { type: "string", name: "overviewParagraphs", label: "Overview paragraphs", list: true, required: false, ui: { component: "textarea" } },
+              longTextField("overview", "Who the service suits"),
+              textField("detailHeading", "More detail heading", false),
               {
                 type: "object",
                 name: "sections",
@@ -188,12 +203,72 @@ var config_default = defineConfig({
                   { type: "string", name: "bullets", label: "Bullet points", list: true, required: false, ui: { component: "textarea" } }
                 ]
               },
-              longTextField("whyAdvanced", "Why Advanced Carpets", false),
-              longTextField("imageCaption", "Image caption", false),
-              longTextField("resultsCopy", "Results section copy", false),
-              { type: "string", name: "benefits", label: "Benefits", list: true, required: true },
-              { type: "string", name: "process", label: "Process steps", list: true, required: true },
+              {
+                type: "object",
+                name: "preparation",
+                label: "Before the visit",
+                required: false,
+                fields: [
+                  textField("heading", "Heading"),
+                  longTextField("intro", "Introduction"),
+                  {
+                    type: "object",
+                    name: "steps",
+                    label: "Preparation details",
+                    list: true,
+                    ui: { itemProps: (item) => ({ label: item?.heading || "Preparation detail" }) },
+                    fields: [textField("heading", "Heading"), longTextField("copy", "Description")]
+                  }
+                ]
+              },
+              longTextField("whyAdvanced", "Why Advanced Carpets"),
+              { type: "string", name: "reasons", label: "Reasons to arrange", list: true, required: true },
+              { type: "string", name: "included", label: "Included work", list: true, required: true },
+              { type: "string", name: "exclusions", label: "Important limits", list: true, required: false },
+              {
+                type: "object",
+                name: "facts",
+                label: "Service facts",
+                list: true,
+                ui: { itemProps: (item) => ({ label: item?.label || "Service fact" }) },
+                fields: [
+                  textField("label", "Fact"),
+                  { type: "string", name: "icon", label: "Lucide icon", options: ["award", "building", "clock", "droplets", "map", "phone", "search", "shield", "sparkles", "truck", "wrench"] },
+                  { type: "string", name: "tone", label: "Colour", options: ["clay", "water", "sage", "taupe"] }
+                ]
+              },
+              {
+                type: "object",
+                name: "process",
+                label: "Four process steps",
+                list: true,
+                ui: { itemProps: (item) => ({ label: item?.title || "Step" }) },
+                fields: [textField("title", "Step title"), longTextField("copy", "Step description")]
+              },
               { type: "string", name: "useCases", label: "Suitable for", list: true, required: true },
+              textField("resultsHeading", "Results heading"),
+              longTextField("resultsCopy", "Results section introduction"),
+              {
+                type: "object",
+                name: "media",
+                label: "Service photos",
+                fields: [
+                  textField("hero", "Hero image path"),
+                  textField("work", "Work image path"),
+                  textField("heroAlt", "Hero image description"),
+                  textField("workAlt", "Work image description")
+                ]
+              },
+              {
+                type: "object",
+                name: "comparison",
+                label: "Before and after",
+                required: false,
+                fields: [textField("before", "Before image path"), textField("after", "After image path"), longTextField("caption", "Caption")]
+              },
+              textField("reviewName", "Approved homepage reviewer name", false),
+              { type: "string", name: "relatedSlugs", label: "Related service slugs", list: true },
+              longTextField("enquiryCopy", "Enquiry instructions"),
               {
                 type: "object",
                 name: "faqs",

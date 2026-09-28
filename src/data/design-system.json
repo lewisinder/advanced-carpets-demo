@@ -25,6 +25,19 @@
       "responsive": "Two reading columns on desktop, one stacked column below 600px",
       "contentRule": "Say what the number measures. A potential loss must not be presented as a measured gain from our work."
     },
+    "serviceAreaDetails": {
+      "role": "Optional named-town coverage within a service page, using only confirmed service areas and practical visit information",
+      "surface": "Open text rows with shared rules in the existing local-service section; no location cards or duplicate town landing pages",
+      "heading": "Descriptive service-and-town h3 headings under the existing local h2",
+      "responsive": "Two reading columns above 900px and one column below 900px, following the service page layout",
+      "contentRule": "Do not imply a separate office, guaranteed availability, or coverage beyond the confirmed service area"
+    },
+    "servicePreparation": {
+      "role": "Optional practical pre-visit guidance on a service page",
+      "surface": "Open two-column section with a short introduction and ruled action list, using existing colour and type tokens",
+      "responsive": "Two columns above 900px and one column below 900px",
+      "contentRule": "Give the customer useful information to provide before a visit; leave treatment-specific safety directions to the technician"
+    },
     "companyGallery": {
       "aspectRatio": "1 / 1",
       "desktopColumns": 4,

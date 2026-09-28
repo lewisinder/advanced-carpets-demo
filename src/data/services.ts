@@ -11,9 +11,12 @@ export type Service = {
   heroHeading: string;
   localHeading: string;
   localCopy: string;
+  localAreas?: Array<{ heading: string; copy: string }>;
   intro: string;
   overview: string;
   sections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
+  detailHeading?: string;
+  preparation?: { heading: string; intro: string; steps: Array<{ heading: string; copy: string }> };
   whyAdvanced: string;
   reasons: string[];
   included: string[];

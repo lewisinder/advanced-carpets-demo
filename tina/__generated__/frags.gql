@@ -73,10 +73,69 @@ fragment ServicesParts on Services {
     slug
     category
     summary
+    seoTitle
+    seoDescription
+    heroHeading
+    localHeading
+    localCopy
+    localAreas {
+      __typename
+      heading
+      copy
+    }
     intro
-    benefits
-    process
+    overview
+    detailHeading
+    sections {
+      __typename
+      heading
+      paragraphs
+      bullets
+    }
+    preparation {
+      __typename
+      heading
+      intro
+      steps {
+        __typename
+        heading
+        copy
+      }
+    }
+    whyAdvanced
+    reasons
+    included
+    exclusions
+    facts {
+      __typename
+      label
+      icon
+      tone
+    }
+    process {
+      __typename
+      title
+      copy
+    }
     useCases
+    resultsHeading
+    resultsCopy
+    media {
+      __typename
+      hero
+      work
+      heroAlt
+      workAlt
+    }
+    comparison {
+      __typename
+      before
+      after
+      caption
+    }
+    reviewName
+    relatedSlugs
+    enquiryCopy
     faqs {
       __typename
       question
