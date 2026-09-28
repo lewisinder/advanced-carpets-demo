@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "policy": {
     "sourceOfTruth": "src/pages/design-system.astro",
     "tokenFile": "src/styles/global.css",
@@ -13,6 +13,11 @@
     "processPatternClass": "steps-grid",
     "processSurfaceMode": "transparent",
     "reviewStarColour": "--brand-orange",
+    "socialLinks": {
+      "placement": "Shared footer only, including on the homepage",
+      "treatment": "Small labelled brand-icon links using the existing footer colours and visible focus states",
+      "source": "Link only to verified business profiles; use the registered local SocialIcon for brand marks not available in Lucide"
+    },
     "serviceEvidenceStat": {
       "role": "A prominent, client-approved service-specific figure with its condition and meaning stated beside it",
       "surface": "Open editorial rule on the charcoal results section, not a metric card",
@@ -117,6 +122,12 @@
       "file": "src/components/ServiceStat.astro",
       "category": "Evidence",
       "description": "Optional editorial figure for a client-approved, service-specific claim. The value is paired with a plain-language label and its condition, so a potential loss is not mistaken for a guaranteed result."
+    },
+    {
+      "name": "SocialIcon",
+      "file": "src/components/icons/SocialIcon.astro",
+      "category": "Icon exception",
+      "description": "Matching local Facebook and Instagram brand marks for verified footer social links, since Lucide does not provide brand icons."
     },
     {
       "name": "ServicePage",

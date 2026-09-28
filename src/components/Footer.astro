@@ -2,6 +2,7 @@
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { withBase } from "@/lib/base";
+import SocialIcon from "@/components/icons/SocialIcon.astro";
 
 const footerAreas = ["Cromwell", "Alexandra", "Queenstown", "Wanaka", "Central Otago", "Southern Lakes", "Maniototo"];
 const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
@@ -15,6 +16,14 @@ const phoneHref = (value: string) => `tel:${value.replaceAll(" ", "")}`;
       </a>
       <p>Cromwell-based carpet cleaning and specialist services for homes and businesses across Central Otago, Southern Lakes and the Maniototo.</p>
       <p class="footer-hours">Normal hours 9am to 5pm every day. Flood emergencies 24/7.</p>
+      <nav class="footer-social" aria-label="Social media">
+        <a href="https://www.facebook.com/p/Advanced-Carpets-Restoration-100063568390888/" target="_blank" rel="noopener noreferrer" aria-label="Advanced Carpets & Restoration on Facebook">
+          <SocialIcon name="facebook" />
+        </a>
+        <a href="https://www.instagram.com/advancedcarpetscentralotago/" target="_blank" rel="noopener noreferrer" aria-label="Advanced Carpets & Restoration on Instagram">
+          <SocialIcon name="instagram" />
+        </a>
+      </nav>
     </div>
     <div>
       <strong>Services</strong>

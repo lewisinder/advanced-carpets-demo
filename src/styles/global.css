@@ -926,6 +926,32 @@ textarea {
   height: auto;
 }
 
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.footer .footer-social a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.footer .footer-social a:hover,
+.footer .footer-social a:focus-visible {
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+  transform: none;
+}
+
 .footer-legal {
   display: flex;
   justify-content: space-between;

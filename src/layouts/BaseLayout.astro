@@ -30,7 +30,8 @@ const ogImage = Astro.props.ogImage ? new URL(withBase(Astro.props.ogImage), Ast
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href={withBase("/assets/logo.png")} type="image/png" />
+    <link rel="icon" href={withBase("/assets/favicon-48.png")} type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href={withBase("/assets/apple-touch-icon.png")} sizes="180x180" />
     <title>{pageTitle}</title>
     <meta name="description" content={Astro.props.description} />
     <meta name="robots" content={robots} />
