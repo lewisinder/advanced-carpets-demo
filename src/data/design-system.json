@@ -38,6 +38,12 @@
       "responsive": "Two columns above 900px and one column below 900px",
       "contentRule": "Give the customer useful information to provide before a visit; leave treatment-specific safety directions to the technician"
     },
+    "serviceSeasonality": {
+      "role": "Optional researched local-season guidance beside a relevant landscape photograph",
+      "surface": "Open image-and-copy section using the shared wool, typography, spacing and image radius tokens",
+      "responsive": "Two columns above 900px, then copy followed by a shorter landscape image",
+      "contentRule": "Keep seasonal claims pest-specific and supported; describe the image without asserting an unverified location"
+    },
     "serviceHeadingCopy": {
       "role": "Optional service-specific headings for the existing fit and included-work sections",
       "source": "Service content data, with shared template defaults for other services",

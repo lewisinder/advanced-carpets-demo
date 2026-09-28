@@ -94,6 +94,13 @@ fragment ServicesParts on Services {
       paragraphs
       bullets
     }
+    seasonality {
+      __typename
+      heading
+      paragraphs
+      image
+      imageAlt
+    }
     preparation {
       __typename
       heading

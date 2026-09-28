@@ -115,6 +115,20 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     </section>
   )}
 
+  {service.seasonality && (
+    <section class="service-page-section service-page-seasonality">
+      <div class="container service-page-seasonality__grid">
+        <div class="service-page-seasonality__copy">
+          <h2>{service.seasonality.heading}</h2>
+          {service.seasonality.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        <figure class="service-page-seasonality__media">
+          <img src={withBase(service.seasonality.image)} alt={service.seasonality.imageAlt} width="4160" height="6240" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+  )}
+
   {service.preparation && (
     <section class="service-page-section service-page-preparation">
       <div class="container service-page-preparation__grid">
@@ -723,6 +737,12 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
   }
 
   .service-page-preparation { background: var(--wool); }
+  .service-page-seasonality { background: var(--wool); border-block: 1px solid var(--line); }
+  .service-page-seasonality__grid { display: grid; grid-template-columns: minmax(0, 1.16fr) minmax(0, .84fr); gap: 72px; align-items: center; }
+  .service-page-seasonality__copy h2 { max-width: 650px; }
+  .service-page-seasonality__copy p { max-width: 680px; margin: 20px 0 0; font-size: 18px; line-height: 1.65; }
+  .service-page-seasonality__media { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); background: var(--charcoal); }
+  .service-page-seasonality__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 68%; }
   .service-page-preparation__grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; }
   .service-page-preparation__grid > div:first-child p { max-width: 520px; margin: 24px 0 0; font-size: 19px; line-height: 1.65; }
   .service-page-preparation__steps { border-top: 1px solid var(--line); }
@@ -1101,5 +1121,12 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     .service-page-more-detail__grid article + article:nth-child(odd) { padding-right: 0; padding-left: 0; border-left: 0; }
     .service-page-more-detail__grid article + article { border-top: 1px solid var(--line); }
   }
-  @media (max-width: 900px) { .service-page-preparation__grid { grid-template-columns: 1fr; gap: 34px; } }
+  @media (max-width: 900px) {
+    .service-page-seasonality__grid,
+    .service-page-preparation__grid { grid-template-columns: 1fr; gap: 34px; }
+    .service-page-seasonality__media { aspect-ratio: 16 / 10; }
+  }
+  @media (max-width: 600px) {
+    .service-page-seasonality__copy p { font-size: 17px; }
+  }
 </style>

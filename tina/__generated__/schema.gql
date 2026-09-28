@@ -287,6 +287,13 @@ type ServicesServicesSections {
   bullets: [String]
 }
 
+type ServicesServicesSeasonality {
+  heading: String!
+  paragraphs: [String!]!
+  image: String!
+  imageAlt: String!
+}
+
 type ServicesServicesPreparationSteps {
   heading: String!
   copy: String!
@@ -344,6 +351,7 @@ type ServicesServices {
   overview: String!
   detailHeading: String
   sections: [ServicesServicesSections]
+  seasonality: ServicesServicesSeasonality
   preparation: ServicesServicesPreparation
   whyAdvanced: String!
   reasons: [String!]!
@@ -378,6 +386,13 @@ input ServicesServicesSectionsFilter {
   heading: StringFilter
   paragraphs: StringFilter
   bullets: StringFilter
+}
+
+input ServicesServicesSeasonalityFilter {
+  heading: StringFilter
+  paragraphs: StringFilter
+  image: StringFilter
+  imageAlt: StringFilter
 }
 
 input ServicesServicesPreparationStepsFilter {
@@ -437,6 +452,7 @@ input ServicesServicesFilter {
   overview: StringFilter
   detailHeading: StringFilter
   sections: ServicesServicesSectionsFilter
+  seasonality: ServicesServicesSeasonalityFilter
   preparation: ServicesServicesPreparationFilter
   whyAdvanced: StringFilter
   reasons: StringFilter
@@ -582,6 +598,13 @@ input ServicesServicesSectionsMutation {
   bullets: [String]
 }
 
+input ServicesServicesSeasonalityMutation {
+  heading: String
+  paragraphs: [String]
+  image: String
+  imageAlt: String
+}
+
 input ServicesServicesPreparationStepsMutation {
   heading: String
   copy: String
@@ -639,6 +662,7 @@ input ServicesServicesMutation {
   overview: String
   detailHeading: String
   sections: [ServicesServicesSectionsMutation]
+  seasonality: ServicesServicesSeasonalityMutation
   preparation: ServicesServicesPreparationMutation
   whyAdvanced: String
   reasons: [String]

@@ -71,6 +71,17 @@
         {"heading":"Ants, carpet beetles, silverfish and borer","paragraphs":["These are different pest problems, so identifying what is present matters. If you have seen insects, trails or damage to carpets, fabrics or timber, send clear photos if you can.","We use those details and what we find at the property to decide which areas need treatment. If you are unsure which pest you have, you can still make an enquiry and describe what you have noticed."]},
         {"heading":"Treatment, safety and follow-up","paragraphs":["Our technicians have completed the Urban Pest Management Course and are certified approved handlers for the pest control products we use. We explain the selected treatment and any preparation or re-entry instructions before work starts.","Bed bugs, ants and some other pests may need a follow-up treatment. We will tell you if a return visit is needed after assessing the pest and the extent of activity."]}
       ],
+      "seasonality": {
+        "heading": "When are pests most active in Central Otago?",
+        "paragraphs": [
+          "Central Otago’s seasons are quite different. Summers can be hot and dry around Cromwell and Alexandra, while winter brings regular frosts. Conditions vary across the wider area, including Queenstown and Wanaka, so the pests you notice will depend on the property as well as the time of year.",
+          "Insects often become more noticeable in spring and early summer. Wasp queens begin new nests in spring, and the number of workers grows through summer. If you notice a nest near an entrance, deck or area people use regularly, tell us where it is. We can assess the location without asking you to go near it.",
+          "By late summer and autumn, an established wasp nest may be much busier. Winter brings a different problem: rats and mice are more likely to get into buildings. Droppings, scratching in a wall or roof space, or activity around stored food are all useful details to pass on, even if you have not seen the animal.",
+          "There is no set month when every Central Otago property needs pest treatment. A wasp nest outside a Cromwell home, signs of rodents in a Queenstown rental and insects in a Wanaka accommodation property need different checks. Tell us what you have seen, where it is active and when you first noticed it. We will assess the pest and explain the treatment and any preparation needed."
+        ],
+        "image": "/assets/capricorn-song-2ODytkpodSU-unsplash.jpg",
+        "imageAlt": "Autumn trees beside a river with mountains beneath a blue sky"
+      },
       "preparation": {
         "heading": "Before pest treatment",
         "intro": "There is no single preparation list for every pest. These details help us plan the visit. We will tell you what to do before treatment and when the treated space can be used again once we know what is needed.",

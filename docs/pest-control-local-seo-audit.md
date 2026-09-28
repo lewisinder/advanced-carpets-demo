@@ -38,10 +38,11 @@ The page should accurately target **Central Otago and the confirmed Southern Lak
 3. **What our Otago pest control service includes.** Explains assessment, treatment and instructions.
 4. **Pests we treat.** Lists the confirmed service scope from the client pest-control PDF.
 5. **Different pests need different treatment.** Six substantial subsections for spiders/flies, rats/mice, wasps, fleas/bed bugs, other listed insects, and safety/follow-up.
-6. **Before pest treatment.** Gives the customer a practical preparation list without making product-specific safety promises.
-7. **What to expect / After pest treatment.** Shows the process and sets follow-up expectations.
-8. **Pest control across Central Otago and Southern Lakes.** Names confirmed towns and tells the customer what location details to supply.
-9. **Pest Control questions / enquiry.** Answers remaining booking and safety questions, then offers a clear contact action.
+6. **When are pests most active in Central Otago?** Explains the local climate, spring and summer insect activity, wasp colony growth, and winter rodent signs beside the landscape image used on the About page.
+7. **Before pest treatment.** Gives the customer a practical preparation list without making product-specific safety promises.
+8. **What to expect / After pest treatment.** Shows the process and sets follow-up expectations.
+9. **Pest control across Central Otago and Southern Lakes.** Names confirmed towns and tells the customer what location details to supply.
+10. **Pest Control questions / enquiry.** Answers remaining booking and safety questions, then offers a clear contact action.
 
 The title, H1 and local H2 already place “Central Otago” prominently. The town H3s cover city searches. The two requested “Otago” H2s sit beside copy that clarifies the actual Central Otago, Southern Lakes and Maniototo coverage. Adding the place name to every pest heading would make the page harder to read and risks unnatural repetition. [Google Search Essentials](https://developers.google.com/search/docs/essentials) recommends relevant terms in the title and main heading, while its [spam policy](https://developers.google.com/search/docs/essentials/spam-policies) warns against repetitive city and keyword blocks.
 
@@ -50,7 +51,6 @@ The title, H1 and local H2 already place “Central Otago” prominently. The to
 | Section | What it should contain | Needed before publication |
 | --- | --- | --- |
 | **Recent pest-control work in the region** | Two or three concise real examples: pest, property type, town, what was assessed, work completed and any follow-up. Real work photos would make this the strongest addition. | Technician records, approval to describe the job, and photo/customer consent. Avoid invented outcomes. |
-| **Seasonal pest activity** | Technician-approved guidance on when common pests become more noticeable locally, and when to contact the team. Link to the relevant treatment subsection. | The team's actual seasonal experience and approved wording; do not guess a month-by-month calendar. |
 | **Pest control for accommodation and rentals** | How the team coordinates access, affected rooms, preparation and guest/tenant use of the space. | Confirmation of the service workflow, any documents supplied and any booking constraints. |
 | **Treatment methods and safety** | Which approaches the team actually offers for each pest, what preparation is needed, product-specific re-entry advice and whether follow-up is typical. | Technician review of methods, approved products and safety instructions. Never publish one universal “safe for pets” promise. |
 
@@ -91,6 +91,9 @@ Google states that no one can request or pay for a better organic local ranking.
 
 ## Source notes
 
+- [NIWA's Otago climate summary](https://niwa.co.nz/climate-and-weather/regional-climatologies/otago): Central Otago has dry, hot summers and frequent winter frosts.
+- [Tenancy Services on seasonal infestations](https://www.tenancy.govt.nz/maintenance-and-inspections/pests-and-infestations/): insect problems tend to arise around spring and early summer; rats and mice more commonly enter homes in winter.
+- [Manaaki Whenua on the wasp life cycle](https://www.landcareresearch.co.nz/discover-our-research/managing-invasive-species/invasive-invertebrates/vespula-wasps/life-cycle-of-a-wasp): nests begin in spring, expand through summer, and produce new queens in late summer and autumn.
 - [Google Search Essentials](https://developers.google.com/search/docs/essentials): helpful content, prominent search terms and crawlable links.
 - [Google LocalBusiness structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business): represent the real business accurately and validate structured data.
 - [Google FAQ appearance changes](https://developers.google.com/search/blog/2023/08/howto-faq-changes): FAQ rich results are generally limited to well-known government and health sites. The FAQs here are for visitors and search relevance, not an expected FAQ rich result.

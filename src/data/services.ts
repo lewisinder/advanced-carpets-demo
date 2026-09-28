@@ -18,6 +18,7 @@ export type Service = {
   overview: string;
   sections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
   detailHeading?: string;
+  seasonality?: { heading: string; paragraphs: string[]; image: string; imageAlt: string };
   preparation?: { heading: string; intro: string; steps: Array<{ heading: string; copy: string }> };
   whyAdvanced: string;
   reasons: string[];

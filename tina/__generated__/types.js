@@ -104,6 +104,13 @@ export const ServicesPartsFragmentDoc = gql`
       paragraphs
       bullets
     }
+    seasonality {
+      __typename
+      heading
+      paragraphs
+      image
+      imageAlt
+    }
     preparation {
       __typename
       heading

@@ -412,6 +412,14 @@ export type ServicesServicesSections = {
   bullets?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
 };
 
+export type ServicesServicesSeasonality = {
+  __typename?: 'ServicesServicesSeasonality';
+  heading: Scalars['String']['output'];
+  paragraphs: Array<Scalars['String']['output']>;
+  image: Scalars['String']['output'];
+  imageAlt: Scalars['String']['output'];
+};
+
 export type ServicesServicesPreparationSteps = {
   __typename?: 'ServicesServicesPreparationSteps';
   heading: Scalars['String']['output'];
@@ -477,6 +485,7 @@ export type ServicesServices = {
   overview: Scalars['String']['output'];
   detailHeading?: Maybe<Scalars['String']['output']>;
   sections?: Maybe<Array<Maybe<ServicesServicesSections>>>;
+  seasonality?: Maybe<ServicesServicesSeasonality>;
   preparation?: Maybe<ServicesServicesPreparation>;
   whyAdvanced: Scalars['String']['output'];
   reasons: Array<Scalars['String']['output']>;
@@ -512,6 +521,13 @@ export type ServicesServicesSectionsFilter = {
   heading?: InputMaybe<StringFilter>;
   paragraphs?: InputMaybe<StringFilter>;
   bullets?: InputMaybe<StringFilter>;
+};
+
+export type ServicesServicesSeasonalityFilter = {
+  heading?: InputMaybe<StringFilter>;
+  paragraphs?: InputMaybe<StringFilter>;
+  image?: InputMaybe<StringFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
 };
 
 export type ServicesServicesPreparationStepsFilter = {
@@ -571,6 +587,7 @@ export type ServicesServicesFilter = {
   overview?: InputMaybe<StringFilter>;
   detailHeading?: InputMaybe<StringFilter>;
   sections?: InputMaybe<ServicesServicesSectionsFilter>;
+  seasonality?: InputMaybe<ServicesServicesSeasonalityFilter>;
   preparation?: InputMaybe<ServicesServicesPreparationFilter>;
   whyAdvanced?: InputMaybe<StringFilter>;
   reasons?: InputMaybe<StringFilter>;
@@ -788,6 +805,13 @@ export type ServicesServicesSectionsMutation = {
   bullets?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type ServicesServicesSeasonalityMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  paragraphs?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type ServicesServicesPreparationStepsMutation = {
   heading?: InputMaybe<Scalars['String']['input']>;
   copy?: InputMaybe<Scalars['String']['input']>;
@@ -845,6 +869,7 @@ export type ServicesServicesMutation = {
   overview?: InputMaybe<Scalars['String']['input']>;
   detailHeading?: InputMaybe<Scalars['String']['input']>;
   sections?: InputMaybe<Array<InputMaybe<ServicesServicesSectionsMutation>>>;
+  seasonality?: InputMaybe<ServicesServicesSeasonalityMutation>;
   preparation?: InputMaybe<ServicesServicesPreparationMutation>;
   whyAdvanced?: InputMaybe<Scalars['String']['input']>;
   reasons?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -871,7 +896,7 @@ export type SitePartsFragment = { __typename: 'Site', name: string, url: string,
 
 export type HomePartsFragment = { __typename: 'Home', seoDescription: string, hero?: { __typename: 'HomeHero', title: string, intro: string, primaryAction: string, secondaryAction: string, rating: string, reviewCount: string, trustedBy?: Array<string | null> | null, metrics?: Array<{ __typename: 'HomeHeroMetrics', value: string, label: string } | null> | null } | null, reviews?: Array<{ __typename: 'HomeReviews', name: string, source: string, initials: string, avatarColor: string, text: string } | null> | null, trust?: { __typename: 'HomeTrust', title: string, intro: string, points?: Array<{ __typename: 'HomeTrustPoints', title: string, text: string } | null> | null } | null, about?: { __typename: 'HomeAbout', title: string, paragraphs?: Array<string | null> | null } | null, steps?: Array<{ __typename: 'HomeSteps', title: string, text: string } | null> | null, faqs?: Array<{ __typename: 'HomeFaqs', question: string, answer: string } | null> | null };
 
-export type ServicesPartsFragment = { __typename: 'Services', services?: Array<{ __typename: 'ServicesServices', name: string, slug: string, category: string, summary: string, seoTitle: string, seoDescription: string, heroHeading: string, fitHeading?: string | null, includesHeading?: string | null, localHeading: string, localCopy: string, intro: string, overview: string, detailHeading?: string | null, whyAdvanced: string, reasons: Array<string>, included: Array<string>, exclusions?: Array<string | null> | null, useCases: Array<string>, resultsHeading: string, resultsCopy: string, reviewName?: string | null, relatedSlugs?: Array<string | null> | null, enquiryCopy: string, localAreas?: Array<{ __typename: 'ServicesServicesLocalAreas', heading: string, copy: string } | null> | null, sections?: Array<{ __typename: 'ServicesServicesSections', heading: string, paragraphs?: Array<string | null> | null, bullets?: Array<string | null> | null } | null> | null, preparation?: { __typename: 'ServicesServicesPreparation', heading: string, intro: string, steps?: Array<{ __typename: 'ServicesServicesPreparationSteps', heading: string, copy: string } | null> | null } | null, facts?: Array<{ __typename: 'ServicesServicesFacts', label: string, icon?: string | null, tone?: string | null } | null> | null, process?: Array<{ __typename: 'ServicesServicesProcess', title: string, copy: string } | null> | null, media?: { __typename: 'ServicesServicesMedia', hero: string, work: string, heroAlt: string, workAlt: string } | null, comparison?: { __typename: 'ServicesServicesComparison', before: string, after: string, caption: string } | null, faqs?: Array<{ __typename: 'ServicesServicesFaqs', question: string, answer: string } | null> | null } | null> | null };
+export type ServicesPartsFragment = { __typename: 'Services', services?: Array<{ __typename: 'ServicesServices', name: string, slug: string, category: string, summary: string, seoTitle: string, seoDescription: string, heroHeading: string, fitHeading?: string | null, includesHeading?: string | null, localHeading: string, localCopy: string, intro: string, overview: string, detailHeading?: string | null, whyAdvanced: string, reasons: Array<string>, included: Array<string>, exclusions?: Array<string | null> | null, useCases: Array<string>, resultsHeading: string, resultsCopy: string, reviewName?: string | null, relatedSlugs?: Array<string | null> | null, enquiryCopy: string, localAreas?: Array<{ __typename: 'ServicesServicesLocalAreas', heading: string, copy: string } | null> | null, sections?: Array<{ __typename: 'ServicesServicesSections', heading: string, paragraphs?: Array<string | null> | null, bullets?: Array<string | null> | null } | null> | null, seasonality?: { __typename: 'ServicesServicesSeasonality', heading: string, paragraphs: Array<string>, image: string, imageAlt: string } | null, preparation?: { __typename: 'ServicesServicesPreparation', heading: string, intro: string, steps?: Array<{ __typename: 'ServicesServicesPreparationSteps', heading: string, copy: string } | null> | null } | null, facts?: Array<{ __typename: 'ServicesServicesFacts', label: string, icon?: string | null, tone?: string | null } | null> | null, process?: Array<{ __typename: 'ServicesServicesProcess', title: string, copy: string } | null> | null, media?: { __typename: 'ServicesServicesMedia', hero: string, work: string, heroAlt: string, workAlt: string } | null, comparison?: { __typename: 'ServicesServicesComparison', before: string, after: string, caption: string } | null, faqs?: Array<{ __typename: 'ServicesServicesFaqs', question: string, answer: string } | null> | null } | null> | null };
 
 export type SiteQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -916,7 +941,7 @@ export type ServicesQueryVariables = Exact<{
 }>;
 
 
-export type ServicesQuery = { __typename?: 'Query', services: { __typename: 'Services', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, services?: Array<{ __typename: 'ServicesServices', name: string, slug: string, category: string, summary: string, seoTitle: string, seoDescription: string, heroHeading: string, fitHeading?: string | null, includesHeading?: string | null, localHeading: string, localCopy: string, intro: string, overview: string, detailHeading?: string | null, whyAdvanced: string, reasons: Array<string>, included: Array<string>, exclusions?: Array<string | null> | null, useCases: Array<string>, resultsHeading: string, resultsCopy: string, reviewName?: string | null, relatedSlugs?: Array<string | null> | null, enquiryCopy: string, localAreas?: Array<{ __typename: 'ServicesServicesLocalAreas', heading: string, copy: string } | null> | null, sections?: Array<{ __typename: 'ServicesServicesSections', heading: string, paragraphs?: Array<string | null> | null, bullets?: Array<string | null> | null } | null> | null, preparation?: { __typename: 'ServicesServicesPreparation', heading: string, intro: string, steps?: Array<{ __typename: 'ServicesServicesPreparationSteps', heading: string, copy: string } | null> | null } | null, facts?: Array<{ __typename: 'ServicesServicesFacts', label: string, icon?: string | null, tone?: string | null } | null> | null, process?: Array<{ __typename: 'ServicesServicesProcess', title: string, copy: string } | null> | null, media?: { __typename: 'ServicesServicesMedia', hero: string, work: string, heroAlt: string, workAlt: string } | null, comparison?: { __typename: 'ServicesServicesComparison', before: string, after: string, caption: string } | null, faqs?: Array<{ __typename: 'ServicesServicesFaqs', question: string, answer: string } | null> | null } | null> | null } };
+export type ServicesQuery = { __typename?: 'Query', services: { __typename: 'Services', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, services?: Array<{ __typename: 'ServicesServices', name: string, slug: string, category: string, summary: string, seoTitle: string, seoDescription: string, heroHeading: string, fitHeading?: string | null, includesHeading?: string | null, localHeading: string, localCopy: string, intro: string, overview: string, detailHeading?: string | null, whyAdvanced: string, reasons: Array<string>, included: Array<string>, exclusions?: Array<string | null> | null, useCases: Array<string>, resultsHeading: string, resultsCopy: string, reviewName?: string | null, relatedSlugs?: Array<string | null> | null, enquiryCopy: string, localAreas?: Array<{ __typename: 'ServicesServicesLocalAreas', heading: string, copy: string } | null> | null, sections?: Array<{ __typename: 'ServicesServicesSections', heading: string, paragraphs?: Array<string | null> | null, bullets?: Array<string | null> | null } | null> | null, seasonality?: { __typename: 'ServicesServicesSeasonality', heading: string, paragraphs: Array<string>, image: string, imageAlt: string } | null, preparation?: { __typename: 'ServicesServicesPreparation', heading: string, intro: string, steps?: Array<{ __typename: 'ServicesServicesPreparationSteps', heading: string, copy: string } | null> | null } | null, facts?: Array<{ __typename: 'ServicesServicesFacts', label: string, icon?: string | null, tone?: string | null } | null> | null, process?: Array<{ __typename: 'ServicesServicesProcess', title: string, copy: string } | null> | null, media?: { __typename: 'ServicesServicesMedia', hero: string, work: string, heroAlt: string, workAlt: string } | null, comparison?: { __typename: 'ServicesServicesComparison', before: string, after: string, caption: string } | null, faqs?: Array<{ __typename: 'ServicesServicesFaqs', question: string, answer: string } | null> | null } | null> | null } };
 
 export type ServicesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -928,7 +953,7 @@ export type ServicesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ServicesConnectionQuery = { __typename?: 'Query', servicesConnection: { __typename?: 'ServicesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ServicesConnectionEdges', cursor: string, node?: { __typename: 'Services', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, services?: Array<{ __typename: 'ServicesServices', name: string, slug: string, category: string, summary: string, seoTitle: string, seoDescription: string, heroHeading: string, fitHeading?: string | null, includesHeading?: string | null, localHeading: string, localCopy: string, intro: string, overview: string, detailHeading?: string | null, whyAdvanced: string, reasons: Array<string>, included: Array<string>, exclusions?: Array<string | null> | null, useCases: Array<string>, resultsHeading: string, resultsCopy: string, reviewName?: string | null, relatedSlugs?: Array<string | null> | null, enquiryCopy: string, localAreas?: Array<{ __typename: 'ServicesServicesLocalAreas', heading: string, copy: string } | null> | null, sections?: Array<{ __typename: 'ServicesServicesSections', heading: string, paragraphs?: Array<string | null> | null, bullets?: Array<string | null> | null } | null> | null, preparation?: { __typename: 'ServicesServicesPreparation', heading: string, intro: string, steps?: Array<{ __typename: 'ServicesServicesPreparationSteps', heading: string, copy: string } | null> | null } | null, facts?: Array<{ __typename: 'ServicesServicesFacts', label: string, icon?: string | null, tone?: string | null } | null> | null, process?: Array<{ __typename: 'ServicesServicesProcess', title: string, copy: string } | null> | null, media?: { __typename: 'ServicesServicesMedia', hero: string, work: string, heroAlt: string, workAlt: string } | null, comparison?: { __typename: 'ServicesServicesComparison', before: string, after: string, caption: string } | null, faqs?: Array<{ __typename: 'ServicesServicesFaqs', question: string, answer: string } | null> | null } | null> | null } | null } | null> | null } };
+export type ServicesConnectionQuery = { __typename?: 'Query', servicesConnection: { __typename?: 'ServicesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ServicesConnectionEdges', cursor: string, node?: { __typename: 'Services', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, services?: Array<{ __typename: 'ServicesServices', name: string, slug: string, category: string, summary: string, seoTitle: string, seoDescription: string, heroHeading: string, fitHeading?: string | null, includesHeading?: string | null, localHeading: string, localCopy: string, intro: string, overview: string, detailHeading?: string | null, whyAdvanced: string, reasons: Array<string>, included: Array<string>, exclusions?: Array<string | null> | null, useCases: Array<string>, resultsHeading: string, resultsCopy: string, reviewName?: string | null, relatedSlugs?: Array<string | null> | null, enquiryCopy: string, localAreas?: Array<{ __typename: 'ServicesServicesLocalAreas', heading: string, copy: string } | null> | null, sections?: Array<{ __typename: 'ServicesServicesSections', heading: string, paragraphs?: Array<string | null> | null, bullets?: Array<string | null> | null } | null> | null, seasonality?: { __typename: 'ServicesServicesSeasonality', heading: string, paragraphs: Array<string>, image: string, imageAlt: string } | null, preparation?: { __typename: 'ServicesServicesPreparation', heading: string, intro: string, steps?: Array<{ __typename: 'ServicesServicesPreparationSteps', heading: string, copy: string } | null> | null } | null, facts?: Array<{ __typename: 'ServicesServicesFacts', label: string, icon?: string | null, tone?: string | null } | null> | null, process?: Array<{ __typename: 'ServicesServicesProcess', title: string, copy: string } | null> | null, media?: { __typename: 'ServicesServicesMedia', hero: string, work: string, heroAlt: string, workAlt: string } | null, comparison?: { __typename: 'ServicesServicesComparison', before: string, after: string, caption: string } | null, faqs?: Array<{ __typename: 'ServicesServicesFaqs', question: string, answer: string } | null> | null } | null> | null } | null } | null> | null } };
 
 export const SitePartsFragmentDoc = gql`
     fragment SiteParts on Site {
@@ -1028,6 +1053,13 @@ export const ServicesPartsFragmentDoc = gql`
       heading
       paragraphs
       bullets
+    }
+    seasonality {
+      __typename
+      heading
+      paragraphs
+      image
+      imageAlt
     }
     preparation {
       __typename

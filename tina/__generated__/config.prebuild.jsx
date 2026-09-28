@@ -207,6 +207,18 @@ var config_default = defineConfig({
               },
               {
                 type: "object",
+                name: "seasonality",
+                label: "Local pest seasons",
+                required: false,
+                fields: [
+                  textField("heading", "Heading"),
+                  { type: "string", name: "paragraphs", label: "Paragraphs", list: true, required: true, ui: { component: "textarea" } },
+                  textField("image", "Image path"),
+                  textField("imageAlt", "Image alt text")
+                ]
+              },
+              {
+                type: "object",
                 name: "preparation",
                 label: "Before the visit",
                 required: false,
