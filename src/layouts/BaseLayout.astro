@@ -13,11 +13,14 @@ type Props = {
   ogImage?: string;
   pathname?: string;
   robots?: string;
+  canonical?: string | null;
 };
 
 const pathname = Astro.props.pathname ?? (Astro.url.pathname.replace(/\/$/, "") || "/");
 const pageTitle = Astro.props.title ?? titleFor(pathname);
-const canonical = `${site.url}${pathname === "/" ? "/" : `${pathname}/`}`;
+const canonical = Astro.props.canonical === null
+  ? null
+  : Astro.props.canonical ?? `${site.url}${pathname === "/" ? "/" : `${pathname}/`}`;
 const schema = JSON.stringify(localBusinessSchema());
 const robots = Astro.props.robots ?? siteIndexing.robots;
 const ogTitle = Astro.props.ogTitle ?? pageTitle;
@@ -35,11 +38,11 @@ const ogImage = Astro.props.ogImage ? new URL(withBase(Astro.props.ogImage), Ast
     <title>{pageTitle}</title>
     <meta name="description" content={Astro.props.description} />
     <meta name="robots" content={robots} />
-    <link rel="canonical" href={canonical} />
+    {canonical && <link rel="canonical" href={canonical} />}
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonical} />
+    {canonical && <meta property="og:url" content={canonical} />}
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content="summary_large_image" />
     {ogImage && <meta name="twitter:image" content={ogImage} />}

@@ -1,0 +1,8 @@
+---
+import LegacyRedirect from "@/layouts/LegacyRedirect.astro";
+import { legacyOtherRoutes } from "@/data/legacy-routes";
+
+const destination = legacyOtherRoutes.find((route) => route.from === "/locations")!.to;
+---
+
+<LegacyRedirect destination={destination} />

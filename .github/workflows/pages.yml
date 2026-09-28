@@ -36,8 +36,8 @@ jobs:
         env:
           DEPLOY_TARGET: github-pages
 
-      - name: SPA-style 404 fallback
-        run: cp dist/index.html dist/404.html
+      - name: Check custom 404 page
+        run: test -f dist/404.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

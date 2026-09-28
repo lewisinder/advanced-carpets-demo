@@ -1,0 +1,138 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { site } from "@/data/site";
+import { withBase } from "@/lib/base";
+
+const phoneHref = `tel:${site.primaryPhone.replaceAll(" ", "")}`;
+---
+
+<BaseLayout
+  title={`Page not found | ${site.name}`}
+  description="This page could not be found. Browse Advanced Carpets & Restoration services or get in touch."
+  pathname="/404"
+  robots="noindex, nofollow"
+  canonical={null}
+>
+  <section class="not-found-section">
+    <div class="container not-found-layout">
+      <div class="not-found-copy">
+        <p class="overline orange">Page not found</p>
+        <h1>We couldn't find that page.</h1>
+        <p>The address may have changed while we update the site. You can head back to the homepage or find the service you need.</p>
+        <div class="not-found-actions">
+          <a class="button button-primary" href={withBase("/")}>Back to homepage</a>
+          <a class="button button-outline" href={withBase("/services/")}>Explore services</a>
+        </div>
+        <p class="not-found-help">Need help with a job? <a href={phoneHref}>Call {site.primaryPhone}</a> or <a href={withBase("/contact/")}>make an enquiry</a>.</p>
+      </div>
+      <div class="not-found-media">
+        <img src={withBase("/assets/carpet-texture-upholstery.jpeg")} alt="" width="2268" height="4032" />
+        <span aria-hidden="true">404</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found-section {
+    padding-block: 72px 96px;
+    background: var(--paper);
+  }
+
+  .not-found-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+    align-items: center;
+    gap: clamp(32px, 6vw, 88px);
+  }
+
+  .not-found-copy {
+    padding-block: 34px;
+  }
+
+  .not-found-copy h1 {
+    max-width: 690px;
+    margin: 12px 0 24px;
+    color: var(--charcoal);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(42px, 5.2vw, 72px);
+    font-weight: 900;
+    letter-spacing: -.04em;
+    line-height: 1.04;
+  }
+
+  .not-found-copy > p:not(.overline) {
+    max-width: 590px;
+    color: var(--muted);
+    font-size: 19px;
+  }
+
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .not-found-copy .not-found-help {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  .not-found-help a {
+    color: var(--water);
+    font-weight: 750;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .not-found-media {
+    position: relative;
+    min-height: 480px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--charcoal);
+  }
+
+  .not-found-media::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 55%;
+    background: linear-gradient(transparent, var(--charcoal));
+    content: "";
+  }
+
+  .not-found-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+    position: absolute;
+    inset: 0;
+  }
+
+  .not-found-media span {
+    position: absolute;
+    z-index: 1;
+    right: 28px;
+    bottom: -24px;
+    color: var(--white);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(120px, 17vw, 230px);
+    font-weight: 900;
+    letter-spacing: -.1em;
+    line-height: 1;
+  }
+
+  @media (max-width: 900px) {
+    .not-found-layout { grid-template-columns: 1fr; }
+    .not-found-media { min-height: 340px; }
+  }
+
+  @media (max-width: 600px) {
+    .not-found-section { padding-block: 40px 64px; }
+    .not-found-actions .button { width: 100%; }
+    .not-found-media { min-height: 280px; }
+    .not-found-media span { right: 24px; bottom: -14px; font-size: 132px; }
+  }
+</style>
