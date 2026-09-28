@@ -38,6 +38,12 @@
       "responsive": "Two columns above 900px and one column below 900px",
       "contentRule": "Give the customer useful information to provide before a visit; leave treatment-specific safety directions to the technician"
     },
+    "serviceHeadingCopy": {
+      "role": "Optional service-specific headings for the existing fit and included-work sections",
+      "source": "Service content data, with shared template defaults for other services",
+      "contentRule": "Use natural service and place wording; keep the adjacent service-area copy clear about confirmed coverage",
+      "layout": "Use the existing section typography and responsive wrapping"
+    },
     "companyGallery": {
       "aspectRatio": "1 / 1",
       "desktopColumns": 4,

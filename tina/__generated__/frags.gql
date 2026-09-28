@@ -76,6 +76,8 @@ fragment ServicesParts on Services {
     seoTitle
     seoDescription
     heroHeading
+    fitHeading
+    includesHeading
     localHeading
     localCopy
     localAreas {

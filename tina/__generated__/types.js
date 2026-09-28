@@ -86,6 +86,8 @@ export const ServicesPartsFragmentDoc = gql`
     seoTitle
     seoDescription
     heroHeading
+    fitHeading
+    includesHeading
     localHeading
     localCopy
     localAreas {

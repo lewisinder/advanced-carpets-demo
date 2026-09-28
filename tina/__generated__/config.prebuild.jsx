@@ -176,6 +176,8 @@ var config_default = defineConfig({
               textField("seoTitle", "Search title"),
               longTextField("seoDescription", "Search description"),
               textField("heroHeading", "Main page heading"),
+              textField("fitHeading", "Who the service suits heading", false),
+              textField("includesHeading", "Service inclusions heading", false),
               textField("localHeading", "Service area heading"),
               longTextField("localCopy", "Service area paragraph"),
               {

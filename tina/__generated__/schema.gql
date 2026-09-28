@@ -335,6 +335,8 @@ type ServicesServices {
   seoTitle: String!
   seoDescription: String!
   heroHeading: String!
+  fitHeading: String
+  includesHeading: String
   localHeading: String!
   localCopy: String!
   localAreas: [ServicesServicesLocalAreas]
@@ -426,6 +428,8 @@ input ServicesServicesFilter {
   seoTitle: StringFilter
   seoDescription: StringFilter
   heroHeading: StringFilter
+  fitHeading: StringFilter
+  includesHeading: StringFilter
   localHeading: StringFilter
   localCopy: StringFilter
   localAreas: ServicesServicesLocalAreasFilter
@@ -626,6 +630,8 @@ input ServicesServicesMutation {
   seoTitle: String
   seoDescription: String
   heroHeading: String
+  fitHeading: String
+  includesHeading: String
   localHeading: String
   localCopy: String
   localAreas: [ServicesServicesLocalAreasMutation]

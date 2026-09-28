@@ -64,7 +64,7 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
   <section class="service-page-section service-page-fit">
     <div class="container service-page-fit__grid">
       <div>
-        <h2>Is {lowerName} right for your property?</h2>
+        <h2>{service.fitHeading ?? `Is ${lowerName} right for your property?`}</h2>
         <p class="service-page-lead">{service.overview}</p>
         <a class="service-page-text-link" href="#service-enquiry">Tell us what you need<ArrowRight size={18} stroke-width={2} aria-hidden="true" /></a>
       </div>
@@ -79,7 +79,7 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
     <div class="container service-page-includes__grid">
       <figure class="service-page-work-photo"><img src={withBase(media.work)} alt={media.workAlt} loading="lazy" /></figure>
       <div>
-        <h2>What our {lowerName} service includes</h2>
+        <h2>{service.includesHeading ?? `What our ${lowerName} service includes`}</h2>
         <div class="service-page-scope-list">{service.included.map((item) => <div><strong>{item}</strong></div>)}</div>
         {service.exclusions?.length ? <p class="service-page-scope-note"><strong>Good to know:</strong> {service.exclusions.join(" ")}</p> : null}
       </div>

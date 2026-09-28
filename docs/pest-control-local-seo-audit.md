@@ -1,6 +1,6 @@
 # Pest control local SEO sweep and page plan — 29 September 2026
 
-The page changes described below are prepared in the local site project and have not been published yet. “Live” in the next section refers to the production site checked before these edits.
+The initial page sweep was published on 29 September 2026. The page structure below includes the later heading update. “Live” in the next section refers to the production site checked before the initial sweep.
 
 ## What is live now
 
@@ -33,9 +33,9 @@ The page should accurately target **Central Otago and the confirmed Southern Lak
 
 ### Page structure now
 
-1. **H1: Pest control in Central Otago and Queenstown.** Establishes service and geography in the first viewport.
-2. **Is pest control right for your property?** Helps visitors recognise whether the service fits their situation.
-3. **What our pest control service includes.** Explains assessment, treatment and instructions.
+1. **H1: Pest control in Central Otago and Cromwell.** Establishes service and the Cromwell base in the first viewport.
+2. **Is pest control right for your Otago property?** Helps visitors recognise whether the service fits their situation.
+3. **What our Otago pest control service includes.** Explains assessment, treatment and instructions.
 4. **Pests we treat.** Lists the confirmed service scope from the client pest-control PDF.
 5. **Different pests need different treatment.** Six substantial subsections for spiders/flies, rats/mice, wasps, fleas/bed bugs, other listed insects, and safety/follow-up.
 6. **Before pest treatment.** Gives the customer a practical preparation list without making product-specific safety promises.
@@ -43,7 +43,7 @@ The page should accurately target **Central Otago and the confirmed Southern Lak
 8. **Pest control across Central Otago and Southern Lakes.** Names confirmed towns and tells the customer what location details to supply.
 9. **Pest Control questions / enquiry.** Answers remaining booking and safety questions, then offers a clear contact action.
 
-The title, H1 and local H2 already place “Central Otago” prominently. The town H3s cover city searches. Adding “Central Otago” to every pest heading would make the page harder to read and risks unnatural repetition. [Google Search Essentials](https://developers.google.com/search/docs/essentials) recommends relevant terms in the title and main heading, while its [spam policy](https://developers.google.com/search/docs/essentials/spam-policies) warns against repetitive city and keyword blocks.
+The title, H1 and local H2 already place “Central Otago” prominently. The town H3s cover city searches. The two requested “Otago” H2s sit beside copy that clarifies the actual Central Otago, Southern Lakes and Maniototo coverage. Adding the place name to every pest heading would make the page harder to read and risks unnatural repetition. [Google Search Essentials](https://developers.google.com/search/docs/essentials) recommends relevant terms in the title and main heading, while its [spam policy](https://developers.google.com/search/docs/essentials/spam-policies) warns against repetitive city and keyword blocks.
 
 ### Larger sections to add when the business can supply proof
 
