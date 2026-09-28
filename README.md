@@ -2,7 +2,7 @@
 
 Marketing site for Advanced Carpets & Restoration, serving Central Otago, Southern Lakes and the Maniototo.
 
-Built with [Astro](https://astro.build/) and managed with [TinaCMS](https://tina.io/). GitHub Pages hosts the current approval site. Cloudflare will host the production domain later.
+Built with [Astro](https://astro.build/) and managed with [TinaCMS](https://tina.io/). Cloudflare Pages hosts the production domain; GitHub Pages remains a noindex approval site.
 
 ## Develop
 
@@ -43,6 +43,6 @@ Run `npm run build:cms` only when those credentials are configured.
 
 ## Deploy
 
-Pushes to `main` deploy automatically through `.github/workflows/pages.yml`. The workflow builds the static site with the GitHub Pages base path and publishes `dist` using GitHub Actions.
+Pushes to `main` deploy the production site through the Cloudflare Pages Git integration. The GitHub Pages workflow also builds the same commit with the demo subpath and publishes its separate approval site.
 
-The GitHub Pages approval site is noindex by default. Set `PUBLIC_SITE_INDEXABLE=true` only for the production Cloudflare deployment. The private `/service-page-template/` and `/design-system/` pages always remain noindex and are omitted from navigation and the sitemap.
+Keep `PUBLIC_SITE_INDEXABLE=true` in the Cloudflare Pages **Production** environment, with the production branch set to `main` and `DEPLOY_TARGET` unset. The build fails rather than deploy a noindex production homepage if this setting goes missing. The GitHub Pages approval site remains noindex, and the `/service-page-template/`, `/design-system/`, `/thank-you/` and 404 pages always remain noindex.

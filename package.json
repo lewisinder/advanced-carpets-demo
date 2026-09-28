@@ -7,7 +7,7 @@
     "dev": "tinacms dev -c \"npm run dev:site\"",
     "dev:site": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build": "npm run build:site",
-    "build:site": "npm run check:design-system && ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build:site": "npm run check:design-system && ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/check-indexability.mjs",
     "preview": "astro preview",
     "build:cms": "tinacms build --skip-cloud-checks --content=local && npm run build:site",
     "check:design-system": "node scripts/check-design-system.mjs",
