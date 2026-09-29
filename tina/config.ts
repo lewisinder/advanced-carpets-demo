@@ -204,6 +204,7 @@ export default defineConfig({
                 ui: { itemProps: (item) => ({ label: item?.heading || "Service detail" }) },
                 fields: [
                   textField("heading", "Heading"),
+                  { type: "string", name: "icon", label: "Heading icon", required: false, options: ["spider", "bug", "rat", "bed", "shield"] },
                   { type: "string", name: "paragraphs", label: "Paragraphs", list: true, required: false, ui: { component: "textarea" } },
                   { type: "string", name: "bullets", label: "Bullet points", list: true, required: false, ui: { component: "textarea" } },
                 ],

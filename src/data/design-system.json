@@ -50,6 +50,14 @@
       "contentRule": "Use natural service and place wording; keep the adjacent service-area copy clear about confirmed coverage",
       "layout": "Use the existing section typography and responsive wrapping"
     },
+    "serviceDetailIcons": {
+      "role": "Optional subject cues beside service detail headings, selected per section in the service content",
+      "source": "Lucide line icons, with the registered SpiderIcon exception where Lucide has no suitable spider",
+      "choices": ["spider", "bug", "rat", "bed", "shield"],
+      "treatment": "Unframed 26px line icons in the existing water colour, aligned with the h3 and hidden from assistive technology because the heading names the subject",
+      "responsive": "Same heading and icon arrangement in the two-column and single-column service detail layouts",
+      "contentRule": "Choose an icon only when it clearly supports the heading; do not suggest a treatment method from an icon"
+    },
     "companyGallery": {
       "role": "Shared moving image rail for company work or an optional service-specific photo set",
       "content": "Keep images, descriptions, source links and the accessible gallery label in service content; stock photography must not be described as local company work",

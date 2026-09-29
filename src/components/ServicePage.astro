@@ -5,14 +5,18 @@ import FaqItem from "@/components/FaqItem.astro";
 import ServiceFacts from "@/components/ServiceFacts.astro";
 import ServiceStat from "@/components/ServiceStat.astro";
 import CompanyGallery from "@/components/CompanyGallery.astro";
+import SpiderIcon from "@/components/icons/SpiderIcon.astro";
 import { services, type Service } from "@/data/services";
 import { site } from "@/data/site";
 import { estimatorServices } from "@/data/estimator";
 import { withBase } from "@/lib/base";
 import homeContent from "../../content/pages/home.json";
 import ArrowRight from "@lucide/astro/icons/arrow-right";
+import Bed from "@lucide/astro/icons/bed";
+import Bug from "@lucide/astro/icons/bug";
 import Calculator from "@lucide/astro/icons/calculator";
 import Phone from "@lucide/astro/icons/phone";
+import Rat from "@lucide/astro/icons/rat";
 import ShieldCheck from "@lucide/astro/icons/shield-check";
 
 type Props = { service: Service };
@@ -23,6 +27,7 @@ const canEstimate = estimatorServices.some((estimatorService) => estimatorServic
 const detailSections = service.sections ?? [];
 const featuredDetail = detailSections[0];
 const extraDetails = detailSections.slice(1);
+const detailIcons = { spider: SpiderIcon, bug: Bug, rat: Rat, bed: Bed, shield: ShieldCheck };
 const relatedServices = service.relatedSlugs.map((slug) => services.find((item) => item.slug === slug)).filter((item): item is Service => Boolean(item));
 const review = homeContent.reviews.find((item) => item.name === service.reviewName);
 const comparison = service.comparison;
@@ -110,7 +115,10 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
       <div class="container">
         <h2>{service.detailHeading ?? `More about ${lowerName}`}</h2>
         <div class:list={["service-page-more-detail__grid", extraDetails.length === 1 && "service-page-more-detail__grid--single"]}>
-          {extraDetails.map((section) => <article><h3>{section.heading}</h3>{section.paragraphs?.map((p) => <p>{p}</p>)}{section.bullets?.length ? <ul>{section.bullets.map((item) => <li>{item}</li>)}</ul> : null}</article>)}
+          {extraDetails.map((section) => {
+            const Icon = section.icon ? detailIcons[section.icon] : null;
+            return <article><h3 class="service-page-more-detail__heading">{Icon && <span class="service-page-more-detail__icon" aria-hidden="true"><Icon size={26} stroke-width={1.8} /></span>}{section.heading}</h3>{section.paragraphs?.map((p) => <p>{p}</p>)}{section.bullets?.length ? <ul>{section.bullets.map((item) => <li>{item}</li>)}</ul> : null}</article>;
+          })}
         </div>
       </div>
     </section>
@@ -1109,6 +1117,8 @@ const technicalAlt = media.technicalAlt ?? media.heroAlt;
   .service-page-more-detail__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
   .service-page-more-detail__grid--single { grid-template-columns: minmax(0, 760px); }
   .service-page-more-detail__grid article { padding: 32px 34px 12px 0; }
+  .service-page-more-detail__heading { display: flex; align-items: center; gap: 12px; }
+  .service-page-more-detail__icon { display: inline-flex; flex: none; color: var(--water); }
   .service-page-more-detail__grid article + article { border-left: 1px solid var(--line); padding-right: 0; padding-left: 34px; }
   .service-page-more-detail__grid article + article:nth-child(odd) { border-left: 0; padding-right: 34px; padding-left: 0; }
   .service-page-more-detail__grid article:nth-child(n + 3) { border-top: 1px solid var(--line); }
