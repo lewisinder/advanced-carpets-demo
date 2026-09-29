@@ -1,0 +1,19 @@
+---
+type Props = {
+  size?: number | string;
+  strokeWidth?: number | string;
+  "stroke-width"?: number | string;
+};
+
+const { size = 24, strokeWidth } = Astro.props;
+const strokeWidthValue = Astro.props["stroke-width"] ?? strokeWidth ?? 2;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width={strokeWidthValue} stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10.6 4 9 2m4.4 2L15 2" />
+  <circle cx="12" cy="6" r="2.4" />
+  <path d="M12 8.4v1.1m0 5V16" />
+  <ellipse cx="12" cy="12" rx="2.2" ry="2.6" />
+  <ellipse cx="12" cy="19" rx="3.7" ry="3" />
+  <path d="m9.8 10-3.5-1.5L4 6m5.8 6.4-4.1.8L3 16m7 0-3.4 1.2L5 21m9.2-11 3.5-1.5L20 6m-5.8 6.4 4.1.8L21 16m-7 0 3.4 1.2L19 21" />
+</svg>

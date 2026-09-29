@@ -17,7 +17,7 @@ export type Service = {
   localAreas?: Array<{ heading: string; copy: string }>;
   intro: string;
   overview: string;
-  sections?: Array<{ heading: string; icon?: "spider" | "bug" | "rat" | "bed" | "shield"; paragraphs?: string[]; bullets?: string[] }>;
+  sections?: Array<{ heading: string; icon?: "spider" | "wasp" | "flea" | "ant" | "bug" | "rat" | "bed" | "shield"; paragraphs?: string[]; bullets?: string[] }>;
   detailHeading?: string;
   gallery?: { label: string; images: CompanyGalleryImage[] };
   seasonality?: { heading: string; paragraphs: string[]; image: string; imageAlt: string };

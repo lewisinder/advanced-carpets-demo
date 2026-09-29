@@ -52,8 +52,8 @@
     },
     "serviceDetailIcons": {
       "role": "Optional subject cues beside service detail headings, selected per section in the service content",
-      "source": "Lucide line icons, with the registered SpiderIcon exception where Lucide has no suitable spider",
-      "choices": ["spider", "bug", "rat", "bed", "shield"],
+      "source": "Lucide line icons, with registered local 24px outline exceptions for spider, wasp, flea and ant where Lucide has no suitable subject icon",
+      "choices": ["spider", "wasp", "flea", "ant", "bug", "rat", "bed", "shield"],
       "treatment": "Unframed 26px line icons in the existing water colour, aligned with the h3 and hidden from assistive technology because the heading names the subject",
       "responsive": "Same heading and icon arrangement in the two-column and single-column service detail layouts",
       "contentRule": "Choose an icon only when it clearly supports the heading; do not suggest a treatment method from an icon"
@@ -175,6 +175,24 @@
       "file": "src/components/icons/SpiderIcon.astro",
       "category": "Icon exception",
       "description": "Local line-icon exception used where Lucide has no suitable spider icon."
+    },
+    {
+      "name": "WaspIcon",
+      "file": "src/components/icons/WaspIcon.astro",
+      "category": "Icon exception",
+      "description": "Local 24px unfilled wasp line icon matching the Lucide stroke treatment."
+    },
+    {
+      "name": "FleaIcon",
+      "file": "src/components/icons/FleaIcon.astro",
+      "category": "Icon exception",
+      "description": "Local 24px unfilled flea line icon matching the Lucide stroke treatment."
+    },
+    {
+      "name": "AntIcon",
+      "file": "src/components/icons/AntIcon.astro",
+      "category": "Icon exception",
+      "description": "Local 24px unfilled ant line icon matching the Lucide stroke treatment."
     },
     {
       "name": "HomePage",
