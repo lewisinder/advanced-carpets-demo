@@ -18,6 +18,13 @@
       "treatment": "Small labelled brand-icon links using the existing footer colours and visible focus states",
       "source": "Link only to verified business profiles; use the registered local SocialIcon for brand marks not available in Lucide"
     },
+    "footerCredit": {
+      "role": "Small external website credit in the shared site footer",
+      "placement": "Footer legal row on every page",
+      "treatment": "Muted text link using the existing legal-row type size, footer colours and visible focus state; no icon or new colour token",
+      "responsive": "The legal row wraps naturally when its contents need more room on narrow screens",
+      "destination": "https://theblueprintcollective.co.nz/"
+    },
     "serviceEvidenceStat": {
       "role": "A prominent, client-approved service-specific figure with its condition and meaning stated beside it",
       "surface": "Open editorial rule on the charcoal results section, not a metric card",
@@ -120,7 +127,7 @@
       "name": "Footer",
       "file": "src/components/Footer.astro",
       "category": "Site shell",
-      "description": "Shared site footer and service links."
+      "description": "Shared site footer, service links, and subdued external website credit in the wrapping legal row."
     },
     {
       "name": "Header",
